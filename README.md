@@ -23,6 +23,7 @@ docs/
     qwen-code/
     trae/
     windsurf/
+    comparison/         — Tool comparison guides
   models/               — One folder per model family, each with a README.md
     TEMPLATE.md         — Standard structure for model docs
     claude/
@@ -34,8 +35,7 @@ docs/
     llama/
     qwen-coder/
     swe-1/
-  comparison/           — Comparison guides and analysis
-    comparison-2026-05-03.md
+    comparison/         — Model comparison guides
 ```
 
 ## Tools Covered
@@ -72,6 +72,7 @@ docs/
 | [Qwen Coder](docs/models/qwen-coder/) | Alibaba | Yes (Apache 2.0) | Yes |
 | [SWE-1](docs/models/swe-1/) | Windsurf/Codeium | No | No |
 
-## Guides
+## Comparisons
 
-- [Comparison Guide (May 3, 2026)](docs/comparison/comparison-2026-05-03.md) — Feature matrix, deep-dives, decision guide
+- [Tool Comparison (May 3, 2026)](docs/tools/comparison/comparison-2026-05-03.md) — Feature matrix, deep-dives, decision guide
+- [Model Comparison (May 3, 2026)](docs/models/comparison/comparison-2026-05-03.md) — Benchmarks, cost, self-hosting, head-to-head matchups
