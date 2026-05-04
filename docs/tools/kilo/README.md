@@ -11,7 +11,7 @@
 
 Kilo Code is a VS Code/JetBrains extension and CLI tool that acts as an autonomous coding agent — it reads your codebase, plans, writes, runs, and debugs code with minimal manual intervention. It positions itself as a "superset" of Cline and Roo Code, absorbing the best of both and adding orchestration, inline autocomplete, and cross-platform sync.
 
-### Pricing
+## Pricing
 
 | Component | Price | Notes |
 |---|---|---|
@@ -26,8 +26,6 @@ Kilo Code is a VS Code/JetBrains extension and CLI tool that acts as an autonomo
 | KiloClaw (managed cloud agents) | $9/month | Managed OpenClaw; AI inference billed separately |
 
 Annual plans available with 50% bonus credits. Pay-as-you-go credit top-ups also available. Free-tier models exist (e.g., ByteDance Dola Seed 2.0 Pro, NVIDIA Nemotron 3 Super 120B) subject to rate limits.
-
----
 
 ## What It Does
 
@@ -75,8 +73,6 @@ No language restrictions — works on any text-based language the underlying mod
 
 All prompts and model selections are visible to the user — no black-box routing unless the gateway "Auto" mode is used.
 
----
-
 ## What It Doesn't Do
 
 - **No native Zed or Vim/Neovim support** — only VS Code, JetBrains, and CLI
@@ -90,8 +86,6 @@ All prompts and model selections are visible to the user — no black-box routin
 - **JetBrains rendering issues** — JCEF (Chromium Embedded Framework) must be enabled; some Android Studio and older JetBrains versions have panel rendering failures
 - **Smaller community than Cline** — 18.9k GitHub stars vs. Cline's 58k+; fewer community tutorials and third-party MCP servers
 - **Fork controversy** — built on Cline/Roo Code foundations; critics note heavy ad spend vs. upstream contributions
-
----
 
 ## Architecture
 
@@ -122,8 +116,6 @@ TypeScript (91.7% of the codebase). Built on a fork of OpenCode, enhanced for th
 
 Kilo has a first-class MCP marketplace (`github.com/Kilo-Org/kilo-marketplace`) with curated Skills, MCP servers, and custom Modes. Skills are self-contained capability packages with repeatable workflows. MCP servers connect external services (Figma, GitHub Issues, databases, web search) so the agent can act on real-world context without leaving the IDE.
 
----
-
 ## Key Differentiators
 
 | Feature | Kilo Code | Cline | Roo Code |
@@ -144,8 +136,6 @@ Kilo has a first-class MCP marketplace (`github.com/Kilo-Org/kilo-marketplace`) 
 
 **Pricing transparency:** Zero markup on model tokens is the clearest differentiator vs. Cursor and Windsurf, which bundle model access into subscription tiers with usage caps.
 
----
-
 ## Ideal Use Cases
 
 - **Complex multi-file features** — Orchestrator mode plans, codes, and debugs across many files autonomously
@@ -156,8 +146,6 @@ Kilo has a first-class MCP marketplace (`github.com/Kilo-Org/kilo-marketplace`) 
 - **Slack-first workflows** — KiloClaw ships code from a Slack message without opening an IDE
 - **Model experimenters** — switching between 500+ models in one interface without managing multiple API integrations
 - **Privacy-first teams** — local model support via Ollama/LM Studio keeps code off external servers
-
----
 
 ## Community & Ecosystem
 
@@ -173,6 +161,8 @@ Kilo has a first-class MCP marketplace (`github.com/Kilo-Org/kilo-marketplace`) 
 - **Forum/discussion:** GitHub Discussions (330+ threads), active Discord
 - **Criticism:** Smaller community vs. Cline (58k stars); perceived as marketing-heavy relative to core upstream contribution; autocomplete quality trails dedicated autocomplete tools like Supermaven
 
----
+## Sources
+
+Sources were integrated during research but not individually tracked.
 
 *Sources: kilo.ai, github.com/Kilo-Org/kilocode, kilo.ai/pricing, kilo.ai/cline, kilo.ai/docs, blog.kilo.ai, morphllm.com, producthunt.com — researched May 2026*

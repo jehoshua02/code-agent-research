@@ -2,12 +2,12 @@
 
 ## What It Is
 
-**Category:** AI coding assistant — IDE plugin, CLI, chat interface, and autonomous coding agent  
-**Maker:** GitHub (Microsoft subsidiary)  
-**Initial release:** June 2021 (Technical Preview); GA for individuals October 2022  
+**Category:** AI coding assistant — IDE plugin, CLI, chat interface, and autonomous coding agent
+**Maker:** GitHub (Microsoft subsidiary)
+**Initial release:** June 2021 (Technical Preview); GA for individuals October 2022
 **Current status (May 2026):** Mature product undergoing major billing transition; new individual plan sign-ups temporarily paused as of April 20, 2026
 
-### Pricing (pre-June 2026 usage-based transition)
+## Pricing
 
 | Plan | Price | Target |
 |---|---|---|
@@ -22,34 +22,32 @@
 
 Free for verified teachers and open source maintainers (Pro-tier access).
 
----
-
 ## What It Does
 
 ### Core Features
 
-**Inline Code Completion**  
+**Inline Code Completion**
 Real-time, context-aware completions as you type. Suggests single lines or entire functions. Uses a dual-model architecture for Copilot Edits: one model proposes changes, a speculative-decoding endpoint applies them fast. Does not consume AI Credits — included at all tiers.
 
-**Next Edit Suggestions (NES)**  
+**Next Edit Suggestions (NES)**
 Predicts the next edit location in the file after completing one, not just where your cursor is. Helps chain multi-point refactors. Also credit-free on all plans.
 
-**Copilot Chat**  
+**Copilot Chat**
 Inline and panel chat interfaces for asking questions about code, generating code on demand, explaining errors, and refactoring. Available in VS Code, Visual Studio, JetBrains IDEs, and GitHub.com. Supports slash commands (`/explain`, `/fix`, `/tests`, `/doc`). Consumes AI credits.
 
-**Agent Mode (IDE)**  
+**Agent Mode (IDE)**
 Autonomously plans and executes multi-step coding tasks within the IDE. Determines which files to change, makes edits across multiple files, runs terminal commands, reviews output, and iterates until done. Generally available in VS Code and JetBrains as of March 2026. Inline agent mode in preview for JetBrains as of April 2026. Supports Model Context Protocol (MCP) servers.
 
-**Copilot Cloud Agent (formerly Coding Agent)**  
+**Copilot Cloud Agent (formerly Coding Agent)**
 Fully autonomous background agent that works on GitHub issues independently. You assign it an issue; it researches the repo, creates an implementation plan, makes code changes on a branch, and opens a pull request for review. Runs in a sandboxed environment on GitHub's infrastructure. Available on Pro, Pro+, Business, and Enterprise plans.
 
-**Copilot Code Review**  
+**Copilot Code Review**
 AI-driven pull request review. Gathers full project context before analyzing a PR, understanding how changes relate to the broader codebase. Shipped on an agentic architecture March 5, 2026. Flags bugs, style issues, and security concerns.
 
-**Copilot CLI**  
+**Copilot CLI**
 Reached GA February 2026. Includes Plan mode and fully autonomous Autopilot mode. Features parallel specialized sub-agents (Explore, Task, Code Review, Plan), repository memory across sessions, hooks, plugins, and a built-in GitHub MCP server.
 
-**GitHub Spark**  
+**GitHub Spark**
 Low-code/no-code web app builder integrated with Copilot. Available on Pro+ plan.
 
 ### Supported IDEs and Surfaces
@@ -73,8 +71,6 @@ Works across all languages present in public GitHub repositories. Best performan
 
 React, Angular, Vue.js, Node.js, Django, Flask, Ruby on Rails, and most major web/backend frameworks. Also assists with infrastructure-as-code (Terraform, Kubernetes manifests), database query generation, and API integration.
 
----
-
 ## What It Doesn't Do
 
 **No offline mode.** Requires continuous internet access to GitHub's cloud service. No local inference option.
@@ -96,8 +92,6 @@ React, Angular, Vue.js, Node.js, Django, Flask, Ruby on Rails, and most major we
 **No write access to databases.** Generated SQL or ORM code must be manually reviewed and executed by the developer.
 
 **Context drift in long sessions.** Does not reliably track variable types or state changes across long conversations; relevance of suggestions can degrade.
-
----
 
 ## Architecture
 
@@ -140,8 +134,6 @@ Agent mode (IDE) and cloud agent support the Model Context Protocol (MCP). Pre-c
 
 A control plane that orchestrates third-party agents (from Anthropic, OpenAI, Google, Cognition, xAI) alongside GitHub's own agents, all accessible under a single Copilot subscription. Positions Copilot as an orchestration layer, not just a single-model tool.
 
----
-
 ## Key Differentiators
 
 **GitHub ecosystem depth.** Native integration with GitHub repositories, issues, pull requests, Actions, and Advanced Security. No other tool has equivalent depth in the GitHub workflow. For teams already on GitHub Enterprise, Copilot Enterprise is the path of least resistance.
@@ -156,8 +148,6 @@ A control plane that orchestrates third-party agents (from Anthropic, OpenAI, Go
 
 **Free tier with real completions.** 2,000 completions/month on the free tier is competitive with Codeium for casual use, with no credit card required.
 
----
-
 ## Ideal Use Cases
 
 - **Teams already on GitHub Enterprise** — Copilot Enterprise integrates directly into the GitHub.com UI, PR review, and issue workflows with no additional tooling.
@@ -169,8 +159,6 @@ A control plane that orchestrates third-party agents (from Anthropic, OpenAI, Go
 - **High-volume enterprise development** — Copilot is reported to generate ~46% of written code on average (up to 61% for Java), making it meaningful for productivity at scale.
 
 Less ideal for: developers in air-gapped environments, teams with strict data residency requirements beyond what GitHub Enterprise offers, or developers who want full model control and local inference (consider Ollama-based tools instead).
-
----
 
 ## Community & Ecosystem
 
@@ -208,3 +196,7 @@ Copilot itself is **not open source**. The VS Code extension's core logic is pro
 - Content exclusions: can configure Copilot to exclude suggestions matching public code
 - Audit logs and usage metrics available for org admins
 - Data does not train GitHub's models when using Business/Enterprise (by default)
+
+## Sources
+
+Sources were integrated during research but not individually tracked.

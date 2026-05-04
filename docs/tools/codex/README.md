@@ -2,8 +2,6 @@
 
 > This document covers the 2025 Codex coding agent — both the open-source CLI tool and the ChatGPT/API-based cloud agent. Not the deprecated 2021 Codex code-completion model.
 
----
-
 ## What It Is
 
 **Codex** is an agentic AI coding assistant made by **OpenAI**. It ships as two related but distinct products that share models and branding:
@@ -17,7 +15,7 @@
 - **Cloud agent initial release:** May 2025 (research preview); general availability followed in 2025
 - **CLI language:** Rust (96%+ of codebase), with Python, TypeScript, and shell support
 
-### Pricing
+## Pricing
 
 | Plan | Monthly Cost | Codex Access |
 |------|-------------|--------------|
@@ -39,8 +37,6 @@ Pricing shifted in April 2026 to token-based credits for Business and new Enterp
 | GPT-5.3-Codex | 43.75 cr | 4.375 cr | 350 cr |
 
 API key access is available across all tiers for automation at standard OpenAI API token rates.
-
----
 
 ## What It Does
 
@@ -73,8 +69,6 @@ API key access is available across all tiers for automation at standard OpenAI A
 
 Codex reads `AGENTS.md` files (global and per-repo) for persistent custom instructions. Precedence: global → repo root → subdirectory. This is a cross-tool standard: tools from other vendors also honor `AGENTS.md`, simplifying team workflows versus tool-specific config files.
 
----
-
 ## What It Doesn't Do
 
 - **No real-time autocomplete** — it is an agentic task executor, not a keystroke-level code completion tool. Use Cursor or Copilot for inline suggestions.
@@ -84,8 +78,6 @@ Codex reads `AGENTS.md` files (global and per-repo) for persistent custom instru
 - **Limited course-correction mid-task** (early releases) — the research preview lacked mid-run steering; GPT-5.3-Codex added real-time interaction without losing context.
 - **No Windows-native sandbox parity** — Windows uses PowerShell sandbox or WSL2; Linux uses bubblewrap; macOS uses Seatbelt. Behaviors differ slightly across platforms.
 - **Not free for production** — requires a paid ChatGPT plan or API key. The Free tier is exploration-only with severe limits.
-
----
 
 ## Architecture
 
@@ -140,8 +132,6 @@ Codex reads `AGENTS.md` files (global and per-repo) for persistent custom instru
 
 The original **codex-1** model (released May 2025) was a version of OpenAI o3 fine-tuned with reinforcement learning on real-world coding tasks to match human PR style. Subsequent versions (GPT-5.x-Codex) build on this foundation.
 
----
-
 ## Key Differentiators
 
 - **GitHub-native automation** — the GitHub App enables genuine issue-to-PR automation with inline code review comments that find real bugs. The tightest GitHub integration among terminal agents.
@@ -153,8 +143,6 @@ The original **codex-1** model (released May 2025) was a version of OpenAI o3 fi
 - **Runs as MCP server** — the CLI can be invoked programmatically via the Agents SDK for pipeline automation and CI/CD integration.
 - **Cross-platform** — macOS, Linux, Windows; web; IDE extension; mobile (via ChatGPT). Single agent across all surfaces.
 - **Speed** — GPT-5.3-Codex runs at 240+ tokens/second (claimed 2.5× faster than Claude Opus). GPT-5.3-Codex is 25% faster than GPT-5.2-Codex.
-
----
 
 ## Ideal Use Cases
 
@@ -168,8 +156,6 @@ The original **codex-1** model (released May 2025) was a version of OpenAI o3 fi
 - **Design-to-code workflows** — Figma MCP integration makes it viable for design-spec-driven development.
 
 Not ideal for: real-time autocomplete while typing, deep IDE UI integration, or teams requiring fully on-premises/air-gapped execution.
-
----
 
 ## Community & Ecosystem
 
@@ -192,3 +178,7 @@ Not ideal for: real-time autocomplete while typing, deep IDE UI integration, or 
 ### Standards Participation
 
 OpenAI participates in the AAIF (Agentic AI Foundation) and promotes AGENTS.md as an open cross-tool standard. MCP was co-developed with Anthropic and is broadly adopted, making Codex interoperable with the wider agent ecosystem.
+
+## Sources
+
+Sources were integrated during research but not individually tracked.

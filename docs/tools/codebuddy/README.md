@@ -7,11 +7,11 @@
 **Released:** May 22, 2024 (plugin); July 2025 (IDE beta); September 2025 (CLI)
 **Website:** https://www.codebuddy.ai
 
-### Pricing (as of May 2026)
+## Pricing
 
 CodeBuddy uses a **credit-based** model. The IDE/plugin product and the CLI product have separate pricing structures.
 
-#### CodeBuddy IDE / Plugin (International)
+### CodeBuddy IDE / Plugin (International)
 
 | Tier | Price | Credits |
 |---|---|---|
@@ -21,14 +21,12 @@ CodeBuddy uses a **credit-based** model. The IDE/plugin product and the CLI prod
 
 Add-on credit packages available for Pro and Team plans (e.g. 10,000 credits for $200 / 6 months).
 
-#### CodeBuddy (China / Enterprise)
+### CodeBuddy (China / Enterprise)
 
 Enterprise flagship: ¥198/user/month (raised from ¥78 in May 2026, ~154% increase).
 Enterprise dedicated: ¥316/user/month (raised from ¥158).
 
 Price increases in 2026 signal compute scarcity pressure across Tencent's AI product line.
-
----
 
 ## What It Does
 
@@ -80,8 +78,6 @@ Price increases in 2026 signal compute scarcity pressure across Tencent's AI pro
 
 15+ IDEs: VS Code (1.82+), Visual Studio 2022, IntelliJ IDEA (2022.2+), PyCharm, GoLand, CLion, PhpStorm, Android Studio, WeChat Developer Tools, Xcode.
 
----
-
 ## What It Doesn't Do
 
 - **Weak on complex multi-file refactoring**: Cross-file dependency handling degrades on deeply nested codebases; requires requests to be broken into smaller scopes and results need independent validation.
@@ -91,8 +87,6 @@ Price increases in 2026 signal compute scarcity pressure across Tencent's AI pro
 - **Limited global brand recognition**: Positioned primarily for Chinese market; international adoption trails GitHub Copilot and Cursor significantly.
 - **No open-source core**: The underlying models and IDE are proprietary; community cannot contribute to or audit the core.
 - **Context window unspecified in public docs**: Token limits per session not publicly documented for the IDE/plugin (CLI documentation is more complete).
-
----
 
 ## Architecture
 
@@ -126,8 +120,6 @@ CodeBuddy is the first product in China (by Tencent's claim) to offer all three 
 - Dual encryption using Chinese national cryptographic algorithms (SM2/SM4)
 - Private deployment option available for enterprise customers
 
----
-
 ## Key Differentiators
 
 1. **Full lifecycle in one product**: Requirement doc generation → design mockup → code → test → deploy. Competitors (Copilot, Cursor) stop at code; CodeBuddy extends into design and deployment.
@@ -138,8 +130,6 @@ CodeBuddy is the first product in China (by Tencent's claim) to offer all three 
 6. **Free tier generous vs. competitors**: Free daily Craft credits with no credit card; Pro at $9.95/month undercuts Cursor Pro ($20) and GitHub Copilot Pro ($10) in credit-per-dollar terms.
 7. **Three-form coverage**: Plugin + standalone IDE + CLI in one product family — matches Cursor (IDE only) plus Claude Code (CLI only) plus Copilot (plugin only), all from one vendor.
 
----
-
 ## Ideal Use Cases
 
 - **Chinese enterprise development teams** needing on-premise/private deployment with MLPS compliance and national cryptographic standards.
@@ -148,8 +138,6 @@ CodeBuddy is the first product in China (by Tencent's claim) to offer all three 
 - **Greenfield projects** where Craft Mode's multi-file autonomous generation shines; less suited to navigating large legacy codebases.
 - **Teams already on Tencent Cloud** (CloudBase, CODING, Tencent meetings) where one-click deployment and DevOps integration add genuine value.
 - **Developers in China** where latency and data residency requirements favor domestic infrastructure.
-
----
 
 ## Community & Ecosystem
 
@@ -177,8 +165,6 @@ CodeBuddy is the first product in China (by Tencent's claim) to offer all three 
 - Shipped from plugin (May 2024) → Craft agent (April 2025) → MCP support (May 2025) → IDE beta (July 2025) → CLI (September 2025) → CLI v2.0 with ACP + open SDK (January 2026)
 - Rapid cadence; major capability additions every 2-3 months
 - Price increases in 2026 suggest transition from growth-at-all-costs to unit economics focus
-
----
 
 ## Sources
 

@@ -9,14 +9,14 @@
 - **Initial release:** July 2024 (as Claude Dev); renamed Cline October 2024
 - **License:** Apache 2.0 (open source)
 - **Extension ID:** `saoudrizwan.claude-dev` (unchanged since original release)
-- **Pricing:**
-  - Extension itself: free
-  - Models: pay-as-you-go via your own API keys — no Cline markup
-  - **Cline Provider:** managed pay-as-you-go inference ($0.01–$0.10 per task typical) — no API key needed
-  - **Teams plan:** free through Q1 2026, then $20/user/month (first 10 seats always free)
-  - **Enterprise:** custom pricing, VPC deployments, SSO/SCIM, audit logs, SLA
 
----
+## Pricing
+
+- Extension itself: free
+- Models: pay-as-you-go via your own API keys — no Cline markup
+- **Cline Provider:** managed pay-as-you-go inference ($0.01–$0.10 per task typical) — no API key needed
+- **Teams plan:** free through Q1 2026, then $20/user/month (first 10 seats always free)
+- **Enterprise:** custom pricing, VPC deployments, SSO/SCIM, audit logs, SLA
 
 ## What It Does
 
@@ -57,8 +57,6 @@ Version-controlled markdown files in `.clinerules/` at the project root are inje
 
 Cline is language-agnostic — it operates on files and runs shell commands, so it works with any language the underlying model understands. Community reports strongest results with TypeScript/JavaScript (React, Next.js, Tailwind) stacks. Works with Python, Go, Rust, Java, C#, and more.
 
----
-
 ## What It Doesn't Do
 
 - **No inline completions:** Cline is a task-level agent, not a tab-complete or ghost-text tool. It does not compete with Copilot's inline suggestion mode.
@@ -71,8 +69,6 @@ Cline is language-agnostic — it operates on files and runs shell commands, so 
 - **No refusal to act:** YOLO Mode aside, Cline still requires human approval for destructive ops, which creates overhead in high-throughput automated pipelines.
 - **Approval fatigue:** Broad multi-file changes accumulate many approval prompts, which some users find disruptive.
 - **Cost unpredictability:** Without a flat-rate subscription option, budgeting is difficult. Typical active development sessions cost $10–$25/day at frontier model rates.
-
----
 
 ## Architecture
 
@@ -112,8 +108,6 @@ Each tool invocation commits a checkpoint to an internal shadow Git repo.
 
 Browser automation and visual reasoning are **only reliable with Claude Sonnet 3.5 or later**.
 
----
-
 ## Key Differentiators
 
 1. **Model agnosticism:** 30+ providers, zero vendor lock-in. Switch models between tasks.
@@ -124,8 +118,6 @@ Browser automation and visual reasoning are **only reliable with Claude Sonnet 3
 6. **Rules as code:** `.clinerules/` files are version-controlled, file-scoped, and composable — coding standards travel with the repo.
 7. **Open source (Apache 2.0):** Auditable, forkable, self-hostable. Roo Code is the most prominent fork.
 8. **No IDE switch required:** Remains a sidebar in standard VS Code, preserving existing editor setup, keybindings, and extensions.
-
----
 
 ## Ideal Use Cases
 
@@ -142,8 +134,6 @@ Browser automation and visual reasoning are **only reliable with Claude Sonnet 3
 - Fully headless/CI automation (use Claude Code CLI or Aider)
 - Teams that need predictable flat-rate billing
 - Heavy Vim/Emacs users (no native plugin)
-
----
 
 ## Community & Ecosystem
 
@@ -182,3 +172,7 @@ Browser automation and visual reasoning are **only reliable with Claude Sonnet 3
 | Model selection | Any of 30+ providers or local runtime |
 | Forking/self-hosting | Apache 2.0 — full source available |
 | CI/headless | Preview CLI for macOS/Linux (Windows on roadmap) |
+
+## Sources
+
+Sources were integrated during research but not individually tracked.

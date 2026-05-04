@@ -9,15 +9,15 @@
 - **Initial release:** June 25, 2025 (general availability)
 - **Latest stable version:** v0.40.0 (April 28, 2026)
 - **License:** Apache 2.0 (fully open source)
-- **Pricing:**
-  - **Free (Google Account / Gemini Code Assist for Individuals):** 1,000 requests/day, 60 requests/minute — no credit card required
-  - **Free (Gemini API Key, unpaid):** 250 requests/day, 10 requests/minute — Flash model only
-  - **Gemini Code Assist Standard:** 1,500 requests/day, 120 req/min — fixed-price subscription
-  - **Gemini Code Assist Enterprise:** 2,000 requests/day, 120 req/min — seat-licensed subscription
-  - **Vertex AI / Pay-as-you-go:** token-based billing; dynamic quotas; 90-day trial in Express Mode
-  - Free tier data may be used for model improvement (privacy concern for teams)
 
----
+## Pricing
+
+- **Free (Google Account / Gemini Code Assist for Individuals):** 1,000 requests/day, 60 requests/minute — no credit card required
+- **Free (Gemini API Key, unpaid):** 250 requests/day, 10 requests/minute — Flash model only
+- **Gemini Code Assist Standard:** 1,500 requests/day, 120 req/min — fixed-price subscription
+- **Gemini Code Assist Enterprise:** 2,000 requests/day, 120 req/min — seat-licensed subscription
+- **Vertex AI / Pay-as-you-go:** token-based billing; dynamic quotas; 90-day trial in Express Mode
+- Free tier data may be used for model improvement (privacy concern for teams)
 
 ## What It Does
 
@@ -49,8 +49,6 @@ Gemini CLI is language-agnostic at the CLI layer. It can read, edit, and reason 
 5. Context is assembled from hierarchical GEMINI.md files (global → project → component)
 6. Agent Skills extend the system prompt on-demand when a matching task is detected
 
----
-
 ## What It Doesn't Do
 
 - **No native IDE integration** (VS Code agent mode is a separate preview via Gemini Code Assist, not Gemini CLI itself)
@@ -61,8 +59,6 @@ Gemini CLI is language-agnostic at the CLI layer. It can read, edit, and reason 
 - **No Windows Clipboard image support on Linux/macOS** (Windows only feature as of v0.23.0)
 - **Slower on complex tasks** — benchmarks show ~2h for a full CLI tool build vs Claude Code's ~1h 17m with fewer retries
 - **Free tier privacy** — data sent via personal Google account may be used for model training; not suitable for confidential codebases without a paid plan
-
----
 
 ## Architecture
 
@@ -103,8 +99,6 @@ Gemini CLI's extensibility is built on MCP. It connects to local or remote MCP s
 
 Hierarchical instruction files loaded from `~/.gemini/GEMINI.md` (global) down to component-level directories. All found files are concatenated and sent with every prompt. Managed via the `/memory` command.
 
----
-
 ## Key Differentiators
 
 1. **Largest free tier in the category** — 1,000 requests/day and 60 req/min at no cost; competitors offer far less or nothing
@@ -117,8 +111,6 @@ Hierarchical instruction files loaded from `~/.gemini/GEMINI.md` (global) down t
 8. **Pre-installed in Google Cloud Shell** — zero setup for GCP users
 9. **Partner extension ecosystem** — 100+ extensions including Figma, Stripe, Snyk, Elastic, Shopify, Postman, Dynatrace
 10. **Non-interactive scripting** — JSON/streaming-JSON output for pipeline automation; Claude Code is primarily interactive
-
----
 
 ## Ideal Use Cases
 
@@ -136,8 +128,6 @@ Hierarchical instruction files loaded from `~/.gemini/GEMINI.md` (global) down t
 - Teams needing the highest output quality on complex multi-file refactors (Claude Code outperforms here)
 - Confidential codebases on the free tier (data training risk)
 - Offline or air-gapped environments (cloud inference required)
-
----
 
 ## Community & Ecosystem
 
@@ -173,8 +163,6 @@ Hierarchical instruction files loaded from `~/.gemini/GEMINI.md` (global) down t
 | Vertex AI | Enterprise auth and billing backend |
 | Google AI Studio | API key source for paid access |
 | ADK (Agent Development Kit) | Companion framework for building agents that Gemini CLI can call |
-
----
 
 ## Sources
 

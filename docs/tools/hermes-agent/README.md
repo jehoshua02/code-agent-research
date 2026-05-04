@@ -1,12 +1,10 @@
 # Hermes Agent
 
-**Source:** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) · MIT License  
-**Docs:** https://hermes-agent.nousresearch.com/docs/  
+**Source:** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) · MIT License
+**Docs:** https://hermes-agent.nousresearch.com/docs/
 **As of:** May 2026
 
----
-
-## 1. What It Is
+## What It Is
 
 Hermes Agent is an open-source, self-improving autonomous AI agent built by **Nous Research** (the team behind the Hermes, Nomos, and Psyche model families). It is not an IDE copilot or chatbot wrapper — it is a long-lived agent runtime that persists across sessions, accumulates skills from experience, and runs on infrastructure you control.
 
@@ -14,12 +12,13 @@ Hermes Agent is an open-source, self-improving autonomous AI agent built by **No
 - **Made by:** Nous Research
 - **Released:** February 25, 2026
 - **License:** MIT (fully open-source, free)
-- **Pricing:** Free. Self-hosted. Bring your own API keys. No managed service or usage limits.
 - **Stars:** ~131,000 GitHub stars as of v0.12.0 (April 30, 2026) — fastest-growing agent framework of 2026
 
----
+## Pricing
 
-## 2. What It Does
+Free. Self-hosted. Bring your own API keys. No managed service or usage limits.
+
+## What It Does
 
 ### Core Concept
 
@@ -72,9 +71,7 @@ Skills are portable files following the [agentskills.io](https://agentskills.io)
 - Trajectory export for model training pipelines
 - Code review skill bundled (`skills/software-development/requesting-code-review/`)
 
----
-
-## 3. What It Doesn't Do
+## What It Doesn't Do
 
 - **No native Windows support.** Requires WSL2.
 - **No managed/cloud service.** No hosted version; you provision and operate your own infrastructure.
@@ -85,9 +82,7 @@ Skills are portable files following the [agentskills.io](https://agentskills.io)
 - **Weaker at pure coding benchmarks than specialized tools.** For focused software engineering tasks (writing, debugging, refactoring), Cursor, Windsurf, and Claude Code outperform Hermes on SWE-bench class tasks.
 - **Android/Termux limitations.** Full `.[all]` extra incompatible; uses curated `.[termux]` subset with manual install path.
 
----
-
-## 4. Architecture
+## Architecture
 
 ### Runtime
 
@@ -133,9 +128,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 ```
 Runs cheaply on serverless (Modal, Daytona) when idle.
 
----
-
-## 5. Key Differentiators
+## Key Differentiators
 
 | Feature | Hermes Agent | Claude Code | OpenClaw |
 |---|---|---|---|
@@ -150,9 +143,7 @@ Runs cheaply on serverless (Modal, Daytona) when idle.
 
 **The defining differentiator:** The autonomous learning loop. No other agent framework auto-creates, auto-improves, and auto-retrieves procedural skills from its own execution history. Combined with vendor-agnostic model support and true server-resident operation, Hermes occupies a category distinct from session-based coding assistants.
 
----
-
-## 6. Ideal Use Cases
+## Ideal Use Cases
 
 - **Developers who context-switch frequently** — Hermes remembers project quirks, past solutions, and individual working style without re-briefing each session.
 - **Automation workflows** — scheduled reports, nightly backups, multi-step pipelines across messaging platforms.
@@ -163,9 +154,7 @@ Runs cheaply on serverless (Modal, Daytona) when idle.
 
 **Not ideal for:** teams needing compliance/audit trails, pure coding benchmark performance, Windows-native workflows, or zero-ops managed service.
 
----
-
-## 7. Community & Ecosystem
+## Community & Ecosystem
 
 ### Adoption
 
@@ -199,8 +188,6 @@ Built by the team behind the [Hermes model family](https://huggingface.co/NousRe
 ### Security
 
 Zero agent-specific CVEs to date (compared to competitor OpenClaw which disclosed 9 CVEs in 4 days in March 2026, including CVSS 9.9). Known risk area: credential exposure on host systems when running with broad filesystem access.
-
----
 
 ## Sources
 

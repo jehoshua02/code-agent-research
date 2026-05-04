@@ -8,7 +8,8 @@
 
 **Released:** November 18, 2025, announced alongside Gemini 3. Public preview download went live November 20, 2025. Current version: 1.23.2 (as of April 2026).
 
-**Pricing:**
+## Pricing
+
 - Free during public preview with "generous rate limits" (exact limits not documented)
 - AI Pro: $20/month
 - AI Ultra: $249.99/month
@@ -16,8 +17,6 @@
 - Credit-to-token conversion is not publicly documented — a recurring user complaint
 - In early 2026, quota refresh rates quietly degraded from ~5-hour cycles to weekly resets for some tiers, triggering significant community backlash
 - Google suspended accounts using Antigravity quotas with unauthorized third-party agent tools (e.g., OpenClaw, OpenCode)
-
----
 
 ## What It Does
 
@@ -69,8 +68,6 @@ No explicit whitelist — inherited from VS Code's extension ecosystem. Works on
 - 94% refactoring accuracy vs. 78% for Cursor 2.0 (source: index.dev, methodology unverified)
 - 40% faster codebase navigation on 100k+ line repos vs. Cursor 2.0
 
----
-
 ## What It Doesn't Do
 
 - **No Git Worktrees support** — explicitly missing as of early 2026
@@ -83,8 +80,6 @@ No explicit whitelist — inherited from VS Code's extension ecosystem. Works on
 - **No support for third-party agent tools** against Antigravity quotas — ToS violation; accounts have been suspended for this
 - **Stability** — as of early 2026: non-functional buttons, disappearing UI elements, broken syntax highlighting in some modes, significant battery drain from the embedded Chrome instance, input lag during agent processing
 - **Compliance-heavy verticals** — artifacts improve auditability but governance frameworks for HIPAA/SOC2/etc. remain underdeveloped
-
----
 
 ## Architecture
 
@@ -115,8 +110,6 @@ No explicit whitelist — inherited from VS Code's extension ecosystem. Works on
 
 **Security note:** A prompt injection vulnerability in the `find_by_name` tool (bypassing Strict Mode via insufficient input sanitization) was patched in April 2026.
 
----
-
 ## Key Differentiators
 
 **vs. Cursor:**
@@ -141,8 +134,6 @@ No explicit whitelist — inherited from VS Code's extension ecosystem. Works on
 - Only AI IDE with native multi-agent parallel orchestration
 - Free at point of use during preview (no other major IDE matched this)
 
----
-
 ## Ideal Use Cases
 
 **Best fit:**
@@ -159,8 +150,6 @@ No explicit whitelist — inherited from VS Code's extension ecosystem. Works on
 - Compliance-sensitive industries (healthcare, finance) without custom governance overlay
 - Teams requiring on-premises or private cloud inference
 - Workflows requiring third-party agent tool integrations (ToS risk)
-
----
 
 ## Community & Ecosystem
 
@@ -179,8 +168,6 @@ No explicit whitelist — inherited from VS Code's extension ecosystem. Works on
 **Forum:** Google AI Developers Forum hosts an active Antigravity subforum. Performance and quota complaints have been sustained since January 2026.
 
 **Antigravity Codes:** Community hub (antigravity.codes) aggregating 1,500+ MCP servers, 500+ rules/workflows, and agent skill collections usable across Antigravity, Cursor, and Windsurf.
-
----
 
 ## Sources
 

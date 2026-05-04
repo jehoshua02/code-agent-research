@@ -9,15 +9,15 @@
 - **Founded:** 2022 by Igor Ostrovsky (ex-Microsoft) and Guy Gur-Ari (ex-Google Research); executive team includes CEO Scott Dietzen (ex-CEO of Pure Storage) and Dion Almaer (ex-Google, Shopify)
 - **Launch:** Emerged from stealth April 24, 2024 with $252M raised (Series B); flagship extension first shipped late 2023 in private access
 - **Investors:** Eric Schmidt, Index Ventures, Sutter Hill Ventures, Lightspeed, Meritech Capital, Innovation Endeavors; near-unicorn at ~$977M post-money valuation
-- **Pricing:**
-  - **Indie:** $20/month — 40,000 credits/month, 1 user
-  - **Standard:** $60/month per developer — 130,000 credits/month, up to 20 users
-  - **Max:** $200/month per developer — 450,000 credits/month, up to 20 users
-  - **Enterprise:** Custom pricing — unlimited users, custom credits, CMEK, data residency, audit trails, SIEM, SSO/SCIM
-  - **Top-up:** $15 per 24,000 credits on all paid plans (expire 12 months after purchase)
-  - Credits pool at the team level. No AI training on paid plan data. No free tier.
 
----
+## Pricing
+
+- **Indie:** $20/month — 40,000 credits/month, 1 user
+- **Standard:** $60/month per developer — 130,000 credits/month, up to 20 users
+- **Max:** $200/month per developer — 450,000 credits/month, up to 20 users
+- **Enterprise:** Custom pricing — unlimited users, custom credits, CMEK, data residency, audit trails, SIEM, SSO/SCIM
+- **Top-up:** $15 per 24,000 credits on all paid plans (expire 12 months after purchase)
+- Credits pool at the team level. No AI training on paid plan data. No free tier.
 
 ## What It Does
 
@@ -41,8 +41,6 @@ No official language restriction stated. The Context Engine performs semantic in
 - Ranked #1 on SWE-Bench Pro Leaderboard (51.80% vs next-best 50.21%)
 - 70% win rate over GitHub Copilot in head-to-head blind study on the Elasticsearch repository; agents outperformed humans in code reuse (+18.2) and completeness (+14.8)
 
----
-
 ## What It Doesn't Do
 
 - **No programmatic SDK:** Unlike Claude Code's Agent SDK (Python/TypeScript), there is no API to build custom subagents or orchestrate Augment agents programmatically.
@@ -53,8 +51,6 @@ No official language restriction stated. The Context Engine performs semantic in
 - **No offline/local model support:** Fully cloud-dependent. No on-premise LLM option.
 - **Stability complaints:** User reports document crash-on-task, HTTP 400 errors on simple prompts, and hallucinated APIs — though severity varies by version.
 - **Memory limitations:** Context window for ongoing tasks is bounded; persistent state requires explicit "Augment memories," and agents can repeat mistakes across long sessions.
-
----
 
 ## Architecture
 
@@ -102,8 +98,6 @@ Augment does not expose its own proprietary model; it is a model-agnostic orches
 - Actively compresses context — reports like "4,456 sources → 682 relevant" for a single query
 - Exposed externally via MCP server (`auggie-context-mcp`)
 
----
-
 ## Key Differentiators
 
 1. **Enterprise-scale context:** Processes 500,000+ files, multi-repo, multi-service codebases. Competitors (Cursor: ~50K files, Copilot: single-repo window) fall short at this scale.
@@ -113,8 +107,6 @@ Augment does not expose its own proprietary model; it is a model-agnostic orches
 5. **Model-agnostic:** Single subscription unlocks Claude, GPT, Gemini, Kimi — user picks model per task. Intelligent routing for cost optimization.
 6. **SWE-Bench Pro #1:** Claims highest benchmark score for agentic coding as of 2026.
 7. **Enterprise security posture:** SOC 2, ISO 42001, CMEK, SIEM, data residency, SSO/SCIM on Enterprise tier; no AI training on customer data on any paid plan.
-
----
 
 ## Ideal Use Cases
 
@@ -128,8 +120,6 @@ Augment does not expose its own proprietary model; it is a model-agnostic orches
 
 Not ideal for: solo developers on small projects (credit cost model disadvantages low-volume users vs. flat-rate tools), Windows/Linux users who want the Intent workspace, or teams wanting a programmable agent SDK.
 
----
-
 ## Community & Ecosystem
 
 - **Closed-source product:** The core platform (Context Engine, IDE extensions, Intent, CLI) is proprietary.
@@ -140,3 +130,7 @@ Not ideal for: solo developers on small projects (credit cost model disadvantage
 - **No public API / agent SDK:** Extensibility is via MCP integrations only; no programmable surface for building on top of Augment agents.
 - **BYOA policy:** Supports external agents (Claude Code, Codex, OpenCode) running inside Intent, making Augment additive rather than exclusive.
 - **GitHub App:** Code review bot installs as a standard GitHub App.
+
+## Sources
+
+Sources were integrated during research but not individually tracked.

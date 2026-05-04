@@ -10,17 +10,17 @@
 - **Acquisition history:**
   - May 2025: OpenAI announced a ~$3B acquisition of Codeium/Windsurf; deal collapsed (Microsoft's contractual rights made it unworkable). Google separately licensed Windsurf technology.
   - December 2025: **Cognition AI** (makers of Devin) acquired Windsurf for ~$250M. Plans to merge Windsurf IDE capabilities with Devin for fully autonomous development workflows.
-- **Pricing (as of early 2026):**
-  - **Free** — $0/month; unlimited Tab autocomplete, limited Cascade credits, SWE-1 Lite access
-  - **Light** — credit-based, daily/weekly refresh; access to premium models
-  - **Pro** — $20/month; unlimited usage at API price, Tab, Previews, Deploys, all premium models, SWE-1.5
-  - **Max** — $200/month; highest usage limits, Devin Cloud background sessions, priority support
-  - **Teams** — $40/user/month; admin dashboard, analytics, RBAC, volume discounts
-  - **Enterprise** — custom pricing; hybrid deployment options, SCIM, account management
-  - Credit add-ons: $120 per 1,000 pooled credits (don't expire, persist across billing cycles)
-  - Credits consumed per Cascade message using premium models; base rate 1 credit/message, varies by model
 
----
+## Pricing
+
+- **Free** — $0/month; unlimited Tab autocomplete, limited Cascade credits, SWE-1 Lite access
+- **Light** — credit-based, daily/weekly refresh; access to premium models
+- **Pro** — $20/month; unlimited usage at API price, Tab, Previews, Deploys, all premium models, SWE-1.5
+- **Max** — $200/month; highest usage limits, Devin Cloud background sessions, priority support
+- **Teams** — $40/user/month; admin dashboard, analytics, RBAC, volume discounts
+- **Enterprise** — custom pricing; hybrid deployment options, SCIM, account management
+- Credit add-ons: $120 per 1,000 pooled credits (don't expire, persist across billing cycles)
+- Credits consumed per Cascade message using premium models; base rate 1 credit/message, varies by model
 
 ## What It Does
 
@@ -61,8 +61,6 @@ Windsurf provides plugins for **40+ editors**, including:
 
 Plugin functionality is more limited than the full Windsurf editor (primarily Tab autocomplete and some Cascade access, not full Flows/Codemaps).
 
----
-
 ## What It Doesn't Do
 
 - **No offline / air-gap mode** — all AI features require internet connectivity. Cloud-only for AI inference. Automatic disqualifier for strict air-gap compliance environments (though Enterprise offers hybrid deployment).
@@ -74,8 +72,6 @@ Plugin functionality is more limited than the full Windsurf editor (primarily Ta
 - **Codemaps limited to Pro+** — not available on Free tier.
 - **No background agent on Free/Pro** — Devin Cloud background sessions (truly autonomous background development) are Max-tier only.
 - **Not open source** — the editor and all SWE-1 models are proprietary.
-
----
 
 ## Architecture
 
@@ -116,8 +112,6 @@ SWE models are trained in-house with a proprietary data pipeline designed for th
 
 Enterprise tier: SOC 2, HIPAA, FedRAMP/DOD, ITAR compliance. RBAC and SCIM provisioning. Hybrid deployment options (not full air-gap).
 
----
-
 ## Key Differentiators
 
 1. **Agentic-first by design** — Cascade and Flows treat the AI as a peer that takes initiative, not a feature that responds to prompts. Codebase-level context is automatic, not manual.
@@ -129,8 +123,6 @@ Enterprise tier: SOC 2, HIPAA, FedRAMP/DOD, ITAR compliance. RBAC and SCIM provi
 7. **Free tier with real capability** — SWE-1 Lite and unlimited Tab autocomplete at $0; competitors' free tiers are more restrictive.
 8. **Deploys integration** — built-in Netlify deploy pipeline directly from Cascade; no external CI setup needed for simple web projects.
 9. **Post-Cognition roadmap** — Cognition plans to integrate Windsurf with Devin for fully autonomous background development, a direction no current competitor has shipping product for.
-
----
 
 ## Ideal Use Cases
 
@@ -147,9 +139,7 @@ Enterprise tier: SOC 2, HIPAA, FedRAMP/DOD, ITAR compliance. RBAC and SCIM provi
 - Teams requiring all tooling to be open source
 - Developers deeply invested in JetBrains remote SSH workflows
 
----
-
-## Community and Ecosystem
+## Community & Ecosystem
 
 ### Adoption (as of early 2026)
 
@@ -187,3 +177,7 @@ The Codeium/Windsurf plugin for VS Code and other editors was historically open 
 | Devin | Cognition | Proprietary | Fully autonomous cloud agent |
 
 As of December 2025, Windsurf and Devin share a parent (Cognition), making future integration likely.
+
+## Sources
+
+Sources were integrated during research but not individually tracked.

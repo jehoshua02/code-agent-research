@@ -9,7 +9,7 @@
 - **Released:** Research preview February 2025; General Availability (GA) May 2025 (alongside Claude 4 models)
 - **Source availability:** TypeScript source made public March 31, 2026 on GitHub at [anthropics/claude-code](https://github.com/anthropics/claude-code); proprietary license (Anthropic Commercial Terms of Service, not OSI open source)
 
-### Pricing Model
+## Pricing
 
 | Plan | Price | Claude Code Access | Token Window (5-hr rolling) |
 |---|---|---|---|
@@ -24,8 +24,6 @@
 **API pay-as-you-go (Sonnet 4.6):** $3/MTok input (≤200K), $15/MTok output (≤200K); 50% batch discount. Prompt cache reads: $0.30/MTok.
 
 Notable: In April 2026, Anthropic briefly removed Claude Code from the $20 Pro plan, then reversed within 24 hours. Pro access remains as of May 2026.
-
----
 
 ## What It Does
 
@@ -73,8 +71,6 @@ Claude Code runs through multiple surfaces (same underlying agentic loop everywh
 - GitHub Actions / CI-CD pipelines
 - iOS app (added October 2025)
 
----
-
 ## What It Doesn't Do
 
 - **No inline autocomplete:** Does not provide real-time keystroke-level completions like GitHub Copilot or Cursor's tab-complete. Operates on discrete tasks, not continuous typing assistance.
@@ -87,8 +83,6 @@ Claude Code runs through multiple surfaces (same underlying agentic loop everywh
 - **No audit of MCP servers:** Anthropic does not vet third-party MCP servers; users assume trust risk.
 - **Irreversible external actions:** Checkpoints cover file changes only; database writes, API calls, and deployments cannot be rolled back through Claude Code.
 - **Permission restoration on resume:** Session-scoped permission decisions are not restored on session resume by design — intentional but can surprise users.
-
----
 
 ## Architecture
 
@@ -145,8 +139,6 @@ Context window holds: conversation history, file contents, command outputs, CLAU
 
 Sessions stored as append-only JSONL under `~/.claude/projects/`. File snapshots (checkpoints) stored separately per session. Design prioritizes auditability over query power.
 
----
-
 ## Key Differentiators
 
 1. **Best-in-class benchmark performance:** Claude Opus 4.7 scores 87.6% on SWE-bench Verified (up from 80.8% for Opus 4.6); Claude Sonnet 4.6 at 79.6%. As of May 2026, top of verified leaderboard.
@@ -171,8 +163,6 @@ vs. GitHub Copilot: Claude Code wins on complex debugging, refactoring, and mult
 
 vs. OpenAI Codex CLI: Claude Code achieves 67% win rate in blind code quality evaluations; Codex CLI runs in network-disabled cloud containers for strong isolation.
 
----
-
 ## Ideal Use Cases
 
 Claude Code is the right tool when:
@@ -190,8 +180,6 @@ Less ideal when:
 - You need multi-provider model flexibility per task
 - Budget is constrained (heavy use runs $100–200+/month)
 - Large enterprise with existing Copilot rollout (enterprise seat switching cost is high)
-
----
 
 ## Community & Ecosystem
 
@@ -234,3 +222,7 @@ GitHub, Postgres, Slack, Supabase, Git, Filesystem, Fetch, Memory — plus commu
 ### Claude for Open Source
 
 Anthropic runs a program ([claude.com/contact-sales/claude-for-oss](https://claude.com/contact-sales/claude-for-oss)) offering Claude access to qualifying open-source projects.
+
+## Sources
+
+Sources were integrated during research but not individually tracked.
