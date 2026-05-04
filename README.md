@@ -23,7 +23,18 @@ docs/
     qwen-code/
     trae/
     windsurf/
-  comparison/             — Comparison guides and analysis
+  models/               — One folder per model family, each with a README.md
+    TEMPLATE.md         — Standard structure for model docs
+    claude/
+    deepseek/
+    gemini/
+    gpt/
+    grok/
+    hunyuan/
+    llama/
+    qwen-coder/
+    swe-1/
+  comparison/           — Comparison guides and analysis
     comparison-2026-05-03.md
 ```
 
@@ -46,6 +57,20 @@ docs/
 | [Qwen Code](docs/tools/qwen-code/) | CLI agent | Alibaba |
 | [Trae](docs/tools/trae/) | IDE (VS Code fork) | ByteDance |
 | [Windsurf](docs/tools/windsurf/) | IDE (VS Code fork) | Cognition AI |
+
+## Models Covered
+
+| Model Family | Maker | Open Weight | Self-Hostable |
+|---|---|---|---|
+| [Claude](docs/models/claude/) | Anthropic | No | No |
+| [DeepSeek](docs/models/deepseek/) | DeepSeek | Yes (MIT) | Yes |
+| [Gemini](docs/models/gemini/) | Google | No | No |
+| [GPT](docs/models/gpt/) | OpenAI | No | No |
+| [Grok](docs/models/grok/) | xAI | No | No |
+| [Hunyuan](docs/models/hunyuan/) | Tencent | Partial | Partial |
+| [Llama](docs/models/llama/) | Meta | Yes | Yes |
+| [Qwen Coder](docs/models/qwen-coder/) | Alibaba | Yes (Apache 2.0) | Yes |
+| [SWE-1](docs/models/swe-1/) | Windsurf/Codeium | No | No |
 
 ## Guides
 
