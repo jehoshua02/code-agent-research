@@ -23,7 +23,9 @@ docs/
     qwen-code/
     trae/
     windsurf/
-  comparison/             — Comparison guides and analysis
+  models/               — One folder per model family, each with a README.md
+    TEMPLATE.md         — Standard structure for model docs
+  comparison/           — Comparison guides and analysis
     comparison-2026-05-03.md
 ```
 
