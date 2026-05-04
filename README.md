@@ -50,3 +50,4 @@ docs/
 ## Guides
 
 - [Comparison Guide (May 3, 2026)](docs/comparison/comparison-2026-05-03.md) — Feature matrix, deep-dives, decision guide
+- [Decision Diagram](docs/comparison/decision-diagram.md) — Flowchart for choosing the right tool
