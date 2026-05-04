@@ -57,3 +57,7 @@ Every website has a main page. By convention, that main page is always named `in
 - You just made a real webpage.
 
 Next up: More tags — and how they work together.
+
+---
+
+[< Previous: Making Things in the Terminal](06-making-things-in-the-terminal.md) | [Next: Tags Are Like Wrappers >](08-tags-are-like-wrappers.md)

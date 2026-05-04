@@ -77,3 +77,7 @@ Try these in ChatGPT and see how the output changes:
 Same start. Different style. Totally different outputs.
 
 **Pick your favorite one and paste it somewhere. You'll use it again later.**
+
+---
+
+[< Previous: AI Is Not Magic (It's Math)](01-ai-is-not-magic.md) | [Next: Tokens: How AI Reads >](03-tokens-how-ai-reads.md)

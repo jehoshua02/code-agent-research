@@ -87,3 +87,7 @@ This is where AI is heading fast. Knowing how agents work — even at a high lev
 ## Key Takeaway
 
 Agents are AI that act, not just answer. They use tools, loop through steps, and complete goals without you doing each piece manually. Perplexity is a simple example. Much more powerful versions are already being used in real software.
+
+---
+
+[< Previous: When AI Gets It Wrong: Debugging AI Output](07-debugging-ai-output.md) | [Next: MCP and Tool Use: Giving AI Superpowers >](09-mcp-and-tool-use.md)

@@ -83,3 +83,7 @@ Ask ChatGPT these questions:
 - "Which is more similar to 'sad' — 'unhappy' or 'raincoat'?"
 
 **Look at how it explains the reasoning. Does it reference meaning, feeling, or context?**
+
+---
+
+[< Previous: What Is RAG? (Retrieval-Augmented Generation)](12-what-is-rag.md) | [Next: Review: Talking to AI Smarter >](14-review-talking-to-ai-smarter.md)

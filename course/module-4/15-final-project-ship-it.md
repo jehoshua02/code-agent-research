@@ -114,3 +114,7 @@ That's the full loop. Idea to shipped product. You did it.
 ## Key Takeaway
 
 Shipping is the final step that makes everything real. Get your app on a live URL, share it with someone, and collect your first real feedback. Done is better than perfect. Ship now, improve after.
+
+---
+
+[< Previous: Final Project: Iterate and Improve](14-final-project-iterate.md)

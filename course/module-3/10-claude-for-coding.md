@@ -54,3 +54,8 @@ If Claude doesn't know something, it usually says so instead of making something
 ## What's Next
 
 Now that you've used several AI tools, it's time to put them head to head. Same task, different tools. You'll see the differences for yourself.
+
+
+---
+
+[< Previous: Cursor: An Editor Built Around AI](09-cursor-ai-editor.md) | [Next: Comparing Tools: Same Task, Different Tools >](11-comparing-tools.md)

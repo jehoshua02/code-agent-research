@@ -67,3 +67,7 @@ You don't always need all three. But when your output is wrong or messy, check: 
 A prompt is a program. Treat it like one. Write it carefully, test it, and improve it when it breaks.
 
 Next lesson, you'll learn how changing the "Role" part alone can completely transform what the AI gives you.
+
+---
+
+[< Module 3](../module-3/15-push-your-app-to-github.md) | [Next: Role Prompting: Give the AI a Job >](02-role-prompting.md)

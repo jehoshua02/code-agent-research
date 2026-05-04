@@ -59,3 +59,8 @@ v0 generates the frontend — the visual part. It doesn't automatically make it 
 ## What's Next
 
 v0 is great for design. But what if you want AI woven into your entire coding experience — not just autocomplete or a chat window, but something deeper? That's Cursor.
+
+
+---
+
+[< Previous: Copilot in Action: Let It Code for You](07-copilot-in-action.md) | [Next: Cursor: An Editor Built Around AI >](09-cursor-ai-editor.md)

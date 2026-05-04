@@ -77,3 +77,7 @@ The goal isn't to always write short prompts. It's to cut the stuff that doesn't
 ## Key Takeaway
 
 When the AI gives you a bad response, your instinct might be to add more explanation. Often the real fix is to cut what's distracting it. One job per prompt.
+
+---
+
+[< Previous: Chain of Thought: Make AI Show Its Work](04-chain-of-thought.md) | [Next: Choosing the Right Model >](06-choosing-the-right-model.md)

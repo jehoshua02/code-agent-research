@@ -62,3 +62,7 @@ Take a look around. You'll see repositories (repos for short) — those are proj
 - GitHub is also used as a coding portfolio.
 
 Next up: Installing Git on your computer.
+
+---
+
+[< Previous: Your First Real Code (Python)](10-your-first-real-code-python.md) | [Next: Installing Git >](12-installing-git.md)

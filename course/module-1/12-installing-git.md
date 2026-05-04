@@ -76,3 +76,7 @@ It should print back your name.
 - Run `git config` to set your name and email — do this once.
 
 Next up: Making your first commit — saving a snapshot of your project.
+
+---
+
+[< Previous: What Is Git?](11-what-is-git.md) | [Next: Your First Commit >](13-your-first-commit.md)

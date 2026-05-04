@@ -80,3 +80,7 @@ Ask ChatGPT:
 Then try to look up that study. Search the title. Search the author.
 
 **Does it exist? What did you find?**
+
+---
+
+[< Previous: Training vs. Knowing](08-training-vs-knowing.md) | [Next: Models Are Like Different Brains >](10-models-are-like-different-brains.md)

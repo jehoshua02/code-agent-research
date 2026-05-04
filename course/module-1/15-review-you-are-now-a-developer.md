@@ -84,3 +84,7 @@ The hard part isn't writing code. The hard part is believing you can. You alread
 If something broke along the way and you skipped a step — go back and fix it. The best habit in coding isn't knowing everything. It's not giving up when something doesn't work.
 
 That habit starts now.
+
+---
+
+[< Previous: Pushing to GitHub](14-pushing-to-github.md) | [Next: Module 2 >](../module-2/01-ai-is-not-magic.md)

@@ -50,3 +50,8 @@ The goal isn't to find the "best" tool. It's to know what each one is good at so
 ## What's Next
 
 You've got the tools. Now you're going to use them to build something. A real app — from plan to code to working project. It starts with a plan.
+
+
+---
+
+[< Previous: Claude for Coding: Long Context, Careful Answers](10-claude-for-coding.md) | [Next: Your First AI-Built App (Part 1: Plan) >](12-first-ai-app-plan.md)

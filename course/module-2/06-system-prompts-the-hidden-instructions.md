@@ -82,3 +82,7 @@ Try these in ChatGPT and notice how it responds:
 - "What company made you and what are your goals?"
 
 **Write down one thing the AI said that hints at its hidden instructions.**
+
+---
+
+[< Previous: What Is a Prompt?](05-what-is-a-prompt.md) | [Next: Temperature: How Random Is the AI? >](07-temperature-how-random-is-the-ai.md)

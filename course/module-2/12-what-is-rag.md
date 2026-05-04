@@ -84,3 +84,7 @@ Look at the citations. Click at least two to verify they're real articles.
 Then ask the same thing on regular ChatGPT.
 
 **What was different about the two answers? Which one did you trust more and why?**
+
+---
+
+[< Previous: How AI Gets Better: Fine-Tuning](11-how-ai-gets-better-fine-tuning.md) | [Next: Embeddings: How AI Understands Meaning >](13-embeddings-how-ai-understands-meaning.md)

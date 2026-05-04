@@ -61,3 +61,8 @@ Think of it like autocorrect on your phone. Usually helpful. Sometimes hilarious
 ## What's Next
 
 Copilot works inside editors. But what if you want AI to design an entire UI — a real-looking interface — just from a description? That's next.
+
+
+---
+
+[< Previous: VS Code: The Editor Pros Use](06-vs-code-the-editor-pros-use.md) | [Next: v0 by Vercel: Describe a UI, Get a Website >](08-v0-by-vercel.md)

@@ -76,3 +76,8 @@ If it does those three things, it's done. Nice work.
 ## What's Next
 
 Now that your app works, you'll save it to GitHub — so it's permanent, shareable, and safe no matter what happens to your computer.
+
+
+---
+
+[< Previous: Your First AI-Built App (Part 2: Build)](13-first-ai-app-build.md) | [Next: Push Your App to GitHub >](15-push-your-app-to-github.md)

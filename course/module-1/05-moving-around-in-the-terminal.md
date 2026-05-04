@@ -84,3 +84,7 @@ You just navigated your computer using only your keyboard. That is what develope
 - Tab autocompletes. Up arrow repeats commands.
 
 Next up: Creating folders and files from the terminal — no mouse needed.
+
+---
+
+[< Previous: The Terminal: Your Secret Weapon](04-the-terminal-your-secret-weapon.md) | [Next: Making Things in the Terminal >](06-making-things-in-the-terminal.md)

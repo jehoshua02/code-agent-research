@@ -63,3 +63,8 @@ A clear idea makes every step after this faster and less frustrating.
 ## What's Next
 
 Now that you have a plan, you'll hand it to an AI and let it write the first version of your app.
+
+
+---
+
+[< Previous: Comparing Tools: Same Task, Different Tools](11-comparing-tools.md) | [Next: Your First AI-Built App (Part 2: Build) >](13-first-ai-app-build.md)

@@ -60,3 +60,8 @@ That's fine. The next lessons will teach you how to fix it.
 ## What's Next
 
 You'll learn Replit — the site you just used — in more detail. It's your home base for running code without installing anything.
+
+
+---
+
+[< Previous: The AI Coding Landscape](01-the-ai-coding-landscape.md) | [Next: Replit: Your Browser-Based Coding Home >](03-replit-browser-coding.md)

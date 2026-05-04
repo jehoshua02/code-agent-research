@@ -73,3 +73,7 @@ The skill isn't memorizing syntax. It's reading code and quickly figuring out wh
 ## Key Takeaway
 
 Don't ship code you don't understand. Use AI to explain it to you. One section at a time is enough. The goal isn't mastery — it's knowing enough to fix it when it breaks.
+
+---
+
+[< Previous: MCP and Tool Use: Giving AI Superpowers](09-mcp-and-tool-use.md) | [Next: Final Project Kickoff: Pick Your Idea >](11-final-project-kickoff.md)

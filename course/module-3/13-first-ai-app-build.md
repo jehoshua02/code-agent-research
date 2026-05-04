@@ -66,3 +66,8 @@ AI often defaults to showing off. You can always ask it to dial it back.
 ## What's Next
 
 You have a working (or almost working) app. The next step is to fix what's broken and add what's missing. That's called iteration — and it's how all real software gets built.
+
+
+---
+
+[< Previous: Your First AI-Built App (Part 1: Plan)](12-first-ai-app-plan.md) | [Next: Your First AI-Built App (Part 3: Fix and Polish) >](14-first-ai-app-fix-and-polish.md)

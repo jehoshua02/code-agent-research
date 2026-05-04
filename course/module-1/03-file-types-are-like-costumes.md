@@ -63,3 +63,7 @@ Always use the right extension for the right type of file.
 - Same content, different extension = treated completely differently.
 
 Next up: How to control your computer without ever touching your mouse.
+
+---
+
+[< Previous: What Is Code?](02-what-is-code.md) | [Next: The Terminal: Your Secret Weapon >](04-the-terminal-your-secret-weapon.md)

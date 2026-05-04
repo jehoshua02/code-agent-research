@@ -78,3 +78,7 @@ The whole thing is four lessons. You can build something real in four lessons.
 ## Key Takeaway
 
 Pick an idea that solves a real problem for real people — even if those people are just you and your friends. Write it down. That's your final project.
+
+---
+
+[< Previous: Reading Code You Didn't Write](10-reading-code-you-didnt-write.md) | [Next: Final Project: Spec It Out >](12-final-project-spec.md)

@@ -80,3 +80,7 @@ Future you will be very grateful when you can read the history and understand wh
 - Write clear commit messages — they're notes to yourself.
 
 Next up: Sending your project to GitHub.
+
+---
+
+[< Previous: Installing Git](12-installing-git.md) | [Next: Pushing to GitHub >](14-pushing-to-github.md)

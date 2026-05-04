@@ -51,3 +51,8 @@ Once approved, Copilot will start working automatically. The next lesson shows y
 ## What's Next
 
 You'll use VS Code for real now — and explore what it actually looks like when Copilot starts suggesting code.
+
+
+---
+
+[< Previous: Asking AI to Fix Your Errors](04-asking-ai-to-fix-errors.md) | [Next: VS Code: The Editor Pros Use >](06-vs-code-the-editor-pros-use.md)

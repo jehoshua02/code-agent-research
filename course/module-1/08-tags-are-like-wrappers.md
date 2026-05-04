@@ -76,3 +76,7 @@ Save, refresh. "Alex" should appear bold. Everything else in that line should be
 - Save the file and refresh the browser to see changes.
 
 Next up: Variables — the most important idea in all of programming.
+
+---
+
+[< Previous: Your First HTML Page](07-your-first-html-page.md) | [Next: What Is a Variable? >](09-what-is-a-variable.md)

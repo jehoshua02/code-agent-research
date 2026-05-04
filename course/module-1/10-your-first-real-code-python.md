@@ -87,3 +87,7 @@ That's the same idea from Lesson 1. Computers are dumb. But now you know how to 
 - You can run Python in the browser at python.org/shell.
 
 Next up: What is Git, and why do developers care so much about it?
+
+---
+
+[< Previous: What Is a Variable?](09-what-is-a-variable.md) | [Next: What Is Git? >](11-what-is-git.md)

@@ -80,3 +80,7 @@ When naming files and folders in code projects:
 - No spaces in file or folder names for code projects.
 
 You now have a project folder (`myproject`) with a file (`index.html`) inside it. In the next lesson, you'll put something in that file.
+
+---
+
+[< Previous: Moving Around in the Terminal](05-moving-around-in-the-terminal.md) | [Next: Your First HTML Page >](07-your-first-html-page.md)

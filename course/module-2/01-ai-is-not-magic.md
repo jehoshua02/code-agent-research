@@ -79,3 +79,7 @@ Each time, the AI is predicting — not remembering, not looking it up, not thin
 Just predicting.
 
 **Write down one thing that surprised you about the outputs.**
+
+---
+
+[< Module 1](../module-1/15-review-you-are-now-a-developer.md) | [Next: What Is a Language Model? >](02-what-is-a-language-model.md)

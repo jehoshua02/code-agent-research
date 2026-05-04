@@ -82,3 +82,7 @@ Ask the same question to two different AI tools:
 Use ChatGPT and Claude (claude.ai — free to use).
 
 **Compare: Which one was clearer? Which one was shorter? Which one felt more like talking to a person?**
+
+---
+
+[< Previous: Hallucinations: When AI Makes Stuff Up](09-hallucinations-when-ai-makes-stuff-up.md) | [Next: How AI Gets Better: Fine-Tuning >](11-how-ai-gets-better-fine-tuning.md)

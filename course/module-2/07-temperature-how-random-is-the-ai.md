@@ -79,3 +79,7 @@ In ChatGPT, ask the same question five times in a row in the same chat:
 Keep clicking send without changing anything.
 
 **How different are the five answers? Write down the most interesting one.**
+
+---
+
+[< Previous: System Prompts: The Hidden Instructions](06-system-prompts-the-hidden-instructions.md) | [Next: Training vs. Knowing >](08-training-vs-knowing.md)

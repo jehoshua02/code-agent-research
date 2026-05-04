@@ -78,3 +78,7 @@ When you build something and realize a screen should work differently, update th
 ## Key Takeaway
 
 Write a one-page spec before building. List your screens and what happens when you click things. Write what the app does NOT do. This document becomes your first AI prompt — and your guard against building forever without finishing.
+
+---
+
+[< Previous: Final Project Kickoff: Pick Your Idea](11-final-project-kickoff.md) | [Next: Final Project: Build with AI >](13-final-project-build.md)

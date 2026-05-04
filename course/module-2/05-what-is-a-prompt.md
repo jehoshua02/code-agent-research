@@ -82,3 +82,7 @@ Pick any topic you like. Ask ChatGPT about it in two ways:
 2. A detailed prompt with instructions, context, and a format request.
 
 **Compare the two answers. Which one was actually useful? What made the difference?**
+
+---
+
+[< Previous: Context Window: AI's Working Memory](04-context-window-ais-working-memory.md) | [Next: System Prompts: The Hidden Instructions >](06-system-prompts-the-hidden-instructions.md)

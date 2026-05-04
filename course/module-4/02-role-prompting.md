@@ -67,3 +67,7 @@ It's like choosing a character in a video game. Same world, but different stats,
 The role you give the AI shapes everything. When output feels off — too complicated, too basic, wrong tone — try changing the role first.
 
 It's the fastest way to fix a bad response without rewriting the whole prompt.
+
+---
+
+[< Previous: Prompts Are Programs](01-prompts-are-programs.md) | [Next: Few-Shot Prompting: Show, Don't Just Tell >](03-few-shot-prompting.md)

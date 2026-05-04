@@ -74,3 +74,7 @@ Variable names can't have spaces. If you want two words, connect them:
 - Variable names can't have spaces.
 
 Next up: Time to write real code — in Python.
+
+---
+
+[< Previous: Tags Are Like Wrappers](08-tags-are-like-wrappers.md) | [Next: Your First Real Code (Python) >](10-your-first-real-code-python.md)

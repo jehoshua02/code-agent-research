@@ -86,3 +86,7 @@ It doesn't mean it's perfect. It means it exists and works.
 ## Key Takeaway
 
 Feed your spec to the AI, get a first version running, then fix it layer by layer. Your goal today is a working app — not a perfect one. It will be rough. Ship rough.
+
+---
+
+[< Previous: Final Project: Spec It Out](12-final-project-spec.md) | [Next: Final Project: Iterate and Improve >](14-final-project-iterate.md)

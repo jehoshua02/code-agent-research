@@ -79,3 +79,7 @@ Keep chatting for 10+ messages about other stuff.
 Then ask: "What do you know about me?"
 
 **Did it remember all three? Write down what it got right and wrong.**
+
+---
+
+[< Previous: Tokens: How AI Reads](03-tokens-how-ai-reads.md) | [Next: What Is a Prompt? >](05-what-is-a-prompt.md)

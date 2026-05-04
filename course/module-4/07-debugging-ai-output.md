@@ -77,3 +77,7 @@ Specific error + code + question = fast fix.
 ## Key Takeaway
 
 Never trust AI code without running it. Errors are normal. Your job is to run, report, and iterate — not to find AI that never makes mistakes.
+
+---
+
+[< Previous: Choosing the Right Model](06-choosing-the-right-model.md) | [Next: Agents: AI That Takes Actions >](08-agents.md)

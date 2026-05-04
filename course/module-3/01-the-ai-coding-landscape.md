@@ -41,3 +41,8 @@ You don't need to click on any of them. Just skim and collect names.
 ## What's Next
 
 In the next lesson, you'll use one of these tools right now — no setup, no install. Just a browser and a question.
+
+
+---
+
+[< Module 2](../module-2/14-review-talking-to-ai-smarter.md) | [Next: Chat-Based Coding: Using ChatGPT to Write Code >](02-chat-based-coding.md)

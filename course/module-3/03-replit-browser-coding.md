@@ -53,3 +53,8 @@ Replit is great for learning and small projects. For bigger, real-world apps, mo
 ## What's Next
 
 Code breaks. It happens to everyone. In the next lesson, you'll learn how to use AI to fix errors — which is honestly one of the most useful skills in this entire module.
+
+
+---
+
+[< Previous: Chat-Based Coding: Using ChatGPT to Write Code](02-chat-based-coding.md) | [Next: Asking AI to Fix Your Errors >](04-asking-ai-to-fix-errors.md)

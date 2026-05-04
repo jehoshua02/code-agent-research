@@ -95,3 +95,7 @@ That's good enough to ship. Perfect is for later.
 ## Key Takeaway
 
 Iteration is not optional — it's the job. Use your app, find 5 problems, fix 3 of them using well-crafted prompts, and document what worked. Real development is this loop, repeated until it's good enough.
+
+---
+
+[< Previous: Final Project: Build with AI](13-final-project-build.md) | [Next: Final Project: Ship It >](15-final-project-ship-it.md)

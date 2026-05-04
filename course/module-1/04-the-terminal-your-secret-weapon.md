@@ -60,3 +60,7 @@ The commands that can actually do damage are obvious when you get to them, and w
 - Most beginner commands are completely safe.
 
 Next up: How to move around inside the terminal.
+
+---
+
+[< Previous: File Types Are Like Costumes](03-file-types-are-like-costumes.md) | [Next: Moving Around in the Terminal >](05-moving-around-in-the-terminal.md)

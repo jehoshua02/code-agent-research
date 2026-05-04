@@ -58,3 +58,7 @@ In the next lesson, you'll see what happens when you change that extension to so
 - The file extension says what kind of code (or content) is inside.
 
 Next up: What happens when you change a file's extension?
+
+---
+
+[< Previous: Computers Are Dumb (On Purpose)](01-computers-are-dumb.md) | [Next: File Types Are Like Costumes >](03-file-types-are-like-costumes.md)

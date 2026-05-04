@@ -57,3 +57,7 @@ That is a computer doing its job.
 - Every bug is the programmer giving the wrong instructions.
 
 Next up: What are those instructions actually made of?
+
+---
+
+[Next: What Is Code? >](02-what-is-code.md)

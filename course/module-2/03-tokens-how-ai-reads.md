@@ -76,3 +76,7 @@ Go to **platform.openai.com/tokenizer** and test these:
 - A few emojis
 
 **Count how many tokens your full name takes. Write it down.**
+
+---
+
+[< Previous: What Is a Language Model?](02-what-is-a-language-model.md) | [Next: Context Window: AI's Working Memory >](04-context-window-ais-working-memory.md)

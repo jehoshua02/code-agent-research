@@ -81,3 +81,7 @@ Then if you have Copilot access, try the same thing there.
 If you don't have Copilot, ask ChatGPT: "How does GitHub Copilot differ from you? Why is it better at code?"
 
 **Write down the biggest difference you noticed (or what ChatGPT said about it).**
+
+---
+
+[< Previous: Models Are Like Different Brains](10-models-are-like-different-brains.md) | [Next: What Is RAG? (Retrieval-Augmented Generation) >](12-what-is-rag.md)

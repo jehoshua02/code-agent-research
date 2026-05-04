@@ -72,3 +72,7 @@ Start with two. Add more only if the output is still off.
 ## Key Takeaway
 
 When you can't describe what you want, show it. Two examples beat two paragraphs of instructions almost every time.
+
+---
+
+[< Previous: Role Prompting: Give the AI a Job](02-role-prompting.md) | [Next: Chain of Thought: Make AI Show Its Work >](04-chain-of-thought.md)

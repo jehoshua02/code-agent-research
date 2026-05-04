@@ -80,3 +80,8 @@ Keep going. Most bugs get solved in 2-3 rounds.
 ## What's Next
 
 So far you've been chatting with AI in a browser. Next, you'll set up a tool that brings AI right into your code editor — so it can help you as you type.
+
+
+---
+
+[< Previous: Replit: Your Browser-Based Coding Home](03-replit-browser-coding.md) | [Next: GitHub Copilot: AI That Lives in Your Editor >](05-github-copilot-setup.md)

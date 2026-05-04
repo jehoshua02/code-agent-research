@@ -63,3 +63,7 @@ Click on it. GitHub shows you the contents. Your code is on the internet.
 - Your code is now backed up and shareable.
 
 Next up: The final lesson — you're already a developer.
+
+---
+
+[< Previous: Your First Commit](13-your-first-commit.md) | [Next: Review: You Are Now a Developer >](15-review-you-are-now-a-developer.md)

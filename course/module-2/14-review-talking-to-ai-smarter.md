@@ -73,3 +73,7 @@ You'll write code, use APIs, and create tools that actually do stuff.
 Everything you learned here is the foundation. You'll use it constantly.
 
 See you in Module 3.
+
+---
+
+[< Previous: Embeddings: How AI Understands Meaning](13-embeddings-how-ai-understands-meaning.md) | [Next: Module 3 >](../module-3/01-the-ai-coding-landscape.md)

@@ -66,3 +66,7 @@ Most of your tasks are screwdriver tasks. Don't reach for the power saw out of h
 There's no single "best" model. There's the right model for the job. Match the size of the tool to the size of the task.
 
 As you build more, this becomes instinct. For now, start by noticing: am I using a semi-truck when I need a bike?
+
+---
+
+[< Previous: Context Management: What to Include and What to Cut](05-context-management.md) | [Next: When AI Gets It Wrong: Debugging AI Output >](07-debugging-ai-output.md)

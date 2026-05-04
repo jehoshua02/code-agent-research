@@ -67,3 +67,7 @@ Ask ChatGPT these questions and note what happens:
 - "What happened in the news today?"
 
 **Did it answer, refuse, or guess? What clues did it give that it might not actually know?**
+
+---
+
+[< Previous: Temperature: How Random Is the AI?](07-temperature-how-random-is-the-ai.md) | [Next: Hallucinations: When AI Makes Stuff Up >](09-hallucinations-when-ai-makes-stuff-up.md)

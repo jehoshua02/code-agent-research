@@ -73,3 +73,7 @@ Tool use opens the door. MCP is the standardized doorknob that everyone's starti
 ## Key Takeaway
 
 AI alone is limited to what it knows. Connected to tools, it can act on the world — read files, call APIs, update databases. MCP is the standard making this easier to build. The more tools an AI agent has, the more it can actually do.
+
+---
+
+[< Previous: Agents: AI That Takes Actions](08-agents.md) | [Next: Reading Code You Didn't Write >](10-reading-code-you-didnt-write.md)

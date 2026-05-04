@@ -65,3 +65,8 @@ Try both and see what feels right.
 ## What's Next
 
 You've used ChatGPT a lot in this module. But there's another AI that handles big chunks of code especially well — Claude. You'll use it next to analyze an entire file at once.
+
+
+---
+
+[< Previous: v0 by Vercel: Describe a UI, Get a Website](08-v0-by-vercel.md) | [Next: Claude for Coding: Long Context, Careful Answers >](10-claude-for-coding.md)

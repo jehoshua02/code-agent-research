@@ -85,3 +85,8 @@ Look at what you just did across this module:
 - Pushed it to GitHub
 
 That's not beginner stuff. That's how actual developers work today. You're doing it already.
+
+
+---
+
+[< Previous: Your First AI-Built App (Part 3: Fix and Polish)](14-first-ai-app-fix-and-polish.md) | [Next: Module 4 >](../module-4/01-prompts-are-programs.md)

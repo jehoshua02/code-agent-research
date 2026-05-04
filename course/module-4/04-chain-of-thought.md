@@ -73,3 +73,7 @@ These all work:
 ## Key Takeaway
 
 When accuracy matters, make the AI show its work. One short phrase can cut errors dramatically on anything involving logic, math, or multi-step reasoning.
+
+---
+
+[< Previous: Few-Shot Prompting: Show, Don't Just Tell](03-few-shot-prompting.md) | [Next: Context Management: What to Include and What to Cut >](05-context-management.md)

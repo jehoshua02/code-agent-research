@@ -52,3 +52,8 @@ You don't need to memorize these. You'll learn them naturally as you use them.
 ## What's Next
 
 Now that VS Code is open and your project is loaded, you'll watch Copilot write code for you in real time.
+
+
+---
+
+[< Previous: GitHub Copilot: AI That Lives in Your Editor](05-github-copilot-setup.md) | [Next: Copilot in Action: Let It Code for You >](07-copilot-in-action.md)
