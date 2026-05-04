@@ -4,7 +4,26 @@
 
 Comprehensive beginner course (target: 13-year-old, short attention span) covering code basics, LLMs, and AI coding tools in 2-5 minute micro-lessons.
 
+## Priority: 1
+
+- Value: 8/10 — High impact, unique content bridging AI tools research to education. Shared audience.
+- Momentum: 1/10 — Brand new work.
+- Effort: 7/10 — ~50 lessons to draft, each needs careful simplification.
+- Risk: 3/10 — Low stakes, markdown docs, easily revised.
+
+## Timeline
+
+- Captured: 2026-05-03
+- Refined: 2026-05-03
+- Started:
+- Verified:
+- Done:
+
 ## Details
+
+Target audience: 13-year-old, no code exposure, just YouTube and games. Assume no prior knowledge.
+
+Personal project, shared with specific audience. Markdown docs only. Claude drafts all content.
 
 4 modules, ~10-15 lessons each:
 
@@ -19,3 +38,7 @@ Design principles:
 - Teach concepts and categories, not all 15 tools
 - No walls of text
 - 2-5 minutes per lesson
+
+## Verification
+
+All lessons drafted, reviewed for reading level and completeness.
