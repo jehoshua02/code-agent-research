@@ -8,13 +8,13 @@
 - **Maker:** Anomaly Co (Jay V and Frank Wang, co-founders; also Dax Raad and Adam Elmore). Previously built SST (Serverless Stack), a Y Combinator–backed open-source cloud framework.
 - **Initial release:** June 19, 2025
 - **Repository:** [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode) — 154K+ stars, 17.8K+ forks, 784+ releases as of May 2026
-- **Pricing:**
-  - **Free (BYOK):** Use your own API keys for any supported provider. No sign-up required.
-  - **Free (subscriptions):** Authenticate with existing GitHub Copilot or ChatGPT Plus/Pro accounts.
-  - **OpenCode Zen (paid):** Hosted, curated model offering. Team-tested and benchmarked models. Pricing not publicly listed; subscription-based. This is the primary revenue source.
-  - **Self-hostable:** Fully open source (MIT license). Run entirely on your own infrastructure.
 
----
+## Pricing
+
+- **Free (BYOK):** Use your own API keys for any supported provider. No sign-up required.
+- **Free (subscriptions):** Authenticate with existing GitHub Copilot or ChatGPT Plus/Pro accounts.
+- **OpenCode Zen (paid):** Hosted, curated model offering. Team-tested and benchmarked models. Pricing not publicly listed; subscription-based. This is the primary revenue source.
+- **Self-hostable:** Fully open source (MIT license). Run entirely on your own infrastructure.
 
 ## What It Does
 
@@ -41,8 +41,6 @@
 
 Any language with an LSP server is first-class. Explicitly supported: TypeScript, JavaScript, Python, Go, Rust, Java, C#, Kotlin. The AI itself is language-agnostic beyond LSP availability.
 
----
-
 ## What It Doesn't Do
 
 - **No inline autocomplete:** OpenCode operates at the task level, not keystroke-by-keystroke. It does not provide real-time inline suggestions like Copilot or Cursor.
@@ -53,8 +51,6 @@ Any language with an LSP server is first-class. Explicitly supported: TypeScript
 - **Documentation lag:** Docs are still catching up with the rapid release cadence. Some behaviors require reading source or GitHub issues.
 - **API cost exposure:** Heavy BYOK usage can exceed the cost of a flat-rate subscription (e.g., Copilot). No built-in spend caps per session.
 - **No built-in code review UI:** No diff visualization, approval flows, or PR review interface.
-
----
 
 ## Architecture
 
@@ -121,8 +117,6 @@ Custom agents defined via markdown files in `.opencode/agents/` or `~/.config/op
 - MCP tools are first-class: available to agents alongside built-in tools, configurable per-agent with glob patterns.
 - Built-in examples: Sentry (error tracking), Context7 (docs search), Grep by Vercel.
 
----
-
 ## Key Differentiators
 
 1. **Provider-agnostic by design.** 75+ LLM providers. The team's explicit stance: "OpenCode is not an AI product. It's a product designed to use AI." No lock-in to any model.
@@ -135,8 +129,6 @@ Custom agents defined via markdown files in `.opencode/agents/` or `~/.config/op
 8. **Zero-friction onboarding.** No sign-up, no credit card required to start. Works immediately with an API key.
 9. **Client/server architecture.** Headless server mode enables remote control — including from mobile — not common in CLI tools.
 
----
-
 ## Ideal Use Cases
 
 - **Terminal-native developers** who live in the shell and don't want to switch to a GUI IDE for AI assistance.
@@ -148,8 +140,6 @@ Custom agents defined via markdown files in `.opencode/agents/` or `~/.config/op
 - **Test generation and documentation** — task-level agent can match existing patterns and cover large surface areas.
 - **Teams using Cloudflare, SST, or similar infrastructure** — first-class integrations and community tooling in these ecosystems.
 - **Organizations wanting to self-host** — MIT license, full source available, no dependency on OpenCode servers if using BYOK.
-
----
 
 ## Community & Ecosystem
 
@@ -166,3 +156,7 @@ Custom agents defined via markdown files in `.opencode/agents/` or `~/.config/op
 - **Notable users:** Cloudflare (confirmed enterprise adoption).
 - **Legal/controversy:** An "OpenCode vs Anthropic" debate emerged in 2026 over open vs. closed AI coding tools, reflecting the project's growing influence in the ecosystem.
 - **Comparison community:** Strong HackerNews presence; frequently benchmarked against Claude Code, Aider, Cursor, and Goose.
+
+## Sources
+
+Sources were integrated during research but not individually tracked.

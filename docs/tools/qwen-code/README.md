@@ -9,15 +9,15 @@
 - **Initial release:** July 2025 (alongside Qwen3-Coder model launch)
 - **License:** Apache 2.0 (fully open source)
 - **GitHub:** [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) — 24,100+ stars as of May 2026
-- **Pricing:**
-  - The CLI itself is free and open source
-  - **Alibaba Cloud Coding Plan** — primary paid API path; no public per-token rates listed, managed through Model Studio / DashScope
-  - **Free OAuth tier** — discontinued April 15, 2026
-  - **Self-hosted** — run local models via Ollama or vLLM at zero API cost
-  - **Third-party APIs** — OpenRouter, Fireworks AI, or any OpenAI-compatible endpoint; cost depends on provider
-  - **OpenRouter / Fireworks AI** — pay-as-you-go, competitive rates for Qwen3-Coder-480B
 
----
+## Pricing
+
+- The CLI itself is free and open source
+- **Alibaba Cloud Coding Plan** — primary paid API path; no public per-token rates listed, managed through Model Studio / DashScope
+- **Free OAuth tier** — discontinued April 15, 2026
+- **Self-hosted** — run local models via Ollama or vLLM at zero API cost
+- **Third-party APIs** — OpenRouter, Fireworks AI, or any OpenAI-compatible endpoint; cost depends on provider
+- **OpenRouter / Fireworks AI** — pay-as-you-go, competitive rates for Qwen3-Coder-480B
 
 ## What It Does
 
@@ -46,8 +46,6 @@ Qwen2.5-Coder-32B scores 65.9 on McEval across **40+ programming languages**, wi
 - **Headless / non-interactive mode** — scriptable, CI-pipeline-friendly (disabled automatically when `CI_*` env vars are detected)
 - **Skills / SubAgents** — built-in composable agentic workflows
 
----
-
 ## What It Doesn't Do
 
 - **No production-critical security implementation** — outputs require human review; the Qwen team explicitly warns against trusting generated security code without audit
@@ -61,8 +59,6 @@ Qwen2.5-Coder-32B scores 65.9 on McEval across **40+ programming languages**, wi
 - **Political content censorship** — Qwen models refuse to discuss historical events or figures considered sensitive by the Chinese government; Taiwan governance questions are blocked
 - **Regional API restrictions** — DashScope API unavailable in some regions (e.g., India) through official channels without workarounds
 - **Rate limits** — free-tier users have hit aggressive limits; early versions had rate-limit regressions between patch releases
-
----
 
 ## Architecture
 
@@ -107,8 +103,6 @@ Training details (Qwen3-Coder-480B): 7.5T tokens, 70% code-focused, synthetic da
 - Ollama (local)
 - vLLM (local)
 
----
-
 ## Key Differentiators
 
 1. **Open-source model + open-source CLI** — both the model weights and the agentic tool are Apache 2.0. No vendor lock-in at either layer.
@@ -119,9 +113,7 @@ Training details (Qwen3-Coder-480B): 7.5T tokens, 70% code-focused, synthetic da
 6. **Model family breadth** — 0.5B to 480B parameter range; deploy the smallest viable model for the task and cost profile.
 7. **Tongyi Lingma integration** — Alibaba's enterprise IDE assistant (generated 3B+ lines of code since June 2024) uses the same underlying model family.
 
----
-
-## Benchmark Summary
+**Benchmark comparison (Qwen3-Coder-480B vs Claude Sonnet 4):**
 
 | Benchmark | Qwen3-Coder-480B | Claude Sonnet 4 |
 |---|---|---|
@@ -133,8 +125,6 @@ Training details (Qwen3-Coder-480B): 7.5T tokens, 70% code-focused, synthetic da
 | Aider (code repair) | 73.7 (32B) | — |
 
 Qwen3-Coder-Next (3B active): >70% SWE-bench Verified, 44.3% SWE-bench Pro — competitive with models 10–20x larger.
-
----
 
 ## Ideal Use Cases
 
@@ -151,8 +141,6 @@ Qwen3-Coder-Next (3B active): >70% SWE-bench Verified, 44.3% SWE-bench Pro — c
 - Projects requiring guaranteed algorithm correctness without human review
 - Users in regions with DashScope API restrictions who don't want to use third-party providers
 
----
-
 ## Community & Ecosystem
 
 - **GitHub stars:** 24,100+ (QwenLM/qwen-code) as of May 2026; 420+ releases
@@ -167,8 +155,6 @@ Qwen3-Coder-Next (3B active): >70% SWE-bench Verified, 44.3% SWE-bench Pro — c
 - **Third-party availability:** Deployable via Together AI, OpenRouter, Fireworks AI, Ollama, vLLM
 - **Forks and mirrors:** Active fork ecosystem; `kevinli1124/qwen-code` and others track upstream
 - **Enterprise:** Alibaba Cloud Coding Plan provides SLA-backed API access; Together AI offers SOC 2-compliant North American hosting with 99.9% uptime SLA and batch API support
-
----
 
 ## Sources
 

@@ -7,13 +7,13 @@
 **Released:** January 20, 2025 (international); March 3, 2025 (Chinese domestic version).
 **Name meaning:** "The Real AI Engineer."
 
+## Pricing
+
 **Pricing (international):**
 - Free tier: limited completions per month, access to Claude 3.5 Sonnet and GPT-4o
 - Pro: $3/month first month, then $10/month or $90/year ($7.50/month)
 - Pro includes: 600 fast-queue requests + unlimited standard-queue requests, Claude 4, Gemini 2.5 Pro
 - No enterprise pricing publicly listed as of mid-2025
-
----
 
 ## What It Does
 
@@ -46,8 +46,6 @@ Vue, Python, JavaScript, HTML, Java, TypeScript. Specializes in front-end web an
 - `.rules` configuration files for persistent agent behavior constraints (added in v1.3.0)
 - WSL and SSH remote development (Debian/Ubuntu documented)
 
----
-
 ## What It Doesn't Do
 
 - **No dedicated code review or bug-finding mode** — no structured review workflow
@@ -59,7 +57,17 @@ Vue, Python, JavaScript, HTML, Java, TypeScript. Specializes in front-end web an
 - **Limited model selection** (free tier: two models only)
 - **No enterprise pricing or SLAs** published
 
----
+**Privacy & Security concerns** — this warrants explicit coverage given documented findings:
+
+- **Telemetry persists after opt-out:** Disabling telemetry in settings does not stop data transmission. In some analyses, opting out *increased* transmission frequency, suggesting the toggle is cosmetic.
+- **Data collected:** Hardware specs, OS/architecture, usage patterns, persistent device identifiers, project and file path information, mouse/keyboard activity, JWT tokens, complete file contents during editing sessions.
+- **Data retention:** Personal data retained 5 years after account closure per privacy policy.
+- **Model training:** Terms of service permit using input content to train models and improve services.
+- **No local mode:** No option to run fully offline or route only to self-hosted models.
+- **ByteDance ownership:** Subject to Chinese data laws. Relevant for code under NDA, government/healthcare, or proprietary algorithms.
+- **Community suppression:** Reported banning/muting of users raising privacy concerns on official channels.
+
+**Practical guidance:** Do not use Trae for client code, proprietary algorithms, government/regulated-industry projects, or anything under NDA without legal review.
 
 ## Architecture
 
@@ -75,8 +83,6 @@ Vue, Python, JavaScript, HTML, Java, TypeScript. Specializes in front-end web an
 
 **Telemetry infrastructure:** Connections to multiple ByteDance domains including `mon-va.byteoversea.com` (telemetry), `maliva-mcs.byteoversea.com` (config/heartbeat), `api.trae.ai`, `api-sg-central.trae.ai`, `bytegate-sg.byteintlapi.com`. Data sent every ~30 seconds including during idle. Uses binary MessagePack format alongside JSON. Persistent device ID via SHA-256 hardware hash survives reinstallation.
 
----
-
 ## Key Differentiators
 
 1. **SOLO mode:** Among the highest autonomous task completion rates in independent tests (75.2% on real-world tasks). Competes directly with Devin/Claude Code style agents.
@@ -85,8 +91,6 @@ Vue, Python, JavaScript, HTML, Java, TypeScript. Specializes in front-end web an
 4. **Multimodal input:** Image and video → code workflows (e.g., Figma-to-code, video context) are built-in, not third-party.
 5. **Chinese language support:** Native Mandarin UI and models (Doubao, DeepSeek) in the domestic version. Most competitors are English-first.
 6. **Resource efficiency:** Lightest RAM footprint among major AI IDEs at 1.5 GB baseline.
-
----
 
 ## Ideal Use Cases
 
@@ -100,10 +104,8 @@ Vue, Python, JavaScript, HTML, Java, TypeScript. Specializes in front-end web an
 
 **Not ideal for:**
 - Large monolithic codebases requiring deep cross-file comprehension
-- Organizations with strict data sovereignty or NDA requirements (see privacy concerns)
+- Organizations with strict data sovereignty or NDA requirements (see privacy concerns above)
 - Teams needing enterprise SLAs, compliance documentation, or SOC 2
-
----
 
 ## Community & Ecosystem
 
@@ -120,24 +122,6 @@ Vue, Python, JavaScript, HTML, Java, TypeScript. Specializes in front-end web an
 **Extension ecosystem:** Inherits VS Code's extension marketplace. 11,000+ MCP servers supported. `.rules` files for agent configuration (v1.3.0+).
 
 **Community channels:** Discord (official). Note: users reporting privacy concerns have been muted on Discord and the word "track" was added to an automated blacklist triggering 7-day mutes.
-
----
-
-## Privacy & Security Concerns
-
-This section warrants explicit coverage given documented findings:
-
-- **Telemetry persists after opt-out:** Disabling telemetry in settings does not stop data transmission. In some analyses, opting out *increased* transmission frequency, suggesting the toggle is cosmetic.
-- **Data collected:** Hardware specs, OS/architecture, usage patterns, persistent device identifiers, project and file path information, mouse/keyboard activity, JWT tokens, complete file contents during editing sessions.
-- **Data retention:** Personal data retained 5 years after account closure per privacy policy.
-- **Model training:** Terms of service permit using input content to train models and improve services.
-- **No local mode:** No option to run fully offline or route only to self-hosted models.
-- **ByteDance ownership:** Subject to Chinese data laws. Relevant for code under NDA, government/healthcare, or proprietary algorithms.
-- **Community suppression:** Reported banning/muting of users raising privacy concerns on official channels.
-
-**Practical guidance:** Do not use Trae for client code, proprietary algorithms, government/regulated-industry projects, or anything under NDA without legal review.
-
----
 
 ## Sources
 
