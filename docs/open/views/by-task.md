@@ -1,6 +1,6 @@
 # View — By Task
 
-Stacks suited to each task. Each section lists relevant models, runtimes, frameworks, MCP servers, and techniques as links to entity files. Authoritative content lives in those entity files.
+Stack combinations suited to each task. Each section lists relevant models, runtimes, frameworks, MCP servers, techniques, and applications as links to entity files. Authoritative content lives in those entity files.
 
 ## 1. Coding
 

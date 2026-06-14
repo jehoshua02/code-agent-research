@@ -25,97 +25,112 @@ Seed list. Add as discovered. Each item below becomes a stub file in Wave 1.
 
 ### 2.1 Models (families)
 
-- [ ] Llama (Meta) — 3.1, 3.2, 3.3, 4
-- [ ] Qwen / Qwen-Coder (Alibaba)
-- [ ] DeepSeek — V2, V3, R1
-- [ ] Mistral — Mistral, Mixtral, Codestral, Magistral
-- [ ] Phi (Microsoft)
-- [ ] Gemma (Google)
-- [ ] Hunyuan (Tencent)
-- [ ] Yi (01.ai)
-- [ ] Falcon (TII)
-- [ ] Command R / Command A (Cohere)
-- [ ] StarCoder2 (BigCode)
-- [ ] OLMo (AI2)
-- [ ] Granite (IBM)
-- [ ] Nemotron (NVIDIA)
-- [ ] DBRX (Databricks)
-- [ ] SmolLM (HuggingFace)
-- [ ] Hermes (Nous Research)
+- [x] Llama (Meta) — 3.1, 3.2, 3.3, 4
+- [x] Qwen / Qwen-Coder (Alibaba)
+- [x] DeepSeek — V2, V3, R1
+- [x] Mistral — Mistral, Mixtral, Codestral, Magistral
+- [x] Phi (Microsoft)
+- [x] Gemma (Google)
+- [x] Hunyuan (Tencent)
+- [x] Yi (01.ai)
+- [x] Falcon (TII)
+- [x] Command R / Command A (Cohere)
+- [x] StarCoder2 (BigCode)
+- [x] OLMo (AI2)
+- [x] Granite (IBM)
+- [x] Nemotron (NVIDIA)
+- [x] DBRX (Databricks)
+- [x] SmolLM (HuggingFace)
+- [x] Hermes (Nous Research)
 
 ### 2.2 Runtimes
 
-- [ ] vLLM
-- [ ] llama.cpp
-- [ ] Ollama
-- [ ] LM Studio
-- [ ] MLX / mlx-lm
-- [ ] TGI (text-generation-inference)
-- [ ] SGLang
-- [ ] ExLlamaV2 / ExLlamaV3
-- [ ] Aphrodite Engine
-- [ ] KoboldCpp
-- [ ] Text Generation WebUI (oobabooga)
-- [ ] Jan
-- [ ] LocalAI
-- [ ] llamafile
-- [ ] transformers (HF baseline)
+- [x] vLLM
+- [x] llama.cpp
+- [x] Ollama
+- [x] LM Studio
+- [x] MLX / mlx-lm
+- [x] TGI (text-generation-inference)
+- [x] SGLang
+- [x] ExLlamaV2 / ExLlamaV3
+- [x] Aphrodite Engine
+- [x] KoboldCpp
+- [x] Text Generation WebUI (oobabooga)
+- [x] Jan
+- [x] LocalAI
+- [x] llamafile
+- [x] transformers (HF baseline)
 
 ### 2.3 Frameworks
 
-- [ ] LangGraph (LangChain)
-- [ ] AutoGen (Microsoft)
-- [ ] CrewAI
-- [ ] Letta (MemGPT successor)
-- [ ] Smolagents (HuggingFace)
-- [ ] OpenAI Swarm
-- [ ] LlamaIndex Agents
-- [ ] Pydantic AI
-- [ ] Haystack agents
-- [ ] DSPy
-- [ ] BeeAI
-- [ ] Atomic Agents
-- [ ] mcp-agent
-- [ ] agno
+- [x] LangGraph (LangChain)
+- [x] AutoGen (Microsoft)
+- [x] CrewAI
+- [x] Letta (MemGPT successor)
+- [x] Smolagents (HuggingFace)
+- [x] OpenAI Swarm
+- [x] LlamaIndex Agents
+- [x] Pydantic AI
+- [x] Haystack agents
+- [x] DSPy
+- [x] BeeAI
+- [x] Atomic Agents
+- [x] mcp-agent
+- [x] agno
 
-### 2.4 MCP servers (by category)
+### 2.4 Applications (finished products)
+
+Installable AI applications that compose the stack. Distinct from frameworks (libraries to build with). Current entries are agentic coding/general-purpose; other categories (chat UIs, eval tools, fine-tuning tools) may be added later.
+
+- [x] OpenCode (Anomaly Co)
+- [x] Aider
+- [x] OpenHands (formerly OpenDevin)
+- [x] AutoGPT
+- [x] Open Interpreter
+- [x] Continue
+- [x] Mentat
+- [x] GPT-Engineer
+- [x] Goose (Block)
+- [x] SWE-agent (Princeton)
+
+### 2.5 MCP servers (by category)
 
 Scope: Anthropic reference servers + notable community servers per category. PulseMCP lists 18k+; this survey covers category leaders, not the long tail.
 
-- [ ] Filesystem
-- [ ] Shell / command execution
-- [ ] Web fetch
-- [ ] Web search
-- [ ] Browser control
-- [ ] Git / GitHub
-- [ ] Database (PostgreSQL, SQLite, MySQL)
-- [ ] Memory / persistent state
-- [ ] Code execution / sandboxing
-- [ ] Cloud APIs (AWS, GCP)
-- [ ] Productivity (calendar, email)
+- [x] Filesystem
+- [x] Shell / command execution
+- [x] Web fetch
+- [x] Web search
+- [x] Browser control
+- [x] Git / GitHub
+- [x] Database (PostgreSQL, SQLite, MySQL)
+- [x] Memory / persistent state
+- [x] Code execution / sandboxing
+- [x] Cloud APIs (AWS, GCP)
+- [x] Productivity (calendar, email)
 
-### 2.5 Techniques
+### 2.6 Techniques
 
-- [ ] RAG (retrieval-augmented generation)
-- [ ] ReAct
-- [ ] Plan-and-execute
-- [ ] Chain-of-thought
-- [ ] Tree-of-thought
-- [ ] Tool use / function calling
-- [ ] Self-consistency
-- [ ] Reflection
-- [ ] Prompt caching
-- [ ] Few-shot / in-context learning
-- [ ] Constrained decoding (JSON mode, grammar)
-- [ ] Speculative decoding
-- [ ] KV cache reuse
+- [x] RAG (retrieval-augmented generation)
+- [x] ReAct
+- [x] Plan-and-execute
+- [x] Chain-of-thought
+- [x] Tree-of-thought
+- [x] Tool use / function calling
+- [x] Self-consistency
+- [x] Reflection
+- [x] Prompt caching
+- [x] Few-shot / in-context learning
+- [x] Constrained decoding (JSON mode, grammar)
+- [x] Speculative decoding
+- [x] KV cache reuse
 
 ## 3. Status
 
 | Phase | Status | Notes |
 |---|---|---|
 | Scaffold | Done | structure, templates, indexes, glossary, justification |
-| Wave 1 — Stubs | Not started | |
+| Wave 1 — Stubs | Done | |
 | Wave 2 — Pass A (Identity) | Not started | |
 | Wave 2 — Pass B (Catalog) | Not started | |
 | Wave 2 — Pass C (Function) | Not started | |

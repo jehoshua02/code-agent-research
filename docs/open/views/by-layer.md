@@ -1,6 +1,6 @@
 # View — By Layer
 
-Opinionated top picks at each layer, with one-line characterization. For the full list, see each layer's `INDEX.md`.
+Opinionated top picks at each stack layer, with one-line characterization. For the full list, see each layer's `INDEX.md`. Applications are not a layer (they consume the stack) — see [../applications/INDEX.md](../applications/INDEX.md).
 
 ## 1. Models
 

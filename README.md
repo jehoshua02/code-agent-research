@@ -77,6 +77,6 @@ docs/
 - [Tool Comparison (May 3, 2026)](docs/tools/comparison/comparison-2026-05-03.md) — Feature matrix, deep-dives, decision guide
 - [Model Comparison (May 3, 2026)](docs/models/comparison/comparison-2026-05-03.md) — Benchmarks, cost, self-hosting, head-to-head matchups
 
-## Open Self-Hosted Survey
+## Open Self-Hostable Survey
 
-[docs/open/](docs/open/) — Survey of the open, free, self-hostable AI ecosystem: models, runtimes, agent frameworks, MCP servers, techniques. Task-agnostic (coding + research + writing + automation + data).
+[docs/open/](docs/open/) — Survey of the open, free, self-hostable AI ecosystem: models, runtimes, agent frameworks, MCP servers, techniques, and applications. Task-agnostic (coding + research + writing + automation + data).

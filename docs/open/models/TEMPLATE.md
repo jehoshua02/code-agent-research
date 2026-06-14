@@ -24,7 +24,7 @@ Distribution channels (HuggingFace, official site, mirrors). Gated? License acce
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Available formats and quantization options (GGUF file format with Q-method variants, AWQ, GPTQ, FP8, FP16/BF16 native, ...). See [GLOSSARY § Quantization](../GLOSSARY.md#quantization) for the format vs method distinction.
 
 ## 7. Capabilities
 
