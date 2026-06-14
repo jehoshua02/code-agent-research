@@ -1,12 +1,16 @@
 # Open Self-Hosted AI Stack — Survey
 
-Unbiased research on the open, free, self-hostable AI ecosystem. The only ceiling is your hardware. Entity files (per model, runtime, framework, etc.) document facts neutrally. Views are where opinion lives.
+Unbiased research on the open, free, self-hostable AI ecosystem. Entity files (per model, runtime, framework, etc.) document facts neutrally. Views are where opinion lives.
+
+**Breadth before depth.** This survey documents every open-weight model and self-hostable component worth knowing about — including ones that don't fit on the reader's current hardware. The `by-hardware` view filters for fit; the survey itself does not. Hardware is a runtime constraint, not a research-scope constraint.
 
 ## 1. Scope
 
 In: open-weight models, self-hostable inference runtimes, open agent frameworks, MCP servers, and techniques. Tasks include coding, research, writing, automation, and data analysis.
 
-Relationship to `../models/` and `../tools/`: those track the broader coding-tool comparison (open and closed). This survey is task-agnostic and limited to what you can run yourself.
+In-scope regardless of size: a 405B model with no chance of running on a 8 GB card still belongs here.
+
+Relationship to `../models/` and `../tools/`: those track the broader coding-tool comparison (open and closed). This survey is task-agnostic and covers the open ecosystem at full breadth.
 
 ## 2. Structure
 
