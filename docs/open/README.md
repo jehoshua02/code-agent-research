@@ -29,7 +29,9 @@ In-scope categories: open-weight models, self-hostable inference runtimes, open 
 
 In-scope regardless of size: a 405B model with no chance of running on an 8 GB card still belongs here.
 
-In-scope regardless of model-specificity: a runtime, application, or framework built for one specific model family (e.g., a Gemma-only chat app or a Llama-only inference engine) is a first-class entity, not a second-class one. Being able to switch models is a feature some readers want and others don't — the survey does not privilege multi-model tooling over single-model tooling. Each entity's documentation should state which models it supports, and that's the end of the framing.
+In-scope regardless of model-specificity: a runtime, application, or framework built for one specific model family (e.g., a Gemma-only chat app or a Llama-only inference engine) is a first-class entity, not a second-class one. Being able to switch models is a feature some readers want and others don't — the survey does not privilege multi-model tooling over single-model tooling.
+
+Model-switching is a stack-level property, not necessarily an entity-level one. A reader who wants to switch models can either pick layers that support model switching (multi-model runtimes/frameworks/applications) **or** switch the whole stack to one built around a different model. Both paths are valid. Each entity's documentation should state which models it supports, and that's the end of the framing.
 
 ### 2.2 Inclusion criteria
 
