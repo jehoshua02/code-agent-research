@@ -6,7 +6,7 @@ Project name, maintainer, license, language, release status.
 
 ## Install
 
-Docker image (preferred). Bare-metal install fallback. Linux-only assumed.
+VM (preferred). Bare-metal install fallback. Linux-only assumed.
 
 ## Hardware Support
 
