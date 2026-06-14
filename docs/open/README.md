@@ -69,3 +69,7 @@ If a model or runtime requires a platform the reader doesn't currently have, tha
 ## 6. Glossary
 
 [Glossary](GLOSSARY.md) — terminology used throughout the survey (layers, model concepts, hardware, protocols).
+
+## 7. Plan
+
+[Plan](PLAN.md) — breadth-first method, inventory, and status.
