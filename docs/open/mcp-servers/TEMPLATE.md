@@ -12,7 +12,7 @@ What it exposes — files, shell, web, browser, database, API, etc.
 
 ## 3. Install
 
-Depends on access needs. Servers that touch the host (filesystem, shell) run alongside the agent on its Linux host. Servers that are isolated (web fetch, remote API proxy) can run in a container or remote process.
+Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#3-deployment-principle) for the general guidance.
 
 ## 4. Transport
 

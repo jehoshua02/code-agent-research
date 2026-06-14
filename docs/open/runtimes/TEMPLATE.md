@@ -8,7 +8,7 @@ Project name, maintainer, license, language, release status.
 
 ## 2. Install
 
-Linux host (bare-metal, WSL2, OrbStack, or cloud Linux). Container only if GPU passthrough is set up and isolation matters.
+Concrete install steps for a Linux host (commands, package, image tag). Note any per-runtime quirks (driver versions, kernel modules, etc.). See [../README.md](../README.md#3-deployment-principle) for the general host-vs-container guidance.
 
 ## 3. Hardware Support
 

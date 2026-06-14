@@ -8,7 +8,7 @@ Project name, maintainer, license, language, release status.
 
 ## 2. Install
 
-Linux host (bare-metal, WSL2, OrbStack, or cloud Linux). Agents typically need broad filesystem and process access — containers are usually too constrained.
+Concrete install steps for a Linux host (commands, package, repo clone, etc.). Note any per-framework quirks. See [../README.md](../README.md#3-deployment-principle) for the general host-vs-container guidance.
 
 ## 3. Model Compatibility
 
