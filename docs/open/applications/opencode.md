@@ -1,10 +1,10 @@
 # OpenCode
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+OpenCode is an MIT-licensed TypeScript application from Anomaly (anomalyco/opencode, formerly redirected from sst/opencode). Active. Agentic coding CLI/TUI with headless mode and IDE integrations; provider-agnostic across 75+ LLM providers.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [anomalyco/opencode](https://github.com/anomalyco/opencode) — observed 2026-06-14

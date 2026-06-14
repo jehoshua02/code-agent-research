@@ -6,13 +6,13 @@ Current entries are agentic coding/general-purpose applications. Other applicati
 
 | Application | Maker | License | Interfaces | Focus | Notes |
 |---|---|---|---|---|---|
-| [OpenCode](opencode.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [Aider](aider.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [OpenHands](openhands.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [AutoGPT](autogpt.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [Open Interpreter](open-interpreter.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [Continue](continue.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [Mentat](mentat.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [GPT-Engineer](gpt-engineer.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [Goose](goose.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
-| [SWE-agent](swe-agent.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
+| [OpenCode](opencode.md) | Anomaly | MIT | _stub_ | Agentic coding | _stub_ |
+| [Aider](aider.md) | Aider-AI | Apache-2.0 | _stub_ | Agentic coding | _stub_ |
+| [OpenHands](openhands.md) | All Hands AI | MIT | _stub_ | Agentic coding (general) | formerly OpenDevin |
+| [AutoGPT](autogpt.md) | Significant Gravitas | MIT (core) / Polyform Shield (platform) | _stub_ | General autonomous agent | _stub_ |
+| [Open Interpreter](open-interpreter.md) | OpenInterpreter | AGPL-3.0 | _stub_ | Code-execution agent | _stub_ |
+| [Continue](continue.md) | Continue Dev | Apache-2.0 | _stub_ | Agentic coding (IDE) | _stub_ |
+| [Mentat](mentat.md) | AbanteAI | Apache-2.0 | _stub_ | Agentic coding | repo 404 as of 2026-06-14 |
+| [GPT-Engineer](gpt-engineer.md) | gpt-engineer-org | MIT | _stub_ | One-shot codegen | archived |
+| [Goose](goose.md) | Block / Linux Foundation AAIF | Apache-2.0 | _stub_ | General agent | _stub_ |
+| [SWE-agent](swe-agent.md) | Princeton NLP | MIT | _stub_ | Agentic coding (research) | _stub_ |

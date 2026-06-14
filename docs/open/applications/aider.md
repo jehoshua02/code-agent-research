@@ -1,10 +1,10 @@
 # Aider
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+Aider is an Apache-2.0 Python application from Aider-AI / Paul Gauthier (Aider-AI/aider). Active. Agentic coding CLI that pair-programs over git, applying edits as commits with strong support for repo-wide context.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [Aider-AI/aider](https://github.com/Aider-AI/aider) — observed 2026-06-14

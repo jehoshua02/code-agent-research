@@ -1,10 +1,10 @@
 # OpenHands
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+OpenHands is an MIT-licensed Python application from All Hands AI (All-Hands-AI/OpenHands), formerly OpenDevin. Active. General-purpose agentic coding platform that runs in a sandboxed runtime; ships a web UI and CLI.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) — observed 2026-06-14

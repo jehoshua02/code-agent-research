@@ -1,10 +1,10 @@
 # Cloud APIs
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category wrap cloud-provider APIs (AWS, GCP, Azure) to expose resources, run commands, or query telemetry. Agents need them for cloud operations, cost analysis, and infrastructure-as-code workflows. Notable community: AWS MCP, GCP MCP, Azure MCP, and Cloudflare's official MCP servers.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [PulseMCP — cloud provider servers](https://www.pulsemcp.com/servers?q=cloud) — observed 2026-06-14

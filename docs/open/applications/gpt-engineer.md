@@ -1,10 +1,10 @@
 # GPT-Engineer
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+GPT-Engineer is an MIT-licensed Python application from Anton Osika (gpt-engineer-org/gpt-engineer). Archived. Early one-shot code-generation agent that took a natural-language spec and emitted a full project; became the precursor to lovable.dev.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer) — observed 2026-06-14

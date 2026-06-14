@@ -1,10 +1,10 @@
 # AutoGen
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+AutoGen is a CC-BY-4.0 Python framework from Microsoft (microsoft/autogen) for building multi-agent conversation systems. Active. Models problems as multiple specialized agents exchanging messages, with optional human-in-the-loop.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, examples. Include date observed.
+- [microsoft/autogen](https://github.com/microsoft/autogen) — observed 2026-06-14

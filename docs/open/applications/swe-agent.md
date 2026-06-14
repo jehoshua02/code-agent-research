@@ -1,10 +1,10 @@
 # SWE-agent
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+SWE-agent is an MIT-licensed Python application from Princeton NLP (princeton-nlp/SWE-agent). Active. Research-grade agent designed for the SWE-bench benchmark; uses a custom agent-computer interface to navigate and edit repositories.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) — observed 2026-06-14

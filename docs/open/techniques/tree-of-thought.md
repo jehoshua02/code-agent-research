@@ -1,10 +1,10 @@
 # Tree-of-thought
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Tree-of-thought (ToT) maintains a tree of partial reasoning paths with branching and backtracking, searched BFS or DFS, evaluating intermediate states before committing. Introduced by Yao et al. (2023). Useful where linear chains hit dead ends but expensive in tokens and time.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Tree of Thoughts: Deliberate Problem Solving with Large Language Models (Yao et al., 2023)](https://arxiv.org/abs/2305.10601) — observed 2026-06-14

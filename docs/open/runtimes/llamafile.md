@@ -1,10 +1,10 @@
 # llamafile
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+llamafile (Mozilla-Ocho/llamafile) is an Apache 2.0 project that combines llama.cpp with Cosmopolitan Libc to ship LLMs as single-file portable executables that run on macOS, Linux, Windows, FreeBSD, OpenBSD, and NetBSD without install.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile) — observed 2026-06-14

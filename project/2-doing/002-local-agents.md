@@ -54,7 +54,7 @@ Beyond coding, agents should handle:
 
 ### Deliverables (in order)
 
-1. **Survey doc** — broad survey of every open-weight model and self-hostable component worth knowing, including ones that don't fit on the 3070. Breadth before depth. Lives in this repo. Multi-dimensional:
+1. **Survey doc** — broad survey of every open-weight model and self-hostable component that meets the [inclusion criteria](../../docs/open/README.md#22-inclusion-criteria), regardless of hardware fit. Breadth before depth. Lives in this repo. Multi-dimensional:
    - By layer: models / runtimes / agent frameworks / MCP servers / techniques (plus applications as a non-layer category)
    - By task: coding / research / writing / automation / data
    - By hardware tier: 8 / 12 / 16 / 24 / 24+ GB (filters fit, doesn't bound scope)

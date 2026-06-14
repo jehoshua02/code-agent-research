@@ -1,10 +1,10 @@
 # Granite
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Granite is IBM's open-weight family. Released under Apache 2.0. Enterprise-oriented general-purpose, code, time-series, and embedding models with attention to data provenance and licensing transparency.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [ibm-granite on HuggingFace](https://huggingface.co/ibm-granite) — observed 2026-06-14

@@ -1,10 +1,10 @@
 # LM Studio
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+LM Studio is a closed-source, proprietary desktop app from Element Labs. Free-to-use, available on macOS, Windows, and Linux. Included in the survey because it is self-hosted and free, but it is not open-source. GUI for discovering, downloading, and running local models, with an OpenAI-compatible local server.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [LM Studio website](https://lmstudio.ai) — observed 2026-06-14

@@ -1,10 +1,10 @@
 # Constrained decoding (JSON mode, grammar)
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Constrained decoding masks token logits at each generation step to enforce a grammar or schema (JSON, regex, context-free grammar), guaranteeing parseable output. Implemented in llama.cpp grammars, dottxt/Outlines, vLLM's structured output, and OpenAI Structured Outputs.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [OpenAI Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs) — observed 2026-06-14

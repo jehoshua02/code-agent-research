@@ -1,10 +1,10 @@
 # Command R
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Command R / Command R+ / Command A are Cohere's open-weight families. Released under CC-BY-NC 4.0 (non-commercial; commercial use requires a Cohere license). Optimized for retrieval-augmented generation and tool use; multilingual.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [CohereForAI on HuggingFace](https://huggingface.co/CohereForAI) — observed 2026-06-14

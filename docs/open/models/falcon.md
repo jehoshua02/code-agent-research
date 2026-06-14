@@ -1,10 +1,10 @@
 # Falcon
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Falcon is TII (UAE Technology Innovation Institute)'s open-weight family. Older Falcon-180B/40B under TII Falcon License; Falcon3 and newer under Apache 2.0. Multilingual general-purpose models.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [tiiuae on HuggingFace](https://huggingface.co/tiiuae) — observed 2026-06-14

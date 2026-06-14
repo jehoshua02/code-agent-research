@@ -1,10 +1,10 @@
 # LangGraph
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+LangGraph is an MIT-licensed Python framework from LangChain (langchain-ai/langgraph) for building stateful agent workflows as graphs of nodes and edges. Active development. Takes a graph-state-machine approach distinct from chain-of-prompts or imperative loops.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, examples. Include date observed.
+- [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) — observed 2026-06-14

@@ -1,10 +1,10 @@
 # Filesystem
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category expose file-tree operations (read, write, list, search, stat) to an agent. Agents need them to inspect and modify repositories or document collections during a task. Notable: filesystem (official reference, Anthropic) for sandbox-rooted file access; community filesystem servers wrap remote storage (S3, Drive, etc.).
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [modelcontextprotocol/servers — filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) — observed 2026-06-14

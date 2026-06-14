@@ -1,10 +1,10 @@
 # Git / GitHub
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category expose Git and GitHub/GitLab operations — clone, diff, status, commit, PR, issues. Agents need them for any code-review or repository-management workflow. Notable: git (official reference, Anthropic) for local repos; community github and gitlab servers for hosted platforms.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [modelcontextprotocol/servers — git](https://github.com/modelcontextprotocol/servers/tree/main/src/git) — observed 2026-06-14

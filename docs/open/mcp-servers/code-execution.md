@@ -1,10 +1,10 @@
 # Code Execution
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category run code in a sandboxed environment (Python, JavaScript, etc.) and return results. Agents need them for data analysis, math, and any task safer to compute than to reason about. Notable community: E2B Code Interpreter MCP, Pyodide-based browsers, and various Docker-sandboxed runners.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [PulseMCP — code execution servers](https://www.pulsemcp.com/servers?q=code) — observed 2026-06-14

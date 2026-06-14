@@ -1,10 +1,10 @@
 # Database
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category expose SQL databases — list tables, execute queries (often read-only by default), inspect schemas. Agents need them for data analysis and reporting tasks. Notable community: PostgreSQL, SQLite, MySQL, BigQuery, Snowflake, and DuckDB MCP servers, typically requiring a connection string.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [PulseMCP — database servers](https://www.pulsemcp.com/servers?q=database) — observed 2026-06-14

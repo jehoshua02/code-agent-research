@@ -1,10 +1,10 @@
 # DeepSeek
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+DeepSeek is DeepSeek AI's open-weight family. V2 and V3 use the DeepSeek License (permissive, commercial use allowed); R1 reasoning model released MIT. DeepSeek-V3 is a 671B-total / 37B-active MoE; R1 is a reasoning-focused variant trained with RL.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [deepseek-ai on HuggingFace](https://huggingface.co/deepseek-ai) — observed 2026-06-14

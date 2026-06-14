@@ -1,10 +1,10 @@
 # Web Search
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category expose a search engine (web, code, or vertical) to the agent. Agents need them for current information beyond the model's training cutoff. Notable community servers wrap Brave Search, Exa, Tavily, Perplexity, and Google Programmable Search; each requires a provider API key.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [PulseMCP — search servers](https://www.pulsemcp.com/servers?q=search) — observed 2026-06-14

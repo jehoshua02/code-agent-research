@@ -2,7 +2,7 @@
 
 Unbiased research on the open, free, self-hostable AI ecosystem. Entity files (per model, runtime, framework, etc.) document facts neutrally. Views are where opinion lives.
 
-**Breadth before depth.** This survey documents every open-weight model and self-hostable component worth knowing about — including ones that don't fit on the reader's current hardware. The `by-hardware` view filters for fit; the survey itself does not. Hardware is a runtime constraint, not a research-scope constraint.
+**Breadth before depth.** This survey documents every open-weight model and self-hostable component that meets the inclusion criteria in §2 — including ones that don't fit on the reader's current hardware. The `by-hardware` view filters for fit; the survey itself does not. Hardware is a runtime constraint, not a research-scope constraint.
 
 ## 1. Why this exists
 
@@ -23,9 +23,32 @@ Known risk: single-layer articles refresh monthly. Stale entries here will look 
 
 ## 2. Scope
 
-In: open-weight models, self-hostable inference runtimes, open agent frameworks, MCP servers, and techniques. Tasks include coding, research, writing, automation, and data analysis.
+### 2.1 Categories
 
-In-scope regardless of size: a 405B model with no chance of running on a 8 GB card still belongs here.
+In-scope categories: open-weight models, self-hostable inference runtimes, open agent frameworks, MCP servers, finished open-source applications, and techniques. Tasks include coding, research, writing, automation, and data analysis.
+
+In-scope regardless of size: a 405B model with no chance of running on an 8 GB card still belongs here.
+
+### 2.2 Inclusion criteria
+
+To stay objective and bound the long tail, an entity is **in scope** if it meets **at least one** of:
+
+1. **Notable backing** — produced or maintained by a recognized organization (corporate AI lab, university research group, named foundation/standards body).
+2. **Adoption signal** — measurable adoption: ≥1,000 GitHub stars (where applicable), or top-N on HuggingFace by downloads in its category, or referenced in another in-scope entity, or cited in PulseMCP / Anthropic reference set (for MCP servers).
+3. **Distinct contribution** — introduces an approach, architecture, or capability not already represented by another in-scope entity. Named in a peer-reviewed paper or canonical industry reference qualifies.
+4. **Independent coverage** — covered in two or more independent surveys / comparisons / news pieces in the past 12 months.
+
+An entity is **excluded** if any of:
+
+- Private fork or one-off experiment with no maintained release.
+- Redundant near-clone of an in-scope entity with no architectural, licensing, or usage distinction.
+- Long-tail entry serving the same purpose as already-included alternatives, with substantially lower adoption and no distinct contribution.
+
+**Archived/discontinued projects** can remain (or be added) if they had clear historical significance — they get an "archived" note in their `## 1. What It Is` and in the INDEX. Otherwise, archived projects without successors are excluded.
+
+The criteria are intentionally objective. When two readers might disagree, the inclusion decision should rest on which criterion the entity does or does not meet, not on personal opinion. Disagreement about whether an entity meets a criterion is a normal pull-request conversation.
+
+### 2.3 Relationship to other docs
 
 Relationship to `../models/` and `../tools/`: those track the broader coding-tool comparison (open and closed). This survey is task-agnostic and covers the open ecosystem at full breadth.
 

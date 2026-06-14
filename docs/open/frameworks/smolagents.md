@@ -1,10 +1,10 @@
 # Smolagents
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+Smolagents is an Apache-2.0 Python framework from HuggingFace (huggingface/smolagents). Active. Minimal, code-first approach where agents emit Python code to execute rather than JSON tool calls.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, examples. Include date observed.
+- [huggingface/smolagents](https://github.com/huggingface/smolagents) — observed 2026-06-14

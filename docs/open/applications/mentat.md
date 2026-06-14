@@ -1,10 +1,10 @@
 # Mentat
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+Mentat is/was an Apache-2.0 Python application from AbanteAI (AbanteAI/mentat). Repo currently returns 404 — appears to have been deleted or made private; included for historical reference. Agentic coding CLI that operated over local repos.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [AbanteAI/mentat (404 as of 2026-06-14)](https://github.com/AbanteAI/mentat) — observed 2026-06-14

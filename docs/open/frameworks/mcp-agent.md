@@ -1,10 +1,10 @@
 # mcp-agent
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+mcp-agent is an Apache-2.0 Python framework from LastMile AI (lastmile-ai/mcp-agent). Low activity since early 2026. Minimal framework specifically for building MCP-native agents with patterns like augmented LLMs and orchestrator-workers.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, examples. Include date observed.
+- [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) — observed 2026-06-14

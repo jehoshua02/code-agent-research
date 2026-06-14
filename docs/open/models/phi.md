@@ -1,10 +1,10 @@
 # Phi
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Phi is Microsoft's small-language-model family (Phi-3, Phi-4). Released under MIT license. Designed for capable performance at small parameter counts (1B–14B) via curated synthetic training data.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [microsoft on HuggingFace](https://huggingface.co/microsoft) — observed 2026-06-14

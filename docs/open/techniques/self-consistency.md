@@ -1,10 +1,10 @@
 # Self-consistency
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Self-consistency samples multiple chain-of-thought reasoning paths at non-zero temperature, then majority-votes the most frequent final answer. Introduced by Wang et al. (2022). Trades cost for accuracy on reasoning benchmarks.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models (Wang et al., 2022)](https://arxiv.org/abs/2203.11171) — observed 2026-06-14

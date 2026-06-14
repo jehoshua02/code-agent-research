@@ -1,10 +1,10 @@
 # Jan
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+Jan (menloresearch/jan) is an AGPL-3.0 TypeScript+Rust desktop application. Active. Cross-platform ChatGPT-style local interface that can run multiple inference backends under the hood; positioned as a privacy-first open alternative to commercial chat apps.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [menloresearch/jan](https://github.com/menloresearch/jan) — observed 2026-06-14

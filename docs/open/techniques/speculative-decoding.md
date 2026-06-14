@@ -1,10 +1,10 @@
 # Speculative decoding
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+A small draft model proposes multiple tokens; the large target model verifies them in one parallel forward pass, accepting matching tokens and resampling the first mismatch. Introduced by Leviathan et al. (2022) and Chen et al. (2023). Speeds up decoding without changing the output distribution.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Fast Inference from Transformers via Speculative Decoding (Leviathan et al., 2022)](https://arxiv.org/abs/2211.17192) — observed 2026-06-14

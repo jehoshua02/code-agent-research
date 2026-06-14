@@ -1,10 +1,10 @@
 # Yi
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Yi is 01.AI's open-weight family. Modern checkpoints released under Apache 2.0 (earlier under a custom Yi license). General-purpose models with bilingual English/Chinese strength.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [01-ai on HuggingFace](https://huggingface.co/01-ai) — observed 2026-06-14
