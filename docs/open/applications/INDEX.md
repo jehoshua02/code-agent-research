@@ -18,3 +18,5 @@ Current entries are agentic coding/general-purpose applications. Other applicati
 | [SWE-agent](swe-agent.md) | Princeton NLP | MIT | CLI/web GUI | Agentic coding (research) | _stub_ |
 | [OpenClaw](openclaw.md) | OpenClaw Foundation | MIT | CLI/messaging channels/mobile/desktop | Personal AI assistant (general) | skills-based; high adoption |
 | [GSD-PI](gsd-pi.md) | open-gsd | MIT | TUI/web UI | Agentic coding (project-workflow) | borderline — under adoption threshold |
+| [Gemma Chat](gemma-chat.md) | ammaarreshi | MIT | _stub_ | Chat + coding (Gemma-specific) | Apple Silicon via MLX or Ollama |
+| [Gemma Gem](gemma-gem.md) | kessler | Apache-2.0 | _stub_ | Browser chat (Gemma-specific) | WebGPU, on-device; borderline adoption |

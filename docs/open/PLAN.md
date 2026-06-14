@@ -60,6 +60,7 @@ Seed list. Add as discovered. Each item below becomes a stub file in Wave 1.
 - [x] LocalAI
 - [x] llamafile
 - [x] transformers (HF baseline)
+- [x] gemma.cpp (Google) — model-specific (Gemma)
 
 ### 2.3 Frameworks
 
@@ -94,6 +95,8 @@ Installable AI applications that compose the stack. Distinct from frameworks (li
 - [x] SWE-agent (Princeton)
 - [x] OpenClaw (OpenClaw Foundation)
 - [x] GSD-PI (open-gsd) — borderline, under-threshold adoption + recent
+- [x] Gemma Chat (ammaarreshi) — model-specific (Gemma)
+- [x] Gemma Gem (kessler) — model-specific (Gemma); borderline adoption
 
 ### 2.5 MCP servers (by category)
 
