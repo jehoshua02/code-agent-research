@@ -29,7 +29,7 @@ Frustrated with paid model token limits while a capable home PC sits idle. Want 
 
 ### Hardware and current environment
 
-- Home PC: RTX 3070 (8GB VRAM). Upgrade only if proven necessary.
+- Home PC: 8 GB VRAM NVIDIA GPU. Upgrade only if proven necessary.
 - Current preferred deployment for the running stack: Linux (bare-metal, WSL2 on Windows, OrbStack on Mac, or cloud Linux). Open to changing this if the model or runtime worth running requires another platform (e.g. macOS for MLX).
 - Survey scope (deliverable 1) is **not** bound by current hardware or current environment — covers everything regardless of fit.
 
@@ -54,11 +54,11 @@ Beyond coding, agents should handle:
 
 ### Deliverables (in order)
 
-1. **Survey doc** — broad survey of every open-weight model and self-hostable component that meets the [inclusion criteria](../../docs/open/README.md#22-inclusion-criteria), including ones that don't fit on the 3070. Breadth before depth. Lives in this repo. Multi-dimensional:
+1. **Survey doc** — broad survey of every open-weight model and self-hostable component that meets the [inclusion criteria](../../docs/open/README.md#22-inclusion-criteria), including ones that don't fit on the current GPU. Breadth before depth. Lives in this repo. Multi-dimensional:
    - By layer: models / runtimes / agent frameworks / MCP servers / techniques (plus applications as a non-layer category)
    - By task: coding / research / writing / automation / data
    - By hardware tier: 8 / 12 / 16 / 24 / 24+ GB (filters fit, doesn't bound scope)
-2. **Working local stack** — pick something from the survey that fits the 3070, install, get something running end-to-end. Stack choice is hardware-bound; survey is not.
+2. **Working local stack** — pick something from the survey that fits current hardware, install, get something running end-to-end. Stack choice is hardware-bound; survey is not.
 3. **Test harness** — public benchmarks only (SWE-bench, GAIA, MMLU, HumanEval, etc.), programmatic grading only.
 
 ### Priorities for picking what to test

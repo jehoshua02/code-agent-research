@@ -4,7 +4,7 @@ What fits at each VRAM tier. Each section links to relevant model entries that f
 
 ## 1. 8 GB
 
-_RTX 3070 / 4060 / 4060 Ti 8GB-class. 7B Q4_K_M fits with room for context. 13B is tight and may require heavy quant or partial offload._
+_RTX 4060 / 4060 Ti 8GB-class. 7B Q4_K_M fits with room for context. 13B is tight and may require heavy quant or partial offload._
 
 ## 2. 12 GB
 
