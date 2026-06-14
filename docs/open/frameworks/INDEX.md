@@ -16,3 +16,4 @@
 | [Atomic Agents](atomic-agents.md) | MIT | Python | _stub_ | _stub_ | _stub_ |
 | [mcp-agent](mcp-agent.md) | Apache-2.0 | Python | _stub_ | _stub_ | _stub_ |
 | [agno](agno.md) | Apache-2.0 | Python | _stub_ | _stub_ | _stub_ |
+| [GSD-PI](gsd-pi.md) | MIT | TypeScript | _stub_ | _stub_ | borderline — under adoption threshold, distinct contribution |
