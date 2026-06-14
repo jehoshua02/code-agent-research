@@ -14,10 +14,14 @@ _curated picks — see [../runtimes/INDEX.md](../runtimes/INDEX.md) for full lis
 
 _curated picks — see [../frameworks/INDEX.md](../frameworks/INDEX.md) for full list_
 
-## 4. MCP Servers
+## 4. Agents
+
+_curated picks — see [../agents/INDEX.md](../agents/INDEX.md) for full list_
+
+## 5. MCP Servers
 
 _curated picks — see [../mcp-servers/INDEX.md](../mcp-servers/INDEX.md) for full list_
 
-## 5. Techniques
+## 6. Techniques
 
 _curated picks — see [../techniques/INDEX.md](../techniques/INDEX.md) for full list_

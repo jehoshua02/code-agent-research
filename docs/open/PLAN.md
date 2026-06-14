@@ -78,7 +78,22 @@ Seed list. Add as discovered. Each item below becomes a stub file in Wave 1.
 - [x] mcp-agent
 - [x] agno
 
-### 2.4 MCP servers (by category)
+### 2.4 Agents (finished products)
+
+Installable agent products that bundle their own loop, UI, and tooling. Distinct from frameworks (libraries to build with).
+
+- [x] OpenCode (Anomaly Co)
+- [x] Aider
+- [x] OpenHands (formerly OpenDevin)
+- [x] AutoGPT
+- [x] Open Interpreter
+- [x] Continue
+- [x] Mentat
+- [x] GPT-Engineer
+- [x] Goose (Block)
+- [x] SWE-agent (Princeton)
+
+### 2.5 MCP servers (by category)
 
 Scope: Anthropic reference servers + notable community servers per category. PulseMCP lists 18k+; this survey covers category leaders, not the long tail.
 
@@ -94,7 +109,7 @@ Scope: Anthropic reference servers + notable community servers per category. Pul
 - [x] Cloud APIs (AWS, GCP)
 - [x] Productivity (calendar, email)
 
-### 2.5 Techniques
+### 2.6 Techniques
 
 - [x] RAG (retrieval-augmented generation)
 - [x] ReAct
