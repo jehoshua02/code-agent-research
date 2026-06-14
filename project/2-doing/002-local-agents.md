@@ -9,7 +9,7 @@ Run AI agents at home on owned hardware, free, for coding + research/web + writi
 - Value: 7/10 — Reduces reliance on paid APIs; reusable infra for everything downstream.
 - Momentum: 1/10 — Brand new work, no prior local-stack experience.
 - Effort: 8/10 — Broad survey + new stack + harness over 2-4 weeks.
-- Risk: 4/10 — Hardware ceiling (8GB VRAM) may force scope cuts.
+- Risk: 4/10 — Hardware ceiling (8GB VRAM) constrains which models can actually be run/benchmarked locally, but does **not** constrain survey breadth.
 
 ## Timeline
 
@@ -27,11 +27,11 @@ Horizon: 2-4 weeks.
 
 Frustrated with paid model token limits while a capable home PC sits idle. Want to test multiple agents/models on owned hardware without optimizing for any single variable yet — gather unbiased breadth first, then decide.
 
-### Hardware
+### Hardware and current environment
 
 - Home PC: RTX 3070 (8GB VRAM). Upgrade only if proven necessary.
-- Linux-only setups. Windows uses WSL2. Mac uses OrbStack. Cloud uses Linux directly.
-- Docker-first for reproducible, bundled dependencies.
+- Current preferred deployment for the running stack: Linux (bare-metal, WSL2 on Windows, OrbStack on Mac, or cloud Linux). Open to changing this if the model or runtime worth running requires another platform (e.g. macOS for MLX).
+- Survey scope (deliverable 1) is **not** bound by current hardware or current environment — covers everything regardless of fit.
 
 ### Access
 
@@ -54,11 +54,11 @@ Beyond coding, agents should handle:
 
 ### Deliverables (in order)
 
-1. **Survey doc** — broad survey of open-weight models, inference runtimes, agent frameworks, tools, and techniques. Lives in this repo. Multi-dimensional:
+1. **Survey doc** — broad survey of every open-weight model and self-hostable component worth knowing, including ones that don't fit on the 3070. Breadth before depth. Lives in this repo. Multi-dimensional:
    - By layer: models / runtimes / agent frameworks / tools / techniques
    - By task: coding / research / writing / automation / data
-   - By hardware tier: 8GB / 16GB / 24GB+
-2. **Working local stack** — pick from the survey, install, get something running end-to-end.
+   - By hardware tier: 8 / 12 / 16 / 24 / 24+ GB (filters fit, doesn't bound scope)
+2. **Working local stack** — pick something from the survey that fits the 3070, install, get something running end-to-end. Stack choice is hardware-bound; survey is not.
 3. **Test harness** — public benchmarks only (SWE-bench, GAIA, MMLU, HumanEval, etc.), programmatic grading only.
 
 ### Priorities for picking what to test
