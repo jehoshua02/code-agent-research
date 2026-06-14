@@ -8,7 +8,7 @@ Project name, maintainer, license, language, release status.
 
 ## 2. Install
 
-Supported platforms (Linux / macOS / Windows / specific distros). Concrete install steps for each. Note any per-runtime quirks (driver versions, kernel modules, etc.). See [../README.md](../README.md#3-deployment-notes) for general reader-facing deployment context.
+Supported platforms (Linux / macOS / Windows / specific distros). Concrete install steps for each. Note any per-runtime quirks (driver versions, kernel modules, etc.). See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
 
 ## 3. Hardware Support
 

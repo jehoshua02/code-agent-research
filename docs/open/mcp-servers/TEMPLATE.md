@@ -12,7 +12,7 @@ What it exposes — files, shell, web, browser, database, API, etc.
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#3-deployment-notes) for general reader-facing deployment context.
+Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
 
 ## 4. Transport
 
