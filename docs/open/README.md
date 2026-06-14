@@ -30,16 +30,17 @@ Each layer has:
 
 Each entity = one file. Small, focused. No multi-topic files. Authoritative facts live in the entity file; views excerpt or link.
 
-## 3. Deployment principle
+## 3. Deployment notes
 
-Runtimes need GPU access; agent frameworks need broad host control. Run them on a **Linux host**:
+Entities are surveyed at full breadth regardless of platform. Each entity file documents its own supported platforms. The notes below are reader-facing context, not a scope filter — the survey includes Linux-only, Mac-only (e.g. MLX), and Windows-native components alike.
 
-- Bare-metal Linux on the GPU box (preferred for runtimes).
-- WSL2 on Windows (CUDA passthrough is supported; verify against current NVIDIA WSL docs before relying on it).
-- Cloud Linux VM (rented GPU).
-- OrbStack on Mac is fine for non-GPU agent/MCP work, but does not give CUDA — don't use it for runtimes that need NVIDIA acceleration.
+Common patterns observed in entries so far:
 
-Containers fit components that don't need host access — many MCP servers, isolated tools, web-scoped services. Use them where the access tradeoffs justify the isolation.
+- **Runtimes** typically need GPU access and run best on bare-metal Linux. WSL2 on Windows supports NVIDIA CUDA. Apple Silicon runtimes (MLX, llama.cpp Metal) target macOS directly. ROCm runtimes target AMD on Linux.
+- **Agent frameworks** typically need broad filesystem and process access; they run best on the agent operator's host OS directly, not inside a container.
+- **MCP servers** vary — some need host access (filesystem, shell), some are isolated (web fetch, remote API) and run fine in containers.
+
+If a model or runtime requires a platform the reader doesn't currently have, that is a deployment cost the reader can choose to pay — not a reason to exclude it from the survey.
 
 ## 4. Views
 

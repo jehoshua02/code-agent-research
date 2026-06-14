@@ -27,11 +27,11 @@ Horizon: 2-4 weeks.
 
 Frustrated with paid model token limits while a capable home PC sits idle. Want to test multiple agents/models on owned hardware without optimizing for any single variable yet — gather unbiased breadth first, then decide.
 
-### Hardware
+### Hardware and current environment
 
 - Home PC: RTX 3070 (8GB VRAM). Upgrade only if proven necessary.
-- Linux-only setups. Windows uses WSL2. Mac uses OrbStack. Cloud uses Linux directly.
-- Linux host for runtimes and agent frameworks (they need GPU access or broad host control). Containers for isolated components only. See `docs/open/README.md` deployment principle.
+- Current preferred deployment for the running stack: Linux (bare-metal, WSL2 on Windows, OrbStack on Mac, or cloud Linux). Open to changing this if the model or runtime worth running requires another platform (e.g. macOS for MLX).
+- Survey scope (deliverable 1) is **not** bound by current hardware or current environment — covers everything regardless of fit.
 
 ### Access
 
