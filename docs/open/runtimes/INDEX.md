@@ -17,4 +17,4 @@
 | [LocalAI](localai.md) | MIT | GGUF, safetensors, GPTQ, AWQ, diffusion, audio | OpenAI-compat | CUDA, ROCm, Metal/MLX, Intel SYCL, Vulkan, CPU, Jetson | multi-backend |
 | [llamafile](llamafile.md) | Apache 2.0 | GGUF (embedded or external) | OpenAI-compat | CUDA, ROCm, Metal, CPU (AVX/AVX2/AVX-512, NEON) | single-file portable |
 | [transformers](transformers.md) | Apache 2.0 | safetensors, PyTorch, GGUF (load); bitsandbytes, GPTQ, AWQ, AQLM, FP8, torchao, HQQ | _stub_ | CUDA, ROCm, Metal (MPS), CPU | library, not server |
-| [gemma.cpp](gemma-cpp.md) | Apache 2.0 | _stub_ | _stub_ | _stub_ | model-specific (Gemma) |
+| [gemma.cpp](gemma-cpp.md) | Apache 2.0 | Custom .sbs (bf16, fp32, fp8, NUQ 4-bit) | _stub_ | CPU only (SIMD via Highway; x86, ARM, any) | model-specific (Gemma) |
