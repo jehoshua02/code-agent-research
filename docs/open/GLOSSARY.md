@@ -40,19 +40,22 @@ Qwen2.5-Coder-32B (model) loaded by vLLM (runtime), driven by LangGraph (framewo
 Model whose trained weights are publicly downloadable. Does not necessarily mean training data, code, or full license freedom are open. Verify per-model license.
 
 ### Parameters (params)
-Count of learned weights. Reported in billions (B) or trillions (T). More params = larger, slower, usually more capable. MoE models report both total params (storage) and active params (per-token compute).
+Count of learned weights. Reported in billions (B) or trillions (T). More params = larger file and slower inference per token, all else equal. Capability depends on training data, methodology, and alignment as well — not on param count alone. MoE models report both total params (storage) and active params (per-token compute).
 
 ### MoE (Mixture of Experts)
 Architecture where only a subset of params is used per token. Active params drive compute cost; total params drive storage/VRAM. Example: DeepSeek-V3 is 671B total / 37B active.
 
 ### Context window
-Maximum number of tokens (prompt + output) the model can attend to in one call. Native context = trained. Extended context (YaRN, position interpolation) trades fidelity for length.
+Maximum number of tokens (prompt + output) the model can attend to in one call. **Native context** = the length the model was trained on. **Extended context** uses position-encoding tricks (YaRN, position interpolation, rope scaling) to operate beyond native. Practical effective context — where retrieval and reasoning quality stay usable — is often less than the advertised maximum; verify per-model.
 
 ### Quantization
-Lossy compression of weights to fewer bits per parameter, to fit smaller VRAM. Common formats:
-- **GGUF** (llama.cpp) — Q2_K, Q4_K_M, Q5_K_M, Q8_0, etc. Higher number = more precision.
-- **AWQ, GPTQ** — 4-bit quantization for GPU runtimes
-- **FP8, FP16, BF16** — full or half precision
+Lossy compression of weights to fewer bits per parameter, to fit smaller VRAM and improve throughput. The relationship "fewer bits → smaller VRAM + faster, but lower quality" is the rule of thumb; specifics vary by method.
+
+Format vs method:
+
+- **GGUF** — file format used by llama.cpp and downstream runtimes. Can hold weights at any precision (including unquantized). Quantization variants are method codes inside the file: `Q2_K`, `Q4_K_M`, `Q5_K_M`, `Q8_0`, etc. As a rough guide, the leading number is bits per weight; suffixes (`_K`, `_M`, `_0`) encode the scheme. Higher bits = more precision, with method nuances.
+- **AWQ, GPTQ** — quantization methods/formats commonly used with GPU runtimes (vLLM, ExLlama, etc.). Most-shipped variants are 4-bit, but the methods support other bit widths.
+- **FP32 / FP16 / BF16 / FP8** — IEEE-style floating-point precisions. FP32 is full precision, FP16/BF16 are half, FP8 is quarter. Often called "precisions" rather than "quantization," though FP8 sits at the boundary.
 
 ### Tool use / function calling
 Model emits structured calls to external functions (declared in the prompt or via API). Framework executes the call and feeds the result back into context.
