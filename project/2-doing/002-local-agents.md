@@ -55,7 +55,7 @@ Beyond coding, agents should handle:
 ### Deliverables (in order)
 
 1. **Survey doc** — broad survey of every open-weight model and self-hostable component worth knowing, including ones that don't fit on the 3070. Breadth before depth. Lives in this repo. Multi-dimensional:
-   - By layer: models / runtimes / agent frameworks / tools / techniques
+   - By layer: models / runtimes / agent frameworks / MCP servers / techniques (plus applications as a non-layer category)
    - By task: coding / research / writing / automation / data
    - By hardware tier: 8 / 12 / 16 / 24 / 24+ GB (filters fit, doesn't bound scope)
 2. **Working local stack** — pick something from the survey that fits the 3070, install, get something running end-to-end. Stack choice is hardware-bound; survey is not.

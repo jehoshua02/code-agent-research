@@ -1,4 +1,4 @@
-# Open Self-Hosted AI Stack — Survey
+# Open Self-Hostable AI Stack — Survey
 
 Unbiased research on the open, free, self-hostable AI ecosystem. Entity files (per model, runtime, framework, etc.) document facts neutrally. Views are where opinion lives.
 
