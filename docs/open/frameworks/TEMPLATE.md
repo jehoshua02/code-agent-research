@@ -6,7 +6,7 @@ Project name, maintainer, license, language, release status.
 
 ## Install
 
-Docker image (preferred). Pip/npm fallback.
+VM (preferred — agents need broad host access; containers are usually too constrained). Bare-metal pip/npm fallback on a dedicated machine.
 
 ## Model Compatibility
 
