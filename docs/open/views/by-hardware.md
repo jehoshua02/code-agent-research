@@ -1,6 +1,6 @@
 # View — By Hardware
 
-What fits at each VRAM tier. Tier descriptions are rough rules of thumb — exact fit depends on quantization, context length, KV cache, and concurrent processes. System RAM matters when offloading.
+What fits at each VRAM tier. Each section links to relevant model entries that fit comfortably at that tier. Tier descriptions are rough rules of thumb — exact fit depends on quantization, context length, KV cache, and concurrent processes. System RAM matters when offloading.
 
 ## 1. 8 GB
 

@@ -31,7 +31,7 @@ Each entity = one file. Small, focused. No multi-topic files. Authoritative fact
 Runtimes need GPU access; agent frameworks need broad host control. Run them on a **Linux host**:
 
 - Bare-metal Linux on the GPU box (preferred for runtimes).
-- WSL2 on Windows (GPU passthrough supported with current NVIDIA drivers).
+- WSL2 on Windows (CUDA passthrough is supported; verify against current NVIDIA WSL docs before relying on it).
 - Cloud Linux VM (rented GPU).
 - OrbStack on Mac is fine for non-GPU agent/MCP work, but does not give CUDA — don't use it for runtimes that need NVIDIA acceleration.
 

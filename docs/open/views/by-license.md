@@ -1,6 +1,6 @@
 # View — By License
 
-Open-weight licenses vary in commercial-use freedom, redistribution terms, and downstream restrictions. Verify the current license text on each entity — projects re-license.
+Open-weight licenses vary in commercial-use freedom, redistribution terms, and downstream restrictions. Each section links to model entries (and other entities) that ship under that license. Verify the current license text on each entity — projects re-license.
 
 ## 1. Apache 2.0
 
