@@ -28,8 +28,7 @@ Supports any OpenAI-compatible endpoint plus provider-specific extensions. First
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
-
+Conversation-driven multi-agent framework. Tools are plain Python (sync or async) functions on `AssistantAgent`; auto-converted to schemas; v0.4+ executes inline in `run()`. Planning emerges from team architecture: `SelectorGroupChat` uses LLM-driven speaker selection, `MagenticOneGroupChat` has dual-loop Task/Progress Ledger orchestration, `GraphFlow` for directed-graph workflows. Memory via `Memory` protocol: `ListMemory`, `ChromaDBVectorMemory`, `RedisMemory`, `Mem0Memory`; RAG-aware. Multi-agent: `RoundRobinGroupChat`, `SelectorGroupChat`, `MagenticOneGroupChat`, `Swarm` (`HandoffMessage`). HITL via `UserProxyAgent` (blocks team) or between-runs (max_turns=1 pattern). State: `save_state()`/`load_state()` JSON-serializable. Observability via OpenTelemetry (`opentelemetry-instrumentation-openai`). Retry: tool-level error signaling via `is_error`; orchestrator-level recovery in MagenticOne. Both sync (`.run()`) and async streaming (`.run_stream()`). Source: microsoft.github.io/autogen.
 ## 5. MCP Support
 
 Native — built into `autogen-ext` via `McpWorkbench` and `StdioServerParams`. Connect to any MCP server (stdio or SSE) and expose its tools directly to agents. Multiple MCP servers can be combined in a list. Source: [AutoGen README MCP example](https://github.com/microsoft/autogen#mcp-server).

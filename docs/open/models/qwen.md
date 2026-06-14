@@ -54,11 +54,11 @@ CPU offload viable for ≤32B with ≥64 GB system RAM (reduced throughput).
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **vLLM** (BF16, FP8, AWQ, GPTQ), **SGLang** (BF16/FP8), **Hugging Face Transformers**, **llama.cpp** (GGUF), **Ollama** (GGUF), and **MLX** (MLX-LM for Apple Silicon). Qwen3 MoE models require vLLM ≥0.8 or SGLang for efficient expert routing. Common quant formats: GGUF (Q2–Q8), AWQ (INT4), GPTQ (INT4/INT8), FP8 (for server-grade GPUs). Qwen2.5-VL requires runtime image-preprocessing support (transformers or vLLM with vision extras).
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Qwen3 models are trained for multilingual chat (100+ languages), **tool/function calling** (built-in tool-call format), coding (Qwen2.5-Coder / Qwen3 competitive on HumanEval/LiveCodeBench), and math reasoning. All Qwen3 models support a hybrid "thinking" mode — toggling between extended chain-of-thought and direct response at inference time. Qwen2-VL and Qwen2.5-VL variants add **vision** (image + video understanding). ([Qwen3 blog](https://qwenlm.github.io/blog/qwen3/))
 
 ## 8. Benchmarks
 

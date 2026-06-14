@@ -53,11 +53,11 @@ GGUF and GPTQ variants for H1 via tiiuae and community repos.
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Falcon 1/3 are widely supported by **Hugging Face Transformers**, **vLLM** (BF16, AWQ, GPTQ), **llama.cpp** (GGUF via community), and **Ollama** (GGUF). **Falcon-H1** (hybrid SSM+Attention) requires Transformers ≥4.51 with Mamba/SSM kernel support; vLLM added H1 support alongside the launch. GGUF and GPTQ quants for H1 are published by tiiuae on HF. **SGLang** and **MLX** support varies — Falcon 1/3 are broadly compatible; H1's hybrid architecture may need runtime-specific patches. Quant formats: GGUF (Q2–Q8), GPTQ (INT4/INT8), AWQ (community), FP8 (H1 server variants).
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Falcon 1 models (7B/40B/180B) target general English instruction following; 2K context limits their utility for long tasks. Falcon 3 adds **reasoning, code, and multilingual** coverage (EN, FR, ES, PT) with 32K context. Falcon-H1 targets **long-context** tasks (up to 256K) using a hybrid SSM+Attention architecture for efficient memory use; the H1R-7B variant adds reasoning focus. No vision capability in any Falcon variant; no official structured **tool/function calling** schema — function use requires prompt engineering. ([Falcon-H1 announcement](https://huggingface.co/blog/falcon-h1))
 
 ## 8. Benchmarks
 

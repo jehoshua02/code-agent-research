@@ -38,11 +38,24 @@ SGLang (sgl-project/sglang) is an Apache 2.0 Python serving engine. Active. Comb
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+Full OpenAI-compatible endpoints: `/v1/chat/completions` (applies chat templates), `/v1/completions` (raw text), `/v1/embeddings`. SSE streaming on both via `stream=True`.
+
+- **Tool / function calling:** OpenAI-compatible on `/v1/chat/completions`. Dedicated native `/parse_function_call`. Supported families: Llama 3.1/3.2/3.3/4, Qwen, DeepSeek-v3, Mistral, GLM. [tool_parser docs](https://docs.sglang.io/docs/advanced_features/tool_parser.md).
+- **Vision (multimodal):** OpenAI-compatible vision API (images as `image_url` content). Llama 3.2, LLaVA-OneVision, Qwen2.5-VL, Gemma3, etc. [openai_api_vision](https://docs.sglang.io/docs/basic_usage/openai_api_vision.md).
+- **Structured outputs:** JSON schema (`response_format`), regex, EBNF grammar. Backends: XGrammar (default), Outlines, Llguidance. Available via OpenAI API (`response_format`/`extra_body`), native `/generate` (`sampling_params`), and offline engine. "3× faster JSON decoding with compressed finite state machine." [structured_outputs](https://docs.sglang.io/docs/advanced_features/structured_outputs.md).
+- **Logprobs:** Native via `/generate` with `return_logprob`, `logprob_start_len`, `top_logprobs_num`, `token_ids_logprob`, `return_text_in_logprobs`.
+- **Native non-OpenAI APIs:** `/generate`, `/encode`, `/v1/rerank`, `/v1/score`, `/classify`, `/tokenize`, `/detokenize`, `/flush_cache`, `/update_weights_from_disk`, `/get_model_info`, `/server_info`, `/health`, MoE expert distribution. Ollama-compatible API also documented.
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Maintainers (LMSYS) publish relative throughput figures in release blogs; no single canonical absolute table.
+
+- **vs vLLM/TRT-LLM ([July 2024 blog](https://lmsys.org/blog/2024-07-25-sglang-llama3/), Llama-8B on 1× A100 bf16):** SGLang and TRT-LLM both reached ~**5,000 tok/s** output; vLLM significantly lower. Llama-70B on 8× A100 bf16: **up to 3.1×** vLLM throughput, competitive with TRT-LLM. Llama-70B on 8× H100 fp8: highest of all systems tested.
+- **GB200 NVL72 (v0.4 release notes):** "**3.8× Prefill, 4.8× Decode Throughput**" vs prior baseline on DeepSeek; "**2.7× Higher Decoding Throughput**" in large-scale expert-parallelism. Relative only.
+- **RadixAttention:** "Up to 5× faster" vs vLLM/Guidance on prefix-cache-heavy multi-call workloads ([Jan 2024 blog](https://lmsys.org/blog/2024-01-17-sglang/)).
+- **JSON decoding:** "3× faster" with compressed FSM.
+
+Prefill and decode reported separately in GB200 figures. TTFT/latency charts shown without numeric prose.
 
 ## 7. Documented Strengths
 

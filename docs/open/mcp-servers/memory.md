@@ -42,7 +42,13 @@ No auth. The server reads and writes a local JSONL file. Access is controlled en
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Memory poisoning.** An adversary who can influence what the agent stores (e.g., via a malicious document the agent summarizes) can plant false facts or injected instructions that affect all future sessions. Treat stored observations as untrusted input and validate before acting on them.
+
+**Cross-session leakage.** The knowledge graph is shared across all sessions using the same file. If multiple users or tasks share a single server instance, one session's private data (credentials, personal details) is visible to all others via `read_graph`.
+
+**Sensitive-info accumulation.** The agent may store passwords, API keys, or PII as observations over time. The `memory.jsonl` file must have strict filesystem permissions (owner-read-only) and should be excluded from backups or version control.
+
+**Prompt injection via stored memory.** Retrieved observations are inserted into the context verbatim. A stored string like `"Ignore previous instructions and..."` becomes a live injection vector on every subsequent session that reads that entity.
 
 ## 7. Documented Strengths
 

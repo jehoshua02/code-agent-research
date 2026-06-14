@@ -29,7 +29,7 @@ Broad built-in provider support: OpenAI, Anthropic, Google Gemini, DeepSeek, Gro
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+Type-safe agent framework using Pydantic models. Tools via `@agent.tool` (with `RunContext`), `@agent.tool_plain`, or `tools=` constructor; schemas auto-extracted from signatures + docstrings (Google/NumPy/Sphinx). Planning via pydantic-graph state machine and the "Deep Agents" tier (planning, file ops, sandboxed code, durable state). Memory: `result.new_messages()` / `result.all_messages()`; passed via `message_history=` to subsequent runs; `conversation_id` correlation; `ProcessHistory` preprocessor for token budget / summarization / redaction. Multi-agent via agent-as-tool (with usage propagation), programmatic hand-off, or pydantic-graph. HITL via Deferred Tools — `requires_approval=True`, raises `ApprovalRequired`, returns `DeferredToolRequests`, resolved with `DeferredToolResults` (`ToolApproved`/`ToolDenied`). State persistence via durable-execution integrations (Temporal, DBOS, Prefect, Restate). Observability: Pydantic Logfire (`logfire.instrument_pydantic_ai()`) + OpenTelemetry; routes to Langfuse / Weave / Arize / SigNoz. Retry: two systems — model-level via `ModelRetry` and `retries=` budget; HTTP/network via tenacity-based `RetryConfig`. Both sync (`run_sync`, `run_stream_sync`) and async (`run`, `run_stream`). Source: pydantic.dev/docs/ai.
 
 ## 5. MCP Support
 

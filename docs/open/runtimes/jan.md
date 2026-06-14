@@ -37,11 +37,21 @@ Primary engine is llama.cpp via a router process (v0.8.0+); other backends exten
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+Local API server at `http://127.0.0.1:1337` described as "an OpenAI-compatible REST API."
+
+- `POST /v1/chat/completions` — primary endpoint; streaming and tool/function calling.
+- `GET /v1/models` — list available/loaded models.
+- `POST /v1/messages` — Anthropic-compatible endpoint, auto-translated internally.
+- `/v1/responses` — "Coming Soon."
+- `/v1/completions`, `/v1/embeddings` — not documented.
+
+**Tool / function calling:** On `/v1/chat/completions`. MCP tool calls executable server-side via "Execute Tools on Server" setting. **Vision (multimodal):** Image upload support added v0.6.9 ("Major multimodal support with image uploads"); Jan-v2-VL model in the hub; API-level details for multimodal inputs not spelled out. **Streaming:** Supported on `/v1/chat/completions` (SSE-style, per OpenAI compat). **Structured outputs:** JSON Schema File parameter (GBNF grammar constraint via llama.cpp); OpenAI-style `response_format: json_object` not explicitly called out. **Logprobs:** Not documented.
+
+Sources: [api-server](https://jan.ai/docs/desktop/api-server), [api-preference](https://jan.ai/docs/desktop/api-preference), [model-parameters](https://jan.ai/docs/desktop/model-parameters).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. Jan's docs, README, and changelog contain no canonical tokens/sec, latency, or batch-size figures. The only performance-adjacent configuration exposed is GPU Layers, Context Length, a "Fit to Hardware" auto context optimization, and configurable Request Timeout — none constitute benchmark claims. Source: [model-parameters](https://jan.ai/docs/desktop/model-parameters).
 
 ## 7. Documented Strengths
 

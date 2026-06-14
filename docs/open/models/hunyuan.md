@@ -48,11 +48,11 @@ Hunyuan-Large (389B / 52B): no official table; FP16 ~780 GB; realistically 8× A
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Primary recommended runtimes are **vLLM** (≥0.8.5) and **SGLang** for MoE expert routing at scale. **Hugging Face Transformers** is supported for smaller quants and experimentation. **llama.cpp** supports GGUF quants (official GGUF repo published by Tencent for Hunyuan-A13B). **Ollama** can load community GGUF variants. Official quantizations shipped: **FP8** (Hunyuan-A13B-Instruct-FP8) and **GPTQ-Int4** (Hunyuan-A13B-Instruct-GPTQ-Int4). GGUF (Q4_0, Q4_K_M, Q8_0) available from the Tencent GGUF repo.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Hunyuan-A13B-Instruct targets **reasoning** (multi-step math, science, code), **agentic behavior**, and long-context tasks (up to 256K tokens). Strong **Chinese and English** bilingual capability is a primary design goal, with some multilingual coverage. **Tool/function calling** is supported in the Instruct variant per the Tencent model card. No vision in the text-focused A13B; Tencent maintains separate Hunyuan-Vision and Hunyuan-Video models. ([Hunyuan-A13B model card](https://huggingface.co/tencent/Hunyuan-A13B-Instruct))
 
 ## 8. Benchmarks
 

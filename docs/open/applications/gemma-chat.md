@@ -29,15 +29,15 @@ Bundled Gemma 4 via MLX-LM (local venv, Apple Silicon only). Four variants selec
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Targets local chat and project scaffolding (Build mode): generates multi-file codebases from a prompt in any language Gemma 4 supports, with a live preview canvas for web projects. No shell execution, file-system write access outside the preview sandbox, browser tool, or data-analysis environment. Vision is available when a multimodal Gemma 4 variant is selected.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not supported. Gemma Chat is a self-contained Electron app with no plugin protocol or MCP integration documented.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+No plugin or skill system. The app is intentionally minimal: behaviour is defined in the Electron/React source (`src/`). Customisation requires forking the repo and modifying the TypeScript source directly.
 
 ## 8. Documented Strengths
 

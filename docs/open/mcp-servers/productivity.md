@@ -58,7 +58,13 @@ OAuth 2.0 or service API tokens, depending on the provider:
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Account-wide write access.** OAuth tokens typically grant write access to the entire account — not just the resources relevant to the task. A miscued agent can delete all calendar events, archive all email, or wipe all Notion pages. Prefer tokens scoped to specific calendars, channels, or workspaces where the provider allows it.
+
+**Mass-action mistakes.** Tools like `send_email` or `post_message` applied in a loop can spam hundreds of contacts or channels before a human can intervene. Rate-limit outbound write calls and require confirmation before bulk actions.
+
+**OAuth scope creep.** Servers often request broad OAuth scopes (e.g., `https://mail.google.com/`) to avoid re-authorization later. Audit the scopes granted during setup and revoke the token if they exceed what the agent actually needs.
+
+**Token storage.** Refresh tokens stored in local files (`credentials.json`) grant long-lived access to personal accounts. Protect these files with owner-only permissions and exclude them from version control; rotation on suspected compromise is manual for most providers.
 
 ## 7. Documented Strengths
 

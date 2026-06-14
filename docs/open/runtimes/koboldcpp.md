@@ -36,11 +36,20 @@ Single prebuilt binary, no package manager. Releases at [github.com/LostRuins/ko
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+Full OpenAI-compatible API at `/v1` (e.g., `http://localhost:5001/v1`): `/v1/chat/completions`, `/v1/completions`, `/v1/embeddings` (also at `/api/extra/embeddings`), `/v1/audio/transcriptions` (Whisper).
+
+- **Tool / function calling:** Via Chat Completions, enabled with `--jinja` and `--jinjatools`; custom instruct tags configurable via `--chatcompletionsadapter`. MCP server support noted in README.
+- **Vision (multimodal):** Vision projectors loaded via `--mmproj`; image and audio inputs simultaneously; `--visionmaxres` for max image resolution. Qwen3-VL-8B, Qwen-Omni recommended.
+- **Streaming:** Three modes — polled-streaming (recommended; polls `/api/extra/generate/check` every second), true SSE per-token, and deprecated pseudo-streaming.
+- **Structured outputs / grammar:** GBNF grammar sampling; `json_to_gbnf.py` utility included. No explicit OpenAI-style `response_format: json_object`.
+- **Logprobs:** Supported. Built-in Token Probability Viewer.
+- **Native KoboldAI API at `/api/v1`** (used by KoboldAI Classic/United). Proprietary routes under `/api/extra/`. Interactive docs at running server's `/api` and at [koboldcpp_api](https://lite.koboldai.net/koboldcpp_api). Compatibility endpoints for Ollama, A1111/Forge, ComfyUI, XTTS, OpenAI Speech.
+
+Sources: [README](https://github.com/LostRuins/koboldcpp), [Wiki](https://github.com/LostRuins/koboldcpp/wiki).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. KoboldCpp includes a `--benchmark` flag that runs a built-in benchmark and outputs CSV timing/speed (including tok/s), but no canonical throughput figures, latency numbers, or prefill-vs-decode breakdowns are published in the README, wiki, or docs. Source: [Wiki](https://github.com/LostRuins/koboldcpp/wiki).
 
 ## 7. Documented Strengths
 

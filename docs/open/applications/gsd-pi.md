@@ -48,15 +48,15 @@ The GSD provider setup docs reference a providers guide ([docs/user-docs/provide
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Targets long-horizon coding tasks across any language the configured model supports: planning, file editing, shell execution, and Git automation (worktree-aware). Does not include a built-in browser tool or vision capability; web research requires a skill or MCP server. Data analysis is handled via shell scripting within the plan/implement/verify workflow.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Native. MCP servers can be registered in the `.gsd/` project config and are surfaced as tools within the agent's tool loop. No adapter required; documented as a first-class integration alongside the built-in tool set.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Extension surfaces include skills (reusable task modules), custom slash commands, and configurable tool sets — all declared in `.gsd/` config files (YAML/JSON). MCP servers add external tools. The TypeScript source under `packages/` defines the agent runtime and workflow engine; custom phases or tool implementations require modifying source or publishing a skill package.
 
 ## 8. Documented Strengths
 

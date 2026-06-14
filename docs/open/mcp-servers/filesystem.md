@@ -47,7 +47,13 @@ No credential-based auth. Access control is path-based: the server enforces that
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Path traversal** is the primary risk: a malicious or hallucinated path like `../../etc/passwd` can escape the intended sandbox if the server's path-normalization logic has gaps. The reference server resolves symlinks before checking allow-lists, but community implementations vary. **Symlink escape** is a related vector — a symlink inside an allowed directory can point anywhere on the filesystem; reads or writes follow the link unless the server explicitly rejects symlinks that resolve outside allowed roots.
+
+**Accidental writes** are a persistent footgun: `write_file` will silently overwrite existing content. There is no dry-run or recycle-bin mechanism. An LLM that mis-identifies a target path can destroy files irreversibly.
+
+**Sensitive-file exposure** is a passive risk in any allowed directory that happens to contain credentials (`.env`, SSH keys, `~/.aws/credentials`). The server has no concept of file sensitivity; it will read anything the OS user can read.
+
+**Mitigation:** restrict allowed directories to the minimum necessary scope; run the server as a low-privilege user; prefer container-mount isolation (Docker with a bind-mount to a specific project directory) over host-wide access.
 
 ## 7. Documented Strengths
 

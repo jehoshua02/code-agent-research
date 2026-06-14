@@ -48,11 +48,11 @@ Min viable for 8B at FP16: RTX 3080/4070 Ti 16 GB. Q4: RTX 3060 12 GB, or even 3
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (primary; IBM publishes examples using transformers), **vLLM** (BF16, AWQ, GPTQ), **llama.cpp** (community GGUF quants), and **Ollama** (GGUF). IBM also deploys Granite via **watsonx.ai** (their enterprise AI platform). **SGLang** supports the standard dense sizes. MoE variants (3.1-1B-A400M, 3.1-3B-A800M) work with vLLM's MoE routing. Common quant formats: GGUF (Q2–Q8), GPTQ (INT4/INT8), AWQ (community sources). IBM ships official GGUF and quantized variants in the `ibm-granite` HF org.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Granite 3.x models are trained for **enterprise instruction following** in 12+ languages (EN, DE, ES, FR, JA, PT, AR, CS, IT, KO, NL, ZH), with emphasis on safe and reliable outputs suitable for business contexts. **Tool/function calling** is natively supported — model cards document a structured tool-call format. **Code generation** is a strength (separate Granite-Code models exist; the 3.x instruct line also handles code). Granite-3.3 adds structured reasoning via `<think>` / `<response>` tags. No vision in the 3.x text line; IBM maintains separate Granite Guardian (safety) and Granite Vision models. ([Granite 3.3 model card](https://huggingface.co/ibm-granite/granite-3.3-8b-instruct))
 
 ## 8. Benchmarks
 

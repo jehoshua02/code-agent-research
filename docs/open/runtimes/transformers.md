@@ -54,11 +54,24 @@ Install backends as needed: `pip install bitsandbytes accelerate`, `auto-gptq`, 
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+`transformers` is a **Python library**, not a server — no built-in HTTP API or OpenAI-compatible endpoint (serving is left to TGI, vLLM, etc.).
+
+Primary APIs:
+
+- `pipeline()` — high-level factory for text-generation, image-to-text, ASR, classification, and dozens of other tasks; handles model loading, tokenization, batching.
+- `AutoModelForCausalLM.generate()` (via `GenerationMixin`) — lower-level entry for fine control (quantization, custom logits processors, streaming, scores).
+
+- **Streaming:** `streamer=` argument on `generate()` accepts `TextStreamer` or `TextIteratorStreamer`.
+- **Tool / function calling:** Not a built-in library feature; tool-use models handle it via chat templates and prompt formatting.
+- **Vision / multimodal:** `pipeline()` supports `image-text-to-text`, `image-classification`, `object-detection`, `depth-estimation`, `video-classification`, etc.; multimodal models use a `processor`. `generate()` accepts `pixel_values`.
+- **Structured outputs / constrained decoding:** Partial — `prefix_allowed_tokens_fn` and `logits_processor` (`LogitsProcessorList`) can implement grammar/schema constraints (e.g., integrating Outlines). No out-of-the-box JSON-schema mode.
+- **Logprobs:** Pass `return_dict_in_generate=True, output_scores=True`; returned `scores` tuple holds per-token logits. `compute_transition_scores()` converts to per-token logprobs.
+
+Docs: [pipelines](https://huggingface.co/docs/transformers/en/main_classes/pipelines), [text_generation](https://huggingface.co/docs/transformers/en/main_classes/text_generation).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer (in quantitative terms). The [GPU inference guide](https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one) covers bitsandbytes 4/8-bit quantization, SDPA/FlashAttention-2, ONNX Runtime via Optimum, and continuous batching, but publishes no canonical tokens/sec or latency figures. The FlashAttention-2 section includes qualitative speedup graphs (Llama-7b, Falcon-7b at seq 4096 across batch sizes) as images with no numbers in text. No prefill-vs-decode breakdown.
 
 ## 7. Documented Strengths
 

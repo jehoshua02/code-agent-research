@@ -44,11 +44,23 @@ llama.cpp backend handles the full set of GGUF quantization types (Q4_K_M, Q5_K_
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+OpenAI-compatible REST API enabled via `--api` flag (default port 5000). Endpoints:
+
+- `/v1/chat/completions` — streaming, tool calling, multimodal image inputs (llama.cpp and ExLlamaV3 backends); auto-detects Jinja2 chat templates.
+- `/v1/completions` — streaming, sampling parameters.
+- `/v1/embeddings` — SentenceTransformer models (default `all-mpnet-base-v2`, 768 dim; also `all-MiniLM-L6-v2`, 384 dim, 5× faster).
+- `/v1/images/generations` — Stable Diffusion via diffusers extension; base64 JSON output only.
+- `/v1/models`, `/v1/models/{id}` — list/inspect models.
+- `/v1/internal/model/list`, `/v1/internal/model/load` — model lifecycle management.
+- `/v1/internal/logits` — token probability endpoint; `use_samplers` flag toggles pre/post-sampling logits.
+
+**Tool / function calling:** Supported via `tools` parameter with Jinja2 template formatting; parallel (Qwen/Mistral) and sequential (GPT-OSS) styles; `finish_reason: "tool_calls"` on response. MCP server integration also supported. **Vision:** Image URL or base64 (`data:image/FORMAT;base64,...`) via `/v1/chat/completions` (llama.cpp and ExLlamaV3 backends). **Streaming:** SSE (`"stream": true`). **Structured outputs:** Not exposed as `response_format` JSON Schema; grammar constraints accessible via backend-specific parameters. **Logprobs:** Via `/v1/internal/logits` (non-standard path, not the OpenAI `logprobs` parameter).
+
+Source: [Wiki §12 OpenAI API](https://github.com/oobabooga/text-generation-webui/wiki/12-%E2%80%90-OpenAI-API).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. The README and wiki contain no canonical throughput, latency, or tok/s figures. Performance depends entirely on the active backend (llama.cpp, ExLlamaV2/V3, Transformers, TensorRT-LLM) and hardware. The wiki links to the community "LocalBench" tool and a "GGUF Memory Calculator" for sizing estimates, but neither constitutes a maintainer-published benchmark. Source: [oobabooga/text-generation-webui README](https://github.com/oobabooga/text-generation-webui).
 
 ## 7. Documented Strengths
 

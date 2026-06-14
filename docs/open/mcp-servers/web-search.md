@@ -46,7 +46,15 @@ Keys are obtained from each provider's developer console. Tavily's remote hosted
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Query exfiltration** is a subtle but real risk: every search query is transmitted to a third-party provider (Brave, Tavily, Exa, etc.). If the agent constructs queries from sensitive context — internal project names, customer data, proprietary code identifiers — that information leaves the operator's infrastructure and appears in provider logs. This applies even when the search result itself is never acted on.
+
+**API key exposure** follows from how keys are configured: environment variables in process-level config are readable by any process running as the same user, and are often logged by MCP host applications in debug output or error traces. A leaked key allows unlimited query issuance at the operator's expense.
+
+**Quota abuse and cost amplification** are operational risks. An LLM in an agentic loop can issue hundreds of search calls in a single session. Paid-tier APIs (Brave, Exa, Tavily) bill per query; an unbounded loop can generate significant charges or exhaust a monthly quota.
+
+**Rate-limit triggering** can cause downstream task failure: most providers enforce per-minute or per-day rate limits, and a burst of agent-driven queries may hit them, causing the server to return errors and the agent to stall or retry in a loop.
+
+**Mitigation:** treat search queries as potentially sensitive; scope API keys to search-only permissions and set spending limits in the provider console; impose a per-session query budget in the agent orchestrator; avoid passing sensitive identifiers into search queries.
 
 ## 7. Documented Strengths
 

@@ -41,7 +41,13 @@ No credential-based auth. Permissions are entirely dictated by the OS user runni
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Arbitrary command execution** is the defining risk: a shell server that accepts free-form command strings gives the agent (and any prompt injected into its context) full OS access under the server process's user account. A single injected instruction — `rm -rf ~` or a curl-pipe-sh — executes without recourse.
+
+**Prompt injection** amplifies this: content the agent reads from external sources (web pages, documents, untrusted tool outputs) can contain instructions that the model treats as legitimate requests to run destructive or exfiltrating commands.
+
+**Allowlist bypass** is the next failure mode. Implementations that restrict to a list of permitted executables are still vulnerable to argument injection (e.g., `git` is allowed, but `git config --global core.sshCommand 'curl ...'` is not), shell metacharacter smuggling (`; rm -rf`), and PATH manipulation if the allowed binary resolves differently at runtime.
+
+**Mitigation:** treat shell MCP servers as a last resort; prefer category-specific servers (filesystem, git) for scoped operations; enforce an allowlist at both the binary and argument level; run inside a container with `--network none` and a read-only root filesystem; require human-in-the-loop approval for each invocation.
 
 ## 7. Documented Strengths
 

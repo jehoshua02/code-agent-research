@@ -33,11 +33,35 @@ Ollama (ollama/ollama) is an MIT-licensed Go runtime that wraps llama.cpp with a
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+OpenAI-compatible endpoints at `http://localhost:11434/v1/`:
+
+- `/v1/chat/completions` — streaming, JSON mode (`response_format`), reproducible outputs (`seed`), vision (base64 images), tool calling (`tools`), reasoning control (`reasoning_effort`). Unsupported: `logprobs`, `tool_choice`, `logit_bias`, `user`, `n`.
+- `/v1/completions` — streaming, JSON mode, reproducible outputs. No `logprobs`.
+- `/v1/embeddings` — supports `dimensions` and `encoding_format`.
+- `/v1/models`, `/v1/models/{model}` — list/inspect local models.
+- `/v1/responses` (v0.13.3+, non-stateful only): streaming, tool calling, reasoning summaries.
+- `/v1/images/generations` — experimental.
+
+**Tool / function calling:** `tools` parameter on chat completions and responses. **Vision:** base64 images in messages. **Streaming:** SSE for `/v1/`. **Structured outputs:** `format: "json"` or `response_format`. **Logprobs:** not supported.
+
+**Native API at `/api/`:** `POST /api/generate`, `POST /api/chat` (tool calling, vision, structured outputs, streaming), `POST /api/embed`, plus model management (`/api/tags`, `/api/show`, `/api/pull`, `/api/push`, `/api/copy`, `/api/delete`, `/api/ps`, `/api/version`). Native streaming is NDJSON, not SSE.
+
+Sources: [openai-compatibility](https://github.com/ollama/ollama/blob/main/docs/openai.md), [api.md](https://github.com/ollama/ollama/blob/main/docs/api.md).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Ollama published a canonical benchmark for NVIDIA DGX Spark (Ollama v0.12.6, GB10 Grace Blackwell, 120 GB VRAM, 10 runs/model, 500-token output, caching disabled), reporting **prefill and decode separately**. Sample figures (tok/s):
+
+| Model | Quant | Prefill | Decode |
+|---|---|---|---|
+| gpt-oss 20B | MXFP4 | 3,224 | 58.27 |
+| gpt-oss 120B | MXFP4 | 1,169 | 41.14 |
+| llama3.1 8B | q4_K_M | 7,614 | 38.02 |
+| llama3.1 70B | q4_K_M | 1,911 | 4.42 |
+| deepseek-r1 14B | q4_K_M | 5,919 | 19.99 |
+| qwen3 32B | q4_K_M | 705.0 | 9.41 |
+
+A separate Apple Silicon post claims "up to 20% faster" output speed with the MLX engine update but gives only relative figures. No batch-size or TTFT data published. Sources: [DGX Spark post](https://ollama.com/blog/nvidia-spark-performance), [MLX post](https://ollama.com/blog/mlx-performance).
 
 ## 7. Documented Strengths
 

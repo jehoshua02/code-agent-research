@@ -22,7 +22,7 @@ Hardcoded to the OpenAI Chat Completions API. Any model accessible via the OpenA
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+**Deprecated.** Educational/experimental; the README states it has been superseded by the OpenAI Agents SDK (openai-agents-python). Tools: plain Python functions auto-converted to Chat Completions schemas; can return strings, `Agent` (handoff), or `Result` (value + agent + context-vars). Planning: simple loop, no planning module; reasoning lives in `instructions`. Memory: stateless between `client.run()` calls; developer must persist `response.messages` / `response.agent` / `response.context_variables`. Multi-agent via explicit handoffs returning an `Agent`. HITL via `run_demo_loop` REPL utility; no built-in approval workflow. State persistence: none — developer manages. Observability: `debug=True`, streaming with `{"delim":"start"|"end"}` markers, `sender` field on messages. Retry: failures appended to chat history for LLM self-recovery; no automatic retry. Synchronous only. Source: github.com/openai/swarm; successor at github.com/openai/openai-agents-python.
 
 ## 5. MCP Support
 

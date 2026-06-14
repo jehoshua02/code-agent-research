@@ -49,11 +49,20 @@ Tools: `llama-quantize` (with optional `--imatrix`), `llama-gguf-split` for shar
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+`llama-server` exposes OpenAI-compatible endpoints: `POST /v1/chat/completions`, `POST /v1/completions`, `POST /v1/embeddings`. The docs caveat: "no strong claims of compatibility with OpenAI API spec is being made, in our experience it suffices to support many apps."
+
+- **Tool / function calling:** Via `--jinja` flag — "Function calling / tool use for ~any model" using the standard `tools` parameter and automatic tool-call parsing.
+- **Vision / multimodal:** Experimental — `/v1/chat/completions` accepts `image_url`, `input_audio`, `input_video` content parts (base64 or remote URL).
+- **Streaming:** SSE via the `stream` parameter.
+- **Structured outputs:** `response_format` for plain or schema-constrained JSON; `grammar` parameter for GBNF grammar files; `json_schema` for schema-constrained sampling.
+- **Logprobs:** Via `n_probs` on the native `/completion` endpoint (top-N token probabilities).
+- **Native endpoints:** `POST /completion`, `POST /embedding`, `POST /reranking`, `POST /infill` (code prefix/suffix), `GET /slots`, `GET /metrics` (Prometheus).
+
+Source: [tools/server/README.md](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+No canonical benchmark suite. The README ships a single illustrative `llama-bench` output (Qwen2 1.5B Q4_0, Metal+BLAS): prefill `pp512` ≈ 5765 tok/s, decode `tg128` ≈ 198 tok/s — a format example for the tool, not a maintainer-published reference. The server docs mention continuous batching, parallel decoding (up to 4 concurrent requests with 4096-token context), and speculative decoding but give no associated numbers. Prefill and decode are reported separately by `llama-bench` (pp* vs tg* tests). Source: [README](https://github.com/ggml-org/llama.cpp).
 
 ## 7. Documented Strengths
 

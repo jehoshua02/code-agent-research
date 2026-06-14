@@ -55,11 +55,11 @@ System RAM for CPU offload: roughly 2× model size at chosen precision.
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **vLLM** (BF16, FP8, AWQ, GPTQ), **SGLang**, **Hugging Face Transformers**, **llama.cpp** (GGUF), and **Ollama** (GGUF). Mistral also ships `mistral-inference`, their own lightweight reference server. MoE models (Mixtral, Mistral Large 3) need vLLM ≥0.5 or SGLang for expert routing. **MLX** supports smaller sizes (7B, 12B, 24B) on Apple Silicon. Common quant formats: GGUF (Q2–Q8), AWQ (INT4), GPTQ (INT4/INT8), FP8 (NeMo 12B and Large 3).
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Mistral Instruct models are trained for general instruction following and **function/tool calling** via a structured `[TOOL_CALLS]` format (introduced in Mistral-7B v0.3 and Mixtral). Codestral specializes in code generation with fill-in-the-middle (FIM) across 80+ programming languages. Mistral Small 3.1 and Large 3 add **vision** (image understanding) and stronger agentic behavior. Strong multilingual support across European languages (EN, FR, DE, ES, IT, PT, RU); Mixtral-8x22B and NeMo 12B especially strong on multilingual tasks. ([Mistral function calling docs](https://docs.mistral.ai/capabilities/function_calling/))
 
 ## 8. Benchmarks
 

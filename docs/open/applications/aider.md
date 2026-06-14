@@ -42,15 +42,15 @@ BYOK: yes — each provider requires its own API key set via env var or `--api-k
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Aider specialises in multi-file coding tasks across any language (strong defaults for Python, JavaScript/TypeScript, Go, Rust, and others). It edits files directly in the local git working tree and commits changes automatically; it can run shell commands via `/run` and `/test`. No built-in browser, web-fetch, or vision tool; data analysis is limited to what the LLM can do over pasted or referenced file content.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not natively supported as of the last verified date. MCP integration is not documented in aider's official docs; no adapter is shipped. Community workarounds (wrapping aider behind an MCP server) exist but are unofficial.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Aider is extended primarily through its `.aider.conf.yml` config file (model selection, editor format, conventions) and `--system-prompt` / `--edit-format` flags. Custom `/commands` can be defined via scripting the CLI. A Python API (`from aider.coders import Coder`) allows embedding aider in larger pipelines; there is no official plugin system or hook architecture.
 
 ## 8. Documented Strengths
 

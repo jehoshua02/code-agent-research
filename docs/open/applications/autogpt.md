@@ -40,15 +40,15 @@ The platform is designed for OpenAI GPT-4/o-series models (primary). The classic
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+AutoGPT targets general autonomous task execution: web search and browsing, file reading and writing, shell command execution (classic agent), and code generation. The platform edition focuses on multi-step workflow automation via visual block graphs rather than raw coding. Vision and data analysis capabilities depend on the underlying model.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not supported natively. MCP is not referenced in AutoGPT's official documentation as of the last verified date. The platform uses its own block-based tool abstraction; MCP integration would require a custom block or adapter.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+The platform is extended through custom blocks (Python classes registered in the block registry under `autogpt_platform/`). The classic Forge-based agent supports plugin-style skills. Workflow logic lives in the visual Agent Builder (web UI) and is serialised as a graph in the platform database; scripted agents are written against the Forge SDK.
 
 ## 8. Documented Strengths
 

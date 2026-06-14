@@ -35,8 +35,7 @@ Model-agnostic. The Letta API accepts any model reference string in `provider/mo
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
-
+Stateful agent framework (MemGPT successor) focused on long-term memory. Tools in four categories: server-tool sandbox, client-side execution, built-in (web search, fetch, code interpreter), MCP (stdio/HTTP/SSE). Planning is emergent from agent loop; supervisor-worker pattern is canonical. Memory is the core feature — four-layer hierarchy: in-context Memory Blocks (XML-prepended, agent-mutable via `memory_rethink`/`memory_replace`), out-of-context Archival Memory (semantic vector search), Files (read-only ≤5 MB), External RAG. All state persisted to DB; nothing lost on context eviction. Multi-agent via shared memory blocks, message passing, five patterns (supervisor-worker, parallel, round-robin, producer-reviewer, hierarchical). HITL: any tool can `require_approval`; emits `approval_request_message`; user approves/denies with feedback. State: persistent DB, Runs/Steps API tracks every invocation; ADE UI for inspection. Observability: per-run trace/usage/messages sub-resources, fine-grained stop reasons. Retry: not built-in; surfaced via stop_reason. Background-mode async (`create_async`) survives disconnects via `run_id`+`seq_id` cursor pagination. Source: docs.letta.com.
 ## 5. MCP Support
 
 Not explicitly documented in the main README or core docs as of June 2026. The Letta server supports extensible tool APIs, but native MCP client integration is not listed as a feature. Verify at [docs.letta.com](https://docs.letta.com) for latest status.

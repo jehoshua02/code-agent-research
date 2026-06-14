@@ -29,15 +29,15 @@ Bundled Gemma 4 via `@huggingface/transformers` + WebGPU (ONNX, q4f16 quantizati
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+General chat and coding assistance in any language Gemma 4 supports, running fully on-device via WebGPU. Because it is a browser extension, it has passive access to the current page (shadow-DOM overlay) but no active browser-automation, shell, file-system, or vision tool. Data analysis is limited to what the model can reason about from pasted text.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not supported. Gemma Gem is a browser extension with no network egress or plugin protocol; MCP would require a local server bridge that is not implemented.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+No plugin or skill system. The extension is intentionally minimal; all logic lives in the TypeScript source under `src/` (content script, service worker, popup). Customisation requires forking and rebuilding the MV3 extension.
 
 ## 8. Documented Strengths
 

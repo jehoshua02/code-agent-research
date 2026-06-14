@@ -42,15 +42,15 @@ Defaults to **OpenAI** (GPT-4 and compatible models) via the OpenAI API. Also su
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Targets one-shot code generation from a natural-language spec, producing entire project scaffolds. Supports any language the underlying LLM knows (Python, JavaScript, etc.). Writes files to disk; does not execute shell commands or browse the web. Vision input is supported when a vision-capable model is configured via `--image_directory`.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not supported. GPT-Engineer is archived and predates MCP; no adapter or plugin mechanism exists.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Logic lives in Python modules under `gpt_engineer/`. Behaviour can be altered by subclassing `AI` or swapping prompt templates; the `bench` binary exposes a scripting surface for benchmarking. No plugin registry or hook system — extension requires forking the source.
 
 ## 8. Documented Strengths
 

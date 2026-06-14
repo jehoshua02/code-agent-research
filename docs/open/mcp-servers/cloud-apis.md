@@ -55,7 +55,13 @@ Credentials are passed via environment variables or ambient SDK credential chain
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Credential scope — least-privilege IAM is mandatory.** Ambient credentials (instance roles, `gcloud` ADC, `~/.aws/credentials`) typically carry broad permissions. An agent with `AdministratorAccess` can delete all resources or exfiltrate secrets. Create a dedicated IAM role or service account scoped to only the resources and actions the agent needs.
+
+**Blast radius of irreversible mutations.** Write tools like `delete_bucket`, `terminate_instances`, or `destroy_stack` can cause instant, hard-to-reverse outages. Gate destructive tools behind an explicit confirmation step or disable them when only read/query access is needed.
+
+**Cost runaway via runaway provisioning.** An agent in a loop can spin up thousands of compute instances or storage objects before a human notices. Set provider-level budget alerts and quotas; consider read-only mode for exploratory or analytical agent tasks.
+
+**Cross-account access.** Servers configured with role-assumption or organization-level credentials can accidentally touch accounts other than the intended target. Scope credentials to a single account and verify `sts:GetCallerIdentity` / equivalent at startup.
 
 ## 7. Documented Strengths
 

@@ -35,11 +35,30 @@ ExLlamaV2 / V3 (turboderp/exllamav2) is an MIT-licensed Python/CUDA inference li
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+ExLlamaV2 does **not** ship an OpenAI-compatible HTTP server. The README recommends **TabbyAPI** (a separate project) — "a FastAPI-based server that provides an OpenAI-style web API" with embeddings and Jinja2 chat templates. TabbyAPI's endpoint coverage (`/v1/chat/completions`, `/v1/completions`, `/v1/embeddings`, tool calling, logprobs) is documented in TabbyAPI itself.
+
+Natively in ExLlamaV2:
+
+- **WebSocket server** (`ExLlamaV2WebSocketServer`, `examples/ws_server.py`): bespoke JSON-over-WebSocket protocol; not OpenAI-compatible.
+- **Streaming:** Token-by-token via `ExLlamaV2StreamingGenerator` and `ExLlamaV2DynamicGenerator.iterate()` (pull-based iteration, prefill/streaming stages distinct). Network streaming through the WebSocket server.
+- **Structured outputs:** Integrations with `lm-format-enforcer` (`ExLlamaV2TokenEnforcerFilter`) and `formatron` (`FormatterBuilder`) — both enforce Pydantic/JSON Schema at the token level.
+- **Vision / multimodal:** Native via `ExLlamaV2VisionTower` + `ExLlamaV2Embedding`. Tested: Pixtral 12B, Mistral-Small 3.1 24B, Qwen2-VL 7B, Gemma3 27B.
+- **Tool calling, logprobs:** Not documented or demonstrated in the core repo.
+
+Sources: [ExLlamaV2 README](https://github.com/turboderp-org/exllamav2), [examples/](https://github.com/turboderp-org/exllamav2/tree/master/examples).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Maintainer-published throughput (single RTX 4090, single-sequence decode):
+
+| Model | Format | Decode (tok/s) |
+|---|---|---|
+| Llama 7B | GPTQ 4-bit, 128 group | ~205 |
+| Llama 2 7B | EXL2 3.0 bpw | ~257 |
+| Llama 2 70B | EXL2 2.5 bpw | ~38 |
+| TinyLlama 1.1B | EXL2 3.0 bpw | ~770 |
+
+Prefill throughput not reported separately. No TTFT, multi-GPU scaling, or batch-size curves in the README. The `doc/dynamic.md` notes batch/continuous-batching benchmarks may be added "in the future." Source: [ExLlamaV2 README](https://github.com/turboderp-org/exllamav2) (Performance section).
 
 ## 7. Documented Strengths
 

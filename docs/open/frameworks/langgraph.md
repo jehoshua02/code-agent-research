@@ -28,8 +28,7 @@ LangGraph is model-agnostic and delegates inference to LangChain integration pac
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
-
+Graph-based agent execution. Tools are `@tool`-decorated Python callables; `ToolNode` executes them within graph nodes; `ToolRuntime` injects state/context/store/stream-writer/retry-info. Planning is the graph itself (nodes + edges); the Deep Agents harness adds a `write_todos` tool. Memory: short-term via checkpointers scoped to `thread_id`; long-term via `BaseStore` with semantic/episodic/procedural types. Multi-agent via subgraphs and Deep Agents' `task` tool (sync + async subagents). Human-in-the-loop via `interrupt(value)` and compile-time/runtime breakpoints; resume with `Command(resume=value)`. State persistence: checkpointers — `InMemorySaver`, `SqliteSaver`, `PostgresSaver`, `CosmosDBSaver`; time-travel and forking supported. Observability: automatic LangSmith tracing via three env vars (`LANGSMITH_TRACING`, `LANGSMITH_API_KEY`, `LANGSMITH_PROJECT`). Retry: `ModelRetryMiddleware`, `ToolRetryMiddleware`, `@wrap_tool_call`. Both sync (`.invoke`/`.stream`) and async (`.ainvoke`/`.astream`/`.abatch`) throughout. Source: docs.langchain.com/oss/python/langgraph/overview.
 ## 5. MCP Support
 
 Via adapter — the `langchain-mcp-adapters` package (v0.3.0+) wraps MCP servers and exposes their tools as LangChain tools usable in LangGraph agents. Install:

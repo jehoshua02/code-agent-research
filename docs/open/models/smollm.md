@@ -43,11 +43,11 @@ Even the 1.7B FP16 fits ~3.4 GB — runnable on integrated graphics (Intel Arc, 
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (primary, with standard `generate` API), **llama.cpp** (GGUF; all sizes including 135M), **Ollama** (GGUF), and **MLX** (Apple Silicon, excellent fit given the tiny sizes). Also deployable via **ONNX Runtime** (HuggingFace publishes ONNX exports) for browser/mobile targets. **vLLM** works but is overkill for these sizes; batch serving of SmolLM makes more sense with Transformers + TGI. Common quant formats: GGUF (Q2–Q8), ONNX (INT4/INT8), bitsandbytes 4-bit/8-bit.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+SmolLM2-Instruct models target **on-device text tasks**: rewriting, summarization, short question answering, and light **function/tool calling** (1.7B Instruct). English-only; the small parameter count limits multilingual and complex reasoning quality. No vision. The 135M and 360M are suitable only for constrained classification or short-form generation; the 1.7B is the only variant capable of meaningful instruction following. Designed for privacy-preserving local inference rather than frontier task performance. ([SmolLM2 blog](https://huggingface.co/blog/smollm2))
 
 ## 8. Benchmarks
 

@@ -35,7 +35,7 @@ Source: [DSPy source — dspy/clients/lm.py](https://github.com/stanfordnlp/dspy
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+Declarative LM programming framework (compile prompts as programs). Tools are plain Python functions wrapped in `dspy.Tool(func)`; auto-schema from signature/docstring; MCP support via `dspy.Tool.from_mcp_tool`; native function-calling opt-in (`ChatAdapter(use_native_function_calling=True)`). Planning via ReAct loop in `dspy.ReAct(signature, tools=[...], max_iters=20)` — each iter produces thought/tool_name/tool_args; built-in `finish` tool; offline "compile-time" planning via optimizers (MIPROv2, BootstrapFewShot, SIMBA). Memory: in-loop `trajectory` dict (working memory, oldest entries truncated); `dspy.History` for conversational (explicit, not auto-tracked); no built-in long-term store (use retrieval as tools). Multi-agent via DSPy module composition (no dedicated primitive); `dspy.Parallel` for concurrent module exec. HITL not interrupt-based; uses `dspy.BestOfN` and `dspy.Refine` (replaced `dspy.Assert`/`dspy.Suggest`) with human-authored `reward_fn`. State persistence: `Module.save("path.json")` (state-only) or `save_program=True` (full cloudpickle); API keys never serialized; transactional load. Observability: `dspy.inspect_history(n)`, MLflow autologging (zero-code), custom `BaseCallback`. Retry: ReAct tool errors → text observations for LLM self-correction; `truncate_trajectory` (3 retries) on context overflow; `BestOfN`/`Refine` for output-level retry. Both sync and async (`module(...)` vs `await module.acall(...)`, `aforward`). Source: dspy.ai.
 
 ## 5. MCP Support
 

@@ -31,7 +31,7 @@ All inference is mediated through [Instructor](https://python.useinstructor.com/
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+**Pass C research deferred** — research agent hit session limit before completing. Composable atomic-component agent framework (BrainBlend-AI/atomic-agents). Atomic single-responsibility blocks (input/output schemas, system prompts, agent class). Apply remaining capability detail in next pass; see project README for current information.
 
 ## 5. MCP Support
 
