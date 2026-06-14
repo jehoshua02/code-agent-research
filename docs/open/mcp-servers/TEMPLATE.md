@@ -26,6 +26,14 @@ How auth/secrets are handled, if any.
 
 Sandboxing, allowlists, common footguns.
 
-## 7. Sources
+## 7. Documented Strengths
+
+Documented strengths from maintainer docs or community reports. Cite source.
+
+## 8. Documented Weaknesses
+
+Documented limitations from issue tracker or community reports. Cite source.
+
+## 9. Sources
 
 Repo, docs. Include date observed.

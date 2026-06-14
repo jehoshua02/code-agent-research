@@ -4,11 +4,11 @@ _Last verified: YYYY-MM-DD_
 
 ## 1. What It Is
 
-Family, maker, release date, license, parameter count (total + active for MoE).
+Family, maker, release date, license. One-paragraph summary of what this family is for.
 
 ## 2. Variants
 
-Sizes and intended use cases.
+Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
 
 ## 3. Context Window
 

@@ -11,7 +11,7 @@ Relationship to `../models/` and `../tools/`: those track the broader coding-too
 ## 2. Structure
 
 ```
-models/         — one file per open-weight model variant
+models/         — one file per open-weight model family (variants enumerated within)
 runtimes/       — inference engines (ollama, vllm, llama.cpp, ...)
 frameworks/     — agent frameworks (langgraph, autogen, crewai, ...)
 mcp-servers/    — MCP server implementations

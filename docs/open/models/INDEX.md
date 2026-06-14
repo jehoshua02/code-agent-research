@@ -1,5 +1,7 @@
 # Models — Index
 
-| Model | Family | Params (total / active) | License | Context | Notes |
+One row per family. Click through for variant details.
+
+| Family | Maker | Sizes | License | Context | Notes |
 |---|---|---|---|---|---|
 | _populate as entries are added_ |  |  |  |  |  |
