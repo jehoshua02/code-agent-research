@@ -65,3 +65,7 @@ If a model or runtime requires a platform the reader doesn't currently have, tha
 - [By task](views/by-task.md) — coding, research, writing, automation, data
 - [By hardware](views/by-hardware.md) — 8 / 12 / 16 / 24 / 24+ GB tiers
 - [By license](views/by-license.md) — Apache 2.0, MIT, custom permissive, source-available
+
+## 6. Glossary
+
+[Glossary](GLOSSARY.md) — terminology used throughout the survey (layers, model concepts, hardware, protocols).
