@@ -8,19 +8,34 @@ MCP servers in this category run code in a sandboxed environment (Python, JavaSc
 
 ## 2. Capability
 
-What it exposes — files, shell, web, browser, database, API, etc.
+Exposes sandboxed code execution to the agent. Common tools across implementations:
+
+- **run_code** / **execute_code** — submit a code string in a target language (Python, JavaScript, etc.) and receive stdout, stderr, and return value; some implementations also return rich output (images, dataframes) as artifacts
+- **install_package** — install a library into the sandbox session (E2B and similar cloud-based runners)
+- **upload_file** / **read_file** — transfer files into or out of the sandbox environment
+- **list_sessions** / **kill_session** — manage long-lived sandbox sessions with state persistence between calls (E2B)
+
+Implementations differ on isolation model: cloud sandboxes (E2B) run code in ephemeral remote VMs; local runners use Docker containers, Pyodide (WASM in-browser), or sub-processes with resource limits.
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+No Anthropic reference implementation. E2B is the most common cloud-sandboxed option:
+
+```
+npx -y @e2b/mcp-server
+```
+
+Docker-based local runners typically require Docker to be installed and running on the host. Container deployment is strongly recommended for any local code-execution server to limit the blast radius of arbitrary code.
 
 ## 4. Transport
 
-stdio / sse / streamable HTTP.
+stdio for local implementations (Docker-based, Pyodide). Cloud-based servers such as E2B connect to a remote sandbox API; the MCP server itself is typically spawned locally via stdio and makes outbound HTTPS calls to the E2B API. Streamable HTTP transport is used by some hosted variants.
 
 ## 5. Auth
 
-How auth/secrets are handled, if any.
+- **Cloud sandboxes (E2B)**: require an `E2B_API_KEY` environment variable; sign up on the E2B platform to obtain one
+- **Local Docker runners**: no credential-based auth; isolation relies on container boundaries and Docker daemon permissions
+- **Pyodide runners**: no auth; isolation relies on WASM sandbox
 
 ## 6. Security Considerations
 

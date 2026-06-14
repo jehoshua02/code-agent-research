@@ -8,15 +8,37 @@ Aider is an Apache-2.0 Python application from Aider-AI / Paul Gauthier (Aider-A
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Requires Python 3.9+.
+
+```bash
+# Recommended (bootstraps into an isolated environment)
+python -m pip install aider-install
+aider-install
+
+# Direct pip install
+python -m pip install aider-chat
+
+# pipx (isolated)
+pipx install aider-chat
+```
+
+After install, run `aider` from inside a git repository. Pass API keys via environment variables or `--api-key` flags.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **CLI**: Primary interface; interactive REPL in the terminal with `/commands` for control.
+- **"Watch" mode for IDE integration**: Aider monitors files for AI-comment triggers (`# AI: ...`), letting any editor drive it passively without a plugin.
+- No dedicated TUI beyond the interactive CLI prompt, no web UI, no IDE extension, no mobile app.
+- Headless/non-interactive: supported via `--yes` flag and message piping for CI scripting.
+- Remote: not built-in; can run over SSH as a standard terminal process.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Aider supports virtually any LLM via its own provider abstraction. Confirmed providers include:
+
+- **Anthropic** (Claude 3.5/3.7 Sonnet — recommended), **OpenAI** (GPT-4o, o1, o3-mini), **DeepSeek** (R1, Chat V3), **Google Gemini**, **OpenRouter**, **Azure OpenAI**, **Cohere**, **Ollama** (local), **LM Studio**, and any OpenAI-compatible endpoint.
+
+BYOK: yes — each provider requires its own API key set via env var or `--api-key <provider>=<key>`. No bundled model; no provider lock-in. Ranks models on its own leaderboard at [aider.chat/docs/leaderboards](https://aider.chat/docs/leaderboards/).
 
 ## 5. Capabilities
 

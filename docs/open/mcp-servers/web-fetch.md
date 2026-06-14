@@ -8,19 +8,42 @@ MCP servers in this category fetch HTTP(S) URLs and return content (HTML, JSON, 
 
 ## 2. Capability
 
-What it exposes — files, shell, web, browser, database, API, etc.
+Exposes HTTP(S) retrieval and content conversion. The Anthropic reference server (`mcp-server-fetch`) exposes a single tool:
+
+- **fetch** — fetch a URL and return its contents as markdown (HTML is converted) or raw HTML; parameters include `url`, `max_length`, `start_index` (for pagination through large pages), and `raw` (return HTML instead of markdown)
+
+Community variants extend this pattern with additional tools for specific content types, multi-URL batching, or cookie/header injection.
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+The Anthropic reference server is Python-based and installs via `uvx`:
+
+```
+uvx mcp-server-fetch
+```
+
+Or via pip:
+
+```
+pip install mcp-server-fetch
+python -m mcp_server_fetch
+```
+
+Community Node.js variants install via npx:
+
+```
+npx -y @some-org/mcp-fetch
+```
+
+Host install is standard; no special container requirement since the server makes outbound HTTP calls rather than accessing local resources.
 
 ## 4. Transport
 
-stdio / sse / streamable HTTP.
+stdio. The process is spawned by the MCP client; no networked listening port in the reference implementation.
 
 ## 5. Auth
 
-How auth/secrets are handled, if any.
+No auth. The server makes outbound requests to arbitrary URLs using a configurable `User-Agent` header. It respects `robots.txt` by default (can be disabled). Proxy configuration is supported via environment variable. No API keys or tokens are required for the server itself; target URLs may have their own auth requirements which the caller must embed in the URL or pass via headers (implementation-dependent).
 
 ## 6. Security Considerations
 

@@ -8,19 +8,43 @@ Hunyuan is Tencent's open-weight family. Released under the Tencent Hunyuan Lice
 
 ## 2. Variants
 
-Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
+| Name | Total / Active Params | Released | Architecture | Intended Use |
+|---|---|---|---|---|
+| Tencent-Hunyuan-Large | 389B / 52B | Nov 2024 | MoE | General-purpose, long-context |
+| Hunyuan-A13B-Pretrain | 80B / 13B | Jun 2025 | MoE | Pre-trained base for fine-tuning |
+| Hunyuan-A13B-Instruct | 80B / 13B | Jun 2025 | MoE | Reasoning, agentic, coding, math, science |
+| Hunyuan-A13B-Instruct-FP8 | 80B / 13B | Jun 2025 | MoE | Same as Instruct, reduced memory |
+| Hunyuan-A13B-Instruct-GPTQ-Int4 | 80B / 13B | Jun 2025 | MoE | Consumer / constrained inference |
+
+The tencent org also hosts Hy-MT (translation) and Hy3 (299B) variants.
 
 ## 3. Context Window
 
-Native context length. Extended context options (YaRN, etc.). Practical limits.
+- Hunyuan-Large: pre-train 256K; Instruct 128K.
+- Hunyuan-A13B: **256K** native (262,144). Default `config.json` caps at 32K to prevent OOM. Full 256K requires 4× NVIDIA H20 (96 GB each) BF16. INT4 + single RTX 4090 can handle ~128K (approximate per community reports).
+- Recommended runtimes: vLLM 0.8.5+ or SGLang.
 
 ## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
+Hunyuan-A13B (80B total / 13B active). Sizes from official GGUF repo:
+
+| Precision | Approx VRAM |
+|---|---|
+| Q4_0 | ~45 GB |
+| Q4_K_M | ~49 GB |
+| Q8_0 | ~85 GB |
+| FP8 (official) | ~80 GB |
+| FP16/BF16 | ~160 GB |
+
+Min viable: 2× RTX 4090 (48 GB combined) for Q4_K_M at 32K context. Full 256K needs 4× H20 96 GB. All experts must reside in VRAM, not just active.
+
+Hunyuan-Large (389B / 52B): no official table; FP16 ~780 GB; realistically 8× A100/H100. Not consumer-runnable without heavy quant.
 
 ## 5. Where To Get Weights
 
-Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+- HuggingFace org: https://huggingface.co/tencent
+- **Gated:** no HF access gate; publicly downloadable.
+- License: Tencent's proprietary "tencent-hunyuan-a13b" license (not Apache 2.0). Review LICENSE at github.com/Tencent-Hunyuan/Hunyuan-A13B before commercial use.
 
 ## 6. Runtime Support
 

@@ -8,15 +8,48 @@ OpenHands is an MIT-licensed Python application from All Hands AI (All-Hands-AI/
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Docker recommended for the local GUI; the CLI requires Python 3.12+ and `uv`.
+
+**CLI (OpenHands-CLI):**
+
+```bash
+# uv (recommended — Python 3.12 required)
+uv tool install openhands --python 3.12
+
+# Standalone binary
+curl -fsSL https://install.openhands.dev/install.sh | sh
+```
+
+**Local GUI (Docker-based):**
+
+```bash
+docker run -it --rm -p 3000:3000 \
+  -e SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.43-nikolaik \
+  docker.all-hands.dev/all-hands-ai/openhands:0.43
+# then open http://localhost:3000
+```
+
+The `openhands` and `agent-server` Docker images are fully MIT-licensed.
+
+**Cloud:** Free trial at [app.all-hands.dev](https://app.all-hands.dev) (requires GitHub/GitLab login; uses Minimax model by default).
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **CLI**: Interactive terminal agent (familiar to Claude Code / Codex users); supports IDE and CI pipeline integration; also runs in local browser via embedded server.
+- **Local GUI**: Single-page React application with a REST API backend; self-hosted via Docker; single-user.
+- **OpenHands Cloud**: Hosted web UI (multi-user, RBAC, Slack/Jira/Linear integrations, collaboration features; source-available).
+- **Enterprise (self-hosted cloud)**: Kubernetes deployment in customer VPC; source-available, requires license.
+- **SDK**: Composable Python library for building custom agents; scalable to thousands of parallel agents in the cloud.
+- Headless/non-interactive: supported via SDK and CLI flags.
+- No mobile app; no dedicated IDE extension (CLI works inside any IDE terminal).
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+OpenHands is model-agnostic. Any LLM supported by LiteLLM can be used, including:
+
+- **Anthropic** (Claude), **OpenAI** (GPT-4o, o1), **Google** (Gemini), **Minimax** (default on cloud), **Ollama** (local), and any OpenAI-compatible endpoint.
+
+BYOK: yes — API keys are supplied at setup time via the CLI wizard or environment variables (`LLM_API_KEY`, `LLM_MODEL`, `LLM_BASE_URL`). No bundled model; no provider lock-in.
 
 ## 5. Capabilities
 

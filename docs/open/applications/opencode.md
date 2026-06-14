@@ -8,15 +8,43 @@ OpenCode is an MIT-licensed TypeScript application from Anomaly (anomalyco/openc
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Node.js runtime required. The repo moved from `sst/opencode` to `anomalyco/opencode` (redirects automatically).
+
+```bash
+# Curl installer (any OS)
+curl -fsSL https://opencode.ai/install | bash
+
+# npm / pnpm / bun / yarn
+npm i -g opencode-ai@latest
+
+# macOS/Linux (Homebrew, recommended — always up to date)
+brew install anomalyco/tap/opencode
+
+# Windows
+scoop install opencode
+choco install opencode
+
+# Arch Linux
+sudo pacman -S opencode          # stable
+paru -S opencode-bin             # AUR latest
+
+# mise (any OS)
+mise use -g opencode
+```
+
+A desktop app (BETA) is also available for download at [opencode.ai/download](https://opencode.ai/download) for macOS (Apple Silicon and Intel), Windows (x64), and Linux (`.deb`, `.rpm`, `.AppImage`). macOS Homebrew cask: `brew install --cask opencode-desktop`.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **TUI**: Interactive terminal UI (primary experience); runs in any terminal.
+- **CLI**: Headless / non-interactive mode available for scripting and CI.
+- **Desktop app (BETA)**: Native wrapper for macOS, Windows, and Linux.
+- No dedicated IDE extension, web UI (browser-hosted), or mobile app.
+- Remote/multi-client: not documented; the TUI is single-session per invocation.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Provider-agnostic via a built-in provider registry covering 75+ LLM providers. Confirmed providers include Anthropic (Claude), OpenAI, Google Gemini, AWS Bedrock, Azure OpenAI, OpenRouter, Ollama (local), and any OpenAI-compatible endpoint. BYOK: yes — users supply API keys via environment variables or a config file. No bundled model; no provider lock-in.
 
 ## 5. Capabilities
 

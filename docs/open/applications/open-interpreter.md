@@ -8,15 +8,40 @@ Open Interpreter is a Python application from the OpenInterpreter org (OpenInter
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Requires Python 3.
+
+```bash
+# From GitHub (latest)
+pip install git+https://github.com/OpenInterpreter/open-interpreter.git
+
+# PyPI (stable)
+pip install open-interpreter
+```
+
+Also runnable in Google Colab (interactive demo available). A desktop app with early access is in development ([signup](https://0ggfznkwh4j.typeform.com/to/G21i9lJ2)).
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **CLI**: Primary interface; run `interpreter` after install to start an interactive ChatGPT-like REPL in the terminal.
+- **Python API**: Import and use programmatically (`from interpreter import interpreter`); supports streaming, message history save/restore, and custom system messages.
+- **Desktop app (early access)**: Native app in development; signup required.
+- No TUI, no IDE extension, no hosted web UI.
+- Headless: supported via Python API — pass messages directly to `.chat(message)` without launching interactive mode.
+- Remote: runs over SSH as a standard Python process.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Open Interpreter uses [LiteLLM](https://docs.litellm.ai/docs/providers/) to connect to language models, giving access to virtually all major providers:
+
+- **OpenAI** (GPT-4o, GPT-3.5-turbo — default), **Anthropic** (Claude 2+), **Cohere** (Command Nightly), **Google**, and any model listed in LiteLLM's provider registry.
+- **Local models**: Any OpenAI-compatible server (LM Studio, Jan.ai, Ollama, Llamafile) via `--api_base` and a dummy key. `--local` flag sets a local-friendly context window automatically.
+
+```bash
+interpreter --model claude-2 --api-key anthropic=<key>
+interpreter --api_base "http://localhost:1234/v1" --api_key fake_key
+```
+
+BYOK: yes. No bundled model; no provider lock-in.
 
 ## 5. Capabilities
 

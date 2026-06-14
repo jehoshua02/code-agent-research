@@ -8,19 +8,41 @@ Yi is 01.AI's open-weight family. Modern checkpoints released under Apache 2.0 (
 
 ## 2. Variants
 
-Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
+| Name | Params | Released | Intended Use |
+|---|---|---|---|
+| Yi-6B / 6B-Chat | 6B | Nov 2023 | Lightweight base / chat |
+| Yi-9B / 9B-200K | 9B | 2024 | Mid-size general / long-context |
+| Yi-34B / 34B-Chat | 34B | Nov 2023 | General base / chat |
+| Yi-34B-200K | 34B | Nov 2023 | Long-document (200K context) |
+| Yi-34B-Chat-4bits / 8bits | 34B | Nov 2023 | Quantized chat for consumer HW |
+| Yi-1.5-6B / 9B / 34B (+ Chat) | 6B / 9B / 34B | May 2024 | Improved continued-pretrain; reasoning, code, math |
+| Yi-Coder family | <10B | Sep 2024 | Code generation |
+| Yi-VL (6B / 34B) | 6B / 34B | Jan 2024 | Vision-language multimodal |
 
 ## 3. Context Window
 
-Native context length. Extended context options (YaRN, etc.). Practical limits.
+- Yi v1 base / chat (34B / 6B): **4K** native.
+- Yi-200K variants (34B / 9B / 6B): extended to **200K** via position interpolation.
+- Yi-1.5: 4K default; 16K / 32K variants for 9B / 34B (named accordingly).
+- Practical caveat: community reports note degraded coherence beyond ~32K on the original 200K models.
 
 ## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
+Estimates from standard formulas (no official 01.AI table).
+
+| Model | FP16 | Q8 | Q4 | Min viable GPU |
+|---|---|---|---|---|
+| Yi-6B | ~12 GB | ~6 GB | ~4 GB | RTX 3060 12 GB (Q4); 3080 (Q8) |
+| Yi-9B | ~18 GB | ~9 GB | ~5 GB | RTX 3060 12 GB (Q4/Q8); 3090 (FP16) |
+| Yi-34B | ~68 GB | ~34 GB | ~17 GB | RTX 4090 24 GB (Q4); 2× A100 40 GB (FP16) |
+
+CPU offload viable; 32 GB system RAM recommended for 34B partial offload.
 
 ## 5. Where To Get Weights
 
-Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+- HuggingFace org: https://huggingface.co/01-ai
+- **Gated:** no — direct download, no auth required.
+- License: **Apache 2.0** for all Yi and Yi-1.5 series.
 
 ## 6. Runtime Support
 

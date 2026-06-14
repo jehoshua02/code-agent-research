@@ -6,15 +6,15 @@ Current entries are agentic coding/general-purpose applications. Other applicati
 
 | Application | Maker | License | Interfaces | Focus | Notes |
 |---|---|---|---|---|---|
-| [OpenCode](opencode.md) | Anomaly | MIT | _stub_ | Agentic coding | _stub_ |
-| [Aider](aider.md) | Aider-AI | Apache-2.0 | _stub_ | Agentic coding | _stub_ |
-| [OpenHands](openhands.md) | All Hands AI | MIT | _stub_ | Agentic coding (general) | formerly OpenDevin |
-| [AutoGPT](autogpt.md) | Significant Gravitas | MIT (core) / Polyform Shield (platform) | _stub_ | General autonomous agent | _stub_ |
-| [Open Interpreter](open-interpreter.md) | OpenInterpreter | AGPL-3.0 | _stub_ | Code-execution agent | _stub_ |
-| [Continue](continue.md) | Continue Dev | Apache-2.0 | _stub_ | Agentic coding (IDE) | _stub_ |
-| [Mentat](mentat.md) | AbanteAI | Apache-2.0 | _stub_ | Agentic coding | repo 404 as of 2026-06-14 |
-| [GPT-Engineer](gpt-engineer.md) | gpt-engineer-org | MIT | _stub_ | One-shot codegen | archived |
-| [Goose](goose.md) | Block / Linux Foundation AAIF | Apache-2.0 | _stub_ | General agent | _stub_ |
-| [SWE-agent](swe-agent.md) | Princeton NLP | MIT | _stub_ | Agentic coding (research) | _stub_ |
-| [OpenClaw](openclaw.md) | OpenClaw Foundation | MIT | _stub_ | Personal AI assistant (general) | skills-based; high adoption |
-| [GSD-PI](gsd-pi.md) | open-gsd | MIT | _stub_ | Agentic coding (project-workflow) | borderline — under adoption threshold |
+| [OpenCode](opencode.md) | Anomaly | MIT | CLI/TUI/desktop app | Agentic coding | _stub_ |
+| [Aider](aider.md) | Aider-AI | Apache-2.0 | CLI (IDE via file-watch) | Agentic coding | _stub_ |
+| [OpenHands](openhands.md) | All Hands AI | MIT | CLI/web UI/cloud/SDK | Agentic coding (general) | formerly OpenDevin |
+| [AutoGPT](autogpt.md) | Significant Gravitas | MIT (core) / Polyform Shield (platform) | Web UI/CLI/API | General autonomous agent | _stub_ |
+| [Open Interpreter](open-interpreter.md) | OpenInterpreter | AGPL-3.0 | CLI/Python API | Code-execution agent | _stub_ |
+| [Continue](continue.md) | Continue Dev | Apache-2.0 | VS Code/JetBrains/CLI | Agentic coding (IDE) | archived (2.0.0 final) |
+| [Mentat](mentat.md) | AbanteAI | Apache-2.0 | — | Agentic coding | repo 404 as of 2026-06-14 |
+| [GPT-Engineer](gpt-engineer.md) | gpt-engineer-org | MIT | CLI | One-shot codegen | archived |
+| [Goose](goose.md) | Block / Linux Foundation AAIF | Apache-2.0 | CLI/desktop app/API | General agent | _stub_ |
+| [SWE-agent](swe-agent.md) | Princeton NLP | MIT | CLI/web GUI | Agentic coding (research) | _stub_ |
+| [OpenClaw](openclaw.md) | OpenClaw Foundation | MIT | CLI/messaging channels/mobile/desktop | Personal AI assistant (general) | skills-based; high adoption |
+| [GSD-PI](gsd-pi.md) | open-gsd | MIT | TUI/web UI | Agentic coding (project-workflow) | borderline — under adoption threshold |

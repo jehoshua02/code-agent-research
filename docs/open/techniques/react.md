@@ -8,23 +8,35 @@ ReAct interleaves Thought, Action, and Observation steps so the model can reason
 
 ## 2. Problem It Solves
 
-What goes wrong without it.
+An LLM acting in a loop has no mechanism to verify whether its intermediate steps are correct. Without real-world feedback between reasoning steps, errors compound silently: a wrong assumption in step 2 cascades into confidently wrong final answers, and the model never knows it went off the rails.
 
 ## 3. How It Works
 
-Mechanism in plain terms. Pseudocode or diagram if needed.
+The model is prompted to alternate between three labeled steps: a Thought (internal reasoning about what to do next), an Action (a tool call with parameters), and an Observation (the tool's return value). The loop repeats until the model produces a final answer. The structure is enforced by the prompt template and by stopping the LLM on the Observation line so the runtime can inject the real tool result. Introduced by Yao et al. 2022.
+
+```
+while not done:
+    thought = llm(prompt + history)          # "I need to search for X"
+    action, args = parse_action(thought)     # search("X")
+    observation = execute_tool(action, args) # "X is defined as..."
+    history += thought + observation
+return parse_final_answer(history)
+```
 
 ## 4. When To Use
 
-Conditions where it pays off.
+ReAct is the right default pattern for multi-step tasks that require external tools — web search, calculators, APIs, databases. It is especially useful when the task cannot be decomposed in advance because each action's result determines the next step.
 
 ## 5. When Not To Use
 
-Conditions where it hurts more than helps.
+Avoid ReAct for single-turn factual questions where one tool call suffices (plain tool use is cheaper). It adds overhead for latency-critical paths because every loop iteration requires at least one LLM call plus tool round-trip. If no tools are available, the Thought/Action structure adds tokens without benefit.
 
 ## 6. Implementations
 
-Libraries, frameworks, or runtimes that ship it.
+- **LangChain** — `AgentExecutor` with `zero-shot-react-description` agent type; also `create_react_agent`
+- **LlamaIndex** — `ReActAgent` with pluggable tool list
+- **smolagents** (Hugging Face) — `ReactCodeAgent` and `ReactToolCallingAgent`
+- **custom** — the pattern is a prompt template plus a parse-and-dispatch loop; no library strictly required
 
 ## 7. Sources
 

@@ -10,15 +10,41 @@ GSD-PI (open-gsd/gsd-pi, npm: `@opengsd/gsd-pi`) is an MIT-licensed TypeScript a
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Node.js required (managed by the package).
+
+```bash
+# Guided installer (recommended — walks through provider and project setup)
+npx @opengsd/gsd-pi@latest
+
+# CI / scripted (non-interactive)
+npx @opengsd/gsd-pi@latest --yes
+
+# Direct global install via npm
+npm install -g @opengsd/gsd-pi@latest
+
+# pnpm global install
+pnpm setup && exec $SHELL -l && pnpm dlx @opengsd/gsd-pi@latest
+```
+
+After install, run `gsd` in a project directory. State is stored under `.gsd/`. Subsequent upgrades: `gsd upgrade`.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **TUI**: Primary interface; interactive terminal UI launched by `gsd`.
+- **Web UI**: Optional; launch with `gsd --web` for a visual control plane when a browser-based dashboard is preferred.
+- **Desktop Studio app** (`studio/` in the repo): optional companion for project oversight.
+- **CLI slash commands**: `/gsd auto`, `/gsd quick "..."`, `/gsd status`, `/gsd config`, etc., used within the TUI session.
+- No IDE extension, no mobile app.
+- Headless: auto-mode (`/gsd auto`) runs autonomously through plan/implement/verify cycles without human input at each step.
+- Remote: not documented; runs locally.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+GSD-PI is multi-provider with configurable per-phase model routing. The README explicitly mentions:
+
+- **Anthropic** (Claude Opus 4.8 as a named supported model), and "the provider your team already uses" as the selection criterion.
+
+The GSD provider setup docs reference a providers guide ([docs/user-docs/providers.md](https://github.com/open-gsd/gsd-pi/blob/main/docs/user-docs/providers.md)); the web configurator at [pi.opengsd.net](https://pi.opengsd.net) helps choose a provider. BYOK: yes — credentials are entered during the guided install flow. No bundled model; no provider lock-in.
 
 ## 5. Capabilities
 

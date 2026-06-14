@@ -8,15 +8,36 @@ Goose is an Apache-2.0 Rust application originally from Block (block/goose), now
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Built in Rust. The repo moved from `block/goose` to `aaif-goose/goose` under the Linux Foundation's AAIF.
+
+**Desktop app** (macOS, Linux, Windows): download from [goose-docs.ai/docs/getting-started/installation](https://goose-docs.ai/docs/getting-started/installation).
+
+**CLI**:
+
+```bash
+curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | bash
+```
+
+Also available via system package managers (Repology tracks packaging status across distros).
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **Desktop app**: Native GUI for macOS, Linux, and Windows; primary graphical interface.
+- **CLI**: Full terminal interface for scripting and terminal workflows.
+- **API**: Embeddable API surface for integrating Goose into other applications.
+- No dedicated IDE extension or mobile app.
+- Headless: yes — CLI supports non-interactive / scripted use.
+- Multi-client: not documented in README; the desktop app and CLI are independent.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Goose works with 15+ providers out of the box:
+
+- **Anthropic** (Claude), **OpenAI** (GPT-4o, etc.), **Google** (Gemini), **Ollama** (local), **OpenRouter**, **Azure OpenAI**, **AWS Bedrock**, and more.
+- Existing ChatGPT, Claude, and Gemini subscriptions can be used via [ACP (Agent Connectivity Protocol)](https://goose-docs.ai/docs/guides/acp-providers) — BYOK or subscription-based.
+- 70+ extensions via MCP.
+
+BYOK: yes. No bundled model; no provider lock-in. Provider credentials configured at setup.
 
 ## 5. Capabilities
 
