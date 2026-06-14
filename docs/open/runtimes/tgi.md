@@ -1,10 +1,10 @@
 # TGI (text-generation-inference)
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+Text Generation Inference (huggingface/text-generation-inference) is HuggingFace's production inference server. Apache 2.0 (re-licensed after a brief HFOIL period). Active. Rust+Python, OpenAI-compatible, supports many model architectures with tensor parallelism.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [huggingface/text-generation-inference](https://github.com/huggingface/text-generation-inference) — observed 2026-06-14

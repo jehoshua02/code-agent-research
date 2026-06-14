@@ -1,10 +1,10 @@
 # Continue
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+Continue is an Apache-2.0 TypeScript application from Continue Dev (continuedev/continue). Active. Open-source IDE extension (VS Code, JetBrains) for agentic coding with custom commands, models, and contexts.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [continuedev/continue](https://github.com/continuedev/continue) — observed 2026-06-14

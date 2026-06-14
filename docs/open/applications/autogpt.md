@@ -1,10 +1,10 @@
 # AutoGPT
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+AutoGPT is a Python application from Significant Gravitas (Significant-Gravitas/AutoGPT), MIT for the core agent and Polyform Shield for the platform tier. Active. Early autonomous-agent project that pioneered iterative goal pursuit with self-prompting.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) — observed 2026-06-14

@@ -1,10 +1,10 @@
 # DSPy
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+DSPy is an MIT-licensed Python framework from Stanford NLP (stanfordnlp/dspy). Active. Treats prompts as programs to be compiled and optimized, separating program logic from prompt text via signatures and modules.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, examples. Include date observed.
+- [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) — observed 2026-06-14

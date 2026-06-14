@@ -1,10 +1,10 @@
 # Open Interpreter
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
+Open Interpreter is a Python application from the OpenInterpreter org (OpenInterpreter/open-interpreter), AGPL-3.0. Active. Lets LLMs execute code locally to perform general tasks; effectively a code-execution agent for any data or system task.
 
 ## 2. Install
 
@@ -40,4 +40,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 10. Sources
 
-Repo, docs, examples. Include date observed.
+- [OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter) — observed 2026-06-14

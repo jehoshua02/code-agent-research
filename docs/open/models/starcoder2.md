@@ -1,10 +1,10 @@
 # StarCoder2
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+StarCoder2 is the BigCode project's open-weight code model family (3B/7B/15B). Released under BigCode OpenRAIL-M license (permissive with use-based restrictions). Trained on The Stack v2 and targeted at code generation.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [bigcode on HuggingFace](https://huggingface.co/bigcode) — observed 2026-06-14

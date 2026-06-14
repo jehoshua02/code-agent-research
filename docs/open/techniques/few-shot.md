@@ -1,10 +1,10 @@
 # Few-shot / in-context learning
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Few-shot prompting (in-context learning) places a small number of input-output examples in the prompt so the model can infer the task format and style without any weight updates. Documented at scale by Brown et al. (GPT-3, 2020). Effective when examples cover the expected input distribution.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Language Models are Few-Shot Learners (Brown et al., 2020)](https://arxiv.org/abs/2005.14165) — observed 2026-06-14

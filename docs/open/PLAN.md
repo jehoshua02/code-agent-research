@@ -131,7 +131,7 @@ Scope: Anthropic reference servers + notable community servers per category. Pul
 |---|---|---|
 | Scaffold | Done | structure, templates, indexes, glossary, justification |
 | Wave 1 — Stubs | Done | |
-| Wave 2 — Pass A (Identity) | Not started | |
+| Wave 2 — Pass A (Identity) | Done | every entity has §1 + ≥1 source; layer INDEXes have license + key columns filled where confident |
 | Wave 2 — Pass B (Catalog) | Not started | |
 | Wave 2 — Pass C (Function) | Not started | |
 | Wave 2 — Pass D (Evidence) | Not started | |

@@ -1,10 +1,10 @@
 # vLLM
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+vLLM (vllm-project/vllm) is an Apache 2.0 Python inference engine. Active. High-throughput, memory-efficient serving via PagedAttention; OpenAI-compatible API; the de facto choice for production GPU serving of open-weight models.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [vllm-project/vllm](https://github.com/vllm-project/vllm) — observed 2026-06-14

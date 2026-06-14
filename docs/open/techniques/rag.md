@@ -1,10 +1,10 @@
 # RAG (retrieval-augmented generation)
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Retrieval-augmented generation grounds LLM responses by retrieving relevant documents from an external store (typically vector-indexed) at inference time and feeding them as context. Introduced by Lewis et al. (2020). Reduces hallucination and lets the model answer about information not in its training data.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., 2020)](https://arxiv.org/abs/2005.11401) — observed 2026-06-14

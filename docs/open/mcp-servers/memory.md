@@ -1,10 +1,10 @@
 # Memory
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category give agents persistent state across sessions — typically as a key-value or knowledge-graph store. Agents need them to remember user preferences, prior conversations, or learned facts. Notable: memory (official reference, Anthropic) — a simple knowledge-graph server; community options include vector-store-backed memory.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [modelcontextprotocol/servers — memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) — observed 2026-06-14

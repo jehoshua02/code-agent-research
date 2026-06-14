@@ -1,10 +1,10 @@
 # KoboldCpp
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+KoboldCpp (LostRuins/koboldcpp) is an AGPL-3.0 single-binary inference server built on llama.cpp. Active. Bundles a web UI focused on story-writing/role-play use cases; OpenAI-compatible API; popular for hobbyist local hosting.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [LostRuins/koboldcpp](https://github.com/LostRuins/koboldcpp) — observed 2026-06-14

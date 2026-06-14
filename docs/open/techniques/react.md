@@ -1,10 +1,10 @@
 # ReAct
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+ReAct interleaves Thought, Action, and Observation steps so the model can reason about a task, invoke external tools, and react to their results in a loop. Introduced by Yao et al. (2022). The canonical pattern behind most modern agent frameworks.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., 2022)](https://arxiv.org/abs/2210.03629) — observed 2026-06-14

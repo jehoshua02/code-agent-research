@@ -1,10 +1,10 @@
 # Aphrodite Engine
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+Aphrodite Engine (aphrodite-engine/aphrodite-engine) is an AGPL-3.0 Python serving engine derived from vLLM. Active. OpenAI-compatible, with quantization-format support beyond upstream vLLM; community-oriented around large-scale local hosting.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [aphrodite-engine/aphrodite-engine](https://github.com/aphrodite-engine/aphrodite-engine) — observed 2026-06-14

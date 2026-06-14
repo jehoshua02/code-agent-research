@@ -1,10 +1,10 @@
 # Prompt caching
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Prompt caching has the provider cache the server-side key-value state for a static prompt prefix and reuse it across requests, paying full compute only on cache misses. Reduces both cost and latency for repeated long prefixes. Available in Anthropic and OpenAI APIs and in some self-hosted runtimes.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Anthropic Prompt Caching documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching) — observed 2026-06-14

@@ -1,10 +1,10 @@
 # SmolLM
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+SmolLM is HuggingFace's small-model family (135M–1.7B). Released under Apache 2.0. Designed for on-device and constrained-hardware deployment, trained on the SmolLM-Corpus.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [HuggingFaceTB/SmolLM2 on HuggingFace](https://huggingface.co/HuggingFaceTB) — observed 2026-06-14

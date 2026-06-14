@@ -1,10 +1,10 @@
 # Text Generation WebUI (oobabooga)
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+Text Generation WebUI (oobabooga/text-generation-webui) is an AGPL-3.0 Python web interface for local LLMs. Active. Maintained by oobabooga; supports multiple backends (Transformers, llama.cpp, ExLlama) behind a unified UI.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui) — observed 2026-06-14

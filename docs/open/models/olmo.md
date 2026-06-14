@@ -1,10 +1,10 @@
 # OLMo
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+OLMo is the Allen Institute for AI (AI2)'s fully-open model family. Weights, code, AND training data all released under Apache 2.0. Designed as a research-transparent alternative where the entire pipeline is reproducible.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [allenai on HuggingFace](https://huggingface.co/allenai) — observed 2026-06-14

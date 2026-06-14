@@ -1,10 +1,10 @@
 # LocalAI
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+LocalAI (mudler/LocalAI) is an MIT-licensed Go server that mimics the OpenAI API across many local backends (llama.cpp, vLLM, GPT4All, Whisper, diffusion). Active. Lets existing OpenAI-API client code target self-hosted models without changes.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [mudler/LocalAI](https://github.com/mudler/LocalAI) — observed 2026-06-14

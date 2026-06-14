@@ -1,10 +1,10 @@
 # Web Fetch
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category fetch HTTP(S) URLs and return content (HTML, JSON, markdown). Agents need them to read documentation, fetch APIs, or scrape pages. Notable: fetch (official reference, Anthropic); community variants add markdown conversion and content-type handling.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [modelcontextprotocol/servers — fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) — observed 2026-06-14

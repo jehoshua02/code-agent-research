@@ -1,10 +1,10 @@
 # DBRX
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+DBRX is Databricks (Mosaic AI)'s open-weight model. Released March 2024 under the Databricks Open Model License. 132B-total / 36B-active MoE; HuggingFace repos may be gated requiring license acceptance.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [databricks/dbrx-instruct on HuggingFace](https://huggingface.co/databricks/dbrx-instruct) — observed 2026-06-14

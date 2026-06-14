@@ -1,10 +1,10 @@
 # Plan-and-execute
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-One-paragraph definition.
+Plan-and-execute separates a planner LLM call (which decomposes the task into ordered sub-tasks) from an executor (which carries out each sub-task with tools). Popularized by Wang et al. (2023, Plan-and-Solve). Keeps long-horizon tasks on track at the cost of an extra round trip per plan revision.
 
 ## 2. Problem It Solves
 
@@ -28,4 +28,4 @@ Libraries, frameworks, or runtimes that ship it.
 
 ## 7. Sources
 
-Papers, posts, repos. Include date observed.
+- [Plan-and-Solve Prompting (Wang et al., 2023)](https://arxiv.org/abs/2305.04091) — observed 2026-06-14

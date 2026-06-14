@@ -1,10 +1,10 @@
 # Llama
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Llama is Meta's open-weight model family (Llama 3.1, 3.2, 3.3, Llama 4 as of 2026). Released under the Llama Community License — permissive for most uses but with conditions (700M MAU cap, naming, AUP). General-purpose decoder-only transformers in dense and MoE variants; long context, multilingual.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [meta-llama on HuggingFace](https://huggingface.co/meta-llama) — observed 2026-06-14

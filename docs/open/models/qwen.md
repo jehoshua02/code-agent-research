@@ -1,10 +1,10 @@
 # Qwen
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Qwen is Alibaba's open-weight model family. Qwen2.5 and Qwen3 lines released under Apache 2.0 (most checkpoints). General-purpose models with strong multilingual support, math/coding-specific variants (Qwen-Coder, Qwen-Math), and dense + MoE architectures.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [Qwen on HuggingFace](https://huggingface.co/Qwen) — observed 2026-06-14

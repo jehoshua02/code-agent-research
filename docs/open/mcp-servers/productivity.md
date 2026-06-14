@@ -1,10 +1,10 @@
 # Productivity
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category expose personal/team productivity tools — calendar, email, notes, task management. Agents need them for scheduling, drafting messages, and organizing work. Notable community: Google Calendar, Gmail, Notion, Linear, Slack, and Microsoft 365 MCP servers; usually require OAuth.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [PulseMCP — productivity servers](https://www.pulsemcp.com/servers?q=productivity) — observed 2026-06-14

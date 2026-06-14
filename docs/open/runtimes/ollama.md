@@ -1,10 +1,10 @@
 # Ollama
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+Ollama (ollama/ollama) is an MIT-licensed Go runtime that wraps llama.cpp with a friendlier install and model-library experience. Active. Provides a local OpenAI-compatible API; the most common entry point for local model use.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [ollama/ollama](https://github.com/ollama/ollama) — observed 2026-06-14

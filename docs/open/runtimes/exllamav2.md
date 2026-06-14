@@ -1,10 +1,10 @@
 # ExLlamaV2 / ExLlamaV3
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+ExLlamaV2 / V3 (turboderp/exllamav2) is an MIT-licensed Python/CUDA inference library. Active. Specializes in fast, memory-efficient 4-bit (GPTQ/EXL2) GPU inference; used by Text Generation WebUI and other front-ends.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [turboderp/exllamav2](https://github.com/turboderp/exllamav2) — observed 2026-06-14

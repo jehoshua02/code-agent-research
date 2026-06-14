@@ -1,10 +1,10 @@
 # Hunyuan
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Hunyuan is Tencent's open-weight family. Released under the Tencent Hunyuan License — custom proprietary terms, not Apache 2.0; has commercial-use carve-outs in some jurisdictions. MoE and dense variants targeting multilingual and Chinese-language strength.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [tencent on HuggingFace](https://huggingface.co/tencent) — observed 2026-06-14

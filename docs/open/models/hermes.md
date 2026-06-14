@@ -1,10 +1,10 @@
 # Hermes
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Hermes is Nous Research's open-weight series of fine-tuned models. Licenses inherit from the base model used for each Hermes variant (e.g., Llama-based Hermes inherits Llama Community License; Qwen-based inherits Apache 2.0). Tuned for tool use, function calling, and chat quality.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [NousResearch on HuggingFace](https://huggingface.co/NousResearch) — observed 2026-06-14

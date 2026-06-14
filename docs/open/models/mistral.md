@@ -1,10 +1,10 @@
 # Mistral
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Mistral is Mistral AI's open-weight family. Smaller models (Mistral 7B, Mixtral 8x7B/8x22B, Mistral Small, Codestral Mamba) under Apache 2.0; flagship Mistral Large under Mistral Research License (non-commercial unless licensed). Dense and MoE architectures.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [mistralai on HuggingFace](https://huggingface.co/mistralai) — observed 2026-06-14

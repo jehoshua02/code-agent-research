@@ -1,10 +1,10 @@
 # Shell
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language.
+MCP servers in this category run commands in a shell on behalf of the agent. Agents need them to invoke build systems, package managers, tests, or any CLI tool not exposed through a dedicated server. No Anthropic reference (deliberately, due to risk). Notable community: mcp-server-commands and similar; usually paired with allowlists and sandboxing.
 
 ## 2. Capability
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker or community reports. Cite source.
 
 ## 9. Sources
 
-Repo, docs. Include date observed.
+- [PulseMCP — command execution servers](https://www.pulsemcp.com/servers?q=shell) — observed 2026-06-14

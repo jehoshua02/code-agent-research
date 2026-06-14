@@ -1,10 +1,10 @@
 # MLX / mlx-lm
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+MLX (ml-explore/mlx) and mlx-lm (ml-explore/mlx-lm) are MIT-licensed Apple frameworks. Active. Apple-Silicon-native array library and LLM tooling using the Metal GPU; macOS-only, designed to exploit unified memory on M-series chips.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, benchmarks. Include date observed.
+- [ml-explore/mlx-lm](https://github.com/ml-explore/mlx-lm) — observed 2026-06-14

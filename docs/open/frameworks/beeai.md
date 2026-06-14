@@ -1,10 +1,10 @@
 # BeeAI
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Project name, maintainer, license, language, release status.
+BeeAI is an Apache-2.0 Python and TypeScript framework (i-am-bee/beeai-framework), originally from IBM Research. Active. Provides production-oriented agent components with both Python and TypeScript SDKs.
 
 ## 2. Install
 
@@ -36,4 +36,4 @@ Documented limitations from issue tracker, docs, or community reports. Cite sour
 
 ## 9. Sources
 
-Repo, docs, examples. Include date observed.
+- [i-am-bee/beeai-framework](https://github.com/i-am-bee/beeai-framework) — observed 2026-06-14

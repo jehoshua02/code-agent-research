@@ -1,10 +1,10 @@
 # Gemma
 
-_Last verified: stub_
+_Last verified: 2026-06-14_
 
 ## 1. What It Is
 
-Family, maker, release date, license. One-paragraph summary of what this family is for.
+Gemma is Google's open-weight family (Gemma 2, Gemma 3). Released under Gemma Terms of Use — permissive for most uses but with prohibited-use restrictions; not strictly OSI-open. Derived from Gemini research, intended for responsible open development.
 
 ## 2. Variants
 
@@ -44,4 +44,4 @@ Documented limitations and failure modes from benchmarks, model card, or communi
 
 ## 11. Sources
 
-Links to model cards, papers, benchmarks. Include date observed.
+- [google/gemma collection on HuggingFace](https://huggingface.co/google) — observed 2026-06-14
