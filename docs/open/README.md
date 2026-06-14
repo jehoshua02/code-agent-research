@@ -32,13 +32,18 @@ Relationship to `../models/` and `../tools/`: those track the broader coding-too
 ## 3. Structure
 
 ```
-models/         — one file per open-weight model family (variants enumerated within)
-runtimes/       — inference engines (ollama, vllm, llama.cpp, ...)
-frameworks/     — agent framework libraries to build with (langgraph, autogen, crewai, ...)
-agents/         — finished open-source agent products (opencode, aider, openhands, ...)
-mcp-servers/    — MCP server implementations
-techniques/     — patterns (rag, tool-use, planning, ...)
-views/          — curated cross-cuts (opinion layer; links to entities)
+Building blocks (the stack — composable layers):
+  models/         — open-weight model families (variants enumerated within)
+  runtimes/       — inference engines (ollama, vllm, llama.cpp, ...)
+  frameworks/     — agent framework libraries to build with (langgraph, autogen, crewai, ...)
+  mcp-servers/    — MCP server implementations
+  techniques/     — patterns (rag, tool-use, planning, ...)
+
+Finished products (consume the stack — installable applications):
+  applications/   — opencode, aider, openhands, ... (agentic coding/general; later: chat UIs, eval, fine-tuning)
+
+Cross-cuts:
+  views/          — curated views (by-task, by-hardware, by-license, by-layer)
 ```
 
 Each layer has:

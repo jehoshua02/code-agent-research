@@ -1,8 +1,10 @@
-# Agents — Index
+# Applications — Index
 
-Finished open-source agent products. One row per agent. For building-block libraries see [../frameworks/INDEX.md](../frameworks/INDEX.md).
+Finished, installable open-source AI products that compose the stack (models + runtimes + framework patterns + MCP). One row per application. Distinct from [frameworks](../frameworks/INDEX.md) (libraries you build with) and from "agent" as a general concept (see [GLOSSARY](../GLOSSARY.md#agent)).
 
-| Agent | Maker | License | Interfaces | Focus | Notes |
+Current entries are agentic coding/general-purpose applications. Other application categories (chat UIs, evaluation tools, fine-tuning tools) may be added later.
+
+| Application | Maker | License | Interfaces | Focus | Notes |
 |---|---|---|---|---|---|
 | [OpenCode](opencode.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |
 | [Aider](aider.md) | _stub_ | _stub_ | _stub_ | _stub_ | _stub_ |

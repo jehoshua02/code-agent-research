@@ -1,10 +1,10 @@
-# {Agent Name}
+# GPT-Engineer
 
-_Last verified: YYYY-MM-DD_
+_Last verified: stub_
 
 ## 1. What It Is
 
-Project name, maker, license, language, release status. Finished agent product — what you can install and use directly.
+Project name, maker, license, language, release status. Finished application — what you can install and use directly. Note its category (agentic coding, general agent, chat UI, eval tool, etc.).
 
 ## 2. Install
 

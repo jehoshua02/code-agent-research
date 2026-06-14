@@ -65,7 +65,21 @@ Generation throughput. Reported as prefill (input processing) and decode (output
 Anthropic-originated open protocol for connecting agents to tools. Transports: stdio, SSE, streamable HTTP.
 
 ### Agent
-A loop that uses a model to plan and act over multiple steps, calling tools and consuming their results. Built with a framework, runs against a runtime.
+Overloaded term. This survey uses these specific senses:
+
+- **Agentic system** (per [Anthropic, *Building Effective Agents*](https://www.anthropic.com/research/building-effective-agents)) — an LLM dynamically directs its own process and tool usage; the LLM picks the next step based on intermediate results. Contrasted with a **workflow**.
+- **Loose industry sense** — sometimes refers to any LLM-with-tools, even simple single-step function calling. LangChain and HuggingFace docs use this looser sense. Be careful when reading external sources.
+
+Examples: a coding session where the LLM reads files, edits them, runs tests, and decides next steps is agentic. A pipeline that always calls `summarize → classify → store` is a workflow even if each step is an LLM call.
+
+### Workflow
+A predefined sequence of LLM calls and tool invocations where each step's logic is fixed in code. Contrasts with agentic systems. Many production "AI" systems are workflows with agent branding. Workflows are easier to reason about, debug, and bound the cost of; agentic systems are more flexible but harder to predict.
+
+### Application (as used in this survey)
+A finished, installable AI product that composes the stack (models + runtimes + framework patterns + MCP). Example: OpenCode is an agentic coding application; Open WebUI is a chat-UI application. Distinct from a **framework** (a library you build applications with) and from a **runtime** (which executes the model).
+
+### Framework vs application
+A framework is a library — you write code on top of it to make something. An application is a finished product — you install and run it. LangGraph is a framework; OpenCode is an application. Some projects blur the line (Continue is both an extension product and an extensibility surface).
 
 ### Self-hostable
 You can run it yourself on hardware you control. Excludes API-only services. Includes everything in this survey.

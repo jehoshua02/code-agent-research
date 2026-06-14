@@ -78,9 +78,9 @@ Seed list. Add as discovered. Each item below becomes a stub file in Wave 1.
 - [x] mcp-agent
 - [x] agno
 
-### 2.4 Agents (finished products)
+### 2.4 Applications (finished products)
 
-Installable agent products that bundle their own loop, UI, and tooling. Distinct from frameworks (libraries to build with).
+Installable AI applications that compose the stack. Distinct from frameworks (libraries to build with). Current entries are agentic coding/general-purpose; other categories (chat UIs, eval tools, fine-tuning tools) may be added later.
 
 - [x] OpenCode (Anomaly Co)
 - [x] Aider
