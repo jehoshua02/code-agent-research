@@ -10,15 +10,22 @@ Gemma Gem (kessler/gemma-gem) is an Apache 2.0 TypeScript application. Active. R
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platform: Chrome (113+) or Edge (113+) with WebGPU enabled. Requires `pnpm`.
+
+```bash
+pnpm install
+pnpm build
+```
+
+Load the unpacked extension from `.output/chrome-mv3-dev/` via `chrome://extensions` (developer mode). Model weights (~500 MB for E2B, ~1.5 GB for E4B) are cached locally on first run. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+Browser extension (Chrome/Edge MV3). Injects a shadow-DOM chat overlay on any page (toggle via `Alt+G`). No standalone web UI, CLI, or API surface.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Bundled Gemma 4 via `@huggingface/transformers` + WebGPU (ONNX, q4f16 quantization, 128K context). Two variants: E2B (`onnx-community/gemma-4-E2B-it-ONNX`, ~500 MB) and E4B (`onnx-community/gemma-4-E4B-it-ONNX`, ~1.5 GB). Model-specific — Gemma 4 only, no external API or provider support.
 
 ## 5. Capabilities
 
