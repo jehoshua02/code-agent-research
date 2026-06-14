@@ -17,3 +17,4 @@ Current entries are agentic coding/general-purpose applications. Other applicati
 | [Goose](goose.md) | Block / Linux Foundation AAIF | Apache-2.0 | _stub_ | General agent | _stub_ |
 | [SWE-agent](swe-agent.md) | Princeton NLP | MIT | _stub_ | Agentic coding (research) | _stub_ |
 | [OpenClaw](openclaw.md) | OpenClaw Foundation | MIT | _stub_ | Personal AI assistant (general) | skills-based; high adoption |
+| [GSD-PI](gsd-pi.md) | open-gsd | MIT | _stub_ | Agentic coding (project-workflow) | borderline — under adoption threshold |

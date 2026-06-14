@@ -24,4 +24,4 @@ These passed inclusion as borderline cases. They appear as full entries in their
 
 | Name | Layer | Borderline reason | Revisit when |
 |---|---|---|---|
-| [GSD-PI](frameworks/gsd-pi.md) | Frameworks | ★626 (under ★1,000 adoption threshold) but ~1 month old; candidate for distinct-contribution criterion | 3 months after first observation (so ~2026-09) |
+| [GSD-PI](applications/gsd-pi.md) | Applications | ★626 (under ★1,000 adoption threshold) but ~1 month old; candidate for distinct-contribution criterion | 3 months after first observation (so ~2026-09) |

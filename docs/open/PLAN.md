@@ -77,7 +77,6 @@ Seed list. Add as discovered. Each item below becomes a stub file in Wave 1.
 - [x] Atomic Agents
 - [x] mcp-agent
 - [x] agno
-- [x] GSD-PI (borderline — under-threshold adoption + recent; distinct contribution candidate)
 
 ### 2.4 Applications (finished products)
 
@@ -94,6 +93,7 @@ Installable AI applications that compose the stack. Distinct from frameworks (li
 - [x] Goose (Block)
 - [x] SWE-agent (Princeton)
 - [x] OpenClaw (OpenClaw Foundation)
+- [x] GSD-PI (open-gsd) — borderline, under-threshold adoption + recent
 
 ### 2.5 MCP servers (by category)
 
