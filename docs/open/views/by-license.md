@@ -1,23 +1,23 @@
 # View — By License
 
-Open-weight licenses vary in commercial-use freedom, redistribution terms, and downstream restrictions. Verify the current license text — projects re-license.
+Open-weight licenses vary in commercial-use freedom, redistribution terms, and downstream restrictions. Verify the current license text on each entity — projects re-license.
 
-## Apache 2.0
+## 1. Apache 2.0
 
 _Permissive. Patent grant. Most permissive common open-weight license._
 
-## MIT
+## 2. MIT
 
 _Permissive. No patent grant. Common for code, less common for weights._
 
-## Custom permissive (Llama-style)
+## 3. Custom permissive (Llama-style)
 
-_Permits commercial use under conditions (e.g. 700M MAU cap, naming, AUP)._
+_Permits commercial use under conditions (e.g. 700M MAU cap, naming, AUP). Read the actual license — terms vary by model._
 
-## Source-available / non-commercial
+## 4. Source-available / non-commercial
 
 _Research-only or non-commercial only. Not free for production use._
 
-## Other
+## 5. Other
 
-_Document any unique terms here._
+_Document any unique terms here, linked from the entity file._

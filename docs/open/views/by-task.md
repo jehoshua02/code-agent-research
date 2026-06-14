@@ -1,23 +1,23 @@
 # View — By Task
 
-Stacks suited to each task. Links only — no duplicated content.
+Stacks suited to each task. Each section links to relevant models, runtimes, frameworks, MCP servers, and techniques. Authoritative content lives in the entity files.
 
-## Coding
-
-_models / runtimes / frameworks / MCP servers / techniques that fit_
-
-## Research / Web Browsing
+## 1. Coding
 
 _..._
 
-## Writing / Content
+## 2. Research / Web Browsing
 
 _..._
 
-## Personal Automation
+## 3. Writing / Content
 
 _..._
 
-## Data Analysis
+## 4. Personal Automation
+
+_..._
+
+## 5. Data Analysis
 
 _..._

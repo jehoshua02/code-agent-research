@@ -1,37 +1,39 @@
 # {Runtime Name}
 
-## What It Is
+_Last verified: YYYY-MM-DD_
+
+## 1. What It Is
 
 Project name, maintainer, license, language, release status.
 
-## Install
+## 2. Install
 
-VM (preferred). Bare-metal install fallback. Linux-only assumed.
+Linux host (bare-metal, WSL2, OrbStack, or cloud Linux). Container only if GPU passthrough is set up and isolation matters.
 
-## Hardware Support
+## 3. Hardware Support
 
 CUDA / ROCm / Metal / CPU. Multi-GPU. Memory mapping. Offloading.
 
-## Model Formats
+## 4. Model Formats
 
 GGUF, AWQ, GPTQ, FP8, safetensors, etc. Quantization options.
 
-## API Surface
+## 5. API Surface
 
 OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
 
-## Performance
+## 6. Performance
 
 Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
 
-## Strengths
+## 7. Strengths
 
 What it's best at relative to other runtimes.
 
-## Weaknesses
+## 8. Weaknesses
 
 Known limitations.
 
-## Sources
+## 9. Sources
 
-Repo, docs, benchmarks.
+Repo, docs, benchmarks. Include date observed.

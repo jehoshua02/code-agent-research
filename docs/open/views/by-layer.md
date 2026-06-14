@@ -1,23 +1,23 @@
 # View — By Layer
 
-Top entries at each layer, with one-line characterization. Links only — no duplicated content.
+Opinionated top picks at each layer, with one-line characterization. For the full list, see each layer's `INDEX.md`.
 
-## Models
+## 1. Models
 
-_populate from [../models/INDEX.md](../models/INDEX.md)_
+_curated picks — see [../models/INDEX.md](../models/INDEX.md) for full list_
 
-## Runtimes
+## 2. Runtimes
 
-_populate from [../runtimes/INDEX.md](../runtimes/INDEX.md)_
+_curated picks — see [../runtimes/INDEX.md](../runtimes/INDEX.md) for full list_
 
-## Frameworks
+## 3. Frameworks
 
-_populate from [../frameworks/INDEX.md](../frameworks/INDEX.md)_
+_curated picks — see [../frameworks/INDEX.md](../frameworks/INDEX.md) for full list_
 
-## MCP Servers
+## 4. MCP Servers
 
-_populate from [../mcp-servers/INDEX.md](../mcp-servers/INDEX.md)_
+_curated picks — see [../mcp-servers/INDEX.md](../mcp-servers/INDEX.md) for full list_
 
-## Techniques
+## 5. Techniques
 
-_populate from [../techniques/INDEX.md](../techniques/INDEX.md)_
+_curated picks — see [../techniques/INDEX.md](../techniques/INDEX.md) for full list_

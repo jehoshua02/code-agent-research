@@ -1,37 +1,39 @@
 # {Framework Name}
 
-## What It Is
+_Last verified: YYYY-MM-DD_
+
+## 1. What It Is
 
 Project name, maintainer, license, language, release status.
 
-## Install
+## 2. Install
 
-VM (preferred — agents need broad host access; containers are usually too constrained). Bare-metal pip/npm fallback on a dedicated machine.
+Linux host (bare-metal, WSL2, OrbStack, or cloud Linux). Agents typically need broad filesystem and process access — containers are usually too constrained.
 
-## Model Compatibility
+## 3. Model Compatibility
 
 Which inference backends it speaks to (OpenAI-compat, ollama, vllm, hf, ...).
 
-## Agent Capabilities
+## 4. Agent Capabilities
 
 Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
 
-## MCP Support
+## 5. MCP Support
 
 Native? Via adapter? Not supported?
 
-## Programming Model
+## 6. Programming Model
 
 Imperative / declarative / graph-based. Where logic lives (code vs config).
 
-## Strengths
+## 7. Strengths
 
 What it's best at relative to other frameworks.
 
-## Weaknesses
+## 8. Weaknesses
 
 Known limitations and complexity costs.
 
-## Sources
+## 9. Sources
 
-Repo, docs, examples.
+Repo, docs, examples. Include date observed.

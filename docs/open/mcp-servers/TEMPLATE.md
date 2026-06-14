@@ -1,29 +1,31 @@
 # {MCP Server Name}
 
-## What It Is
+_Last verified: YYYY-MM-DD_
+
+## 1. What It Is
 
 Project name, maintainer, license, language.
 
-## Capability
+## 2. Capability
 
 What it exposes — files, shell, web, browser, database, API, etc.
 
-## Install
+## 3. Install
 
-Docker image (preferred). Bare install fallback.
+Depends on access needs. Servers that touch the host (filesystem, shell) run alongside the agent on its Linux host. Servers that are isolated (web fetch, remote API proxy) can run in a container or remote process.
 
-## Transport
+## 4. Transport
 
 stdio / sse / streamable HTTP.
 
-## Auth
+## 5. Auth
 
 How auth/secrets are handled, if any.
 
-## Security Considerations
+## 6. Security Considerations
 
 Sandboxing, allowlists, common footguns.
 
-## Sources
+## 7. Sources
 
-Repo, docs.
+Repo, docs. Include date observed.

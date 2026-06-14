@@ -1,41 +1,43 @@
 # {Model Name}
 
-## What It Is
+_Last verified: YYYY-MM-DD_
+
+## 1. What It Is
 
 Family, maker, release date, license, parameter count (total + active for MoE).
 
-## Variants
+## 2. Variants
 
 Sizes and intended use cases.
 
-## Context Window
+## 3. Context Window
 
 Native context length. Extended context options (YaRN, etc.). Practical limits.
 
-## Hardware Requirements
+## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup.
+VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
 
-## Runtime Support
+## 5. Runtime Support
 
 Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
 
-## Capabilities
+## 6. Capabilities
 
 Tool use, function calling, vision, code, languages, etc. What it's trained for.
 
-## Benchmarks
+## 7. Benchmarks
 
 Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
 
-## Strengths
+## 8. Strengths
 
 What it does well relative to peers in its size class.
 
-## Weaknesses
+## 9. Weaknesses
 
 Known limitations and failure modes.
 
-## Sources
+## 10. Sources
 
-Links to model cards, papers, benchmarks.
+Links to model cards, papers, benchmarks. Include date observed.

@@ -1,29 +1,31 @@
 # {Technique Name}
 
-## What It Is
+_Last verified: YYYY-MM-DD_
+
+## 1. What It Is
 
 One-paragraph definition.
 
-## Problem It Solves
+## 2. Problem It Solves
 
 What goes wrong without it.
 
-## How It Works
+## 3. How It Works
 
 Mechanism in plain terms. Pseudocode or diagram if needed.
 
-## When To Use
+## 4. When To Use
 
 Conditions where it pays off.
 
-## When Not To Use
+## 5. When Not To Use
 
 Conditions where it hurts more than helps.
 
-## Implementations
+## 6. Implementations
 
 Libraries, frameworks, or runtimes that ship it.
 
-## Sources
+## 7. Sources
 
-Papers, posts, repos.
+Papers, posts, repos. Include date observed.
