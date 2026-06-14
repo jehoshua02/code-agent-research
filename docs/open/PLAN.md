@@ -92,6 +92,8 @@ Installable AI applications that compose the stack. Distinct from frameworks (li
 - [x] GPT-Engineer
 - [x] Goose (Block)
 - [x] SWE-agent (Princeton)
+- [x] OpenClaw (OpenClaw Foundation)
+- [x] GSD-PI (open-gsd) — borderline, under-threshold adoption + recent
 
 ### 2.5 MCP servers (by category)
 

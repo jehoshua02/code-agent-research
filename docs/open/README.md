@@ -48,7 +48,11 @@ An entity is **excluded** if any of:
 
 The criteria are intentionally objective. When two readers might disagree, the inclusion decision should rest on which criterion the entity does or does not meet, not on personal opinion. Disagreement about whether an entity meets a criterion is a normal pull-request conversation.
 
-### 2.3 Relationship to other docs
+### 2.3 Considered but not included
+
+Entities we researched and decided **not** to add as full entries are recorded in [CONSIDERED.md](CONSIDERED.md) — with the criterion they failed (or the reason they fall outside scope). Borderline inclusions are tracked there too. This way the research effort isn't lost, and readers can tell "we considered X and chose not to add it" apart from "we never looked at X."
+
+### 2.4 Relationship to other docs
 
 Relationship to `../models/` and `../tools/`: those track the broader coding-tool comparison (open and closed). This survey is task-agnostic and covers the open ecosystem at full breadth.
 
