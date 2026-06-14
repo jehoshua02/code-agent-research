@@ -26,13 +26,13 @@ OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
 
 Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
 
-## 7. Strengths
+## 7. Documented Strengths
 
-What it's best at relative to other runtimes.
+Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
 
-## 8. Weaknesses
+## 8. Documented Weaknesses
 
-Known limitations.
+Documented limitations from issue tracker, docs, or community reports. Cite source.
 
 ## 9. Sources
 

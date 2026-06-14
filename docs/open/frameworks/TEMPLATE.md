@@ -26,13 +26,13 @@ Native? Via adapter? Not supported?
 
 Imperative / declarative / graph-based. Where logic lives (code vs config).
 
-## 7. Strengths
+## 7. Documented Strengths
 
-What it's best at relative to other frameworks.
+Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
 
-## 8. Weaknesses
+## 8. Documented Weaknesses
 
-Known limitations and complexity costs.
+Documented limitations from issue tracker, docs, or community reports. Cite source.
 
 ## 9. Sources
 

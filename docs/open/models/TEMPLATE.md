@@ -18,26 +18,30 @@ Native context length. Extended context options (YaRN, etc.). Practical limits.
 
 VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
 
-## 5. Runtime Support
+## 5. Where To Get Weights
+
+Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+
+## 6. Runtime Support
 
 Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
 
-## 6. Capabilities
+## 7. Capabilities
 
 Tool use, function calling, vision, code, languages, etc. What it's trained for.
 
-## 7. Benchmarks
+## 8. Benchmarks
 
 Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
 
-## 8. Strengths
+## 9. Documented Strengths
 
-What it does well relative to peers in its size class.
+Documented strengths from benchmarks, model card, or independent testing. Cite source.
 
-## 9. Weaknesses
+## 10. Documented Weaknesses
 
-Known limitations and failure modes.
+Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
 
-## 10. Sources
+## 11. Sources
 
 Links to model cards, papers, benchmarks. Include date observed.
