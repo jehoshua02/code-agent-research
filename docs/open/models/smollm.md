@@ -8,19 +8,38 @@ SmolLM is HuggingFace's small-model family (135M–1.7B). Released under Apache 
 
 ## 2. Variants
 
-Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
+SmolLM2 (released Feb 4, 2025; HuggingFaceTB org):
+
+| Name | Params | Context | Intended Use |
+|---|---|---|---|
+| SmolLM2-135M (+ Instruct) | 135M | 2K | Ultra-lightweight on-device |
+| SmolLM2-360M (+ Instruct) | 360M | 2K | On-device language tasks |
+| SmolLM2-1.7B (+ Instruct) | 1.7B | 8K | Lightweight general-purpose; rewriting, summarization, function calling |
+
+All trained on 11 trillion tokens in BF16. Successor to SmolLM v1 with improvements in instruction following, knowledge, reasoning, and math.
 
 ## 3. Context Window
 
-Native context length. Extended context options (YaRN, etc.). Practical limits.
+- **135M / 360M:** 2,048 tokens.
+- **1.7B:** 8,192 tokens (extended from 2K via continued training with RoPE base 130,000).
+- No official extended-context variants; the 135M / 360M are too small for meaningful RoPE extrapolation.
 
 ## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
+Designed for on-device / edge deployment.
+
+| Variant | Q4 | Q8 | FP16/BF16 |
+|---|---|---|---|
+| SmolLM2-135M | ~0.1 GB | ~0.15 GB | ~0.27 GB |
+| SmolLM2-360M | ~0.2 GB | ~0.4 GB | ~0.72 GB |
+| SmolLM2-1.7B | ~1.1 GB | ~1.9 GB | ~3.4 GB |
+
+Even the 1.7B FP16 fits ~3.4 GB — runnable on integrated graphics (Intel Arc, Apple M-series) or a laptop GPU. Min viable for 1.7B FP16: RTX 3050 4 GB. 8 GB system RAM enough for CPU inference of any variant.
 
 ## 5. Where To Get Weights
 
-Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+- HuggingFace org: https://huggingface.co/HuggingFaceTB
+- **Gated:** no. **License:** Apache 2.0. Direct download.
 
 ## 6. Runtime Support
 

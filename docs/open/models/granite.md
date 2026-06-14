@@ -8,19 +8,43 @@ Granite is IBM's open-weight family. Released under Apache 2.0. Enterprise-orien
 
 ## 2. Variants
 
-Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
+**Granite 3.1** (Dec 18, 2024):
+
+| Name | Total / Active Params | Architecture | Intended Use |
+|---|---|---|---|
+| Granite-3.1-1B-A400M-Instruct | 1.3B / 400M | MoE | Lightweight instruction following |
+| Granite-3.1-2B-Instruct | 2.5B | Dense | General assistant |
+| Granite-3.1-3B-A800M-Instruct | 3.3B / 800M | MoE | Efficient instruction following |
+| Granite-3.1-8B-Instruct | 8.1B | Dense | General assistant |
+
+**Granite 3.3** (Apr 16, 2025):
+
+| Name | Params | Architecture | Intended Use |
+|---|---|---|---|
+| Granite-3.3-2B-Instruct | 2B | Dense | Reasoning, instruction following |
+| Granite-3.3-8B-Instruct | 8B | Dense | Enterprise assistant; structured reasoning via `<think>` / `<response>` tags |
+
+Both generations support 12+ languages (en, de, es, fr, ja, pt, ar, cs, it, ko, nl, zh).
 
 ## 3. Context Window
 
-Native context length. Extended context options (YaRN, etc.). Practical limits.
+All Granite 3.1 and 3.3 models: **128K tokens** native. Practical caveat: at 128K, KV cache for the 8B at FP16 can require 32–40 GB on top of weights — full 128K realistically needs an A100 80 GB or H100. Shorter contexts (8K–32K) fit a single 24 GB GPU.
 
 ## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
+No official VRAM table in model cards; estimates from standard scaling.
+
+| Variant | Q4 | Q8 | FP16/BF16 |
+|---|---|---|---|
+| Granite-3.x-2B | ~1.5 GB | ~2.5 GB | ~5 GB |
+| Granite-3.x-8B | ~5 GB | ~9 GB | ~16 GB |
+
+Min viable for 8B at FP16: RTX 3080/4070 Ti 16 GB. Q4: RTX 3060 12 GB, or even 3050 8 GB with headroom. 16–32 GB system RAM for CPU offload.
 
 ## 5. Where To Get Weights
 
-Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+- HuggingFace org: https://huggingface.co/ibm-granite
+- **Gated:** no. **License:** Apache 2.0. Direct download.
 
 ## 6. Runtime Support
 

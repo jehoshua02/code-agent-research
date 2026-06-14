@@ -8,15 +8,44 @@ Continue is an Apache-2.0 TypeScript application from Continue Dev (continuedev/
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: any OS where VS Code or JetBrains IDEs run (macOS, Linux, Windows); the CLI is Node.js-based.
+
+> **Note:** The `continuedev/continue` repository is read-only (archived) as of 2026. A final 2.0.0 release was published; it remains installable but is not actively maintained.
+
+**VS Code extension** (primary):
+
+```
+# From VS Code Marketplace
+ext install Continue.continue
+
+# Or search "Continue" in the Extensions panel
+```
+
+Also available on the [OpenVSX Registry](https://open-vsx.org/extension/Continue/continue) for VS Code-compatible editors (e.g., VSCodium).
+
+**CLI** (Node.js):
+
+```bash
+npm install -g @continuedev/cli
+```
+
+**JetBrains plugin**: Available via GitHub Releases; install `.zip` manually. The maintainers recommend the CLI over the JetBrains plugin going forward.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **VS Code extension**: Chat sidebar, inline Edit mode, Autocomplete, and an Agent mode for autonomous development tasks.
+- **JetBrains plugin**: Equivalent to the VS Code extension for IntelliJ-family IDEs; feature parity is lower than VS Code.
+- **CLI**: Standalone terminal interface (`@continuedev/cli` on npm); works outside an IDE.
+- No standalone web UI, no mobile app.
+- Headless: the CLI can be scripted; the IDE extensions require a running IDE.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Continue is provider-agnostic and configurable. Supported providers documented in the project include:
+
+- **Anthropic** (Claude), **OpenAI** (GPT-4o, etc.), **Google Gemini**, **Mistral**, **Cohere**, **AWS Bedrock**, **Azure OpenAI**, **Ollama** (local), **LM Studio**, **Llamafile**, and any OpenAI-compatible endpoint.
+
+BYOK: yes — provider credentials are set in a `config.json` file per workspace. No bundled model; no provider lock-in.
 
 ## 5. Capabilities
 

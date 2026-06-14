@@ -8,15 +8,37 @@ GPT-Engineer is an MIT-licensed Python application from Anton Osika (gpt-enginee
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Requires Python 3.10–3.12 (last version supporting 3.8–3.9 was 0.2.6). Docker also supported.
+
+```bash
+# Stable release via pip
+python -m pip install gpt-engineer
+
+# Development install
+git clone https://github.com/gpt-engineer-org/gpt-engineer.git
+cd gpt-engineer
+poetry install
+poetry shell
+```
+
+Docker and GitHub Codespaces options are also documented in the repo.
+
+After install, set `OPENAI_API_KEY` (or configure another provider), create a project folder with a `prompt` file, then run:
+
+```bash
+gpte projects/my-new-project
+```
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **CLI**: Single primary interface — the `gpte` binary. Run with a project directory argument; interactive only in the sense that it may ask clarifying questions during generation.
+- Headless: runs non-interactively once a `prompt` file is present; suitable for scripting and benchmarking via the `bench` binary.
+- No TUI, no web UI, no IDE extension, no mobile app.
+- GitHub Codespaces: full browser-based environment available.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Defaults to **OpenAI** (GPT-4 and compatible models) via the OpenAI API. Also supports **Azure OpenAI** and **Anthropic** models. Local and open-source models are documented at [gpt-engineer.readthedocs.io/en/latest/open_models.html](https://gpt-engineer.readthedocs.io/en/latest/open_models.html) (e.g., WizardCoder). Vision-capable models can accept image inputs via `--image_directory`. BYOK: yes — set `OPENAI_API_KEY` or equivalent env var. No bundled model.
 
 ## 5. Capabilities
 

@@ -8,11 +8,24 @@ Pydantic AI is an MIT-licensed Python framework from the Pydantic team (pydantic
 
 ## 2. Install
 
-Supported platforms. Concrete install steps for each. Note any per-framework quirks. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Python 3.10+ required; Linux, macOS, Windows supported.
+
+```bash
+pip install pydantic-ai
+```
+
+Install provider extras as needed:
+
+```bash
+pip install "pydantic-ai[anthropic]"   # Anthropic
+pip install "pydantic-ai[google]"      # Gemini
+pip install "pydantic-ai[groq]"        # Groq
+# OpenAI is included by default
+```
 
 ## 3. Model Compatibility
 
-Which inference backends it speaks to (OpenAI-compat, ollama, vllm, hf, ...).
+Broad built-in provider support: OpenAI, Anthropic, Google Gemini, DeepSeek, Grok (xAI), Cohere, Mistral, Perplexity, Azure AI Foundry, Amazon Bedrock, Google Cloud, Ollama, LiteLLM (100+ providers), Groq, **OpenRouter**, Together AI, Fireworks AI, Cerebras, Hugging Face, GitHub, Heroku, Vercel, Nebius, OVHcloud, Alibaba Cloud, and SambaNova. Custom model backends are also supported. Source: [pydantic-ai README](https://github.com/pydantic/pydantic-ai).
 
 ## 4. Agent Capabilities
 
@@ -20,11 +33,25 @@ Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
 
 ## 5. MCP Support
 
-Native? Via adapter? Not supported?
+Native — MCP is a built-in capability. Use `MCPServerStdio` / `MCPServerHTTP` to connect agents to MCP servers. Also exposed as an agent capability via `capabilities=[MCPCapability()]`. Source: [ai.pydantic.dev/mcp/overview](https://ai.pydantic.dev/mcp/overview).
 
 ## 6. Programming Model
 
-Imperative / declarative / graph-based. Where logic lives (code vs config).
+Imperative / type-safe. Logic lives in Python code using a FastAPI-inspired decorator pattern. Agents are typed generics (`Agent[Deps, OutputType]`); tools are registered with `@agent.tool`; dynamic instructions with `@agent.instructions`; dependencies injected via `RunContext`. Agent definitions can also be expressed in YAML/JSON (no-code path). Supports both sync and async execution. Example:
+
+```python
+from pydantic_ai import Agent
+
+agent = Agent("openai:gpt-4o", instructions="Be concise.")
+
+@agent.tool
+async def get_weather(ctx, city: str) -> str:
+    """Return current weather for a city."""
+    return f"Sunny in {city}"
+
+result = agent.run_sync("What's the weather in Paris?")
+print(result.output)
+```
 
 ## 7. Documented Strengths
 

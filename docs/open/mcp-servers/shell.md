@@ -8,19 +8,36 @@ MCP servers in this category run commands in a shell on behalf of the agent. Age
 
 ## 2. Capability
 
-What it exposes — files, shell, web, browser, database, API, etc.
+Exposes one or more tools that spawn processes on the host machine. Operations vary slightly by implementation but typically include:
+
+- **run_process** (mcp-server-commands) — run a command via the system's default shell (`command_line` mode) or directly as an executable (`argv` mode); returns stdout and stderr as text; supports passing stdin content
+- **execute_command** / **run_shell** (mcp-shell-server and similar) — run an arbitrary shell command and capture combined output
+
+Some implementations expose multiple tools for common patterns (read file, list directory) layered on top of shell execution.
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Community servers; no Anthropic reference implementation. The most common is the npm-published `mcp-server-commands`:
+
+```
+npx mcp-server-commands
+```
+
+Python-based alternatives (e.g., `mcp-shell-server`) install via:
+
+```
+uvx mcp-shell-server
+```
+
+**Host vs container:** Shell servers by definition execute on whichever machine the process runs. For any meaningful sandboxing, run inside a container with restricted mounts and no network or with an allowlist of permitted commands. Running on the host directly exposes all tools available to the server's user account.
 
 ## 4. Transport
 
-stdio / sse / streamable HTTP.
+stdio. The server process is spawned by the MCP client; JSON-RPC flows over stdin/stdout. HTTP wrapping is possible via adapters such as `mcpo` but is not the default for any major shell server.
 
 ## 5. Auth
 
-How auth/secrets are handled, if any.
+No credential-based auth. Permissions are entirely dictated by the OS user running the server process. Most implementations warn explicitly against running with elevated privileges (e.g., sudo). Some clients (Claude Desktop) prompt for human approval of each command invocation.
 
 ## 6. Security Considerations
 

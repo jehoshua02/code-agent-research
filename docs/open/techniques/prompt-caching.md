@@ -8,23 +8,25 @@ Prompt caching has the provider cache the server-side key-value state for a stat
 
 ## 2. Problem It Solves
 
-What goes wrong without it.
+In agentic loops and multi-turn conversations, a large static system prompt — tool definitions, background documents, persona instructions — is sent on every request and billed at full input-token rates. This makes high-frequency loops expensive: a 10,000-token system prompt sent 100 times costs 1 million input tokens even though the content never changed.
 
 ## 3. How It Works
 
-Mechanism in plain terms. Pseudocode or diagram if needed.
+The provider computes and caches the key-value attention state for a designated prompt prefix after the first request. On subsequent requests that share the same prefix, the provider skips recomputation and serves the cached state at a reduced price (Anthropic charges ~10% of normal input price for cache reads). The developer marks cache breakpoints explicitly (Anthropic `cache_control` parameter) or the provider handles caching automatically (OpenAI). Cache entries have a TTL (typically 5 minutes on Anthropic, longer on OpenAI) and are invalidated when the prefix changes.
 
 ## 4. When To Use
 
-Conditions where it pays off.
+Use prompt caching when a large static block — system prompt, tool list, retrieved documents — appears at the start of many requests in a short time window. It is especially valuable in agentic loops, multi-turn chat with a long persona, and document Q&A where the same document is queried repeatedly.
 
 ## 5. When Not To Use
 
-Conditions where it hurts more than helps.
+Prompt caching provides no benefit when the prompt changes significantly on every request, because the prefix never matches and the cache is never hit. It is also ineffective when the interval between requests exceeds the cache TTL, or when the prompt is too short for the cache overhead to matter. Not all providers support it — verify before designing around it.
 
 ## 6. Implementations
 
-Libraries, frameworks, or runtimes that ship it.
+- **Anthropic API** — `cache_control: {"type": "ephemeral"}` breakpoint on `system`, `user`, or `tool` content blocks; 5-minute TTL by default
+- **OpenAI API** — automatic prompt caching for prompts over 1,024 tokens; no explicit markup required
+- **Google Gemini** — explicit context caching API (`cachedContents`) with configurable TTL
 
 ## 7. Sources
 

@@ -8,19 +8,41 @@ MCP servers in this category expose a search engine (web, code, or vertical) to 
 
 ## 2. Capability
 
-What it exposes — files, shell, web, browser, database, API, etc.
+Exposes one or more search tools backed by a third-party search API. Common tools across implementations:
+
+- **brave_web_search** / **web_search** — submit a query string, return ranked results with title, URL, and snippet
+- **brave_local_search** (Brave server) — location-aware search for local businesses and places
+- **search** (Tavily) — web search optimized for factual/research queries; returns full-text content extraction alongside snippets
+- **search** / **find_similar** (Exa) — neural search with semantic similarity; supports date filtering and domain restrictions
+- Multi-provider servers (e.g., mcp-omnisearch) expose a unified interface wrapping Brave, Tavily, Exa, Kagi, and others under separate named tools
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+All major implementations are Node.js and install via npx. Examples:
+
+```
+npx -y @brave/brave-search-mcp-server
+```
+
+```
+npx -y tavily-mcp
+```
+
+Exa and other providers follow the same npx pattern with their own package names. No Anthropic reference implementation exists for this category. Host install is standard; the server makes outbound API calls.
 
 ## 4. Transport
 
-stdio / sse / streamable HTTP.
+stdio by default for all major local implementations. The Brave server supports `--transport http` for an HTTP listening mode. Tavily also offers a hosted remote MCP endpoint reachable via streamable HTTP.
 
 ## 5. Auth
 
-How auth/secrets are handled, if any.
+Provider API key required in all cases, passed as an environment variable:
+
+- Brave: `BRAVE_API_KEY`
+- Tavily: `TAVILY_API_KEY`
+- Exa: `EXA_API_KEY`
+
+Keys are obtained from each provider's developer console. Tavily's remote hosted server additionally supports OAuth for the remote transport variant.
 
 ## 6. Security Considerations
 

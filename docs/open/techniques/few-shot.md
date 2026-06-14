@@ -8,23 +8,33 @@ Few-shot prompting (in-context learning) places a small number of input-output e
 
 ## 2. Problem It Solves
 
-What goes wrong without it.
+Zero-shot prompts rely on the model's internal priors for output format, reasoning style, and level of detail. For tasks with unusual output schemas, domain-specific conventions, or edge cases the model hasn't seen in training, zero-shot produces inconsistent or off-format responses that require post-processing or simply fail downstream.
 
 ## 3. How It Works
 
-Mechanism in plain terms. Pseudocode or diagram if needed.
+K labeled input-output pairs are prepended to the prompt before the live query. The model treats these examples as implicit demonstrations of the expected behavior — format, length, vocabulary, and reasoning style — and generalizes the pattern to the new input. No weight updates occur; the learning happens entirely within the context window. Documented at scale by Brown et al. 2020 (GPT-3).
+
+```
+prompt = ""
+for input, output in examples[:k]:
+    prompt += f"Input: {input}\nOutput: {output}\n\n"
+prompt += f"Input: {live_query}\nOutput:"
+response = llm(prompt)
+```
 
 ## 4. When To Use
 
-Conditions where it pays off.
+Few-shot is effective for format-sensitive tasks (structured extraction, specific JSON schemas), tasks with uncommon output conventions the model wasn't trained on, and situations where fine-tuning is not feasible. It is a cheap intervention that often closes the gap between zero-shot and fine-tuned performance.
 
 ## 5. When Not To Use
 
-Conditions where it hurts more than helps.
+Skip few-shot when the examples don't fit in the context window, when the examples are poor quality or unrepresentative (bad examples actively mislead the model), or when the task is already well-covered by the model's zero-shot instruction following. Example selection matters significantly — random examples can hurt.
 
 ## 6. Implementations
 
-Libraries, frameworks, or runtimes that ship it.
+- **Prompt engineering** — no library required; manually prepend examples to system or user message
+- **DSPy** — `BootstrapFewShot` optimizer automatically selects and generates effective few-shot examples from a labeled dataset
+- **LangChain** — `FewShotPromptTemplate` structures example formatting; `SemanticSimilarityExampleSelector` picks relevant examples dynamically
 
 ## 7. Sources
 

@@ -8,23 +8,33 @@ Retrieval-augmented generation grounds LLM responses by retrieving relevant docu
 
 ## 2. Problem It Solves
 
-What goes wrong without it.
+LLMs encode knowledge only up to their training cutoff and have no access to private, domain-specific, or recently updated information. Without RAG, a model answering questions about a company's internal documentation or last week's news must either hallucinate a plausible-sounding answer or refuse. The longer the gap between training and deployment, the worse this gets.
 
 ## 3. How It Works
 
-Mechanism in plain terms. Pseudocode or diagram if needed.
+At query time, the user's question is embedded into a vector, and a similarity search retrieves the top-K most relevant chunks from a document store. Those chunks are prepended to the prompt as context before the model generates a response. The model never searches the store itself — the retrieval step is handled by the application layer. Introduced by Lewis et al. 2022.
+
+```
+query_vec = embed(user_query)
+docs = vector_store.search(query_vec, top_k=5)
+prompt = system_prompt + format(docs) + user_query
+response = llm(prompt)
+```
 
 ## 4. When To Use
 
-Conditions where it pays off.
+Use RAG when the target knowledge is too large to fit in the context window, changes frequently (product catalogs, news, internal wikis), or is private and was never in the model's training data. It is the standard solution for domain-specific Q&A over large corpora.
 
 ## 5. When Not To Use
 
-Conditions where it hurts more than helps.
+Skip RAG when the fact set is small and static enough to fit directly in the context window, when retrieval latency is unacceptable, or when your retrieval pipeline produces low-quality results (wrong chunks surface and mislead the model more than no context would). Poor retrieval quality is a common failure mode that can make answers worse than zero-shot.
 
 ## 6. Implementations
 
-Libraries, frameworks, or runtimes that ship it.
+- **LangChain** — `RetrievalQA` and `create_retrieval_chain` wrappers with pluggable vector stores
+- **LlamaIndex** — `VectorStoreIndex` with `as_query_engine()`; strong document ingestion pipeline
+- **Haystack** — `DocumentStore` + `Retriever` + `Reader` pipeline, production-focused
+- **bare retrieval + any LLM API** — embed with OpenAI or a local model, search with Pinecone / Chroma / pgvector, assemble prompt manually
 
 ## 7. Sources
 

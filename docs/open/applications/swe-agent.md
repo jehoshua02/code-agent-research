@@ -8,15 +8,40 @@ SWE-agent is an MIT-licensed Python application from Princeton NLP (princeton-nl
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows (via Docker or GitHub Codespaces). Python 3.9+ required; Docker recommended for the default sandbox backend.
+
+```bash
+# Clone and install
+git clone https://github.com/SWE-agent/SWE-agent.git
+cd SWE-agent
+python -m pip install --upgrade pip && pip install --editable .
+
+# Verify
+sweagent --help
+```
+
+Optionally install Docker for local code evaluation and Node.js for the web-based GUI. GitHub Codespaces provides a zero-install browser environment.
+
+> Note: active development has shifted to [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent), which matches SWE-agent's performance with much simpler code. SWE-agent is still maintained but primarily for research.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **CLI** (`sweagent`): Primary interface; runs batch or single-instance tasks from the command line with a YAML config file.
+- **Web GUI**: Optional browser-based interface; requires Node.js installed alongside the Python package.
+- GitHub Codespaces: browser-based development environment available.
+- No TUI, no IDE extension, no mobile app.
+- Headless/non-interactive: yes — the CLI is designed for batch/automated runs (SWE-bench benchmarking).
+- Remote: Docker backend runs sandboxed; cloud evaluation also supported.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+SWE-agent supports all models accessible through [LiteLLM](https://docs.litellm.ai/docs/providers/), including:
+
+- **Anthropic** (Claude Sonnet 4 — recommended), **OpenAI** (GPT-4o, o1-preview), **Together AI**, and any other LiteLLM-listed provider.
+- **Local models**: any OpenAI-compatible endpoint via `api_base`; Ollama supported via LiteLLM's Ollama adapter.
+- API keys set via `.env` file or `--agent.model.api_key` flag.
+
+BYOK: yes. No bundled model; no provider lock-in. Model selection via `--agent.model.name`.
 
 ## 5. Capabilities
 

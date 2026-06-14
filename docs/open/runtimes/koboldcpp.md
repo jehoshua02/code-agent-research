@@ -8,15 +8,31 @@ KoboldCpp (LostRuins/koboldcpp) is an AGPL-3.0 single-binary inference server bu
 
 ## 2. Install
 
-Supported platforms (Linux / macOS / Windows / specific distros). Concrete install steps for each. Note any per-runtime quirks (driver versions, kernel modules, etc.). See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Single prebuilt binary, no package manager. Releases at [github.com/LostRuins/koboldcpp/releases](https://github.com/LostRuins/koboldcpp/releases).
+
+- **Windows:** `koboldcpp.exe` (CUDA 12, default), `koboldcpp-oldpc.exe` (CUDA 11 + AVX1), `koboldcpp-nocuda.exe` (CPU/Vulkan, recommended for AMD on Windows).
+- **Linux (x86-64):** Same three variants — `koboldcpp-linux-x64`, `-oldpc`, `-nocuda`. `chmod +x` and run.
+- **macOS (Apple Silicon):** `koboldcpp-mac-arm64` includes Metal. Intel Macs require building from source (`make LLAMA_METAL=1`).
+- **AMD ROCm/HIP (Linux):** Build from source — e.g. `make LLAMA_HIPBLAS=1 GPU_TARGETS=gfx1100 -j$(nproc)` (RDNA3); RDNA2 uses `gfx1030`; RDNA4 uses `gfx1201` with `GGML_HIP_FORCE_ROCWMMA_FATTN_GFX12=1`. Experimental rolling ROCm Linux binaries also published.
+- **Docker:** `hub.docker.com/r/koboldai/koboldcpp` (Ubuntu, NVIDIA/AMD passthrough; described as expert-targeted).
 
 ## 3. Hardware Support
 
-CUDA / ROCm / Metal / CPU. Multi-GPU. Memory mapping. Offloading.
+- **CUDA (cuBLAS):** Enable with `--usecuda`. CUDA 12 default, CUDA 11 via the `oldpc` build. `--gpulayers N` controls VRAM offload.
+- **ROCm/HIP (hipBLAS):** Source build with `LLAMA_HIPBLAS=1`. RDNA2 (gfx1030), RDNA3 (gfx1100), RDNA4 (gfx1201/1200).
+- **Metal (Apple):** Prebuilt arm64 binary or `make LLAMA_METAL=1`. Apple Silicon (M1–M4) and Intel Macs; benefits from unified memory.
+- **Vulkan:** `--usevulkan`; cross-vendor (NVIDIA, AMD, Intel) without CUDA/ROCm; recommended for AMD on Windows; in the `nocuda` builds.
+- **CPU:** All builds. AVX2 default; `--noavx2` for older CPUs. OpenBLAS path removed — CPU BLAS now routed through Vulkan or CUDA.
+- **Multi-GPU:** CUDA only; auto-distributes layers across detected NVIDIA GPUs; `--tensor_split 3 1` adjusts ratio.
+- **Memory:** `--gpulayers N` for layer offload; `--usemmap` for memory-mapped weight loading; CPU+GPU hybrid spills unfittable layers to system RAM.
 
 ## 4. Model Formats
 
-GGUF, AWQ, GPTQ, FP8, safetensors, etc. Quantization options.
+- **GGUF (primary):** Loaded via the bundled llama.cpp. Compatible with community GGUFs from Hugging Face (TheBloke, bartowski, etc.).
+- **Architectures:** Llama, Mistral, Qwen, Gemma (incl. Gemma4), Phi, Falcon, Deepseek, and most other GGUF-supported families.
+- **Legacy GGML `.bin`:** Backward compatibility maintained.
+- **Quantizations:** legacy (Q4_0, Q4_1, Q5_0, Q5_1, Q8_0); K-quants (Q2_K, Q3_K_{S,M,L}, Q4_K_{S,M}, Q5_K_{S,M}, Q6_K); IQ-quants (IQ3_XXS, IQ3_S, IQ3_M, IQ4_XS); F16. Q4_K_M is the community default.
+- **Not supported natively:** GPTQ, AWQ, EXL2, safetensors — must be converted to GGUF first.
 
 ## 5. API Surface
 

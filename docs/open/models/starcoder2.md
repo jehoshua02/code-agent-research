@@ -8,19 +8,36 @@ StarCoder2 is the BigCode project's open-weight code model family (3B/7B/15B). R
 
 ## 2. Variants
 
-Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
+| Name | Params | Released | Intended Use |
+|---|---|---|---|
+| StarCoder2-3B | 3B | Feb 2024 | Code gen, FIM, lightweight / on-device |
+| StarCoder2-7B | 7B | Feb 2024 | Code gen across 17 languages |
+| StarCoder2-15B | 15B | Feb 2024 | Code gen across 600+ languages; flagship |
+
+All three are base (non-instruct) models. They work best given code context rather than natural-language commands — bare "write a function that..." prompts under-perform without additional fine-tuning. 3B/7B trained on 3.5+ trillion tokens (The Stack v2).
 
 ## 3. Context Window
 
-Native context length. Extended context options (YaRN, etc.). Practical limits.
+**16,384 tokens** native across all three variants, using a sliding window attention mechanism with a 4,096 dense window. Full attention is dense only inside the 4K window; the rest uses sliding/sparse patterns. No official long-context extension. Perplexity may degrade near the far edges of the 16K window.
 
 ## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
+7B and 15B figures from the official HuggingFace model cards; 3B from standard formulas.
+
+| Variant | Q4 | Q8 | FP16/BF16 |
+|---|---|---|---|
+| StarCoder2-3B | ~2.0 GB | ~3.5 GB | ~6 GB |
+| StarCoder2-7B | ~4.2 GB | ~7.7 GB | ~14.6 GB |
+| StarCoder2-15B | ~9.2 GB | ~16.9 GB | ~32.2 GB |
+
+Min viable GPU: RTX 3090/4090 24 GB runs 15B at Q8. 7B at FP16 fits a 16 GB GPU (RTX 4080, A4000). 32–64 GB system RAM recommended if offloading the 15B.
 
 ## 5. Where To Get Weights
 
-Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+- HuggingFace org: https://huggingface.co/bigcode
+- Repos: `bigcode/starcoder2-3b`, `bigcode/starcoder2-7b`, `bigcode/starcoder2-15b`.
+- **Gated:** yes — must log in to HF and accept the **BigCode OpenRAIL-M v1** license before download. Self-serve, no institutional approval.
+- Commercial use permitted subject to OpenRAIL-M use restrictions.
 
 ## 6. Runtime Support
 

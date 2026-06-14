@@ -8,15 +8,30 @@ Aphrodite Engine (aphrodite-engine/aphrodite-engine) is an AGPL-3.0 Python servi
 
 ## 2. Install
 
-Supported platforms (Linux / macOS / Windows / specific distros). Concrete install steps for each. Note any per-runtime quirks (driver versions, kernel modules, etc.). See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+- **Linux (pip):** `pip install -U aphrodite-engine` — prebuilt wheels target CUDA 12.8/12.9, Python 3.10–3.13.
+- **Windows:** Via WSL2 only.
+- **macOS:** Not supported.
+- **Docker:** `docker run --runtime nvidia --gpus all -v ~/.cache/huggingface:/root/.cache/huggingface -p 2242:2242 --ipc=host alpindale/aphrodite-openai:latest`
+- **From source:** `git clone https://github.com/PygmalionAI/aphrodite-engine && cd aphrodite-engine && uv pip install -e .` (needed for Python 3.14, non-standard CUDA, ARM64/GH200).
+- **GPU:** NVIDIA with compute capability ≥ 7.0 (Volta+) and CUDA ≥ 12; NVIDIA Container Toolkit for Docker.
 
 ## 3. Hardware Support
 
-CUDA / ROCm / Metal / CPU. Multi-GPU. Memory mapping. Offloading.
+- **CUDA / NVIDIA:** Volta (sm70), Turing (sm75), Ampere (sm80/86), Ada (sm89), Hopper (sm90); Blackwell support via NVFP4.
+- **ROCm / AMD:** Supported, but quantization is limited to GPTQ, INT8, FP8, BitsAndBytes, VPTQ, Experts-INT8.
+- **Metal / Apple Silicon:** Not supported.
+- **CPU (x86 AVX2/AVX512, ppc64le):** Supported; only AWQ quantization works on CPU.
+- **Other accelerators:** Intel XPU (limited quant), Google TPU (TPU-INT8 only), AWS Inferentia/Trainium (Neuron-Quant).
+- **Multi-GPU:** Tensor parallelism for distributed inference.
+- **Memory:** Defaults to 92% GPU VRAM (`--gpu-memory-utilization` configurable); FP8 E5M2 / E4M3 / INT8 KV cache quantization plus TurboQuant.
 
 ## 4. Model Formats
 
-GGUF, AWQ, GPTQ, FP8, safetensors, etc. Quantization options.
+Loads HuggingFace safetensors and PyTorch state_dict for almost all architectures. Quantization-format breadth is the engine's main differentiator from vLLM:
+
+- **Weight formats:** GGUF (all architectures, single or sharded), AWQ, GPTQ (2/3/4/8-bit via ExLlamaV2 kernels), EXL2 (ExLlamaV2) and ExLlamaV3, AQLM (2-bit), AutoRound, BitNet (1-bit), bitsandbytes (8-bit), QuIP# (2-bit), SqueezeLLM (4-bit), Marlin, NVIDIA ModelOpt (FP8/FPGEMM-FP8), TorchAO, VPTQ, compressed_tensors, MXFP4 (Blackwell native; Marlin on Ampere/Hopper), DeepSpeedFP, EETQ (INT8), QQQ, SmoothQuant+ (4-/8-bit), Experts-INT8 (MoE).
+- **KV cache quantization:** FP8 E5M2 (CUDA 11.8+), FP8 E4M3, INT8 with calibration, TurboQuant.
+- **Differentiators vs. vLLM:** EXL2/ExLlamaV2/V3, QuIP#, SqueezeLLM, AQLM, BitNet.
 
 ## 5. API Surface
 

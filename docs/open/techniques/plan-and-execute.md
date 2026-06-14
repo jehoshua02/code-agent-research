@@ -8,23 +8,35 @@ Plan-and-execute separates a planner LLM call (which decomposes the task into or
 
 ## 2. Problem It Solves
 
-What goes wrong without it.
+ReAct-style step-by-step agents decide what to do next based only on the most recent observation, so they tend to drift from the original goal on long tasks. After several tool calls, the model may pursue a tangent or forget an earlier constraint, producing work that is locally coherent but globally wrong.
 
 ## 3. How It Works
 
-Mechanism in plain terms. Pseudocode or diagram if needed.
+A dedicated planner LLM call receives the task and produces an ordered list of sub-tasks. A separate executor then works through that list, running each sub-task with tools or sub-agents. The plan is explicit and inspectable; the executor only needs to handle one step at a time. If a step fails or reveals new information, the planner can be called again to revise remaining steps. Popularized by Wang et al. 2023 (Plan-and-Solve).
+
+```
+plan = planner_llm(task)          # ["Step 1: ...", "Step 2: ...", ...]
+results = []
+for step in plan:
+    result = executor_llm(step, context=results)
+    results.append(result)
+return synthesize(results)
+```
 
 ## 4. When To Use
 
-Conditions where it pays off.
+Use plan-and-execute for long-horizon tasks with multiple distinct phases that can be named in advance — research pipelines, multi-stage code generation, report assembly. The explicit plan also makes the agent's behavior auditable, which matters in production.
 
 ## 5. When Not To Use
 
-Conditions where it hurts more than helps.
+Skip it for simple single-step tasks where planning overhead is wasted. It is a poor fit for dynamic environments where conditions change faster than the plan can be revised — a fixed plan becomes a liability when early steps invalidate later assumptions. Real-time or latency-critical tasks cannot afford the extra planning round-trip.
 
 ## 6. Implementations
 
-Libraries, frameworks, or runtimes that ship it.
+- **LangChain** — `PlanAndExecute` agent (`langchain_experimental.plan_and_execute`)
+- **LlamaIndex** — `SubQuestionQueryEngine` decomposes questions into sub-queries before executing
+- **AutoGen** — multi-agent conversation pattern where one agent plans and others execute
+- **custom** — a planner prompt + a loop over sub-tasks with any executor is sufficient
 
 ## 7. Sources
 

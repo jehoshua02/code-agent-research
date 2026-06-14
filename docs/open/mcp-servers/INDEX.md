@@ -4,14 +4,14 @@ One row per category. Each entry covers notable implementations within that cate
 
 | Server | Capability | License | Transport | Notes |
 |---|---|---|---|---|
-| [Filesystem](filesystem.md) | Read/write/list files | _stub_ | stdio | Anthropic reference + community |
-| [Shell](shell.md) | Run shell commands | _stub_ | stdio | community only (no Anthropic reference) |
-| [Web Fetch](web-fetch.md) | Fetch URLs | _stub_ | stdio | Anthropic reference + community |
-| [Web Search](web-search.md) | Search engine APIs | _stub_ | stdio | community (Brave, Exa, Tavily, etc.) |
-| [Browser Control](browser-control.md) | Drive headless browser | _stub_ | stdio | community (Playwright, Puppeteer) |
-| [Git / GitHub](git-github.md) | Git ops + hosted-platform APIs | _stub_ | stdio | Anthropic reference (git) + community (github, gitlab) |
-| [Database](database.md) | SQL query/inspect | _stub_ | stdio | community (Postgres, SQLite, etc.) |
-| [Memory](memory.md) | Persistent state | _stub_ | stdio | Anthropic reference (knowledge-graph) + community |
-| [Code Execution](code-execution.md) | Sandboxed code run | _stub_ | stdio | community (E2B, Pyodide) |
-| [Cloud APIs](cloud-apis.md) | AWS / GCP / Azure | _stub_ | stdio / streamable HTTP | community + some official |
-| [Productivity](productivity.md) | Calendar, email, notes, tasks | _stub_ | stdio | community (Google, Notion, Linear, etc.) |
+| [Filesystem](filesystem.md) | Read/write/list/search files | MIT | stdio | Anthropic reference + community |
+| [Shell](shell.md) | Run shell commands | varies | stdio | community only (no Anthropic reference) |
+| [Web Fetch](web-fetch.md) | Fetch URLs → markdown | MIT | stdio | Anthropic reference + community |
+| [Web Search](web-search.md) | Search engine APIs | varies | stdio; streamable HTTP (hosted) | community (Brave, Exa, Tavily, etc.) |
+| [Browser Control](browser-control.md) | Drive headless browser | Apache-2.0 | stdio; streamable HTTP (--port) | community (Playwright, Puppeteer) |
+| [Git / GitHub](git-github.md) | Git ops + hosted-platform APIs | MIT | stdio | Anthropic reference (git) + community (github, gitlab) |
+| [Database](database.md) | SQL query/inspect | varies | stdio | community (Postgres, SQLite, etc.) |
+| [Memory](memory.md) | Persistent knowledge-graph state | MIT | stdio | Anthropic reference + community |
+| [Code Execution](code-execution.md) | Sandboxed code run | varies | stdio; streamable HTTP (cloud) | community (E2B, Docker runners) |
+| [Cloud APIs](cloud-apis.md) | AWS / GCP / Azure / Cloudflare | varies | stdio; streamable HTTP (hosted) | community + official (Cloudflare) |
+| [Productivity](productivity.md) | Calendar, email, notes, tasks | varies | stdio; streamable HTTP (some) | community (Google, Notion, Linear, Slack) |

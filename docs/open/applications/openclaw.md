@@ -8,15 +8,34 @@ OpenClaw is an MIT-licensed TypeScript application from the OpenClaw Foundation 
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Platforms: macOS, Linux, Windows. Node.js 24 (recommended) or Node.js 22.19+ required.
+
+```bash
+# Recommended — guided onboarding installer
+npm install -g openclaw@latest
+openclaw onboard --install-daemon
+
+# pnpm alternative
+pnpm add -g openclaw@latest
+```
+
+`openclaw onboard` installs a system daemon (launchd on macOS, systemd on Linux) that keeps the Gateway running. Windows users can also use the [Windows Hub](https://docs.openclaw.ai/platforms/windows) native companion app for GUI-driven setup.
+
+Docker is also supported: [docs.openclaw.ai/install/docker](https://docs.openclaw.ai/install/docker).
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+- **CLI**: Primary control plane — `openclaw gateway`, `openclaw message send`, `openclaw agent`, etc.
+- **Companion apps**: Windows Hub (tray app + native chat + node mode), macOS menu bar app, iOS and Android apps (voice wake, Talk mode).
+- **Live Canvas**: Agent-driven visual workspace (A2UI) on macOS.
+- **Web surfaces**: Gateway exposes a web interface and remote access via Tailscale.
+- **Multi-channel messaging**: WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Microsoft Teams, Matrix, IRC, and 15+ more channels serve as conversational interfaces.
+- Headless: yes — the Gateway daemon runs as a background service; CLI is fully scriptable.
+- Multi-client/remote: yes — the Gateway can be exposed remotely (Tailscale or direct); multiple channels route to isolated agent workspaces.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+OpenClaw supports multiple providers with a `<provider>/<model-id>` syntax in config. Documented providers include **OpenAI** (GPT-4o, Codex; primary sponsor) and "many providers and models." The docs reference [auth profile rotation and failover](https://docs.openclaw.ai/concepts/model-failover), implying support for Anthropic, Google, and others (exact list at [docs.openclaw.ai/concepts/models](https://docs.openclaw.ai/concepts/models)). BYOK: yes — provider credentials are stored in `~/.openclaw/openclaw.json`. No bundled model.
 
 ## 5. Capabilities
 

@@ -8,15 +8,15 @@ Mentat is/was an Apache-2.0 Python application from AbanteAI (AbanteAI/mentat). 
 
 ## 2. Install
 
-Supported platforms. Concrete install steps. Container vs host considerations. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Cannot fill; repo removed.
 
 ## 3. Interfaces
 
-CLI / TUI / IDE plugin / web UI / API / mobile. Headless mode? Remote drive?
+Cannot fill; repo removed.
 
 ## 4. Model Compatibility
 
-Which providers and local runtimes it can drive (OpenAI-compat, Ollama, Anthropic, OpenRouter, etc.). BYOK? Bundled model? Provider lock-in?
+Cannot fill; repo removed.
 
 ## 5. Capabilities
 

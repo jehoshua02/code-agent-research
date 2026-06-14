@@ -8,19 +8,32 @@ DBRX is Databricks (Mosaic AI)'s open-weight model. Released March 2024 under th
 
 ## 2. Variants
 
-Each variant: name, total params (and active for MoE), release date, intended use case. One row per variant.
+| Name | Total / Active Params | Released | Intended Use |
+|---|---|---|---|
+| DBRX Base | 132B / 36B | Mar 27, 2024 | Pre-trained base; general-purpose |
+| DBRX Instruct | 132B / 36B | Mar 27, 2024 | Few-turn instruction following, chat |
+
+Architecture: fine-grained MoE — 16 experts per layer, 4 active per token (16-choose-4 = 1820 combinations). Uses RoPE, GLU, and GQA. Trained on 12T tokens of text + code. No smaller or larger DBRX variants exist.
 
 ## 3. Context Window
 
-Native context length. Extended context options (YaRN, etc.). Practical limits.
+**32,768 tokens** (32K) native. No official extended-context variant. At 32K with 132B total params, memory pressure is substantial even on multi-GPU.
 
 ## 4. Hardware Requirements
 
-VRAM at Q4 / Q8 / FP16. Minimum viable GPU. Recommended setup. System RAM if offload is relevant.
+| Precision | VRAM Required |
+|---|---|
+| BF16 | ~264 GB (8× A100 80 GB minimum) |
+| Q8 | ~132 GB |
+| Q4 | ~66–70 GB (≈ 2× A100 80 GB, or 4× RTX 4090 24 GB) |
+
+All 132B params must be in memory (not just active 36B). CPU offload impractical at usable speed; full CPU offload would need ≥256 GB system RAM.
 
 ## 5. Where To Get Weights
 
-Distribution channels (HuggingFace, official site, mirrors). Gated? License acceptance required? Account needed?
+- HuggingFace: https://huggingface.co/databricks (repos `dbrx-base`, `dbrx-instruct`)
+- **Gated:** yes — must log in to HF and accept the **Databricks Open Model License** and **Databricks Open Model Acceptable Use Policy** before download. Self-serve acceptance.
+- Commercial use permitted under the Databricks Open Model License.
 
 ## 6. Runtime Support
 

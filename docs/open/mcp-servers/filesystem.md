@@ -8,19 +8,42 @@ MCP servers in this category expose file-tree operations (read, write, list, sea
 
 ## 2. Capability
 
-What it exposes — files, shell, web, browser, database, API, etc.
+Exposes file-tree operations against a set of allowed directories configured at startup. Operations include:
+
+- **read_file / read_text_file** — read full file contents; supports head/tail line ranges
+- **read_media_file** — read image or audio files as base64 with MIME type
+- **read_multiple_files** — batch read several files in one call
+- **write_file** — create or overwrite a file
+- **edit_file** — apply targeted string replacements within a file
+- **create_directory** — create directories (including nested paths), idempotent
+- **list_directory / list_directory_with_sizes** — list directory contents with optional size info
+- **directory_tree** — return recursive directory structure as JSON
+- **move_file** — move or rename files and directories
+- **search_files** — glob-pattern recursive file search
+- **get_file_info** — retrieve metadata (size, timestamps, permissions)
+- **list_allowed_directories** — report which directories the server is permitted to access
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+Run directly with npx (Node.js) or via Docker. The server takes one or more allowed directory paths as arguments.
+
+```
+npx -y @modelcontextprotocol/server-filesystem /path/to/allowed/dir
+```
+
+```
+docker run -i --rm mcp/filesystem /projects
+```
+
+The reference implementation is Node.js. Host install is typical for local dev; Docker is appropriate when you want to limit which host paths are visible to the process. Build from source: `docker build -t mcp/filesystem -f src/filesystem/Dockerfile .`
 
 ## 4. Transport
 
-stdio / sse / streamable HTTP.
+stdio (the process is spawned as a child; JSON-RPC flows over stdin/stdout). No networked transport in the reference implementation.
 
 ## 5. Auth
 
-How auth/secrets are handled, if any.
+No credential-based auth. Access control is path-based: the server enforces that all operations stay within directories specified at launch (via CLI args) or provided at runtime via the MCP Roots protocol (`roots/list` / `roots/list_changed`). No API keys or tokens.
 
 ## 6. Security Considerations
 

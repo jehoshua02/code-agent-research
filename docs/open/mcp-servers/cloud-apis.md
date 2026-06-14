@@ -8,19 +8,50 @@ MCP servers in this category wrap cloud-provider APIs (AWS, GCP, Azure) to expos
 
 ## 2. Capability
 
-What it exposes — files, shell, web, browser, database, API, etc.
+Exposes cloud-provider resource management and query operations. Tools vary by provider but commonly include:
+
+- **list_resources** / **describe_resource** — enumerate or inspect cloud resources (EC2 instances, S3 buckets, GCS objects, Azure VMs, etc.)
+- **run_query** / **execute_command** — invoke a provider CLI or SDK call and return structured output
+- **get_logs** / **query_metrics** — retrieve CloudWatch, Cloud Logging, or Azure Monitor data
+- **deploy** / **update_resource** — create or modify infrastructure resources (often gated behind explicit write-mode flags)
+- **list_deployments** / **rollback** — manage deployments or release history
+
+Cloudflare's official servers expose Workers, KV, R2, D1, and AI Gateway operations. AWS community servers wrap the AWS SDK or CLI. GCP and Azure servers similarly wrap their respective SDKs.
 
 ## 3. Install
 
-Supported platforms. Concrete install steps. Whether host or container is appropriate depends on this server's access needs — call that out. See [../README.md](../README.md#4-deployment-notes) for general reader-facing deployment context.
+No single reference implementation; each provider has its own package. Examples:
+
+Cloudflare (official, Node.js):
+
+```
+npx -y @cloudflare/mcp-server-cloudflare
+```
+
+AWS community servers are typically Node.js or Python:
+
+```
+npx -y @aws-mcp/mcp-server-aws
+```
+
+```
+uvx awslabs.core-mcp-server
+```
+
+Host install is standard when using ambient credentials (AWS profile, gcloud ADC, Azure CLI login). Container deployment is viable if credentials are injected via environment variables or mounted credential files.
 
 ## 4. Transport
 
-stdio / sse / streamable HTTP.
+stdio for locally spawned servers (the most common pattern for CLI/SDK-based servers). Cloudflare's hosted MCP servers use streamable HTTP with OAuth 2.1, accessible directly from MCP clients without a local process. AWS and GCP remote variants also use streamable HTTP when offered as hosted endpoints.
 
 ## 5. Auth
 
-How auth/secrets are handled, if any.
+Credentials are passed via environment variables or ambient SDK credential chains — not through MCP protocol-level auth:
+
+- **AWS**: `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY` / `AWS_SESSION_TOKEN`, or ambient `~/.aws/credentials` / instance role
+- **GCP**: Application Default Credentials (`gcloud auth application-default login`) or `GOOGLE_APPLICATION_CREDENTIALS` pointing to a service account JSON
+- **Azure**: Azure CLI login (`az login`) or `AZURE_CLIENT_ID` / `AZURE_CLIENT_SECRET` / `AZURE_TENANT_ID`
+- **Cloudflare remote servers**: OAuth 2.1 authorization code flow; the MCP client handles the browser-based consent prompt
 
 ## 6. Security Considerations
 
