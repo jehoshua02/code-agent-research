@@ -13,7 +13,7 @@ context_window: 8192
 modalities: ["text"]
 gated: false
 released: "2025-02"
-hardware_tiers: ["8gb"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["automation"]
 notes: "English-only; 135M/360M are too small for instruction following; designed for on-device edge deployment"
 ---

@@ -2,7 +2,7 @@
 name: "Web Search"
 license_category: "mit"
 status: "active"
-url: "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search"
+url: "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/brave-search"
 last_verified: "2026-06-14"
 transport: "stdio"
 has_anthropic_reference: false

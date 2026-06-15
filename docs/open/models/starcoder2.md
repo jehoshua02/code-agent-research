@@ -13,7 +13,7 @@ context_window: 16384
 modalities: ["text"]
 gated: true
 released: "2024-02"
-hardware_tiers: ["8gb", "12gb", "16gb", "24gb"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["coding"]
 notes: "Base model only — no instruction tuning; largely superseded by Qwen2.5-Coder and DeepSeekCoder-V2"
 ---

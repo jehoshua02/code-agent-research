@@ -226,7 +226,8 @@
         "8gb",
         "12gb",
         "16gb",
-        "24gb"
+        "24gb",
+        "24gb+"
       ],
       "has_moe": true,
       "last_verified": "2026-06-14",
@@ -458,8 +459,10 @@
       "gated": false,
       "hardware_tiers": [
         "8gb",
+        "12gb",
         "16gb",
-        "24gb"
+        "24gb",
+        "24gb+"
       ],
       "has_moe": false,
       "last_verified": "2026-06-14",
@@ -590,7 +593,11 @@
       "filename": "smollm.md",
       "gated": false,
       "hardware_tiers": [
-        "8gb"
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
       ],
       "has_moe": false,
       "last_verified": "2026-06-14",
@@ -627,7 +634,8 @@
         "8gb",
         "12gb",
         "16gb",
-        "24gb"
+        "24gb",
+        "24gb+"
       ],
       "has_moe": false,
       "last_verified": "2026-06-14",
@@ -659,6 +667,7 @@
       "filename": "yi.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
         "12gb",
         "16gb",
         "24gb",
@@ -1989,7 +1998,7 @@
       "notes": "Auth is a database connection string/credentials, not a typical API key; read-only mode is the safe default.",
       "status": "active",
       "transport": "stdio",
-      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres"
+      "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres"
     },
     {
       "auth": "none",
@@ -2113,7 +2122,7 @@
       "notes": "All implementations require a paid third-party API key (Brave, Exa, Tavily, etc.).",
       "status": "active",
       "transport": "stdio",
-      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search"
+      "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/brave-search"
     },
     {
       "applies_at": "model",

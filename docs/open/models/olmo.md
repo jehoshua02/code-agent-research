@@ -13,7 +13,7 @@ context_window: 4096
 modalities: ["text"]
 gated: false
 released: "2025-01"
-hardware_tiers: ["8gb", "16gb", "24gb"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["research"]
 notes: "Full pipeline open (weights + data + training code); English-only; 4K context is a hard limitation"
 ---
