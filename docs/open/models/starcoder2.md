@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+StarCoder2 is a code-only base model from the open BigCode research project, trained on The Stack v2 dataset covering 600+ programming languages — think of it as an autocomplete engine for code, not a chat assistant. Pick StarCoder2 if you want a solid, openly-developed foundation for building a code completion or fill-in-the-middle tool, especially if you plan to fine-tune it for your specific use case. The main catch is that it has no instruction tuning out of the box (it won't respond well to plain English commands), requires accepting an OpenRAIL-M license on download, and has been largely superseded by newer code-focused models like Qwen2.5-Coder.
+
 ## 1. What It Is
 
 StarCoder2 is the BigCode project's open-weight code model family (3B/7B/15B). Released under BigCode OpenRAIL-M license (permissive with use-based restrictions). Trained on The Stack v2 and targeted at code generation.

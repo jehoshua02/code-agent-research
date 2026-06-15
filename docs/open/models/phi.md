@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Phi is Microsoft's family of small language models that punch well above their weight — a 14B Phi-4 often beats much larger models on coding, math, and reasoning tasks, thanks to carefully curated synthetic training data rather than raw scale. Pick Phi if you need a capable model that runs on consumer hardware (some variants fit on a single GPU or even CPU), is MIT-licensed with zero restrictions, and excels at STEM and coding tasks. The main catch is that Phi models are English-first and the flagship Phi-4 has a shorter native context window (16K) than most peers.
+
 ## 1. What It Is
 
 Phi is Microsoft's small-language-model family (Phi-3, Phi-4). Released under MIT license. Designed for capable performance at small parameter counts (1B–14B) via curated synthetic training data.

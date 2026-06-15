@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Smolagents is a minimal HuggingFace Python framework where agents write and execute Python code as their "[tool](../GLOSSARY.md#tool) calls" rather than emitting JSON — making the action step very flexible and easy to debug. Pick it if you want a lightweight, code-first agent with excellent HuggingFace model support and don't need heavy scaffolding. The main catch is that executing arbitrary generated Python code requires a sandboxed environment (e2b or Docker) in production, which adds setup overhead.
+
 ## 1. What It Is
 
 Smolagents is an Apache-2.0 Python framework from HuggingFace (huggingface/smolagents). Active. Minimal, code-first approach where agents emit Python code to execute rather than JSON tool calls.

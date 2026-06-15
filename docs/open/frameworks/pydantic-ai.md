@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Pydantic AI is a Python agent framework from the Pydantic team that makes type safety a first-class concern — agent inputs, outputs, and [tool](../GLOSSARY.md#tool) results are all validated Pydantic models, and dependencies are injected like a proper application. Pick it if you care deeply about correctness, testability, and clean Python idioms, especially if you already use Pydantic elsewhere in your codebase. The main catch is that the structured/typed approach requires more upfront schema design compared to looser frameworks.
+
 ## 1. What It Is
 
 Pydantic AI is an MIT-licensed Python framework from the Pydantic team (pydantic/pydantic-ai). Active. Brings type-safe, Pydantic-modeled inputs and outputs to agent construction, with dependency-injection-style design.

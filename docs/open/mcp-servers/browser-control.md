@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A browser-control [MCP](../GLOSSARY.md#mcp-model-context-protocol) server gives an agent a real browser it can navigate, click, type into, and take screenshots of — for sites where plain HTTP fetching won't work because the page requires JavaScript or user interaction. Use one when the agent needs to log in to a service, fill out a form, or scrape a single-page application. The main catch: browser sessions are slow and resource-heavy, and interactive flows are fragile if page layout changes.
+
 ## 1. What It Is
 
 MCP servers in this category drive a headless browser (Playwright, Puppeteer, or Chrome DevTools Protocol) to navigate, click, and extract content. Agents need them for sites that require JavaScript rendering or interactive flows. Notable community: playwright-mcp, puppeteer-based servers, chrome-devtools-mcp.

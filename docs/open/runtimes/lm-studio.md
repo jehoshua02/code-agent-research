@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+LM Studio is a point-and-click desktop app for downloading and chatting with local LLMs — no terminal required. Pick it if you want a GUI experience similar to ChatGPT but running privately on your own machine. The catch: it's closed-source and proprietary (free to use, not open), macOS support is Apple Silicon only, and it's less suited for headless server or CI use than CLI-first tools.
+
 ## 1. What It Is
 
 LM Studio is a closed-source, proprietary desktop app from Element Labs. Free-to-use, available on macOS, Windows, and Linux. Included in the survey because it is self-hosted and free, but it is not open-source. GUI for discovering, downloading, and running local models, with an OpenAI-compatible local server.

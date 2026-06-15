@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+AutoGPT was the first viral autonomous-[agent](../GLOSSARY.md#agent) project — it showed the world that you could hand an [LLM](../GLOSSARY.md#llm) a goal and let it plan and act in a loop without human hand-holding at every step. Today the original self-prompting loop is still there, but the project has evolved into a hosted platform tier (Polyform Shield licensed) that dominates the roadmap; the MIT core agent is largely a foundation for that cloud service. Pick AutoGPT if you want to experiment with the historical blueprint of autonomous agents or try the managed platform; go to Aider or OpenHands if you want a focused, actively developed open-source coding agent.
+
 ## 1. What It Is
 
 AutoGPT is a Python application from Significant Gravitas (Significant-Gravitas/AutoGPT), MIT for the core agent and Polyform Shield for the platform tier. Active. Early autonomous-agent project that pioneered iterative goal pursuit with self-prompting.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+BeeAI is an IBM Research-originated Python and TypeScript framework for production-ready agents, with a unified `ChatModel` abstraction that works across Ollama, OpenAI, Anthropic, watsonx, and more. Pick it if you need both Python and TypeScript SDKs from a single framework or want production-oriented defaults (structured outputs, error handling, observability) out of the box. The main catch is that it's less widely adopted than LangGraph or CrewAI, so community resources and third-party tutorials are thinner.
+
 ## 1. What It Is
 
 BeeAI is an Apache-2.0 Python and TypeScript framework (i-am-bee/beeai-framework), originally from IBM Research. Active. Provides production-oriented agent components with both Python and TypeScript SDKs.

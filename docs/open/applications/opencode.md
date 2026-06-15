@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+OpenCode is a [coding agent](../GLOSSARY.md#agent) you run in your terminal that reads your codebase, edits files, and runs commands for you — think GitHub Copilot but with a full [agentic loop](../GLOSSARY.md#agent-loop) instead of single completions. Pick it if you want a polished TUI experience, support for 75+ [LLM](../GLOSSARY.md#llm) providers, and don't want to be locked into one IDE or cloud vendor. The main catch is that it's TypeScript-based rather than Python, so the plugin ecosystem is smaller than Aider's.
+
 ## 1. What It Is
 
 OpenCode is an MIT-licensed TypeScript application from Anomaly (anomalyco/opencode, formerly redirected from sst/opencode). Active. Agentic coding CLI/TUI with headless mode and IDE integrations; provider-agnostic across 75+ LLM providers.

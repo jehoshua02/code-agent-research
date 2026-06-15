@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Atomic Agents is a Python framework built around the idea of composing small, single-responsibility building blocks — each "atomic" component handles one thing and has strictly typed Pydantic inputs and outputs via [Instructor](https://python.useinstructor.com/). Pick it if you want a clean, testable architecture where agent behavior emerges from composing small focused units rather than configuring a large monolithic class. The main catch is that it requires Python 3.12+ and the composable style demands more upfront design discipline compared to just writing a quick agent script.
+
 ## 1. What It Is
 
 Atomic Agents is an MIT-licensed Python framework (BrainBlend-AI/atomic-agents). Active. Builds agents from small composable atomic components, emphasizing single-responsibility blocks over monolithic agent classes.

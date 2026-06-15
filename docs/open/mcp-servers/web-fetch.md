@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A web-fetch [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent download the contents of any URL — documentation pages, REST API responses, or plain HTML — and read them as text. Use one when the agent needs to look something up on the web or call a public HTTP API without using a search index. The main catch: the agent fetches whatever URL it decides to visit, so prompt injection via malicious page content is a real attack vector.
+
 ## 1. What It Is
 
 MCP servers in this category fetch HTTP(S) URLs and return content (HTML, JSON, markdown). Agents need them to read documentation, fetch APIs, or scrape pages. Notable: fetch (official reference, Anthropic); community variants add markdown conversion and content-type handling.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+MLX / mlx-lm is Apple's own framework for running LLMs on Apple Silicon Macs, exploiting the unified CPU+GPU memory to run larger models than discrete-GPU machines can. Pick it if you're on an M-series Mac and want maximum local performance without touching llama.cpp or CUDA. The hard constraint: Apple Silicon and macOS only — nothing else is supported.
+
 ## 1. What It Is
 
 MLX (ml-explore/mlx) and mlx-lm (ml-explore/mlx-lm) are MIT-licensed Apple frameworks. Active. Apple-Silicon-native array library and LLM tooling using the Metal GPU; macOS-only, designed to exploit unified memory on M-series chips.

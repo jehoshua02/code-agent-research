@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Llama is Meta's family of open-weight language models — think of them as freely downloadable AI brains you can run on your own hardware. Pick Llama if you want the broadest ecosystem support: more tutorials, tools, and community [quantizations](../GLOSSARY.md#quantization) exist for Llama than almost any other open model. The main catch is that the license restricts commercial apps with over 700 million monthly active users, and the largest models require expensive data-center GPUs (like an A100 or H100).
+
 ## 1. What It Is
 
 Llama is Meta's open-weight model family (Llama 3.1, 3.2, 3.3, Llama 4 as of 2026). Released under the Llama Community License — permissive for most uses but with conditions (700M MAU cap, naming, AUP). General-purpose decoder-only transformers in dense and MoE variants; long context, multilingual.

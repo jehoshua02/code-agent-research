@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Speculative decoding is a runtime-level speed trick: a small cheap model drafts several tokens at once, and the large model verifies them all in a single pass — producing the same output as running the big model alone but significantly faster. Use it (or benefit from it transparently) when serving a large model and generation latency is the bottleneck. The main catch: it's an inference-engine concern, not an agent-design concern — you can't configure it from a prompt or API call; it must be supported by the serving infrastructure.
+
 ## 1. What It Is
 
 A small draft model proposes multiple tokens; the large target model verifies them in one parallel forward pass, accepting matching tokens and resampling the first mismatch. Introduced by Leviathan et al. (2022) and Chen et al. (2023). Speeds up decoding without changing the output distribution.

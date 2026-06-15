@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Ollama is the easiest way to run LLMs locally — one install command, then `ollama run llama3` and you have a working OpenAI-compatible HTTP API on your machine. Pick it if you want local models up and running in minutes without configuring drivers or file formats. The main limitation is it runs only [GGUF](../GLOSSARY.md#quantization) models under the hood via llama.cpp, so heavy multi-user throughput or exotic quantization formats are better served by vLLM or ExLlamaV2.
+
 ## 1. What It Is
 
 Ollama (ollama/ollama) is an MIT-licensed Go runtime that wraps llama.cpp with a friendlier install and model-library experience. Active. Provides a local OpenAI-compatible API; the most common entry point for local model use.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Gemma Chat is a local AI chat and [coding agent](../GLOSSARY.md#agent) for Apple Silicon Macs that runs Google's Gemma 4 model entirely on-device via MLX — no API key, no cloud, your data stays on your machine. Pick it if you are on a Mac with Apple Silicon, have already chosen Gemma as your [model](../GLOSSARY.md#model), and want a polished chat UI with agent capabilities without sending anything to a third-party server. The main catch is that it is Apple Silicon-only (no Intel Mac, no Linux, no Windows) and model-specific, so it is not the right choice if you want to swap between providers.
+
 ## 1. What It Is
 
 Gemma Chat (ammaarreshi/gemma-chat) is an MIT-licensed TypeScript application. Active. Local AI chat + coding agent for Apple Silicon powered by Google's Gemma 4 via MLX, with Ollama support. Model-specific by design — the user has already chosen Gemma; the application is optimized around that choice.

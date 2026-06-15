@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Haystack Agents extends deepset's Haystack NLP pipeline framework with agentic, tool-using components — so agents are just another piece you plug into a Haystack pipeline alongside retrievers, readers, and rankers. Pick it if you're building [RAG](../GLOSSARY.md#rag-retrieval-augmented-generation) or document-processing pipelines and want agents as one composable step in that system. The main catch is that Haystack's pipeline abstraction adds overhead if you only need an agent and have no broader NLP pipeline to integrate with.
+
 ## 1. What It Is
 
 Haystack Agents refers to the agentic features of Haystack from deepset (deepset-ai/haystack, Apache-2.0, Python). Active. Extends Haystack's pipeline framework for NLP and RAG with tool-using and multi-step agentic components.

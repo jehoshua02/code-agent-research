@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A memory [MCP](../GLOSSARY.md#mcp-model-context-protocol) server gives an agent a persistent store — facts, preferences, past conversation summaries — that survives across sessions, unlike the context window which resets every time. Use one when you want the agent to remember user details or accumulated knowledge between separate conversations. The main catch: the agent writes its own memory, so errors or hallucinations get persisted and can silently corrupt future behavior.
+
 ## 1. What It Is
 
 MCP servers in this category give agents persistent state across sessions — typically as a key-value or knowledge-graph store. Agents need them to remember user preferences, prior conversations, or learned facts. Notable: memory (official reference, Anthropic) — a simple knowledge-graph server; community options include vector-store-backed memory.

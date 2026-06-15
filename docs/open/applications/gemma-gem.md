@@ -4,6 +4,10 @@ _Last verified: 2026-06-14_
 
 > **Borderline inclusion.** ★930 as of 2026-06-14 (under the ★1,000 adoption threshold) but distinct contribution: runs Gemma 4 entirely on-device via WebGPU. Revisit in 3 months.
 
+## 0. TL;DR
+
+Gemma Gem is a browser extension that runs Google's Gemma 4 [model](../GLOSSARY.md#model) entirely on-device via WebGPU — no install, no API key, no data leaving your machine, just load the extension in Chrome or Edge and the model runs in your browser tab. Pick it when you want a completely offline, zero-trust AI assistant and your browser supports WebGPU; it is best for privacy-sensitive tasks or environments where you cannot install local software. Being niche and early-stage (★930 as of 2026-06-14), the model choices are limited to Gemma variants and WebGPU support is still browser-dependent, so expect occasional compatibility gaps.
+
 ## 1. What It Is
 
 Gemma Gem (kessler/gemma-gem) is an Apache 2.0 TypeScript application. Active. Runs Google's Gemma 4 model entirely on-device via WebGPU — no API keys, no cloud, no data leaving the machine. Model-specific by design.

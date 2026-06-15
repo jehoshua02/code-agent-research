@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Few-shot prompting means putting a handful of worked examples directly in the prompt so the model learns the expected format and style from them — no model training required. Use it when zero-shot instructions produce inconsistent output formats or when your task has domain conventions the model doesn't naturally match. The main catch: examples consume context window tokens, and poor example selection (wrong format, unrepresentative cases) can mislead the model as much as help it.
+
 ## 1. What It Is
 
 Few-shot prompting (in-context learning) places a small number of input-output examples in the prompt so the model can infer the task format and style without any weight updates. Documented at scale by Brown et al. (GPT-3, 2020). Effective when examples cover the expected input distribution.

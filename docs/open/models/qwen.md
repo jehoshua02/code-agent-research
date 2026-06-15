@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Qwen is Alibaba's family of open-weight AI models, ranging from tiny edge models to frontier-scale reasoning giants, all released under the permissive Apache 2.0 license. Pick Qwen if you want a genuinely free-to-use model (no usage restrictions, no gating) with strong coding, math, and multilingual skills — it's one of the few frontier-quality families where you can commercialize without worrying about license clauses. The catch is that the largest [mixture-of-experts](../GLOSSARY.md#moe-mixture-of-experts) models require keeping all expert weights in GPU memory, so running them is still expensive.
+
 ## 1. What It Is
 
 Qwen is Alibaba's open-weight model family. Qwen2.5 and Qwen3 lines released under Apache 2.0 (most checkpoints). General-purpose models with strong multilingual support, math/coding-specific variants (Qwen-Coder, Qwen-Math), and dense + MoE architectures.

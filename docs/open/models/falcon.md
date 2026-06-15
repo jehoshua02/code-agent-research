@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Falcon is the UAE's Technology Innovation Institute open-weight model family, notable for its newer Falcon-H1 line that uses a hybrid architecture blending traditional attention with a state-space model to handle very long contexts (up to 256K tokens) more efficiently. Pick Falcon if you want an Apache 2.0 model with genuinely long-context capability, or if geopolitical/lab diversity in your model stack matters to you. The main catch is that Falcon lacks any built-in tool/function calling and no vision support, and the older Falcon 1 series is severely limited to 2K context — effectively obsolete for most modern tasks.
+
 ## 1. What It Is
 
 Falcon is TII (UAE Technology Innovation Institute)'s open-weight family. Older Falcon-180B/40B under TII Falcon License; Falcon3 and newer under Apache 2.0. Multilingual general-purpose models.

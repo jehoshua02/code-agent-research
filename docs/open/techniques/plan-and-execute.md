@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Plan-and-execute splits work into two phases: a planner LLM call lays out all the steps upfront, then a separate executor works through them one by one with [tools](../GLOSSARY.md#tool). Use it when tasks are long-horizon and a pure [ReAct](../GLOSSARY.md#react) loop tends to go off track — the explicit plan keeps the agent anchored. The main catch: the plan is generated before any execution, so it may be wrong; you need a replanning step when reality doesn't match the plan's assumptions.
+
 ## 1. What It Is
 
 Plan-and-execute separates a planner LLM call (which decomposes the task into ordered sub-tasks) from an executor (which carries out each sub-task with tools). Popularized by Wang et al. (2023, Plan-and-Solve). Keeps long-horizon tasks on track at the cost of an extra round trip per plan revision.

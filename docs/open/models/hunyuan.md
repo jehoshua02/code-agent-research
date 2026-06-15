@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Hunyuan is Tencent's open-weight model family, built around a [mixture-of-experts](../GLOSSARY.md#moe-mixture-of-experts) design where only 13B of the 80B total parameters activate per request, making it more efficient to run than its total size suggests. Pick Hunyuan if you need strong Chinese-English bilingual capability with long context (up to 256K tokens), or if you want a Tencent-backed model for reasoning and agentic tasks. The main catch is the proprietary Tencent license (not Apache 2.0) that requires careful review before commercial use, and the minimum hardware bar is high — you need at least two high-end GPUs even for compressed versions.
+
 ## 1. What It Is
 
 Hunyuan is Tencent's open-weight family. Released under the Tencent Hunyuan License — custom proprietary terms, not Apache 2.0; has commercial-use carve-outs in some jurisdictions. MoE and dense variants targeting multilingual and Chinese-language strength.

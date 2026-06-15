@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+llamafile bundles a [GGUF](../GLOSSARY.md#quantization) model and the llama.cpp runtime into a single executable file that runs on macOS, Linux, Windows, and BSDs with no install whatsoever — download, chmod +x, run. Pick it for the ultimate zero-friction demo or air-gapped deployment where you can't install software. The constraint is file size: Windows caps executables at 4 GB, so models larger than that need a separate GGUF file alongside the binary, and it's not suited for multi-user throughput.
+
 ## 1. What It Is
 
 llamafile (Mozilla-Ocho/llamafile) is an Apache 2.0 project that combines llama.cpp with Cosmopolitan Libc to ship LLMs as single-file portable executables that run on macOS, Linux, Windows, FreeBSD, OpenBSD, and NetBSD without install.

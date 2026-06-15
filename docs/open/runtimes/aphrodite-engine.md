@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Aphrodite Engine is a vLLM fork aimed at community and hobbyist GPU hosting, adding support for more [quantization](../GLOSSARY.md#quantization) formats than upstream vLLM. Pick it over vLLM if you need quantization formats vLLM doesn't support (such as GGUF or AQLM) while still getting a high-throughput OpenAI-compatible server. The catch: AGPL-3.0 license has copyleft implications for commercial use, and like vLLM it's Linux+NVIDIA-only (Windows via WSL2 only, no macOS).
+
 ## 1. What It Is
 
 Aphrodite Engine (aphrodite-engine/aphrodite-engine) is an AGPL-3.0 Python serving engine derived from vLLM. Active. OpenAI-compatible, with quantization-format support beyond upstream vLLM; community-oriented around large-scale local hosting.

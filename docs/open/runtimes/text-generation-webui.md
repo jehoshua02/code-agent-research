@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Text Generation WebUI (oobabooga) is a browser-based UI that lets you swap between multiple inference backends — llama.cpp, ExLlamaV2, Transformers — from a single interface. Pick it if you want a flexible local experimentation environment and don't mind a heavier setup in exchange for backend flexibility. The catch is complexity: it's a ~10 GB install, configuration is sprawling, and it's less suited for headless API serving than purpose-built servers like Ollama or vLLM.
+
 ## 1. What It Is
 
 Text Generation WebUI (oobabooga/text-generation-webui) is an AGPL-3.0 Python web interface for local LLMs. Active. Maintained by oobabooga; supports multiple backends (Transformers, llama.cpp, ExLlama) behind a unified UI.

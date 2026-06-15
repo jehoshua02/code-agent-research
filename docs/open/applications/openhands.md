@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+OpenHands is a full [coding agent](../GLOSSARY.md#agent) platform that runs in a sandboxed Docker container and gives the [LLM](../GLOSSARY.md#llm) a browser, terminal, and file system — closer to a self-hosted junior developer than a chat assistant. Pick it if you want a web UI, strong sandboxing for safety, and an ambitious general-purpose [agentic loop](../GLOSSARY.md#agent-loop) that can tackle multi-step tasks end-to-end. The main catch is the Docker dependency and heavier setup compared to simpler CLI tools like Aider.
+
 ## 1. What It Is
 
 OpenHands is an MIT-licensed Python application from All Hands AI (All-Hands-AI/OpenHands), formerly OpenDevin. Active. General-purpose agentic coding platform that runs in a sandboxed runtime; ships a web UI and CLI.

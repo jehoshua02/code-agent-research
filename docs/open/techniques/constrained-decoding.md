@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Constrained decoding forces the model to output valid JSON (or any other grammar) by mathematically ruling out invalid tokens at every generation step — so you get guaranteed-parseable output, not just "usually valid" output. Use it whenever downstream code parses the model's output and you cannot tolerate malformed JSON or schema violations. The main catch: it requires access to the inference runtime's token logits (llama.cpp, vLLM, Outlines), so it's not available via standard chat-completion APIs like Claude or GPT-4 without a structured-output wrapper.
+
 ## 1. What It Is
 
 Constrained decoding masks token logits at each generation step to enforce a grammar or schema (JSON, regex, context-free grammar), guaranteeing parseable output. Implemented in llama.cpp grammars, dottxt/Outlines, vLLM's structured output, and OpenAI Structured Outputs.

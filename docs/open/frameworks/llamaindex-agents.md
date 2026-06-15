@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+LlamaIndex Agents is the agentic layer of LlamaIndex — a Python framework that lets agents query, retrieve, and reason over your data using LlamaIndex's rich indexing and [RAG](../GLOSSARY.md#rag-retrieval-augmented-generation) primitives. Pick it if your agent's primary job is answering questions over documents, databases, or APIs and you're already using or considering LlamaIndex for data ingestion. The main catch is that it's most powerful when combined with LlamaIndex's data ecosystem; using it purely for general agent tasks adds unnecessary complexity.
+
 ## 1. What It Is
 
 LlamaIndex Agents is the agent component of LlamaIndex (run-llama/llama_index, MIT, Python). Active. Built around data-aware agents that compose retrieval, tools, and reasoning over LlamaIndex's retrieval and indexing primitives.

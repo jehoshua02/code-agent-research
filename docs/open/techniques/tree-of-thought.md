@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Tree-of-thought extends [chain-of-thought](../GLOSSARY.md#chain-of-thought) by exploring multiple reasoning branches in parallel and pruning dead ends — like a chess engine considering several moves before committing. Use it for planning or puzzle problems where the correct path isn't obvious and a single linear chain frequently gets stuck. The main catch: it multiplies LLM calls dramatically, making it expensive and slow; most production systems find simpler heuristics or ReAct loops sufficient.
+
 ## 1. What It Is
 
 Tree-of-thought (ToT) maintains a tree of partial reasoning paths with branching and backtracking, searched BFS or DFS, evaluating intermediate states before committing. Introduced by Yao et al. (2023). Useful where linear chains hit dead ends but expensive in tokens and time.

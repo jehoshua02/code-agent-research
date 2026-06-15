@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Productivity [MCP](../GLOSSARY.md#mcp-model-context-protocol) servers connect an agent to tools like Google Calendar, Gmail, Notion, Linear, and Slack — letting it schedule meetings, draft messages, or update tasks on your behalf. Use one when building a personal assistant or workflow automation agent that needs to act inside your existing toolset. The main catch: these servers use OAuth and touch real accounts, so a prompt-injection attack or a misunderstood instruction can send emails or delete tasks for real.
+
 ## 1. What It Is
 
 MCP servers in this category expose personal/team productivity tools — calendar, email, notes, task management. Agents need them for scheduling, drafting messages, and organizing work. Notable community: Google Calendar, Gmail, Notion, Linear, Slack, and Microsoft 365 MCP servers; usually require OAuth.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+mcp-agent is a minimal Python framework specifically for building agents that consume [MCP](../GLOSSARY.md#mcp-model-context-protocol) servers as their primary [tool](../GLOSSARY.md#tool) source — it handles MCP server lifecycle, connection management, and basic orchestrator-worker patterns out of the box. Pick it if your agent is MCP-native from the start and you want the simplest possible wrapper rather than a full-featured framework. The main catch is low activity since early 2026, which raises questions about long-term maintenance.
+
 ## 1. What It Is
 
 mcp-agent is an Apache-2.0 Python framework from LastMile AI (lastmile-ai/mcp-agent). Low activity since early 2026. Minimal framework specifically for building MCP-native agents with patterns like augmented LLMs and orchestrator-workers.

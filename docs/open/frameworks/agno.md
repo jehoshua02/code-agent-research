@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Agno is a Python framework aiming to be a batteries-included agent platform — it covers the widest provider breadth (30+ LLM providers), multi-modal inputs, Teams for [multi-agent](../GLOSSARY.md#multi-agent-system) coordination, 120+ built-in tool kits, 13+ storage backends, and native [MCP](../GLOSSARY.md#mcp-model-context-protocol) support in one package. Pick it if you want to avoid stitching together separate libraries and prefer one opinionated framework that handles memory, storage, observability, and multi-agent routing together. The main catch is that the breadth means more API surface to learn and more implicit "magic" to debug when something goes wrong.
+
 ## 1. What It Is
 
 Agno is an Apache-2.0 Python framework (agno-agi/agno). Active. Model-agnostic, multi-modal agent framework with built-in support for tools, structured outputs, and memory across many providers.

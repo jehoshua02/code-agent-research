@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Nemotron is NVIDIA's open-weight model family, optimized specifically for NVIDIA hardware — models come with dedicated support in NVIDIA's own serving tools (TensorRT-LLM, NIM) and a wide array of pre-built [quantizations](../GLOSSARY.md#quantization). Pick Nemotron if you're already running on NVIDIA infrastructure and want a commercially-licensed model that's tuned for high-throughput serving with minimal setup friction, or if you need a reward model for building your own AI training pipeline. The main catch is that the 340B flagship needs an entire multi-GPU server to run, the license requires attribution, and the older Nemotron-4 models top out at a very short 4K context window.
+
 ## 1. What It Is
 
 Nemotron is NVIDIA's open-weight family. Released under the NVIDIA Open Model License — permits commercial use with attribution requirements. Includes models derived from Llama and fully NVIDIA-trained variants, often co-developed for NVIDIA hardware.
