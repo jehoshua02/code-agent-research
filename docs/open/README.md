@@ -118,7 +118,7 @@ If a model or runtime requires a platform the reader doesn't currently have, tha
 Each entity has a YAML frontmatter block at the top. INDEX.md tables and `survey.json` are generated from frontmatter — don't edit INDEXes by hand. See:
 
 - [SCHEMA.md](SCHEMA.md) — field definitions per layer, controlled vocab, rules
-- [`../../scripts/README.md`](../../scripts/README.md) — `validate.py`, `regen.py`, `pick.py`, `build-sqlite.py` quick reference
+- [`../../scripts/README.md`](../../scripts/README.md) — `validate.py`, `regen.py`, `build-sqlite.py`, `query.py` quick reference
 - [QUERIES.md](QUERIES.md) — example SQL queries against the SQLite build (`survey.sqlite`)
 
 Run `scripts/validate.py` and `scripts/regen.py` locally before committing survey changes.

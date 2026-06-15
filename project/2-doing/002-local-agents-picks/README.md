@@ -10,4 +10,4 @@ Suggested filename: `YYYY-MM-DD-<scenario-slug>.md`.
 
 ## Worked examples (tool documentation, not personal history)
 
-For canonical examples of how to use the picker scripts — `pick.py` and `query.py` — see [`scripts/examples/`](../../../scripts/examples/) instead. Those demonstrate the tooling; this directory is for your own picks.
+For canonical examples of how to use `query.py`, see [`scripts/examples/`](../../../scripts/examples/) instead. Those demonstrate the tooling; this directory is for your own picks.

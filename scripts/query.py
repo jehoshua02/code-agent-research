@@ -3,8 +3,8 @@
 Raw-SQL escape hatch over docs/open/survey.sqlite. Auto-builds the SQLite
 cache from survey.json if missing or stale.
 
-Use this when pick.py's flags don't cover what you want — arbitrary WHERE,
-JOIN, GROUP BY, sort by any column, exclusion, NOT EXISTS, etc.
+Use this for any structured query against the survey data — filters, JOIN,
+GROUP BY, sort by any column, exclusion, NOT EXISTS, etc.
 
 See docs/open/QUERIES.md for example patterns.
 

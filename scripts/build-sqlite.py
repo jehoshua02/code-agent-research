@@ -3,8 +3,7 @@
 Build docs/open/survey.sqlite from docs/open/survey.json.
 
 The SQLite file is a query cache, not source of truth. It's regenerable any
-time and gitignored. Use it for ad-hoc questions that pick.py can't express —
-arbitrary WHERE, joins-by-self, aggregates, sorts by any field.
+time and gitignored. Use it for any structured query against the survey data.
 
 Schema: one table `entities` with all common columns; list-typed frontmatter
 fields are stored as JSON arrays (use SQLite's json_each / json_extract to
