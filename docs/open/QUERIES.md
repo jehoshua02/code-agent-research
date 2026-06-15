@@ -7,7 +7,7 @@ python3 scripts/regen.py        # update survey.json from frontmatter
 python3 scripts/build-sqlite.py # build survey.sqlite from survey.json
 ```
 
-Use it for ad-hoc questions that `pick.py` doesn't have flags for. The schema is one table `entities` with all common frontmatter fields as proper columns; list fields are stored as JSON arrays (use SQLite's `json_each` / `json_extract`).
+The schema is one table `entities` with all common frontmatter fields as proper columns; list fields are stored as JSON arrays (use SQLite's `json_each` / `json_extract`).
 
 ## Connecting
 

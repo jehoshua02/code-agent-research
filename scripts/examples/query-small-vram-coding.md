@@ -1,6 +1,6 @@
 # Example — picking a small-VRAM agentic-coding stack via `query.py`
 
-> **Worked example showing `scripts/query.py` in action.** Same scenario as [`pick-small-vram-coding.md`](pick-small-vram-coding.md) but worked through raw SQL instead of `pick.py`'s flag-driven interface. Both methodologies arrive at the same final stack; SQL lets the picker ask sharper "why" questions in between. Output snapshots are from 2026-06-15 and will drift; rerun against the current `survey.sqlite` for current results.
+> **Worked example showing `scripts/query.py` in action.** Drawn from a real session on an 8 GB GPU targeting agentic coding. Output snapshots are from 2026-06-15 and will drift; rerun against the current `survey.sqlite` for current results.
 
 ## Constraints
 
@@ -165,8 +165,6 @@ The standard four — all installable, two from Anthropic's reference set.
 
 ## Recommendation
 
-Identical to the previous walkthrough (via `pick.py`):
-
 | Layer | Pick |
 |---|---|
 | Model | Qwen2.5-Coder-7B (Q4_K_M, ~5 GB) — Apache 2.0, fits 3070 with KV-cache headroom |
@@ -176,10 +174,10 @@ Identical to the previous walkthrough (via `pick.py`):
 | Framework | skip — OpenCode is finished |
 | Techniques | implicit (ReAct + tool use inside OpenCode) |
 
-## What SQL gave us that flags didn't
+## What SQL is good at
 
 - **`ORDER BY context_window DESC`** — see who has the longest context, not just who passes the filter.
-- **`params_total` inline** — without writing a custom `pick.py` output column.
+- **`params_total` inline** — every frontmatter column is directly queryable.
 - **`GROUP_CONCAT` on list fields** — formats / interfaces / providers visible in one row instead of as separate query passes.
 - **Head-to-head dump** of two specific entities (`name IN (...)`) — quick comparison without recomputing filters.
 - **Composable refinements** — each step's query is a copy-and-tweak of the last; the path through the decision is recoverable later.
