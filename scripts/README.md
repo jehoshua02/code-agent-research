@@ -65,6 +65,15 @@ python3 scripts/query.py --shell
 
 CI is not wired up. Discipline is local — run both before committing.
 
+## Worked examples
+
+[`scripts/examples/`](examples/) contains end-to-end demos of using the picker scripts on real scenarios. Read these before writing your own queries — they show the queries, the reasoning between them, and the recommendation that falls out.
+
+| File | Tool | Scenario |
+|---|---|---|
+| [`examples/pick-small-vram-coding.md`](examples/pick-small-vram-coding.md) | `pick.py` | 8 GB GPU, agentic coding, MCP-required, Apache 2.0 / MIT only |
+| [`examples/query-small-vram-coding.md`](examples/query-small-vram-coding.md) | `query.py` (SQL) | Same, via raw SQL — shows what SQL adds over flags |
+
 ## Safety notes
 
 - `regen.py` refuses to write if any entity lacks frontmatter (would silently drop rows from INDEX). Migrate first, or pass `--force` only when you intentionally want to migrate partial state.

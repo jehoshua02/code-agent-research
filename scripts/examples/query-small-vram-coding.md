@@ -1,6 +1,6 @@
-# Stack pick — 3070 + agentic coding (via SQL) — 2026-06-15
+# Example — picking a small-VRAM agentic-coding stack via `query.py`
 
-> **Ephemeral working note.** Not canonical survey content. Same scenario as `2026-06-15-3070-coding.md` but worked through `scripts/query.py` (SQL) instead of `scripts/pick.py` (flags). Both methodologies arrived at the same final stack; SQL let the picker ask sharper "why" questions in between.
+> **Worked example showing `scripts/query.py` in action.** Same scenario as [`pick-small-vram-coding.md`](pick-small-vram-coding.md) but worked through raw SQL instead of `pick.py`'s flag-driven interface. Both methodologies arrive at the same final stack; SQL lets the picker ask sharper "why" questions in between. Output snapshots are from 2026-06-15 and will drift; rerun against the current `survey.sqlite` for current results.
 
 ## Constraints
 

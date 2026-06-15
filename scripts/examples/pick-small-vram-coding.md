@@ -1,6 +1,6 @@
-# Stack pick — 3070 + agentic coding — 2026-06-15
+# Example — picking a small-VRAM agentic-coding stack via `pick.py`
 
-> **Ephemeral working note.** Not canonical survey content. Demonstrates how the survey's `pick.py` plus a short conversation produces a concrete recommendation. Add new dated picks as constraints, hardware, or the survey itself changes.
+> **Worked example showing `scripts/pick.py` in action.** Drawn from a real session on a 3070 (8 GB VRAM) targeting agentic coding. Output snapshots are from 2026-06-15 and will drift; rerun the queries against the current survey for current results. See [`query-small-vram-coding.md`](query-small-vram-coding.md) for the same scenario worked through `query.py` (raw SQL) instead.
 
 ## Constraints
 
