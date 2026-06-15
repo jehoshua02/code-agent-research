@@ -1,3 +1,20 @@
+---
+name: "llama.cpp"
+maker: "ggml-org"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/ggml-org/llama.cpp"
+last_verified: "2026-06-14"
+language: "C++"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan", "sycl"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["gguf"]
+notes: "Upstream of Ollama, KoboldCpp, and llamafile; GGUF is the sole inference format."
+---
+
 # llama.cpp
 
 _Last verified: 2026-06-14_

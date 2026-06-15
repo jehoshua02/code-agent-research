@@ -1,3 +1,20 @@
+---
+name: "llamafile"
+maker: "Mozilla"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/Mozilla-Ocho/llamafile"
+last_verified: "2026-06-14"
+language: "C++"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["gguf"]
+notes: "Single-file portable executable via Cosmopolitan Libc; CUDA JIT is Linux-only (no CUDA on Windows as of v0.10.0)."
+---
+
 # llamafile
 
 _Last verified: 2026-06-14_

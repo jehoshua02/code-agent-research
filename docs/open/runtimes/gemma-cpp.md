@@ -1,3 +1,20 @@
+---
+name: "gemma.cpp"
+maker: "Google"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/google/gemma.cpp"
+last_verified: "2026-06-14"
+language: "C++"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cpu"]
+api_openai_compat: false
+supports_mcp: "none"
+formats: ["sbs"]
+notes: "Gemma-family only; CPU-only (no GPU); proprietary .sbs format with closed-source safetensors converter."
+---
+
 # gemma.cpp
 
 _Last verified: 2026-06-14_

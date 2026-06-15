@@ -1,3 +1,20 @@
+---
+name: "Jan"
+maker: "Menlo Research"
+license: "AGPL-3.0"
+license_category: "source-available"
+status: "active"
+url: "https://github.com/menloresearch/jan"
+last_verified: "2026-06-14"
+language: "TypeScript"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan"]
+api_openai_compat: true
+supports_mcp: "native"
+formats: ["gguf", "mlx"]
+notes: "Desktop chat app; GGUF-only for primary llama.cpp path; MLX backend added v0.7.7 for Apple Silicon."
+---
+
 # Jan
 
 _Last verified: 2026-06-14_

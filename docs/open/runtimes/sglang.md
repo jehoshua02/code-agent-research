@@ -1,3 +1,20 @@
+---
+name: "SGLang"
+maker: "LMSYS"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/sgl-project/sglang"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux"]
+gpu_backends: ["cuda", "rocm", "cpu", "tpu", "xpu", "ascend"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["safetensors", "gptq", "awq", "fp8", "gguf"]
+notes: "macOS support is experimental (MLX backend, Python 3.11 only); Windows unsupported."
+---
+
 # SGLang
 
 _Last verified: 2026-06-14_

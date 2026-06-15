@@ -1,3 +1,20 @@
+---
+name: "LM Studio"
+maker: "Element Labs"
+license: "Proprietary"
+license_category: "proprietary"
+status: "active"
+url: "https://lmstudio.ai"
+last_verified: "2026-06-14"
+language: "TypeScript"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan"]
+api_openai_compat: true
+supports_mcp: "native"
+formats: ["gguf", "mlx"]
+notes: "Closed-source, free-to-use; macOS supports Apple Silicon only (no Intel Mac)."
+---
+
 # LM Studio
 
 _Last verified: 2026-06-14_

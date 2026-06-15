@@ -1,3 +1,20 @@
+---
+name: "Text Generation WebUI"
+maker: "oobabooga"
+license: "AGPL-3.0"
+license_category: "source-available"
+status: "active"
+url: "https://github.com/oobabooga/text-generation-webui"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan"]
+api_openai_compat: true
+supports_mcp: "native"
+formats: ["gguf", "exl2", "gptq", "awq", "safetensors"]
+notes: "Multi-backend web UI (~10 GB install); hot-swap between llama.cpp, ExLlamaV2, Transformers without restart."
+---
+
 # Text Generation WebUI (oobabooga)
 
 _Last verified: 2026-06-14_

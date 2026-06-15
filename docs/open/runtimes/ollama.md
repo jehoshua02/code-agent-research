@@ -1,3 +1,20 @@
+---
+name: "Ollama"
+maker: "Ollama"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/ollama/ollama"
+last_verified: "2026-06-14"
+language: "Go"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["gguf"]
+notes: "Wraps llama.cpp; bundled CUDA libs — no separate toolkit install required."
+---
+
 # Ollama
 
 _Last verified: 2026-06-14_

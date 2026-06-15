@@ -1,3 +1,20 @@
+---
+name: "LocalAI"
+maker: "mudler"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/mudler/LocalAI"
+last_verified: "2026-06-14"
+language: "Go"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan", "sycl"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["gguf", "safetensors", "gptq", "awq"]
+notes: "Multi-backend routing layer (36+ backends); also exposes Anthropic, Ollama, and ElevenLabs-compatible APIs."
+---
+
 # LocalAI
 
 _Last verified: 2026-06-14_

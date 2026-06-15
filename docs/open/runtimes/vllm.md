@@ -1,3 +1,20 @@
+---
+name: "vLLM"
+maker: "vLLM Project"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/vllm-project/vllm"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux", "wsl2"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "tpu", "xpu", "gaudi", "ascend"]
+api_openai_compat: true
+supports_mcp: "native"
+formats: ["safetensors", "gguf", "awq", "gptq", "fp8", "bitsandbytes"]
+notes: "GGUF support is highly experimental; macOS via unsupported community plugin only."
+---
+
 # vLLM
 
 _Last verified: 2026-06-14_
