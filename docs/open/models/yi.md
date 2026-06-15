@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Yi is a Chinese AI lab's (01.AI) open-weight model family focused on strong English and Chinese bilingual capability, with models ranging from a lightweight 6B up to a capable 34B — all under the permissive Apache 2.0 license. Pick Yi if you need a well-established bilingual model with no download restrictions and good consumer-hardware compatibility, especially for Chinese-language tasks. The main catch is that the Yi family is now somewhat dated — newer families like Qwen3 or Llama 3 have largely surpassed it — and Yi Chat models lack a native tool-calling format.
+
 ## 1. What It Is
 
 Yi is 01.AI's open-weight family. Modern checkpoints released under Apache 2.0 (earlier under a custom Yi license). General-purpose models with bilingual English/Chinese strength.

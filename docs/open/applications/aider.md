@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Aider is a [coding agent](../GLOSSARY.md#agent) you run in your terminal that pair-programs with you over your git history, turning every LLM edit into a real commit so you always have a clean undo path. Pick it if you want git-native pair programming, deep repo-wide context, and a mature [agentic loop](../GLOSSARY.md#agent-loop) that has been battle-tested across many [LLM](../GLOSSARY.md#llm) providers. The main catch is that it's a CLI-only tool — there's no built-in GUI, so if you prefer clicking over typing it may feel spartan.
+
 ## 1. What It Is
 
 Aider is an Apache-2.0 Python application from Aider-AI / Paul Gauthier (Aider-AI/aider). Active. Agentic coding CLI that pair-programs over git, applying edits as commits with strong support for repo-wide context.

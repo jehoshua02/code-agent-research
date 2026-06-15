@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Granite is IBM's open-weight model family designed with enterprise use in mind — think carefully documented training data provenance, structured tool calling, and multilingual business-task performance — all under Apache 2.0 with no download restrictions. Pick Granite if you're building enterprise software and want an IBM-backed model that's safe to deploy commercially, integrates with IBM's watsonx.ai platform, and handles 12+ languages reliably. The main catch is that Granite tops out at 8B parameters in the instruct line, so it won't match frontier-scale models on complex reasoning tasks, and there's no vision capability.
+
 ## 1. What It Is
 
 Granite is IBM's open-weight family. Released under Apache 2.0. Enterprise-oriented general-purpose, code, time-series, and embedding models with attention to data provenance and licensing transparency.

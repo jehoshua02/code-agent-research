@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A code-execution [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent run Python, JavaScript, or other code in a sandboxed environment and get back real output — useful for data analysis, math, or anything that's safer to compute than to reason about from memory. Use one when the agent needs to process files, generate charts, or verify calculations. The main catch: even sandboxed environments have escape risks; prefer cloud-managed sandboxes (E2B, etc.) over local subprocess runners when the agent's code is untrusted.
+
 ## 1. What It Is
 
 MCP servers in this category run code in a sandboxed environment (Python, JavaScript, etc.) and return results. Agents need them for data analysis, math, and any task safer to compute than to reason about. Notable community: E2B Code Interpreter MCP, Pyodide-based browsers, and various Docker-sandboxed runners.

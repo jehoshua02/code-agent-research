@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+OpenAI Swarm is a tiny, now-deprecated Python library that demonstrated how [agents](../GLOSSARY.md#agent) can hand off control to one another using plain function returns — useful for learning the handoff pattern. Do not pick it for production; OpenAI itself replaced it with the OpenAI Agents SDK. Its value today is as a readable, ~300-line reference for understanding agent handoffs, not as a foundation to build on.
+
 ## 1. What It Is
 
 OpenAI Swarm is an MIT-licensed Python framework (openai/swarm) for lightweight multi-agent handoffs. Marked experimental/educational by OpenAI; the patterns have been superseded by the OpenAI Agents SDK. Still cited as a reference for the agent-handoff pattern.

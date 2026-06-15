@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+DeepSeek is a Chinese AI lab's open-weight model family best known for its R1 reasoning model, which matches frontier performance on coding and math by teaching itself to "think step-by-step" through reinforcement learning — all released under permissive (MIT/DeepSeek) licenses. Pick DeepSeek if you need strong reasoning or coding ability and are comfortable with Chinese-lab provenance; the distilled smaller versions (7B–70B) bring that reasoning capability to consumer hardware. The main catch is that the flagship 671B [mixture-of-experts](../GLOSSARY.md#moe-mixture-of-experts) model needs multiple H100s, and the main models have limited tool-calling support (only added in R1-0528).
+
 ## 1. What It Is
 
 DeepSeek is DeepSeek AI's open-weight family. V2 and V3 use the DeepSeek License (permissive, commercial use allowed); R1 reasoning model released MIT. DeepSeek-V3 is a 671B-total / 37B-active MoE; R1 is a reasoning-focused variant trained with RL.

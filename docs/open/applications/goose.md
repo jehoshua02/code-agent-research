@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Goose is a general-purpose AI [agent](../GLOSSARY.md#agent) — desktop app and CLI — that can use tools, call APIs, and automate tasks beyond just coding, backed by an extensible toolkit and [MCP](../GLOSSARY.md#mcp) support. Pick it if you want a Rust-fast, provider-agnostic agent with a GUI option and the backing of the Linux Foundation's AAIF for long-term stewardship. The main catch is that its broader scope means it's less laser-focused on git/code workflows than Aider, so pure coding tasks may need more prompting.
+
 ## 1. What It Is
 
 Goose is an Apache-2.0 Rust application originally from Block (block/goose), now under the Linux Foundation's AAIF (aaif-goose/goose). Active. General-purpose open-source AI agent with extensible toolkit and MCP support.

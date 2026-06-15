@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Command R is Cohere's open-weight model family purpose-built for [retrieval-augmented generation](../GLOSSARY.md#rag-retrieval-augmented-generation) — tasks where the model needs to search through documents, cite its sources, and call tools reliably — rather than being a general-purpose chat model. Pick Command R if you're building a document Q&A or enterprise search application and want a model with first-class, structured tool-calling baked in and strong multilingual support across 23 languages. The main catch is the non-commercial CC-BY-NC license: you can experiment freely, but any production use requires a separate Cohere commercial agreement.
+
 ## 1. What It Is
 
 Command R / Command R+ / Command A are Cohere's open-weight families. Released under CC-BY-NC 4.0 (non-commercial; commercial use requires a Cohere license). Optimized for retrieval-augmented generation and tool use; multilingual.

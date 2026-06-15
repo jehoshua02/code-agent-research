@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+llama.cpp is a C/C++ library that runs LLMs locally using [GGUF](../GLOSSARY.md#quantization)-format model files, on anything from a MacBook GPU to a Linux CUDA server. Pick it if you want low-level control, broad hardware support, or are building a tool that embeds model inference directly. The catch is that it's a library and CLI, not a polished app — you'll need to build from source or wire up bindings yourself; many people use a friendlier wrapper like Ollama instead.
+
 ## 1. What It Is
 
 llama.cpp (ggml-org/llama.cpp) is an MIT-licensed C/C++ inference framework. Active. Runs LLMs efficiently on CPU and GPU (CUDA, Metal, ROCm, Vulkan) using the GGUF format; the upstream of many derived runtimes (Ollama, KoboldCpp, llamafile).

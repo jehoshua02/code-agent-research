@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Application historically existed (agentic coding CLI over local repos); repo removed as of 2026-06-14. Listed for archival reference.
+
 ## 1. What It Is
 
 Mentat is/was an Apache-2.0 Python application from AbanteAI (AbanteAI/mentat). Repo currently returns 404 — appears to have been deleted or made private; included for historical reference. Agentic coding CLI that operated over local repos.

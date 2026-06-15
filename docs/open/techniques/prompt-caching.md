@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Prompt caching is a runtime-level optimization where the provider saves the processed state of a long, repeated prompt prefix — system prompt, tool definitions, documents — so subsequent requests reuse it at a fraction of the cost. Use it when your agent sends the same large system prompt or context on every turn, which is nearly always. The main catch: caching is tied to an exact prefix match with a short TTL (around 5 minutes on Anthropic), so any change to the prefix before the TTL expires causes a full cache miss.
+
 ## 1. What It Is
 
 Prompt caching has the provider cache the server-side key-value state for a static prompt prefix and reuse it across requests, paying full compute only on cache misses. Reduces both cost and latency for repeated long prefixes. Available in Anthropic and OpenAI APIs and in some self-hosted runtimes.

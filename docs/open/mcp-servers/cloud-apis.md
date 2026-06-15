@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A cloud-API [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent interact with AWS, GCP, Azure, or Cloudflare resources — listing buckets, querying logs, deploying functions — through natural language instead of raw CLI commands. Use one when building DevOps agents that need to inspect or manage cloud infrastructure. The main catch: write operations are real and often irreversible, so gate destructive actions behind explicit confirmation steps and use least-privilege IAM roles.
+
 ## 1. What It Is
 
 MCP servers in this category wrap cloud-provider APIs (AWS, GCP, Azure) to expose resources, run commands, or query telemetry. Agents need them for cloud operations, cost analysis, and infrastructure-as-code workflows. Notable community: AWS MCP, GCP MCP, Azure MCP, and Cloudflare's official MCP servers.

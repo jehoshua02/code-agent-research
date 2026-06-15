@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+OpenClaw is a cross-platform personal AI assistant (released November 2025) built around a community Skills Registry of 5,400+ skills — think of it as a general-purpose [agent](../GLOSSARY.md#agent) you extend by installing skills rather than writing plugins from scratch. Pick it if you want a breadth-first assistant that can handle coding, research, and everyday automation through a rich extension ecosystem rather than a coding-only tool. Being new and niche, the skills registry quality varies widely and the community is still small, so expect more rough edges than in mature tools like Aider or OpenHands.
+
 ## 1. What It Is
 
 OpenClaw is an MIT-licensed TypeScript application from the OpenClaw Foundation (openclaw/openclaw). Active, released November 2025. Cross-platform personal AI assistant ("Your own personal AI assistant. Any OS. Any Platform"); category is general-purpose agentic application with a skills-based extension model (a community Skills Registry catalogs 5,400+ skills).

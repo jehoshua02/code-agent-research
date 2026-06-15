@@ -4,6 +4,10 @@ _Last verified: 2026-06-14_
 
 > **Borderline inclusion.** Below the ★1,000 adoption threshold (★626 as of 2026-06-14) but recent (created May 2026) and a candidate for the "distinct contribution" criterion. Revisit in 3 months when adoption stabilizes.
 
+## 0. TL;DR
+
+GSD-PI is a local-first [coding agent](../GLOSSARY.md#agent) (released 2026) that organizes long-horizon autonomous work into a structured milestones/slices/tasks workflow under a `.gsd/` directory, rather than free-form chat. Pick it if you want an [agentic loop](../GLOSSARY.md#agent-loop) that plans, tracks, and verifies multi-step projects with built-in git worktree automation — best for developers who find other agents too conversational for large tasks. It's still early-stage (★626 as of 2026-06-14), so expect a smaller community and fewer integrations than more established tools.
+
 ## 1. What It Is
 
 GSD-PI (open-gsd/gsd-pi, npm: `@opengsd/gsd-pi`) is an MIT-licensed TypeScript application. Active, baselined at 1.0.0 in 2026. Local-first agentic coding application — TUI/web agent that plans, implements, verifies, and tracks work via a milestones/slices/tasks workflow with worktree-aware Git automation, multi-provider model routing, and an extension surface for skills/tools/commands. Distinct in organizing long-horizon autonomous work around a structured project workflow under `.gsd/` rather than ad-hoc conversation.

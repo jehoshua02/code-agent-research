@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+LangGraph is a Python library for building agents as graphs of nodes and edges, where each node is a step in the [workflow](../GLOSSARY.md#workflow) and edges encode control flow. Pick it if you want fine-grained control over the agent loop — pause, branch, retry, or hand off between agents — plus built-in observability through LangSmith. The main catch is a steeper learning curve: you think in graph state machines, not in straightforward imperative scripts.
+
 ## 1. What It Is
 
 LangGraph is an MIT-licensed Python framework from LangChain (langchain-ai/langgraph) for building stateful agent workflows as graphs of nodes and edges. Active development. Takes a graph-state-machine approach distinct from chain-of-prompts or imperative loops.

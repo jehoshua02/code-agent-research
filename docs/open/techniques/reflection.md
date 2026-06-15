@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Reflection has the model critique its own output — or a separate critic model does it — and then revise based on that feedback, within the same session. Use it when a single-shot answer is often nearly right but has fixable errors (wrong format, missing edge cases, failing tests), and you want automatic self-correction. The main catch: the model tends to agree with its own prior output, so critique quality degrades without external ground truth like test results or a separate critic.
+
 ## 1. What It Is
 
 Reflection (Reflexion) has a model evaluate its own output via verbal feedback, store a self-critique in memory, and use it on the next attempt. Introduced by Shinn et al. (2023). Improves performance across coding and reasoning tasks without weight updates, by reusing structured failure analysis.

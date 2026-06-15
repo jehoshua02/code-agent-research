@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Jan is a cross-platform desktop chat app — think a privacy-first, open-source alternative to ChatGPT that runs entirely on your own machine. Pick it if you want a polished GUI for chatting with local models on Mac, Windows, or Linux without touching the terminal. The catch is it's primarily a chat interface rather than a developer-facing API server, so it's less useful if you're building integrations or need programmatic access.
+
 ## 1. What It Is
 
 Jan (menloresearch/jan) is an AGPL-3.0 TypeScript+Rust desktop application. Active. Cross-platform ChatGPT-style local interface that can run multiple inference backends under the hood; positioned as a privacy-first open alternative to commercial chat apps.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Self-consistency runs the same prompt multiple times with some randomness, then picks the answer that comes up most often — majority voting instead of a single shot. Use it when accuracy on reasoning tasks matters more than cost or latency and a single [chain-of-thought](../GLOSSARY.md#chain-of-thought) answer isn't reliable enough. The main catch: it multiplies your inference cost by however many samples you take (typically 5–20x), so it's only practical for tasks where that trade-off is justified.
+
 ## 1. What It Is
 
 Self-consistency samples multiple chain-of-thought reasoning paths at non-zero temperature, then majority-votes the most frequent final answer. Introduced by Wang et al. (2022). Trades cost for accuracy on reasoning benchmarks.

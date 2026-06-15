@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Chain-of-thought prompting tells the model to show its work before giving a final answer — either by example or by appending "Let's think step by step." Use it for multi-step math, logic puzzles, or any task where jumping straight to an answer produces wrong results. The main catch: it generates more output tokens (higher cost and latency), and intermediate reasoning steps can themselves be wrong, leading to a confidently wrong conclusion.
+
 ## 1. What It Is
 
 Chain-of-thought (CoT) prompting elicits intermediate reasoning steps before the final answer, via worked examples or the trigger phrase "Let's think step by step." Introduced by Wei et al. (2022). Improves performance on multi-step reasoning tasks but increases output tokens and latency.

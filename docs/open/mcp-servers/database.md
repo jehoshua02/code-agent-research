@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A database [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent query SQL databases, inspect schemas, and retrieve data — turning natural-language questions into real query results. Use one when you want the agent to answer questions about data in PostgreSQL, SQLite, BigQuery, or similar stores without hardcoding the SQL yourself. The main catch: most servers default to read-only access for safety, but even read-only access exposes your full schema and data, so keep credentials scoped to a least-privilege role.
+
 ## 1. What It Is
 
 MCP servers in this category expose SQL databases — list tables, execute queries (often read-only by default), inspect schemas. Agents need them for data analysis and reporting tasks. Notable community: PostgreSQL, SQLite, MySQL, BigQuery, Snowflake, and DuckDB MCP servers, typically requiring a connection string.

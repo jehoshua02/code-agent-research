@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Open Interpreter lets an [LLM](../GLOSSARY.md#llm) write and execute code directly on your machine — think of it as ChatGPT's Code Interpreter but running locally against your own files, APIs, and system. Pick it if you need a general-purpose [agent](../GLOSSARY.md#agent) for data wrangling, automation, or system tasks rather than pure software development. The main catch is the AGPL-3.0 license and the fact that it executes arbitrary code on your machine, so you need to be comfortable reviewing what it runs before approving.
+
 ## 1. What It Is
 
 Open Interpreter is a Python application from the OpenInterpreter org (OpenInterpreter/open-interpreter), AGPL-3.0. Active. Lets LLMs execute code locally to perform general tasks; effectively a code-execution agent for any data or system task.

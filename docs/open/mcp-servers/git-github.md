@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A Git/GitHub [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent inspect commits, diffs, and branches, or create pull requests and manage issues — without shelling out to the `git` CLI directly. Use one when the agent needs to participate in a code-review workflow, automate PR creation, or reason about repository history. The main catch: write operations (commit, push, PR creation) are irreversible, so scope the agent's permissions carefully and review its actions before merging.
+
 ## 1. What It Is
 
 MCP servers in this category expose Git and GitHub/GitLab operations — clone, diff, status, commit, PR, issues. Agents need them for any code-review or repository-management workflow. Notable: git (official reference, Anthropic) for local repos; community github and gitlab servers for hosted platforms.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+TGI (Text Generation Inference) is HuggingFace's production-grade inference server — a Docker image you point at a HuggingFace model ID to get an OpenAI-compatible API endpoint with [continuous batching](../GLOSSARY.md#batching) and tensor parallelism. Pick it if you're already in the HuggingFace ecosystem and want a supported, production-ready server without much custom config. The main friction is it's Docker-first with Linux+NVIDIA as the assumed environment; macOS and Windows are not first-class.
+
 ## 1. What It Is
 
 Text Generation Inference (huggingface/text-generation-inference) is HuggingFace's production inference server. Apache 2.0 (re-licensed after a brief HFOIL period). Active. Rust+Python, OpenAI-compatible, supports many model architectures with tensor parallelism.

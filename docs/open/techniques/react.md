@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+ReAct is the most common [agent loop](../GLOSSARY.md#agent-loop) pattern: the model alternates between thinking out loud, calling a [tool](../GLOSSARY.md#tool), and reading the result — repeating until the task is done. Use it any time the agent needs to gather information or take actions across multiple steps before it can answer. The main catch: errors in early steps compound silently, so long ReAct chains can drift far off track without any built-in replanning mechanism.
+
 ## 1. What It Is
 
 ReAct interleaves Thought, Action, and Observation steps so the model can reason about a task, invoke external tools, and react to their results in a loop. Introduced by Yao et al. (2022). The canonical pattern behind most modern agent frameworks.

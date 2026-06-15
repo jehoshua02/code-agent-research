@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Continue is an IDE extension for VS Code and JetBrains that wires a self-hosted or cloud [LLM](../GLOSSARY.md#llm) directly into your editor — similar to GitHub Copilot but fully open-source and pointed at any model you choose. Pick it if you spend most of your time in VS Code or a JetBrains IDE and want AI completions and chat without leaving your editor or paying a SaaS subscription. The main catch is that the repository is archived as of 2026 (a final 2.0.0 was shipped but active development has stopped), so the [agentic loop](../GLOSSARY.md#agent-loop) is less mature than Aider's and future compatibility is uncertain.
+
 ## 1. What It Is
 
 Continue is an Apache-2.0 TypeScript application from Continue Dev (continuedev/continue). Active. Open-source IDE extension (VS Code, JetBrains) for agentic coding with custom commands, models, and contexts.

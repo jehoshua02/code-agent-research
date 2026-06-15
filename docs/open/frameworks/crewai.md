@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+CrewAI is a Python framework for assembling a "crew" of role-playing [agents](../GLOSSARY.md#agent) — researcher, writer, reviewer — that collaborate on a shared goal. Pick it if you like a high-level, role-centric mental model and want to get a multi-agent [workflow](../GLOSSARY.md#workflow) running quickly with minimal boilerplate. The main catch is limited control over the underlying agent loop, which can make debugging surprising behavior harder.
+
 ## 1. What It Is
 
 CrewAI is an MIT-licensed Python framework from crewAI Inc. (crewAI-Inc/crewAI) for role-based multi-agent crews. Active. Emphasizes assigning agents distinct roles (researcher, writer, etc.) collaborating on a shared goal.

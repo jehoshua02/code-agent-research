@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+KV cache reuse is a runtime-level optimization where the inference engine stores the intermediate attention computations for already-processed tokens and reuses them on the next request, instead of reprocessing the same prefix from scratch every time. It's automatic in production inference runtimes (vLLM, TGI, etc.) and is what makes [prompt caching](../GLOSSARY.md#prompt-caching) possible at the provider level. The main catch: this is infrastructure plumbing, not an agent technique — as an agent developer, you benefit from it indirectly by keeping prompt prefixes stable.
+
 ## 1. What It Is
 
 Key-value attention tensors from already-processed tokens are stored in GPU memory and reused on the next decode step, avoiding redundant recomputation. Cross-request prefix sharing was formalized by Kwon et al. (2023, PagedAttention) and is now standard in production-grade inference runtimes.

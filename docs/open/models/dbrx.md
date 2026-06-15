@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+DBRX is Databricks' single open-weight model — a 132B [mixture-of-experts](../GLOSSARY.md#moe-mixture-of-experts) model that activates only 36B parameters per request, released in March 2024 as a competitive alternative to GPT-3.5 for code and general chat. Pick DBRX if you're already in the Databricks ecosystem (MLflow, Mosaic AI Model Serving) and want a commercially-licensed model with good coding performance. The main catch is that DBRX is now dated — the model has seen no updates since launch, lacks tool calling and multilingual support, and requires at least two A100 80 GB GPUs even at INT4 compression.
+
 ## 1. What It Is
 
 DBRX is Databricks (Mosaic AI)'s open-weight model. Released March 2024 under the Databricks Open Model License. 132B-total / 36B-active MoE; HuggingFace repos may be gated requiring license acceptance.

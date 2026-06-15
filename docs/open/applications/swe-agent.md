@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+SWE-agent is a research-grade [coding agent](../GLOSSARY.md#agent) from Princeton NLP, built specifically to solve real GitHub issues autonomously and score well on the SWE-bench benchmark — it's the tool academics and teams use to measure where [agentic loops](../GLOSSARY.md#agent-loop) actually stand today. Pick it if you are evaluating agent capabilities, running benchmarks, or need a rigorously designed agent-computer interface as a foundation for your own research. The main catch is that it's optimized for benchmark tasks rather than everyday interactive coding, so the setup is heavier and the UX is more research-lab than developer-tool.
+
 ## 1. What It Is
 
 SWE-agent is an MIT-licensed Python application from Princeton NLP (princeton-nlp/SWE-agent). Active. Research-grade agent designed for the SWE-bench benchmark; uses a custom agent-computer interface to navigate and edit repositories.

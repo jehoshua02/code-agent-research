@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Hermes is Nous Research's series of fine-tuned models built on top of base models like Llama 3.1, specifically sharpened for tool calling, structured outputs, and multi-step agentic workflows — it's what you get when you take a capable base model and train it intensively to reliably follow JSON and XML schemas when calling functions. Pick Hermes if you're building an AI agent that needs to call tools or APIs reliably and you want a community-developed model with a well-documented calling format. The main catch is that the license is inherited from the base model (Llama's 700M MAU cap applies), training was at 8K context so quality may degrade on very long inputs despite the 128K window, and no vision support exists.
+
 ## 1. What It Is
 
 Hermes is Nous Research's open-weight series of fine-tuned models. Licenses inherit from the base model used for each Hermes variant (e.g., Llama-based Hermes inherits Llama Community License; Qwen-based inherits Apache 2.0). Tuned for tool use, function calling, and chat quality.

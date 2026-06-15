@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A web-search [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent query a search engine and get back ranked results — useful whenever the agent needs current information that postdates its training cutoff. Use one when building a research or question-answering agent that should cite up-to-date sources. The main catch: every server requires a paid third-party API key (Brave, Exa, Tavily, etc.), and result quality varies significantly between providers.
+
 ## 1. What It Is
 
 MCP servers in this category expose a search engine (web, code, or vertical) to the agent. Agents need them for current information beyond the model's training cutoff. Notable community servers wrap Brave Search, Exa, Tavily, Perplexity, and Google Programmable Search; each requires a provider API key.

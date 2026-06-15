@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+SGLang is a GPU inference server that matches or beats vLLM on raw throughput and adds first-class support for structured/constrained output generation (e.g., enforcing JSON schemas in responses). Pick it if you need high-throughput serving and your workload involves structured outputs or you want a strong vLLM alternative. Like vLLM, it's Linux-first and NVIDIA-primary — Windows is unsupported and macOS support is experimental.
+
 ## 1. What It Is
 
 SGLang (sgl-project/sglang) is an Apache 2.0 Python serving engine. Active. Combines a high-performance backend with a structured-generation frontend language; competitive with vLLM on throughput, with built-in support for constrained outputs.

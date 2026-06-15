@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+LocalAI is a Docker-based server that exposes an OpenAI-compatible API in front of many different local backends (llama.cpp, Whisper, image generation, and more), so existing code that calls OpenAI can be pointed at your own hardware with no client changes. Pick it if you want a single self-hosted endpoint that handles text, speech, and images across heterogeneous hardware. The trade-off is operational complexity — you're managing multiple backend processes and a Go routing layer, which adds surface area compared to single-purpose servers.
+
 ## 1. What It Is
 
 LocalAI (mudler/LocalAI) is an MIT-licensed Go server that mimics the OpenAI API across many local backends (llama.cpp, vLLM, GPT4All, Whisper, diffusion). Active. Lets existing OpenAI-API client code target self-hosted models without changes.

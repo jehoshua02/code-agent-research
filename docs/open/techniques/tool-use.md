@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Tool use (function calling) is the foundational capability that turns a chat model into an agent: instead of making something up, the model emits a structured call to a real function, gets the result back, and continues from there. Every other agentic technique — [ReAct](../GLOSSARY.md#react), [RAG](../GLOSSARY.md#rag), plan-and-execute — assumes tool use is already in place. The main catch: the model decides when and how to call tools, so vague tool descriptions or overlapping tool names produce bad calls.
+
 ## 1. What It Is
 
 Tool use (a.k.a. function calling) is the pattern where the model emits structured tool-call requests that a runtime intercepts, executes, and returns results from, rather than fabricating answers from memory. Toolformer (Schick et al., 2023) is an early survey; modern providers expose it via API-level structured calls.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+DSPy is fundamentally different from other agent frameworks — instead of writing prompts, you write programs using typed signatures and modules, then let DSPy's optimizer automatically find the best prompts and few-shot examples for your task. Pick it if you have labeled data (or can generate it) and want the model's behavior tuned automatically rather than hand-crafting instructions. The main catch is the mental shift: you don't write prompts at all, which is unfamiliar and requires understanding the compile/optimize loop before you see results.
+
 ## 1. What It Is
 
 DSPy is an MIT-licensed Python framework from Stanford NLP (stanfordnlp/dspy). Active. Treats prompts as programs to be compiled and optimized, separating program logic from prompt text via signatures and modules.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Letta (formerly MemGPT) is a Python framework built around the idea that agents need persistent, structured [memory](../GLOSSARY.md#memory) — it splits memory into in-context, archival, and recall tiers so agents can remember things across many conversations. Pick it if long-term user or task memory is the central requirement of your application. The main catch is that Letta's architecture requires running a Letta server (cloud or self-hosted), adding operational complexity compared to a simple library.
+
 ## 1. What It Is
 
 Letta is an Apache-2.0 Python framework (letta-ai/letta), the rebrand of MemGPT. Active. Focuses on long-term persistent memory for agents via OS-style memory management — distinguishing between in-context, archival, and recall memory tiers.

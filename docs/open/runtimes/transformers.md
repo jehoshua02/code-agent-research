@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+HuggingFace Transformers is the Python library for loading and running open-weight models — it's the reference implementation most other tools are built on top of. Pick it when you need programmatic access to model internals (fine-tuning, embeddings, custom pipelines) rather than a ready-made API server. The catch is that it's a library, not a server: raw throughput is lower than purpose-built serving engines, and you have to wire up your own HTTP layer if you need an API endpoint.
+
 ## 1. What It Is
 
 transformers (huggingface/transformers) is HuggingFace's Apache 2.0 Python library for loading and running model architectures. Active. More a library than a runtime — typically used directly by developers or wrapped by serving stacks; the canonical reference implementation for most open-weight architectures.

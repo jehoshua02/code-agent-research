@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+RAG (retrieval-augmented generation) is the best-known way to give an LLM access to private or recent knowledge: before the model answers, your app searches a document store and pastes the relevant excerpts into the prompt. Use it when the model's training data doesn't cover your domain — internal docs, recent news, proprietary data. The main catch: answer quality is only as good as retrieval quality; if the wrong chunks are fetched, the model confidently answers from the wrong source.
+
 ## 1. What It Is
 
 Retrieval-augmented generation grounds LLM responses by retrieving relevant documents from an external store (typically vector-indexed) at inference time and feeding them as context. Introduced by Lewis et al. (2020). Reduces hallucination and lets the model answer about information not in its training data.

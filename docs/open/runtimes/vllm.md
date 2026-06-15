@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+vLLM is a high-throughput inference server you run on a GPU box to host LLMs over an HTTP API, using [continuous batching](../GLOSSARY.md#batching) and [PagedAttention](../GLOSSARY.md#kv-cache) to squeeze maximum throughput from your hardware. Pick it if you're building a production backend and need an OpenAI-compatible endpoint with serious performance. The main catch: Linux and NVIDIA are the first-class path — macOS and Windows are unsupported or experimental.
+
 ## 1. What It Is
 
 vLLM (vllm-project/vllm) is an Apache 2.0 Python inference engine. Active. High-throughput, memory-efficient serving via PagedAttention; OpenAI-compatible API; the de facto choice for production GPU serving of open-weight models.

@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+GPT-Engineer was an early one-shot [coding agent](../GLOSSARY.md#agent) that took a natural-language spec and generated a full project from scratch — an influential proof-of-concept that showed what [LLMs](../GLOSSARY.md#llm) could build end-to-end. The repository is archived and no longer maintained; its successor is lovable.dev (a commercial product). Do not start new projects on it, but it is worth knowing as the historical precursor to modern scaffold-generation agents.
+
 ## 1. What It Is
 
 GPT-Engineer is an MIT-licensed Python application from Anton Osika (gpt-engineer-org/gpt-engineer). Archived. Early one-shot code-generation agent that took a natural-language spec and emitted a full project; became the precursor to lovable.dev.

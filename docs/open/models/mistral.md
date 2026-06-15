@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Mistral is a French AI startup's open-weight model family covering everything from a fast 7B general-purpose model to a 675B frontier reasoning giant, with most models under the permissive Apache 2.0 license. Pick Mistral if you want strong European-language support, reliable function/tool calling, or a capable code-generation model (Codestral); the smaller models are among the best in their size class for efficiency. The catch: the older Mistral Large and Codestral v0.1 carry non-commercial licenses, and the flagship Large 3 [mixture-of-experts](../GLOSSARY.md#moe-mixture-of-experts) model demands a multi-H100 setup.
+
 ## 1. What It Is
 
 Mistral is Mistral AI's open-weight family. Smaller models (Mistral 7B, Mixtral 8x7B/8x22B, Mistral Small, Codestral Mamba) under Apache 2.0; flagship Mistral Large under Mistral Research License (non-commercial unless licensed). Dense and MoE architectures.

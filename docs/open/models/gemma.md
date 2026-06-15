@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+Gemma is Google's open-weight model family built on the same research as Gemini, covering tiny 1B edge models all the way up to a capable 31B multimodal flagship that handles text, images, and audio. Pick Gemma if you want a Google-pedigree model with broad runtime support (including Google's own tools and TPUs), strong multilingual coverage (140+ languages in Gemma 3+), and — with Gemma 4 — a fully Apache 2.0 licensed model. The catch is that Gemma 1–3 require accepting a terms-of-use agreement before downloading, and the license is not strictly open-source, which can cause friction in some organizational contexts.
+
 ## 1. What It Is
 
 Gemma is Google's open-weight family (Gemma 2, Gemma 3). Released under Gemma Terms of Use — permissive for most uses but with prohibited-use restrictions; not strictly OSI-open. Derived from Gemini research, intended for responsible open development.

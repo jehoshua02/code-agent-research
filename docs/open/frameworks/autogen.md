@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+AutoGen is a Microsoft Python framework for building systems where multiple specialized [agents](../GLOSSARY.md#agent) collaborate by exchanging messages, optionally looping in a human. Pick it if you want to split complex tasks across agents with distinct roles and need flexible human-in-the-loop approval. The main catch is that AutoGen is now in maintenance mode — Microsoft recommends new projects use Microsoft Agent Framework instead.
+
 ## 1. What It Is
 
 AutoGen is a CC-BY-4.0 Python framework from Microsoft (microsoft/autogen) for building multi-agent conversation systems. Active. Models problems as multiple specialized agents exchanging messages, with optional human-in-the-loop.

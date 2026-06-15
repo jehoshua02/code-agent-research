@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+ExLlamaV2 is a Python library optimized for running [quantized](../GLOSSARY.md#quantization) models (GPTQ and its own EXL2 format) on NVIDIA GPUs with high token throughput and low VRAM usage. Pick it if you're a hobbyist or researcher squeezing the most out of a consumer NVIDIA GPU, or if you use Text Generation WebUI (which uses it under the hood). macOS is not supported, and it requires a CUDA-capable NVIDIA GPU — no AMD or CPU-only path.
+
 ## 1. What It Is
 
 ExLlamaV2 / V3 (turboderp/exllamav2) is an MIT-licensed Python/CUDA inference library. Active. Specializes in fast, memory-efficient 4-bit (GPTQ/EXL2) GPU inference; used by Text Generation WebUI and other front-ends.

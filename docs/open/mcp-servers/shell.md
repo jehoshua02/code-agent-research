@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A shell [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent run arbitrary commands on the host machine — build tools, package managers, test runners, or any CLI. Use one when you need the agent to do things no dedicated server covers, like running `npm test` or invoking a custom script. The main catch: shell access is the highest-risk tool category; always pair it with an allowlist of permitted commands and run inside a container or sandbox.
+
 ## 1. What It Is
 
 MCP servers in this category run commands in a shell on behalf of the agent. Agents need them to invoke build systems, package managers, tests, or any CLI tool not exposed through a dedicated server. No Anthropic reference (deliberately, due to risk). Notable community: mcp-server-commands and similar; usually paired with allowlists and sandboxing.

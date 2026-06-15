@@ -2,6 +2,8 @@
 
 Unbiased research on the open, free, self-hostable AI ecosystem. Entity files (per model, runtime, framework, etc.) document facts neutrally. Views are where opinion lives.
 
+**New to the space?** Start with the [Reading Guide](READING_GUIDE.md) — it explains the mental model and gives you a path through the survey based on what you want to do.
+
 **Breadth before depth.** This survey documents every open-weight model and self-hostable component that meets the inclusion criteria in §2 — including ones that don't fit on the reader's current hardware. The `by-hardware` view filters for fit; the survey itself does not. Hardware is a runtime constraint, not a research-scope constraint.
 
 ## 1. Why this exists
@@ -105,8 +107,12 @@ If a model or runtime requires a platform the reader doesn't currently have, tha
 
 ## 6. Glossary
 
-[Glossary](GLOSSARY.md) — terminology used throughout the survey (layers, model concepts, hardware, protocols).
+[Glossary](GLOSSARY.md) — terminology used throughout the survey (layers, model concepts, hardware, protocols, agent patterns, runtime APIs, memory/state, observability, security, decoding).
 
-## 7. Plan
+## 7. Reading guide
+
+[Reading Guide](READING_GUIDE.md) — mental model and suggested paths through the survey for new readers.
+
+## 8. Plan
 
 [Plan](PLAN.md) — breadth-first method, inventory, and status.

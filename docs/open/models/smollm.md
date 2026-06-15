@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+SmolLM is HuggingFace's family of tiny language models (135M to 1.7B parameters) designed to run on phones, laptops, and edge devices — the entire 1.7B model at full precision fits in about 3.4 GB of memory. Pick SmolLM if you need a privacy-preserving AI that runs entirely on-device with zero cloud dependency, and your task is simple: text rewriting, summarization, or short Q&A in English. The main catch is that these models are English-only, lack vision, and the two smallest sizes (135M, 360M) are too limited for anything beyond simple classification or text manipulation.
+
 ## 1. What It Is
 
 SmolLM is HuggingFace's small-model family (135M–1.7B). Released under Apache 2.0. Designed for on-device and constrained-hardware deployment, trained on the SmolLM-Corpus.

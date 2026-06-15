@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+OLMo is the Allen Institute for AI's uniquely transparent open model — not only are the weights free under Apache 2.0, but the full training dataset and training code are also publicly released, making it the rare model you can fully audit and reproduce from scratch. Pick OLMo if you're doing academic research that requires complete reproducibility, studying how language models are trained, or need a model with no license restrictions and maximum openness. The main catch is that it's a research-first model, not a frontier performer: it's English-only, has a short 4K context window, and lacks tool calling or vision — newer models will outperform it on most practical tasks.
+
 ## 1. What It Is
 
 OLMo is the Allen Institute for AI (AI2)'s fully-open model family. Weights, code, AND training data all released under Apache 2.0. Designed as a research-transparent alternative where the entire pipeline is reproducible.

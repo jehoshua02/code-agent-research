@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+A filesystem [MCP](../GLOSSARY.md#mcp-model-context-protocol) server lets an agent read, write, and navigate files on disk — think of it as giving the agent access to your file manager. Pick one when you want the agent to inspect a codebase, edit documents, or generate output files. The main catch: always restrict the server to a sandboxed directory, because a misconfigured allowlist lets the agent read or overwrite anything on the host machine.
+
 ## 1. What It Is
 
 MCP servers in this category expose file-tree operations (read, write, list, search, stat) to an agent. Agents need them to inspect and modify repositories or document collections during a task. Notable: filesystem (official reference, Anthropic) for sandbox-rooted file access; community filesystem servers wrap remote storage (S3, Drive, etc.).

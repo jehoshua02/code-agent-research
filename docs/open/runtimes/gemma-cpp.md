@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+gemma.cpp is a lightweight C++ runtime built by Google specifically for the Gemma model family — not a general-purpose LLM server. Pick it if you're deploying a Gemma model and want a minimal, well-optimized binary with no Python dependency. The hard constraint: it only runs Gemma models, so if you ever need to switch model families you'll need a different runtime entirely.
+
 ## 1. What It Is
 
 gemma.cpp (google/gemma.cpp) is an Apache 2.0 C++ inference engine maintained by Google. Active. Lightweight standalone runtime targeting Google's Gemma model family — model-specific by design, optimized for Gemma's architecture rather than general-purpose serving.

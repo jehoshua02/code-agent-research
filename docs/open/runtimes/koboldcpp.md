@@ -2,6 +2,10 @@
 
 _Last verified: 2026-06-14_
 
+## 0. TL;DR
+
+KoboldCpp is a single-binary local inference server built on llama.cpp, bundling a browser-based UI aimed at creative writing and role-play. Pick it if you want the no-install experience of a self-contained binary that works on Windows, Linux, or Mac, especially for interactive storytelling use cases. It's a thin wrapper around llama.cpp with a niche UI focus — for pure API serving or heavier workloads, Ollama or vLLM are better fits.
+
 ## 1. What It Is
 
 KoboldCpp (LostRuins/koboldcpp) is an AGPL-3.0 single-binary inference server built on llama.cpp. Active. Bundles a web UI focused on story-writing/role-play use cases; OpenAI-compatible API; popular for hobbyist local hosting.
