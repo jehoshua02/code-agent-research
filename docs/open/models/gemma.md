@@ -1,3 +1,24 @@
+---
+name: "Gemma"
+maker: "Google"
+license: "Gemma Terms of Use"
+license_category: "custom-permissive"
+status: "active"
+url: "https://huggingface.co/google"
+last_verified: "2026-06-14"
+variants: ["1B", "2B", "4B", "7B", "9B", "12B", "27B", "E2B", "E4B", "26B-A4B", "31B"]
+params_total: "31B"
+has_moe: true
+params_active: "4B"
+context_window: 262144
+modalities: ["text", "vision", "audio"]
+gated: true
+released: "2026-04"
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
+best_for: ["coding", "research", "writing", "automation", "data"]
+notes: "Gemma 1–3 require license-acceptance gating; Gemma 4 is Apache 2.0 and ungated"
+---
+
 # Gemma
 
 _Last verified: 2026-06-14_

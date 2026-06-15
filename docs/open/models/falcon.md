@@ -1,3 +1,23 @@
+---
+name: "Falcon"
+maker: "TII"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://huggingface.co/tiiuae"
+last_verified: "2026-06-14"
+variants: ["Falcon-7B", "Falcon-40B", "Falcon-180B", "Falcon3-1B", "Falcon3-3B", "Falcon3-7B", "Falcon3-10B", "Falcon-H1-0.5B", "Falcon-H1-1.5B", "Falcon-H1-3B", "Falcon-H1-7B", "Falcon-H1-34B", "Falcon-H1R-7B"]
+params_total: "180B"
+has_moe: false
+context_window: 262144
+modalities: ["text"]
+gated: false
+released: "2026-01"
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
+best_for: ["research", "writing"]
+notes: "Falcon-180B uses TII Falcon License (non-Apache); Falcon 1 series limited to 2K context — effectively obsolete"
+---
+
 # Falcon
 
 _Last verified: 2026-06-14_

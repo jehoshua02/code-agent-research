@@ -1,3 +1,23 @@
+---
+name: "OLMo"
+maker: "Allen Institute for AI"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://huggingface.co/allenai"
+last_verified: "2026-06-14"
+variants: ["OLMo-2-7B", "OLMo-2-7B-SFT", "OLMo-2-7B-DPO", "OLMo-2-7B-Instruct", "OLMo-2-13B", "OLMo-2-13B-SFT", "OLMo-2-13B-DPO", "OLMo-2-13B-Instruct"]
+params_total: "13B"
+has_moe: false
+context_window: 4096
+modalities: ["text"]
+gated: false
+released: "2025-01"
+hardware_tiers: ["8gb", "16gb", "24gb"]
+best_for: ["research"]
+notes: "Full pipeline open (weights + data + training code); English-only; 4K context is a hard limitation"
+---
+
 # OLMo
 
 _Last verified: 2026-06-14_

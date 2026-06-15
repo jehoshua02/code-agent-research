@@ -1,3 +1,24 @@
+---
+name: "Granite"
+maker: "IBM"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://huggingface.co/ibm-granite"
+last_verified: "2026-06-14"
+variants: ["Granite-3.1-1B-A400M", "Granite-3.1-2B", "Granite-3.1-3B-A800M", "Granite-3.1-8B", "Granite-3.3-2B", "Granite-3.3-8B"]
+params_total: "8B"
+has_moe: true
+params_active: "800M"
+context_window: 131072
+modalities: ["text"]
+gated: false
+released: "2025-04"
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb"]
+best_for: ["coding", "automation", "data"]
+notes: "Tops out at 8B; explicit data provenance documentation makes it suitable for regulated industries"
+---
+
 # Granite
 
 _Last verified: 2026-06-14_

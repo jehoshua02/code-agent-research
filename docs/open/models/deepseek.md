@@ -1,3 +1,24 @@
+---
+name: "DeepSeek"
+maker: "DeepSeek AI"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://huggingface.co/deepseek-ai"
+last_verified: "2026-06-14"
+variants: ["V2", "V2.5", "V3", "V3-0324", "R1", "R1-0528", "R1-Distill-Qwen-1.5B", "R1-Distill-Qwen-7B", "R1-Distill-Qwen-14B", "R1-Distill-Qwen-32B", "R1-Distill-Llama-8B", "R1-Distill-Llama-70B"]
+params_total: "685B"
+has_moe: true
+params_active: "37B"
+context_window: 131072
+modalities: ["text"]
+gated: false
+released: "2025-05"
+hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+best_for: ["coding", "research", "data"]
+notes: "V3/R1 weight license is DeepSeek (not MIT); R1 distill variants are MIT; tool calling added in R1-0528"
+---
+
 # DeepSeek
 
 _Last verified: 2026-06-14_

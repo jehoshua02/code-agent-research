@@ -1,3 +1,23 @@
+---
+name: "Yi"
+maker: "01.AI"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "borderline"
+url: "https://huggingface.co/01-ai"
+last_verified: "2026-06-14"
+variants: ["Yi-6B", "Yi-6B-Chat", "Yi-9B", "Yi-9B-200K", "Yi-34B", "Yi-34B-Chat", "Yi-34B-200K", "Yi-1.5-6B", "Yi-1.5-9B", "Yi-1.5-34B", "Yi-VL-6B", "Yi-VL-34B"]
+params_total: "34B"
+has_moe: false
+context_window: 200000
+modalities: ["text", "vision"]
+gated: false
+released: "2024-05"
+hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+best_for: ["research", "writing"]
+notes: "Largely superseded by Qwen3 and Llama 3 as of mid-2025; no native tool-calling format"
+---
+
 # Yi
 
 _Last verified: 2026-06-14_

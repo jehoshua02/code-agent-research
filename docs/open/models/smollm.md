@@ -1,3 +1,23 @@
+---
+name: "SmolLM"
+maker: "HuggingFace"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://huggingface.co/HuggingFaceTB"
+last_verified: "2026-06-14"
+variants: ["SmolLM2-135M", "SmolLM2-135M-Instruct", "SmolLM2-360M", "SmolLM2-360M-Instruct", "SmolLM2-1.7B", "SmolLM2-1.7B-Instruct"]
+params_total: "1.7B"
+has_moe: false
+context_window: 8192
+modalities: ["text"]
+gated: false
+released: "2025-02"
+hardware_tiers: ["8gb"]
+best_for: ["automation"]
+notes: "English-only; 135M/360M are too small for instruction following; designed for on-device edge deployment"
+---
+
 # SmolLM
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,23 @@
+---
+name: "StarCoder2"
+maker: "BigCode"
+license: "BigCode OpenRAIL-M"
+license_category: "source-available"
+status: "borderline"
+url: "https://huggingface.co/bigcode"
+last_verified: "2026-06-14"
+variants: ["3B", "7B", "15B"]
+params_total: "15B"
+has_moe: false
+context_window: 16384
+modalities: ["text"]
+gated: true
+released: "2024-02"
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb"]
+best_for: ["coding"]
+notes: "Base model only — no instruction tuning; largely superseded by Qwen2.5-Coder and DeepSeekCoder-V2"
+---
+
 # StarCoder2
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,23 @@
+---
+name: "Command R"
+maker: "Cohere"
+license: "CC-BY-NC 4.0"
+license_category: "source-available"
+status: "active"
+url: "https://huggingface.co/CohereForAI"
+last_verified: "2026-06-14"
+variants: ["Command-R-35B", "Command-R-32B", "Command-R+-104B", "Command-R7B-7B", "Command-A-111B"]
+params_total: "111B"
+has_moe: false
+context_window: 262144
+modalities: ["text"]
+gated: false
+released: "2025-03"
+hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+best_for: ["research", "automation", "data"]
+notes: "CC-BY-NC license blocks production use without a separate Cohere commercial agreement"
+---
+
 # Command R
 
 _Last verified: 2026-06-14_

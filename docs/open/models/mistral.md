@@ -1,3 +1,24 @@
+---
+name: "Mistral"
+maker: "Mistral AI"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://huggingface.co/mistralai"
+last_verified: "2026-06-14"
+variants: ["7B", "Mixtral-8x7B", "Mixtral-8x22B", "NeMo-12B", "Large-2407", "Codestral-22B", "Small-3.1-24B", "Large-3-675B"]
+params_total: "675B"
+has_moe: true
+params_active: "41B"
+context_window: 262144
+modalities: ["text", "vision"]
+gated: false
+released: "2025-03"
+hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+best_for: ["coding", "research", "writing", "automation"]
+notes: "Codestral v0.1 and Large-2407 are non-commercial; check license per variant"
+---
+
 # Mistral
 
 _Last verified: 2026-06-14_
