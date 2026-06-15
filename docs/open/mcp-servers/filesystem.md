@@ -1,3 +1,16 @@
+---
+name: "Filesystem"
+license_category: "mit"
+status: "active"
+url: "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: true
+auth: "none"
+best_for: ["coding", "research", "automation", "data"]
+notes: ""
+---
+
 # Filesystem
 
 _Last verified: 2026-06-14_

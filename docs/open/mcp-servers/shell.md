@@ -1,3 +1,16 @@
+---
+name: "Shell"
+license_category: "mit"
+status: "active"
+url: "https://github.com/g0t4/mcp-server-commands"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: false
+auth: "none"
+best_for: ["coding", "automation"]
+notes: "No Anthropic reference implementation; highest-risk MCP category due to arbitrary command execution."
+---
+
 # Shell
 
 _Last verified: 2026-06-14_

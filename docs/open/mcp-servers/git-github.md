@@ -1,3 +1,16 @@
+---
+name: "Git / GitHub"
+license_category: "mit"
+status: "active"
+url: "https://github.com/modelcontextprotocol/servers/tree/main/src/git"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: true
+auth: "api-key"
+best_for: ["coding", "automation"]
+notes: "Local git server requires no auth; GitHub/GitLab servers require a personal access token."
+---
+
 # Git / GitHub
 
 _Last verified: 2026-06-14_

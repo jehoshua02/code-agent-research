@@ -1,3 +1,16 @@
+---
+name: "Web Fetch"
+license_category: "mit"
+status: "active"
+url: "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: true
+auth: "none"
+best_for: ["research", "automation", "data"]
+notes: ""
+---
+
 # Web Fetch
 
 _Last verified: 2026-06-14_
