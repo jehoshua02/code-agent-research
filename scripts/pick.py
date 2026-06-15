@@ -21,6 +21,8 @@ Examples:
 
 Filters compose with AND logic across flag types; multi-valued flags (e.g.
 --license apache-2.0 --license mit) compose with OR.
+
+For a worked example, see scripts/examples/pick-small-vram-coding.md.
 """
 from __future__ import annotations
 

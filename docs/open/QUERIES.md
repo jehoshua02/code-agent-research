@@ -138,6 +138,10 @@ WHERE json_extract(extras, '$.some_field') IS NOT NULL;
 
 To promote it to a real column, add a row to the `COLUMNS` list in `scripts/build-sqlite.py` and rebuild.
 
+## Worked example
+
+For an end-to-end walkthrough — choosing a small-VRAM agentic-coding stack via SQL queries, with reasoning between each query and the final recommendation — see [`scripts/examples/query-small-vram-coding.md`](../../scripts/examples/query-small-vram-coding.md).
+
 ## Cheatsheet
 
 | You want | Pattern |
