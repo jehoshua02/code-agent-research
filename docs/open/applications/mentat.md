@@ -1,3 +1,21 @@
+---
+name: "Mentat"
+maker: "AbanteAI"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "archived"
+url: "https://github.com/AbanteAI/mentat"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli"]
+supports_mcp: "none"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding"]
+notes: "Repo removed 2026-06-14; listed for historical reference only."
+---
+
 # Mentat
 
 _Last verified: 2026-06-14_

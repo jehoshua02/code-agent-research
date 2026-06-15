@@ -1,3 +1,22 @@
+---
+name: "Open Interpreter"
+maker: "OpenInterpreter"
+license: "AGPL-3.0"
+license_category: "source-available"
+status: "active"
+url: "https://github.com/OpenInterpreter/open-interpreter"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli", "api"]
+providers: ["openai", "anthropic", "cohere", "google", "ollama"]
+supports_mcp: "none"
+byok: true
+focus: "code-execution"
+hardware_tiers: ["any"]
+best_for: ["coding", "automation", "data"]
+notes: "Executes Python/JS/Shell locally; AGPL-3.0 limits commercial use; desktop app in early access."
+---
+
 # Open Interpreter
 
 _Last verified: 2026-06-14_

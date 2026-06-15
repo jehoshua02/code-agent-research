@@ -1,3 +1,22 @@
+---
+name: "OpenClaw"
+maker: "OpenClaw Foundation"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/openclaw/openclaw"
+last_verified: "2026-06-14"
+language: "TypeScript"
+interfaces: ["cli", "desktop", "mobile", "web-ui"]
+providers: ["openai", "anthropic", "google"]
+supports_mcp: "native"
+byok: true
+focus: "personal-assistant"
+hardware_tiers: ["any"]
+best_for: ["automation", "coding", "research"]
+notes: "Skills Registry (44,000+ skills); 22+ messaging channel interfaces; high-severity CVE history."
+---
+
 # OpenClaw
 
 _Last verified: 2026-06-14_

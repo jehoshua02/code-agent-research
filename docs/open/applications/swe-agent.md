@@ -1,3 +1,22 @@
+---
+name: "SWE-agent"
+maker: "Princeton NLP"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/princeton-nlp/SWE-agent"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli", "web-ui"]
+providers: ["anthropic", "openai", "ollama"]
+supports_mcp: "none"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding", "research"]
+notes: "Research-grade; active development shifted to mini-swe-agent; SWE-bench SOTA holder."
+---
+
 # SWE-agent
 
 _Last verified: 2026-06-14_

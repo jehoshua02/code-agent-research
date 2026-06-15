@@ -1,3 +1,22 @@
+---
+name: "Gemma Gem"
+maker: "kessler"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "borderline"
+url: "https://github.com/kessler/gemma-gem"
+last_verified: "2026-06-14"
+language: "TypeScript"
+interfaces: ["browser-extension"]
+providers: ["google"]
+supports_mcp: "none"
+byok: false
+focus: "chat-ui"
+hardware_tiers: ["any"]
+best_for: ["research"]
+notes: "930 stars 2026-06-14; runs Gemma 4 on-device via WebGPU; Chrome/Edge 113+ only; model-specific."
+---
+
 # Gemma Gem
 
 _Last verified: 2026-06-14_

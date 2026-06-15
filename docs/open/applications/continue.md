@@ -1,3 +1,22 @@
+---
+name: "Continue"
+maker: "Continue Dev"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "archived"
+url: "https://github.com/continuedev/continue"
+last_verified: "2026-06-14"
+language: "TypeScript"
+interfaces: ["ide-plugin", "cli"]
+providers: ["anthropic", "openai", "google", "mistral", "cohere", "aws-bedrock", "azure-openai", "ollama"]
+supports_mcp: "native"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding"]
+notes: "Repository archived 2026; final 2.0.0 release shipped; no further fixes will be accepted."
+---
+
 # Continue
 
 _Last verified: 2026-06-14_

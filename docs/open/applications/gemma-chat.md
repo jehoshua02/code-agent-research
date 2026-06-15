@@ -1,3 +1,22 @@
+---
+name: "Gemma Chat"
+maker: "ammaarreshi"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/ammaarreshi/gemma-chat"
+last_verified: "2026-06-14"
+language: "TypeScript"
+interfaces: ["desktop"]
+providers: ["google"]
+supports_mcp: "none"
+byok: false
+focus: "chat-ui"
+hardware_tiers: ["mac-only"]
+best_for: ["coding"]
+notes: "Apple Silicon only; runs Gemma 4 via MLX locally; no API key required; model-specific."
+---
+
 # Gemma Chat
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,22 @@
+---
+name: "Goose"
+maker: "Block / Linux Foundation AAIF"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/block/goose"
+last_verified: "2026-06-14"
+language: "Rust"
+interfaces: ["cli", "desktop", "api"]
+providers: ["anthropic", "openai", "google", "ollama", "openrouter", "azure-openai", "aws-bedrock"]
+supports_mcp: "native"
+byok: true
+focus: "general-agent"
+hardware_tiers: ["any"]
+best_for: ["coding", "automation", "research"]
+notes: "Transferred from Block to Linux Foundation AAIF in 2026; 70+ extensions via MCP."
+---
+
 # Goose
 
 _Last verified: 2026-06-14_
