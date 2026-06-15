@@ -11,11 +11,19 @@ Use it for ad-hoc questions that `pick.py` doesn't have flags for. The schema is
 
 ## Connecting
 
+Three ways:
+
 ```bash
-sqlite3 docs/open/survey.sqlite          # CLI
+# Thin wrapper — auto-builds the cache if stale, formats output
+python3 scripts/query.py "SELECT name FROM entities WHERE layer='models'" --format names
+python3 scripts/query.py --shell    # opens the sqlite3 CLI
+
+# Direct sqlite3 CLI
+sqlite3 docs/open/survey.sqlite
 ```
 
 ```python
+# Or from Python
 import sqlite3
 conn = sqlite3.connect("docs/open/survey.sqlite")
 ```
