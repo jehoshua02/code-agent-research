@@ -2,19 +2,19 @@
 
 | Runtime | License | Formats | API | Hardware | Notes |
 |---|---|---|---|---|---|
-| [vLLM](vllm.md) | Apache 2.0 | safetensors, AWQ, GPTQ, FP8, bitsandbytes, compressed-tensors, GGUF (experimental) | OpenAI-compat | CUDA, ROCm, CPU (x86/ARM), TPU, Gaudi, XPU; Metal via plugin | _stub_ |
-| [llama.cpp](llama-cpp.md) | MIT | GGUF (all llama.cpp quants) | OpenAI-compat | CUDA, ROCm, Metal, Vulkan, SYCL, MUSA, CANN, CPU | _stub_ |
-| [Ollama](ollama.md) | MIT | GGUF (imports safetensors/PyTorch) | OpenAI-compat | CUDA, ROCm, Metal, Vulkan, CPU | wraps llama.cpp |
-| [LM Studio](lm-studio.md) | Proprietary (free-to-use) | GGUF, MLX | OpenAI-compat | CUDA, ROCm (Linux), Vulkan, Metal, CPU | closed-source |
-| [MLX / mlx-lm](mlx.md) | MIT | MLX native (safetensors); GGUF export only | _stub_ | Apple Silicon Metal only | _stub_ |
-| [TGI](tgi.md) | Apache 2.0 | safetensors, GPTQ, AWQ, FP8, bitsandbytes, EETQ, Marlin, EXL2 | OpenAI-compat | CUDA, ROCm, Inferentia, Gaudi, TPU, Intel GPU | _stub_ |
-| [SGLang](sglang.md) | Apache 2.0 | safetensors, GPTQ, AWQ, FP8, GGUF, FP4/MXFP4, bitsandbytes, torchao | OpenAI-compat | CUDA, ROCm, CPU (Xeon), TPU, Ascend, XPU | _stub_ |
-| [ExLlamaV2 / V3](exllamav2.md) | MIT | EXL2, GPTQ, safetensors | _stub_ | CUDA only (Ampere+) | _stub_ |
-| [Aphrodite Engine](aphrodite-engine.md) | AGPL-3.0 | GGUF, AWQ, GPTQ, EXL2, AQLM, BitNet, FP8, MXFP4, bitsandbytes, QuIP#, SqueezeLLM, Marlin, + more | OpenAI-compat | CUDA, ROCm, CPU, XPU, TPU, Inferentia | vLLM fork |
-| [KoboldCpp](koboldcpp.md) | AGPL-3.0 | GGUF (legacy GGML) | OpenAI-compat | CUDA, ROCm, Metal, Vulkan, CPU | llama.cpp-based |
-| [Text Generation WebUI](text-generation-webui.md) | AGPL-3.0 | GGUF, EXL2, GPTQ, AWQ, safetensors, bitsandbytes, TRT-LLM, HQQ | _stub_ | CUDA, ROCm (Linux), Vulkan, Metal, CPU | maintained by oobabooga |
-| [Jan](jan.md) | AGPL-3.0 | GGUF, MLX (TensorRT-LLM via Cortex) | _stub_ | CUDA, ROCm (Linux, experimental), Metal/MLX, Vulkan, CPU | desktop app |
-| [LocalAI](localai.md) | MIT | GGUF, safetensors, GPTQ, AWQ, diffusion, audio | OpenAI-compat | CUDA, ROCm, Metal/MLX, Intel SYCL, Vulkan, CPU, Jetson | multi-backend |
-| [llamafile](llamafile.md) | Apache 2.0 | GGUF (embedded or external) | OpenAI-compat | CUDA, ROCm, Metal, CPU (AVX/AVX2/AVX-512, NEON) | single-file portable |
-| [transformers](transformers.md) | Apache 2.0 | safetensors, PyTorch, GGUF (load); bitsandbytes, GPTQ, AWQ, AQLM, FP8, torchao, HQQ | _stub_ | CUDA, ROCm, Metal (MPS), CPU | library, not server |
-| [gemma.cpp](gemma-cpp.md) | Apache 2.0 | Custom .sbs (bf16, fp32, fp8, NUQ 4-bit) | _stub_ | CPU only (SIMD via Highway; x86, ARM, any) | model-specific (Gemma) |
+| [Aphrodite Engine](aphrodite-engine.md) | AGPL-3.0 | safetensors, gguf, awq, gptq, exl2, fp8, bitsandbytes | OpenAI-compat | cuda, rocm, cpu, tpu, xpu | vLLM fork with broader quantization support (EXL2, GGUF, AQLM, BitNet); AGPL-3.0 has copyleft implications. |
+| [ExLlamaV2](exllamav2.md) | MIT | exl2, gptq, safetensors | _stub_ | cuda | NVIDIA Ampere (sm_80) minimum; no OpenAI server built-in — TabbyAPI recommended for HTTP serving. |
+| [gemma.cpp](gemma-cpp.md) | Apache-2.0 | sbs | _stub_ | cpu | Gemma-family only; CPU-only (no GPU); proprietary .sbs format with closed-source safetensors converter. |
+| [Jan](jan.md) | AGPL-3.0 | gguf, mlx | OpenAI-compat | cuda, rocm, metal, cpu, vulkan | Desktop chat app; GGUF-only for primary llama.cpp path; MLX backend added v0.7.7 for Apple Silicon. |
+| [KoboldCpp](koboldcpp.md) | AGPL-3.0 | gguf | OpenAI-compat | cuda, rocm, metal, cpu, vulkan | Single-binary llama.cpp wrapper with bundled browser UI for story/roleplay; AGPL-3.0 copyleft. |
+| [llama.cpp](llama-cpp.md) | MIT | gguf | OpenAI-compat | cuda, rocm, metal, cpu, vulkan, sycl | Upstream of Ollama, KoboldCpp, and llamafile; GGUF is the sole inference format. |
+| [llamafile](llamafile.md) | Apache-2.0 | gguf | OpenAI-compat | cuda, rocm, metal, cpu | Single-file portable executable via Cosmopolitan Libc; CUDA JIT is Linux-only (no CUDA on Windows as of v0.10.0). |
+| [LM Studio](lm-studio.md) | Proprietary | gguf, mlx | OpenAI-compat | cuda, rocm, metal, cpu, vulkan | Closed-source, free-to-use; macOS supports Apple Silicon only (no Intel Mac). |
+| [LocalAI](localai.md) | MIT | gguf, safetensors, gptq, awq | OpenAI-compat | cuda, rocm, metal, cpu, vulkan, sycl | Multi-backend routing layer (36+ backends); also exposes Anthropic, Ollama, and ElevenLabs-compatible APIs. |
+| [MLX / mlx-lm](mlx.md) | MIT | safetensors | OpenAI-compat | metal | Apple Silicon and macOS only; built-in server is not recommended for production. |
+| [Ollama](ollama.md) | MIT | gguf | OpenAI-compat | cuda, rocm, metal, cpu, vulkan | Wraps llama.cpp; bundled CUDA libs — no separate toolkit install required. |
+| [SGLang](sglang.md) | Apache-2.0 | safetensors, gptq, awq, fp8, gguf | OpenAI-compat | cuda, rocm, cpu, tpu, xpu, ascend | macOS support is experimental (MLX backend, Python 3.11 only); Windows unsupported. |
+| [Text Generation WebUI](text-generation-webui.md) | AGPL-3.0 | gguf, exl2, gptq, awq, safetensors | OpenAI-compat | cuda, rocm, metal, cpu, vulkan | Multi-backend web UI (~10 GB install); hot-swap between llama.cpp, ExLlamaV2, Transformers without restart. |
+| [TGI](tgi.md) | Apache-2.0 | safetensors, gptq, awq, fp8, bitsandbytes | OpenAI-compat | cuda, rocm | Now in maintenance mode; README redirects new projects to vLLM, SGLang, and llama.cpp. |
+| [transformers](transformers.md) | Apache-2.0 | safetensors, gguf, gptq, awq | _stub_ | cuda, rocm, metal, cpu | Library, not a server; GGUF loads as dequantized FP32 — for inference use llama.cpp or vLLM. |
+| [vLLM](vllm.md) | Apache-2.0 | safetensors, gguf, awq, gptq, fp8, bitsandbytes | OpenAI-compat | cuda, rocm, metal, cpu, tpu, xpu, gaudi, ascend | GGUF support is highly experimental; macOS via unsupported community plugin only. |

@@ -1,3 +1,23 @@
+---
+name: "Hermes"
+maker: "Nous Research"
+license: "Llama Community License"
+license_category: "custom-permissive"
+status: "active"
+url: "https://huggingface.co/NousResearch"
+last_verified: "2026-06-14"
+variants: ["Hermes-3-8B", "Hermes-3-70B", "Hermes-3-405B"]
+params_total: "405B"
+has_moe: false
+context_window: 131072
+modalities: ["text"]
+gated: false
+released: "2024-08"
+hardware_tiers: ["16gb", "24gb", "24gb+"]
+best_for: ["coding", "automation"]
+notes: "Fine-tune of Llama 3.1; inherits Llama 700M MAU cap; trained at 8K context so long-context quality may degrade"
+---
+
 # Hermes
 
 _Last verified: 2026-06-14_

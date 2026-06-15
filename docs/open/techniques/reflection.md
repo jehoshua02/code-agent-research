@@ -1,3 +1,15 @@
+---
+name: "Reflection"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2303.11366"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "LLMs produce errors silently with no feedback loop, so the same mistake recurs and cannot be corrected within a session"
+best_for: ["coding", "writing", "research"]
+notes: ""
+---
+
 # Reflection
 
 _Last verified: 2026-06-14_

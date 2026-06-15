@@ -1,3 +1,15 @@
+---
+name: "Tree-of-thought"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2305.10601"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "Chain-of-thought reasoning is strictly linear, so a wrong turn early in a multi-step problem taints the entire chain with no way to backtrack"
+best_for: ["research", "coding"]
+notes: "Expensive in tokens and LLM calls; most production systems prefer simpler heuristics"
+---
+
 # Tree-of-thought
 
 _Last verified: 2026-06-14_

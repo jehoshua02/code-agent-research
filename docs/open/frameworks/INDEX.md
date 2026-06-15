@@ -2,17 +2,17 @@
 
 | Framework | License | Language | MCP | Programming Model | Notes |
 |---|---|---|---|---|---|
-| [LangGraph](langgraph.md) | MIT | Python | Via adapter (`langchain-mcp-adapters`) | Graph-based; typed `StateGraph` in Python code | JS/TS library also available |
-| [AutoGen](autogen.md) | CC-BY-4.0 | Python | Native (`McpWorkbench` in `autogen-ext`) | Imperative / event-driven; layered Core / AgentChat API | In maintenance mode; successor is MS Agent Framework |
-| [CrewAI](crewai.md) | MIT | Python | Native (`MCPServerTool` in `crewai-tools`) | Declarative-hybrid; agents/tasks in YAML, orchestration in Python | |
-| [Letta](letta.md) | Apache-2.0 | Python | Not documented (as of Jun 2026) | Imperative / API-driven; message-passing via HTTP or SDK | Python + TypeScript SDKs; also CLI (Node.js) |
-| [Smolagents](smolagents.md) | Apache-2.0 | Python | Native (`ToolCollection.from_mcp()`) | Imperative / code-first; `CodeAgent` emits Python as action language | |
-| [OpenAI Swarm](openai-swarm.md) | MIT | Python | Not supported | Imperative / minimalist; `Agent` + handoff functions only | Experimental/educational; superseded by OpenAI Agents SDK |
-| [LlamaIndex Agents](llamaindex-agents.md) | MIT | Python | Via adapter (`llama-index-tools-mcp`) | Imperative / compositional; `ReActAgent` or event-driven `Workflows` | |
-| [Pydantic AI](pydantic-ai.md) | MIT | Python | Native (built-in `MCPServerStdio`/`MCPServerHTTP`) | Imperative / type-safe; FastAPI-style decorator pattern | |
-| [Haystack Agents](haystack-agents.md) | Apache-2.0 | Python | Via companion (`Hayhooks` exposes pipelines as MCP servers) | Declarative pipeline / component graph; YAML-serializable | |
-| [DSPy](dspy.md) | MIT | Python | Not supported | Declarative / program-based; `Signature` + `Module` compiled by optimizer | Unique: optimizes prompts/weights, not just executes them |
-| [BeeAI](beeai.md) | Apache-2.0 | Python+TypeScript | Native (added May 2025) | Imperative / component-based; `RequirementAgent` + handoff tools | Part of Linux Foundation AI & Data |
-| [Atomic Agents](atomic-agents.md) | MIT | Python | Not supported | Imperative / composable-component; typed `AtomicAgent[Input, Output]` via Instructor | Requires Python 3.12+ |
-| [mcp-agent](mcp-agent.md) | Apache-2.0 | Python | Native (core design; full MCP spec) | Imperative / pattern-based; implements Anthropic's effective-agent patterns | Low activity since early 2026 |
-| [agno](agno.md) | Apache-2.0 | Python | Native (bidirectional: `MCPTools` + `AgentOS` as MCP server) | Imperative / platform-oriented; `Agent` objects + `AgentOS` production runtime | 50+ provider modules; broadest model coverage listed |
+| [agno](agno.md) | Apache-2.0 | Python | native | imperative | Broadest provider coverage (30+); bidirectional MCP; AgentOS runtime exposes REST API with RBAC. |
+| [Atomic Agents](atomic-agents.md) | MIT | Python | none | composable | Single-responsibility AtomicAgent components chained via Pydantic schema matching; built on Instructor. |
+| [AutoGen](autogen.md) | CC-BY-4.0 | Python | native | imperative | Now in maintenance mode; Microsoft recommends new projects use Microsoft Agent Framework. |
+| [BeeAI](beeai.md) | Apache-2.0 | Python | native | imperative | Dual Python+TypeScript SDKs; constraint-based RequirementAgent; Linux Foundation governance. |
+| [CrewAI](crewai.md) | MIT | Python | native | role-based | YAML/Python hybrid config; LLM routing via LiteLLM (100+ providers). |
+| [DSPy](dspy.md) | MIT | Python | none | declarative | Prompt-as-program paradigm; optimizer (MIPROv2, SIMBA) compiles typed Signatures into tuned prompts. |
+| [Haystack Agents](haystack-agents.md) | Apache-2.0 | Python | adapter | declarative | Agents are Components in a Haystack Pipeline graph; MCP via Hayhooks companion tool. |
+| [LangGraph](langgraph.md) | MIT | Python | adapter | graph | MCP via langchain-mcp-adapters; also available as a JS/TS npm package. |
+| [Letta](letta.md) | Apache-2.0 | Python | none | imperative | Formerly MemGPT; requires a Letta Cloud or self-hosted server — no simple library mode. |
+| [LlamaIndex Agents](llamaindex-agents.md) | MIT | Python | adapter | composable | MCP via llama-index-tools-mcp; strongest when paired with LlamaIndex's RAG and indexing ecosystem. |
+| [mcp-agent](mcp-agent.md) | Apache-2.0 | Python | native | imperative | Low activity since early 2026; last commit January 25, 2026 — long-term maintenance uncertain. |
+| [OpenAI Swarm](openai-swarm.md) | MIT | Python | none | imperative | Superseded by the OpenAI Agents SDK; retained as an educational reference for the handoff pattern. |
+| [Pydantic AI](pydantic-ai.md) | MIT | Python | native | imperative | Type-safe agent generics with FastAPI-style decorators; deep Logfire/OTel observability built in. |
+| [Smolagents](smolagents.md) | Apache-2.0 | Python | native | code-emitting | CodeAgent emits Python as tool calls; sandbox (e2b/Docker) required in production. |

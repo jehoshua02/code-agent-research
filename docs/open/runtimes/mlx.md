@@ -1,3 +1,20 @@
+---
+name: "MLX / mlx-lm"
+maker: "Apple"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/ml-explore/mlx-lm"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["macos"]
+gpu_backends: ["metal"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["safetensors"]
+notes: "Apple Silicon and macOS only; built-in server is not recommended for production."
+---
+
 # MLX / mlx-lm
 
 _Last verified: 2026-06-14_

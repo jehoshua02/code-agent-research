@@ -1,3 +1,15 @@
+---
+name: "Constrained decoding (JSON mode, grammar)"
+license_category: "n/a"
+status: "active"
+url: "https://platform.openai.com/docs/guides/structured-outputs"
+last_verified: "2026-06-14"
+applies_at: "runtime"
+problem: "LLMs generate free-form text that may not conform to required schemas, causing downstream parse failures that require expensive retry logic"
+best_for: ["coding", "automation", "data"]
+notes: "Requires access to token logits at inference time; not available via standard hosted chat-completion APIs without a structured-output wrapper"
+---
+
 # Constrained decoding (JSON mode, grammar)
 
 _Last verified: 2026-06-14_

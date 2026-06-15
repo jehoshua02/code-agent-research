@@ -1,3 +1,22 @@
+---
+name: "GSD-PI"
+maker: "open-gsd"
+license: "MIT"
+license_category: "mit"
+status: "borderline"
+url: "https://github.com/open-gsd/gsd-pi"
+last_verified: "2026-06-14"
+language: "TypeScript"
+interfaces: ["tui", "web-ui", "desktop"]
+providers: ["anthropic"]
+supports_mcp: "native"
+byok: true
+focus: "project-workflow"
+hardware_tiers: ["any"]
+best_for: ["coding", "automation"]
+notes: "626 stars 2026-06-14; milestone/slice/task workflow with worktree-aware git automation."
+---
+
 # GSD-PI
 
 _Last verified: 2026-06-14_

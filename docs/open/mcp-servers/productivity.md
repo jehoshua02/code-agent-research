@@ -1,3 +1,16 @@
+---
+name: "Productivity"
+license_category: "mit"
+status: "active"
+url: "https://github.com/makenotion/notion-mcp-server"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: false
+auth: "oauth"
+best_for: ["writing", "automation", "research"]
+notes: "OAuth is the dominant auth pattern (Google, Notion, Microsoft 365); some providers use bot/API tokens instead."
+---
+
 # Productivity
 
 _Last verified: 2026-06-14_

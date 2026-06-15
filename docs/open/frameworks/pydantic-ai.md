@@ -1,3 +1,18 @@
+---
+name: "Pydantic AI"
+maker: "Pydantic"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/pydantic/pydantic-ai"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "native"
+programming_model: "imperative"
+best_for: ["coding", "automation", "data"]
+notes: "Type-safe agent generics with FastAPI-style decorators; deep Logfire/OTel observability built in."
+---
+
 # Pydantic AI
 
 _Last verified: 2026-06-14_

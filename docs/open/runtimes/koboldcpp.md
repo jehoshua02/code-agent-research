@@ -1,3 +1,20 @@
+---
+name: "KoboldCpp"
+maker: "LostRuins"
+license: "AGPL-3.0"
+license_category: "source-available"
+status: "active"
+url: "https://github.com/LostRuins/koboldcpp"
+last_verified: "2026-06-14"
+language: "C++"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu", "vulkan"]
+api_openai_compat: true
+supports_mcp: "native"
+formats: ["gguf"]
+notes: "Single-binary llama.cpp wrapper with bundled browser UI for story/roleplay; AGPL-3.0 copyleft."
+---
+
 # KoboldCpp
 
 _Last verified: 2026-06-14_

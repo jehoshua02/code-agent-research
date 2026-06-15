@@ -1,3 +1,22 @@
+---
+name: "OpenHands"
+maker: "All Hands AI"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/All-Hands-AI/OpenHands"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli", "web-ui", "api"]
+providers: ["anthropic", "openai", "google", "minimax", "ollama"]
+supports_mcp: "native"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding", "research", "automation"]
+notes: "Runs in sandboxed Docker; full browser + terminal environment; formerly OpenDevin."
+---
+
 # OpenHands
 
 _Last verified: 2026-06-14_

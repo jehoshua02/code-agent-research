@@ -1,3 +1,15 @@
+---
+name: "Self-consistency"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2203.11171"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "A single chain-of-thought sample can follow a plausible but incorrect reasoning path and return a confident wrong answer"
+best_for: ["research", "data", "coding"]
+notes: "Multiplies inference cost by N samples; only justified when accuracy is the top priority"
+---
+
 # Self-consistency
 
 _Last verified: 2026-06-14_

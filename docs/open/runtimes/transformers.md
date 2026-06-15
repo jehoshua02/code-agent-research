@@ -1,3 +1,20 @@
+---
+name: "transformers"
+maker: "HuggingFace"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/huggingface/transformers"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux", "macos", "windows"]
+gpu_backends: ["cuda", "rocm", "metal", "cpu"]
+api_openai_compat: false
+supports_mcp: "none"
+formats: ["safetensors", "gguf", "gptq", "awq"]
+notes: "Library, not a server; GGUF loads as dequantized FP32 — for inference use llama.cpp or vLLM."
+---
+
 # transformers (HF baseline)
 
 _Last verified: 2026-06-14_

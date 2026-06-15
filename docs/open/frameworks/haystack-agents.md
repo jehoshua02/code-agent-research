@@ -1,3 +1,18 @@
+---
+name: "Haystack Agents"
+maker: "deepset"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/deepset-ai/haystack"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "adapter"
+programming_model: "declarative"
+best_for: ["research", "data", "automation"]
+notes: "Agents are Components in a Haystack Pipeline graph; MCP via Hayhooks companion tool."
+---
+
 # Haystack agents
 
 _Last verified: 2026-06-14_

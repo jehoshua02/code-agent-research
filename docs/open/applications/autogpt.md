@@ -1,3 +1,22 @@
+---
+name: "AutoGPT"
+maker: "Significant Gravitas"
+license: "MIT (core); Polyform Shield (platform)"
+license_category: "source-available"
+status: "active"
+url: "https://github.com/Significant-Gravitas/AutoGPT"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli", "web-ui", "api"]
+providers: ["openai", "anthropic", "azure-openai"]
+supports_mcp: "none"
+byok: true
+focus: "general-agent"
+hardware_tiers: ["any"]
+best_for: ["automation", "research"]
+notes: "Pioneered autonomous agent loops; original MIT core largely superseded by Polyform-licensed platform."
+---
+
 # AutoGPT
 
 _Last verified: 2026-06-14_

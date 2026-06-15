@@ -1,3 +1,23 @@
+---
+name: "Nemotron"
+maker: "NVIDIA"
+license: "NVIDIA Open Model License"
+license_category: "custom-permissive"
+status: "active"
+url: "https://huggingface.co/nvidia"
+last_verified: "2026-06-14"
+variants: ["Nemotron-4-340B-Base", "Nemotron-4-340B-Instruct", "Nemotron-4-340B-Reward", "Llama-3.1-Nemotron-70B-Instruct", "Llama-3.1-Nemotron-70B-Reward"]
+params_total: "340B"
+has_moe: false
+context_window: 131072
+modalities: ["text"]
+gated: false
+released: "2024-10"
+hardware_tiers: ["24gb+"]
+best_for: ["research", "automation"]
+notes: "Nemotron-4-340B has only 4K context; Llama-3.1-Nemotron-70B inherits 128K from Llama 3.1"
+---
+
 # Nemotron
 
 _Last verified: 2026-06-14_

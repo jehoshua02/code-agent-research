@@ -1,3 +1,15 @@
+---
+name: "ReAct"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2210.03629"
+last_verified: "2026-06-14"
+applies_at: "framework"
+problem: "An LLM acting in a loop has no mechanism to verify intermediate steps, so errors compound silently without real-world feedback"
+best_for: ["coding", "research", "automation", "data"]
+notes: ""
+---
+
 # ReAct
 
 _Last verified: 2026-06-14_

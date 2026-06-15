@@ -4,14 +4,14 @@ One row per category. Each entry covers notable implementations within that cate
 
 | Server | Capability | License | Transport | Notes |
 |---|---|---|---|---|
-| [Filesystem](filesystem.md) | Read/write/list/search files | MIT | stdio | Anthropic reference + community |
-| [Shell](shell.md) | Run shell commands | varies | stdio | community only (no Anthropic reference) |
-| [Web Fetch](web-fetch.md) | Fetch URLs → markdown | MIT | stdio | Anthropic reference + community |
-| [Web Search](web-search.md) | Search engine APIs | varies | stdio; streamable HTTP (hosted) | community (Brave, Exa, Tavily, etc.) |
-| [Browser Control](browser-control.md) | Drive headless browser | Apache-2.0 | stdio; streamable HTTP (--port) | community (Playwright, Puppeteer) |
-| [Git / GitHub](git-github.md) | Git ops + hosted-platform APIs | MIT | stdio | Anthropic reference (git) + community (github, gitlab) |
-| [Database](database.md) | SQL query/inspect | varies | stdio | community (Postgres, SQLite, etc.) |
-| [Memory](memory.md) | Persistent knowledge-graph state | MIT | stdio | Anthropic reference + community |
-| [Code Execution](code-execution.md) | Sandboxed code run | varies | stdio; streamable HTTP (cloud) | community (E2B, Docker runners) |
-| [Cloud APIs](cloud-apis.md) | AWS / GCP / Azure / Cloudflare | varies | stdio; streamable HTTP (hosted) | community + official (Cloudflare) |
-| [Productivity](productivity.md) | Calendar, email, notes, tasks | varies | stdio; streamable HTTP (some) | community (Google, Notion, Linear, Slack) |
+| [Browser Control](browser-control.md) | Browser Control | _stub_ | stdio | Dominant implementation is Microsoft's playwright-mcp; supports HTTP transport via --port flag. |
+| [Cloud APIs](cloud-apis.md) | Cloud APIs | _stub_ | stdio | Cloudflare's official server uses OAuth 2.1 with streamable HTTP; AWS/GCP community servers use stdio with ambient SDK credentials. |
+| [Code Execution](code-execution.md) | Code Execution | _stub_ | stdio | E2B is the dominant cloud-sandboxed option and requires an API key; local Docker runners need no auth. |
+| [Database](database.md) | Database | _stub_ | stdio | Auth is a database connection string/credentials, not a typical API key; read-only mode is the safe default. |
+| [Filesystem](filesystem.md) | Filesystem | _stub_ | stdio | _stub_ |
+| [Git / GitHub](git-github.md) | Git / GitHub | _stub_ | stdio | Local git server requires no auth; GitHub/GitLab servers require a personal access token. |
+| [Memory](memory.md) | Memory | _stub_ | stdio | Reference implementation stores data in a local JSONL file; no multi-tenant isolation. |
+| [Productivity](productivity.md) | Productivity | _stub_ | stdio | OAuth is the dominant auth pattern (Google, Notion, Microsoft 365); some providers use bot/API tokens instead. |
+| [Shell](shell.md) | Shell | _stub_ | stdio | No Anthropic reference implementation; highest-risk MCP category due to arbitrary command execution. |
+| [Web Fetch](web-fetch.md) | Web Fetch | _stub_ | stdio | _stub_ |
+| [Web Search](web-search.md) | Web Search | _stub_ | stdio | All implementations require a paid third-party API key (Brave, Exa, Tavily, etc.). |

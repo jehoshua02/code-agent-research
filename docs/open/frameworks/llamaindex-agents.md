@@ -1,3 +1,18 @@
+---
+name: "LlamaIndex Agents"
+maker: "LlamaIndex"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/run-llama/llama_index"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "adapter"
+programming_model: "composable"
+best_for: ["research", "data", "automation"]
+notes: "MCP via llama-index-tools-mcp; strongest when paired with LlamaIndex's RAG and indexing ecosystem."
+---
+
 # LlamaIndex Agents
 
 _Last verified: 2026-06-14_

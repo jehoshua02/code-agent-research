@@ -1,3 +1,15 @@
+---
+name: "RAG (retrieval-augmented generation)"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2005.11401"
+last_verified: "2026-06-14"
+applies_at: "framework"
+problem: "LLMs have no access to private, domain-specific, or recently updated information beyond their training cutoff"
+best_for: ["research", "data", "automation"]
+notes: ""
+---
+
 # RAG (retrieval-augmented generation)
 
 _Last verified: 2026-06-14_

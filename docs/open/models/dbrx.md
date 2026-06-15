@@ -1,3 +1,24 @@
+---
+name: "DBRX"
+maker: "Databricks"
+license: "Databricks Open Model License"
+license_category: "custom-permissive"
+status: "borderline"
+url: "https://huggingface.co/databricks"
+last_verified: "2026-06-14"
+variants: ["DBRX-Base", "DBRX-Instruct"]
+params_total: "132B"
+has_moe: true
+params_active: "36B"
+context_window: 32768
+modalities: ["text"]
+gated: true
+released: "2024-03"
+hardware_tiers: ["24gb+"]
+best_for: ["coding"]
+notes: "No updates since March 2024; largely superseded by Llama 3 and Qwen 2.5 class models"
+---
+
 # DBRX
 
 _Last verified: 2026-06-14_

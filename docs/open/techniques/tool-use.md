@@ -1,3 +1,15 @@
+---
+name: "Tool use / function calling"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2302.04761"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "LLMs have a frozen knowledge cutoff and no mechanism to take actions or read live state, so they fabricate answers or refuse real-world tasks"
+best_for: ["coding", "research", "automation", "data"]
+notes: ""
+---
+
 # Tool use / function calling
 
 _Last verified: 2026-06-14_

@@ -1,0 +1,2345 @@
+{
+  "entities": [
+    {
+      "best_for": [
+        "research",
+        "automation",
+        "data"
+      ],
+      "context_window": 262144,
+      "filename": "command-r.md",
+      "gated": false,
+      "hardware_tiers": [
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "CC-BY-NC 4.0",
+      "license_category": "source-available",
+      "maker": "Cohere",
+      "modalities": [
+        "text"
+      ],
+      "name": "Command R",
+      "notes": "CC-BY-NC license blocks production use without a separate Cohere commercial agreement",
+      "params_total": "111B",
+      "released": "2025-03",
+      "status": "active",
+      "url": "https://huggingface.co/CohereForAI",
+      "variants": [
+        "Command-R-35B",
+        "Command-R-32B",
+        "Command-R+-104B",
+        "Command-R7B-7B",
+        "Command-A-111B"
+      ]
+    },
+    {
+      "best_for": [
+        "coding"
+      ],
+      "context_window": 32768,
+      "filename": "dbrx.md",
+      "gated": true,
+      "hardware_tiers": [
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Databricks Open Model License",
+      "license_category": "custom-permissive",
+      "maker": "Databricks",
+      "modalities": [
+        "text"
+      ],
+      "name": "DBRX",
+      "notes": "No updates since March 2024; largely superseded by Llama 3 and Qwen 2.5 class models",
+      "params_active": "36B",
+      "params_total": "132B",
+      "released": "2024-03",
+      "status": "borderline",
+      "url": "https://huggingface.co/databricks",
+      "variants": [
+        "DBRX-Base",
+        "DBRX-Instruct"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "data"
+      ],
+      "context_window": 131072,
+      "filename": "deepseek.md",
+      "gated": false,
+      "hardware_tiers": [
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "DeepSeek AI",
+      "modalities": [
+        "text"
+      ],
+      "name": "DeepSeek",
+      "notes": "V3/R1 weight license is DeepSeek (not MIT); R1 distill variants are MIT; tool calling added in R1-0528",
+      "params_active": "37B",
+      "params_total": "685B",
+      "released": "2025-05",
+      "status": "active",
+      "url": "https://huggingface.co/deepseek-ai",
+      "variants": [
+        "V2",
+        "V2.5",
+        "V3",
+        "V3-0324",
+        "R1",
+        "R1-0528",
+        "R1-Distill-Qwen-1.5B",
+        "R1-Distill-Qwen-7B",
+        "R1-Distill-Qwen-14B",
+        "R1-Distill-Qwen-32B",
+        "R1-Distill-Llama-8B",
+        "R1-Distill-Llama-70B"
+      ]
+    },
+    {
+      "best_for": [
+        "research",
+        "writing"
+      ],
+      "context_window": 262144,
+      "filename": "falcon.md",
+      "gated": false,
+      "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "TII",
+      "modalities": [
+        "text"
+      ],
+      "name": "Falcon",
+      "notes": "Falcon-180B uses TII Falcon License (non-Apache); Falcon 1 series limited to 2K context \u2014 effectively obsolete",
+      "params_total": "180B",
+      "released": "2026-01",
+      "status": "active",
+      "url": "https://huggingface.co/tiiuae",
+      "variants": [
+        "Falcon-7B",
+        "Falcon-40B",
+        "Falcon-180B",
+        "Falcon3-1B",
+        "Falcon3-3B",
+        "Falcon3-7B",
+        "Falcon3-10B",
+        "Falcon-H1-0.5B",
+        "Falcon-H1-1.5B",
+        "Falcon-H1-3B",
+        "Falcon-H1-7B",
+        "Falcon-H1-34B",
+        "Falcon-H1R-7B"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "writing",
+        "automation",
+        "data"
+      ],
+      "context_window": 262144,
+      "filename": "gemma.md",
+      "gated": true,
+      "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Gemma Terms of Use",
+      "license_category": "custom-permissive",
+      "maker": "Google",
+      "modalities": [
+        "text",
+        "vision",
+        "audio"
+      ],
+      "name": "Gemma",
+      "notes": "Gemma 1\u20133 require license-acceptance gating; Gemma 4 is Apache 2.0 and ungated",
+      "params_active": "4B",
+      "params_total": "31B",
+      "released": "2026-04",
+      "status": "active",
+      "url": "https://huggingface.co/google",
+      "variants": [
+        "1B",
+        "2B",
+        "4B",
+        "7B",
+        "9B",
+        "12B",
+        "27B",
+        "E2B",
+        "E4B",
+        "26B-A4B",
+        "31B"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation",
+        "data"
+      ],
+      "context_window": 131072,
+      "filename": "granite.md",
+      "gated": false,
+      "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "IBM",
+      "modalities": [
+        "text"
+      ],
+      "name": "Granite",
+      "notes": "Tops out at 8B; explicit data provenance documentation makes it suitable for regulated industries",
+      "params_active": "800M",
+      "params_total": "8B",
+      "released": "2025-04",
+      "status": "active",
+      "url": "https://huggingface.co/ibm-granite",
+      "variants": [
+        "Granite-3.1-1B-A400M",
+        "Granite-3.1-2B",
+        "Granite-3.1-3B-A800M",
+        "Granite-3.1-8B",
+        "Granite-3.3-2B",
+        "Granite-3.3-8B"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "context_window": 131072,
+      "filename": "hermes.md",
+      "gated": false,
+      "hardware_tiers": [
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Llama Community License",
+      "license_category": "custom-permissive",
+      "maker": "Nous Research",
+      "modalities": [
+        "text"
+      ],
+      "name": "Hermes",
+      "notes": "Fine-tune of Llama 3.1; inherits Llama 700M MAU cap; trained at 8K context so long-context quality may degrade",
+      "params_total": "405B",
+      "released": "2024-08",
+      "status": "active",
+      "url": "https://huggingface.co/NousResearch",
+      "variants": [
+        "Hermes-3-8B",
+        "Hermes-3-70B",
+        "Hermes-3-405B"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "data"
+      ],
+      "context_window": 262144,
+      "filename": "hunyuan.md",
+      "gated": false,
+      "hardware_tiers": [
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Tencent Hunyuan License",
+      "license_category": "custom-permissive",
+      "maker": "Tencent",
+      "modalities": [
+        "text"
+      ],
+      "name": "Hunyuan",
+      "notes": "Proprietary Tencent license \u2014 not Apache 2.0; minimum 2\u00d7 RTX 4090 even at Q4",
+      "params_active": "13B",
+      "params_total": "389B",
+      "released": "2025-06",
+      "status": "active",
+      "url": "https://huggingface.co/tencent",
+      "variants": [
+        "Hunyuan-Large-389B",
+        "Hunyuan-A13B-Pretrain",
+        "Hunyuan-A13B-Instruct",
+        "Hunyuan-A13B-Instruct-FP8",
+        "Hunyuan-A13B-Instruct-GPTQ-Int4"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "writing",
+        "automation",
+        "data"
+      ],
+      "context_window": 128000,
+      "filename": "llama.md",
+      "gated": true,
+      "hardware_tiers": [
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Llama Community License",
+      "license_category": "custom-permissive",
+      "maker": "Meta",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "name": "Llama",
+      "notes": "Broadest ecosystem support; community-license restricts apps over 700M MAU",
+      "params_active": "17B",
+      "params_total": "405B",
+      "released": "2025-04",
+      "status": "active",
+      "url": "https://huggingface.co/meta-llama",
+      "variants": [
+        "1B",
+        "3B",
+        "8B",
+        "70B",
+        "405B",
+        "Scout-17B-16E",
+        "Maverick-17B-128E"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "writing",
+        "automation"
+      ],
+      "context_window": 262144,
+      "filename": "mistral.md",
+      "gated": false,
+      "hardware_tiers": [
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Mistral AI",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "name": "Mistral",
+      "notes": "Codestral v0.1 and Large-2407 are non-commercial; check license per variant",
+      "params_active": "41B",
+      "params_total": "675B",
+      "released": "2025-03",
+      "status": "active",
+      "url": "https://huggingface.co/mistralai",
+      "variants": [
+        "7B",
+        "Mixtral-8x7B",
+        "Mixtral-8x22B",
+        "NeMo-12B",
+        "Large-2407",
+        "Codestral-22B",
+        "Small-3.1-24B",
+        "Large-3-675B"
+      ]
+    },
+    {
+      "best_for": [
+        "research",
+        "automation"
+      ],
+      "context_window": 131072,
+      "filename": "nemotron.md",
+      "gated": false,
+      "hardware_tiers": [
+        "24gb+"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "NVIDIA Open Model License",
+      "license_category": "custom-permissive",
+      "maker": "NVIDIA",
+      "modalities": [
+        "text"
+      ],
+      "name": "Nemotron",
+      "notes": "Nemotron-4-340B has only 4K context; Llama-3.1-Nemotron-70B inherits 128K from Llama 3.1",
+      "params_total": "340B",
+      "released": "2024-10",
+      "status": "active",
+      "url": "https://huggingface.co/nvidia",
+      "variants": [
+        "Nemotron-4-340B-Base",
+        "Nemotron-4-340B-Instruct",
+        "Nemotron-4-340B-Reward",
+        "Llama-3.1-Nemotron-70B-Instruct",
+        "Llama-3.1-Nemotron-70B-Reward"
+      ]
+    },
+    {
+      "best_for": [
+        "research"
+      ],
+      "context_window": 4096,
+      "filename": "olmo.md",
+      "gated": false,
+      "hardware_tiers": [
+        "8gb",
+        "16gb",
+        "24gb"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Allen Institute for AI",
+      "modalities": [
+        "text"
+      ],
+      "name": "OLMo",
+      "notes": "Full pipeline open (weights + data + training code); English-only; 4K context is a hard limitation",
+      "params_total": "13B",
+      "released": "2025-01",
+      "status": "active",
+      "url": "https://huggingface.co/allenai",
+      "variants": [
+        "OLMo-2-7B",
+        "OLMo-2-7B-SFT",
+        "OLMo-2-7B-DPO",
+        "OLMo-2-7B-Instruct",
+        "OLMo-2-13B",
+        "OLMo-2-13B-SFT",
+        "OLMo-2-13B-DPO",
+        "OLMo-2-13B-Instruct"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "data"
+      ],
+      "context_window": 131072,
+      "filename": "phi.md",
+      "gated": false,
+      "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Microsoft",
+      "modalities": [
+        "text",
+        "vision",
+        "audio"
+      ],
+      "name": "Phi",
+      "notes": "Phi-4 has only 16K native context; family is English-first despite some multilingual support",
+      "params_active": "6.6B",
+      "params_total": "42B",
+      "released": "2025-04",
+      "status": "active",
+      "url": "https://huggingface.co/microsoft",
+      "variants": [
+        "Phi-3-mini-3.8B",
+        "Phi-3-small-7B",
+        "Phi-3-medium-14B",
+        "Phi-3.5-mini-3.8B",
+        "Phi-3.5-MoE-42B",
+        "Phi-3.5-Vision-4.2B",
+        "Phi-4-14B",
+        "Phi-4-mini-3.8B",
+        "Phi-4-multimodal-5.6B",
+        "Phi-4-reasoning-14B",
+        "Phi-4-reasoning-vision-15B"
+      ]
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "writing",
+        "automation",
+        "data"
+      ],
+      "context_window": 131072,
+      "filename": "qwen.md",
+      "gated": false,
+      "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": true,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Alibaba",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "name": "Qwen",
+      "notes": "Qwen2.5 uses a proprietary Alibaba license; Qwen3 is Apache 2.0",
+      "params_active": "22B",
+      "params_total": "235B",
+      "released": "2025-04",
+      "status": "active",
+      "url": "https://huggingface.co/Qwen",
+      "variants": [
+        "0.6B",
+        "1.7B",
+        "4B",
+        "8B",
+        "14B",
+        "32B",
+        "30B-A3B",
+        "72B",
+        "235B-A22B"
+      ]
+    },
+    {
+      "best_for": [
+        "automation"
+      ],
+      "context_window": 8192,
+      "filename": "smollm.md",
+      "gated": false,
+      "hardware_tiers": [
+        "8gb"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "HuggingFace",
+      "modalities": [
+        "text"
+      ],
+      "name": "SmolLM",
+      "notes": "English-only; 135M/360M are too small for instruction following; designed for on-device edge deployment",
+      "params_total": "1.7B",
+      "released": "2025-02",
+      "status": "active",
+      "url": "https://huggingface.co/HuggingFaceTB",
+      "variants": [
+        "SmolLM2-135M",
+        "SmolLM2-135M-Instruct",
+        "SmolLM2-360M",
+        "SmolLM2-360M-Instruct",
+        "SmolLM2-1.7B",
+        "SmolLM2-1.7B-Instruct"
+      ]
+    },
+    {
+      "best_for": [
+        "coding"
+      ],
+      "context_window": 16384,
+      "filename": "starcoder2.md",
+      "gated": true,
+      "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "BigCode OpenRAIL-M",
+      "license_category": "source-available",
+      "maker": "BigCode",
+      "modalities": [
+        "text"
+      ],
+      "name": "StarCoder2",
+      "notes": "Base model only \u2014 no instruction tuning; largely superseded by Qwen2.5-Coder and DeepSeekCoder-V2",
+      "params_total": "15B",
+      "released": "2024-02",
+      "status": "borderline",
+      "url": "https://huggingface.co/bigcode",
+      "variants": [
+        "3B",
+        "7B",
+        "15B"
+      ]
+    },
+    {
+      "best_for": [
+        "research",
+        "writing"
+      ],
+      "context_window": 200000,
+      "filename": "yi.md",
+      "gated": false,
+      "hardware_tiers": [
+        "12gb",
+        "16gb",
+        "24gb",
+        "24gb+"
+      ],
+      "has_moe": false,
+      "last_verified": "2026-06-14",
+      "layer": "models",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "01.AI",
+      "modalities": [
+        "text",
+        "vision"
+      ],
+      "name": "Yi",
+      "notes": "Largely superseded by Qwen3 and Llama 3 as of mid-2025; no native tool-calling format",
+      "params_total": "34B",
+      "released": "2024-05",
+      "status": "borderline",
+      "url": "https://huggingface.co/01-ai",
+      "variants": [
+        "Yi-6B",
+        "Yi-6B-Chat",
+        "Yi-9B",
+        "Yi-9B-200K",
+        "Yi-34B",
+        "Yi-34B-Chat",
+        "Yi-34B-200K",
+        "Yi-1.5-6B",
+        "Yi-1.5-9B",
+        "Yi-1.5-34B",
+        "Yi-VL-6B",
+        "Yi-VL-34B"
+      ]
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "aphrodite-engine.md",
+      "formats": [
+        "safetensors",
+        "gguf",
+        "awq",
+        "gptq",
+        "exl2",
+        "fp8",
+        "bitsandbytes"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "cpu",
+        "tpu",
+        "xpu"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "AGPL-3.0",
+      "license_category": "source-available",
+      "maker": "PygmalionAI",
+      "name": "Aphrodite Engine",
+      "notes": "vLLM fork with broader quantization support (EXL2, GGUF, AQLM, BitNet); AGPL-3.0 has copyleft implications.",
+      "platforms": [
+        "linux",
+        "wsl2"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/aphrodite-engine/aphrodite-engine"
+    },
+    {
+      "api_openai_compat": false,
+      "filename": "exllamav2.md",
+      "formats": [
+        "exl2",
+        "gptq",
+        "safetensors"
+      ],
+      "gpu_backends": [
+        "cuda"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "turboderp",
+      "name": "ExLlamaV2",
+      "notes": "NVIDIA Ampere (sm_80) minimum; no OpenAI server built-in \u2014 TabbyAPI recommended for HTTP serving.",
+      "platforms": [
+        "linux",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/turboderp/exllamav2"
+    },
+    {
+      "api_openai_compat": false,
+      "filename": "gemma-cpp.md",
+      "formats": [
+        "sbs"
+      ],
+      "gpu_backends": [
+        "cpu"
+      ],
+      "language": "C++",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Google",
+      "name": "gemma.cpp",
+      "notes": "Gemma-family only; CPU-only (no GPU); proprietary .sbs format with closed-source safetensors converter.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/google/gemma.cpp"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "jan.md",
+      "formats": [
+        "gguf",
+        "mlx"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "AGPL-3.0",
+      "license_category": "source-available",
+      "maker": "Menlo Research",
+      "name": "Jan",
+      "notes": "Desktop chat app; GGUF-only for primary llama.cpp path; MLX backend added v0.7.7 for Apple Silicon.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/menloresearch/jan"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "koboldcpp.md",
+      "formats": [
+        "gguf"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan"
+      ],
+      "language": "C++",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "AGPL-3.0",
+      "license_category": "source-available",
+      "maker": "LostRuins",
+      "name": "KoboldCpp",
+      "notes": "Single-binary llama.cpp wrapper with bundled browser UI for story/roleplay; AGPL-3.0 copyleft.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/LostRuins/koboldcpp"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "llama-cpp.md",
+      "formats": [
+        "gguf"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan",
+        "sycl"
+      ],
+      "language": "C++",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "ggml-org",
+      "name": "llama.cpp",
+      "notes": "Upstream of Ollama, KoboldCpp, and llamafile; GGUF is the sole inference format.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/ggml-org/llama.cpp"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "llamafile.md",
+      "formats": [
+        "gguf"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu"
+      ],
+      "language": "C++",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Mozilla",
+      "name": "llamafile",
+      "notes": "Single-file portable executable via Cosmopolitan Libc; CUDA JIT is Linux-only (no CUDA on Windows as of v0.10.0).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/Mozilla-Ocho/llamafile"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "lm-studio.md",
+      "formats": [
+        "gguf",
+        "mlx"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Proprietary",
+      "license_category": "proprietary",
+      "maker": "Element Labs",
+      "name": "LM Studio",
+      "notes": "Closed-source, free-to-use; macOS supports Apple Silicon only (no Intel Mac).",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://lmstudio.ai"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "localai.md",
+      "formats": [
+        "gguf",
+        "safetensors",
+        "gptq",
+        "awq"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan",
+        "sycl"
+      ],
+      "language": "Go",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "mudler",
+      "name": "LocalAI",
+      "notes": "Multi-backend routing layer (36+ backends); also exposes Anthropic, Ollama, and ElevenLabs-compatible APIs.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/mudler/LocalAI"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "mlx.md",
+      "formats": [
+        "safetensors"
+      ],
+      "gpu_backends": [
+        "metal"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Apple",
+      "name": "MLX / mlx-lm",
+      "notes": "Apple Silicon and macOS only; built-in server is not recommended for production.",
+      "platforms": [
+        "macos"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/ml-explore/mlx-lm"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "ollama.md",
+      "formats": [
+        "gguf"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan"
+      ],
+      "language": "Go",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Ollama",
+      "name": "Ollama",
+      "notes": "Wraps llama.cpp; bundled CUDA libs \u2014 no separate toolkit install required.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/ollama/ollama"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "sglang.md",
+      "formats": [
+        "safetensors",
+        "gptq",
+        "awq",
+        "fp8",
+        "gguf"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "cpu",
+        "tpu",
+        "xpu",
+        "ascend"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "LMSYS",
+      "name": "SGLang",
+      "notes": "macOS support is experimental (MLX backend, Python 3.11 only); Windows unsupported.",
+      "platforms": [
+        "linux"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/sgl-project/sglang"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "text-generation-webui.md",
+      "formats": [
+        "gguf",
+        "exl2",
+        "gptq",
+        "awq",
+        "safetensors"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "vulkan"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "AGPL-3.0",
+      "license_category": "source-available",
+      "maker": "oobabooga",
+      "name": "Text Generation WebUI",
+      "notes": "Multi-backend web UI (~10 GB install); hot-swap between llama.cpp, ExLlamaV2, Transformers without restart.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/oobabooga/text-generation-webui"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "tgi.md",
+      "formats": [
+        "safetensors",
+        "gptq",
+        "awq",
+        "fp8",
+        "bitsandbytes"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "HuggingFace",
+      "name": "TGI",
+      "notes": "Now in maintenance mode; README redirects new projects to vLLM, SGLang, and llama.cpp.",
+      "platforms": [
+        "linux",
+        "wsl2"
+      ],
+      "status": "deprecated",
+      "supports_mcp": "none",
+      "url": "https://github.com/huggingface/text-generation-inference"
+    },
+    {
+      "api_openai_compat": false,
+      "filename": "transformers.md",
+      "formats": [
+        "safetensors",
+        "gguf",
+        "gptq",
+        "awq"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "HuggingFace",
+      "name": "transformers",
+      "notes": "Library, not a server; GGUF loads as dequantized FP32 \u2014 for inference use llama.cpp or vLLM.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/huggingface/transformers"
+    },
+    {
+      "api_openai_compat": true,
+      "filename": "vllm.md",
+      "formats": [
+        "safetensors",
+        "gguf",
+        "awq",
+        "gptq",
+        "fp8",
+        "bitsandbytes"
+      ],
+      "gpu_backends": [
+        "cuda",
+        "rocm",
+        "metal",
+        "cpu",
+        "tpu",
+        "xpu",
+        "gaudi",
+        "ascend"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "runtimes",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "vLLM Project",
+      "name": "vLLM",
+      "notes": "GGUF support is highly experimental; macOS via unsupported community plugin only.",
+      "platforms": [
+        "linux",
+        "wsl2"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/vllm-project/vllm"
+    },
+    {
+      "best_for": [
+        "automation",
+        "research",
+        "data"
+      ],
+      "filename": "agno.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "agno-agi",
+      "name": "agno",
+      "notes": "Broadest provider coverage (30+); bidirectional MCP; AgentOS runtime exposes REST API with RBAC.",
+      "programming_model": "imperative",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/agno-agi/agno"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "filename": "atomic-agents.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "BrainBlend AI",
+      "name": "Atomic Agents",
+      "notes": "Single-responsibility AtomicAgent components chained via Pydantic schema matching; built on Instructor.",
+      "programming_model": "composable",
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/BrainBlend-AI/atomic-agents"
+    },
+    {
+      "best_for": [
+        "automation",
+        "research"
+      ],
+      "filename": "autogen.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "CC-BY-4.0",
+      "license_category": "custom-permissive",
+      "maker": "Microsoft",
+      "name": "AutoGen",
+      "notes": "Now in maintenance mode; Microsoft recommends new projects use Microsoft Agent Framework.",
+      "programming_model": "imperative",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/microsoft/autogen"
+    },
+    {
+      "best_for": [
+        "automation",
+        "research",
+        "coding"
+      ],
+      "filename": "beeai.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "IBM Research",
+      "name": "BeeAI",
+      "notes": "Dual Python+TypeScript SDKs; constraint-based RequirementAgent; Linux Foundation governance.",
+      "programming_model": "imperative",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/i-am-bee/beeai-framework"
+    },
+    {
+      "best_for": [
+        "automation",
+        "research",
+        "writing"
+      ],
+      "filename": "crewai.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "crewAI Inc.",
+      "name": "CrewAI",
+      "notes": "YAML/Python hybrid config; LLM routing via LiteLLM (100+ providers).",
+      "programming_model": "role-based",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/crewAI-Inc/crewAI"
+    },
+    {
+      "best_for": [
+        "research",
+        "data",
+        "automation"
+      ],
+      "filename": "dspy.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Stanford NLP",
+      "name": "DSPy",
+      "notes": "Prompt-as-program paradigm; optimizer (MIPROv2, SIMBA) compiles typed Signatures into tuned prompts.",
+      "programming_model": "declarative",
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/stanfordnlp/dspy"
+    },
+    {
+      "best_for": [
+        "research",
+        "data",
+        "automation"
+      ],
+      "filename": "haystack-agents.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "deepset",
+      "name": "Haystack Agents",
+      "notes": "Agents are Components in a Haystack Pipeline graph; MCP via Hayhooks companion tool.",
+      "programming_model": "declarative",
+      "status": "active",
+      "supports_mcp": "adapter",
+      "url": "https://github.com/deepset-ai/haystack"
+    },
+    {
+      "best_for": [
+        "automation",
+        "coding",
+        "research"
+      ],
+      "filename": "langgraph.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "LangChain",
+      "name": "LangGraph",
+      "notes": "MCP via langchain-mcp-adapters; also available as a JS/TS npm package.",
+      "programming_model": "graph",
+      "status": "active",
+      "supports_mcp": "adapter",
+      "url": "https://github.com/langchain-ai/langgraph"
+    },
+    {
+      "best_for": [
+        "automation",
+        "research"
+      ],
+      "filename": "letta.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Letta AI",
+      "name": "Letta",
+      "notes": "Formerly MemGPT; requires a Letta Cloud or self-hosted server \u2014 no simple library mode.",
+      "programming_model": "imperative",
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/letta-ai/letta"
+    },
+    {
+      "best_for": [
+        "research",
+        "data",
+        "automation"
+      ],
+      "filename": "llamaindex-agents.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "LlamaIndex",
+      "name": "LlamaIndex Agents",
+      "notes": "MCP via llama-index-tools-mcp; strongest when paired with LlamaIndex's RAG and indexing ecosystem.",
+      "programming_model": "composable",
+      "status": "active",
+      "supports_mcp": "adapter",
+      "url": "https://github.com/run-llama/llama_index"
+    },
+    {
+      "best_for": [
+        "automation"
+      ],
+      "filename": "mcp-agent.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "LastMile AI",
+      "name": "mcp-agent",
+      "notes": "Low activity since early 2026; last commit January 25, 2026 \u2014 long-term maintenance uncertain.",
+      "programming_model": "imperative",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/lastmile-ai/mcp-agent"
+    },
+    {
+      "best_for": [],
+      "filename": "openai-swarm.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "OpenAI",
+      "name": "OpenAI Swarm",
+      "notes": "Superseded by the OpenAI Agents SDK; retained as an educational reference for the handoff pattern.",
+      "programming_model": "imperative",
+      "status": "deprecated",
+      "supports_mcp": "none",
+      "url": "https://github.com/openai/swarm"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation",
+        "data"
+      ],
+      "filename": "pydantic-ai.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Pydantic",
+      "name": "Pydantic AI",
+      "notes": "Type-safe agent generics with FastAPI-style decorators; deep Logfire/OTel observability built in.",
+      "programming_model": "imperative",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/pydantic/pydantic-ai"
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "automation"
+      ],
+      "filename": "smolagents.md",
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "frameworks",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "HuggingFace",
+      "name": "Smolagents",
+      "notes": "CodeAgent emits Python as tool calls; sandbox (e2b/Docker) required in production.",
+      "programming_model": "code-emitting",
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/huggingface/smolagents"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "byok": true,
+      "filename": "aider.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Aider-AI / Paul Gauthier",
+      "name": "Aider",
+      "notes": "Git-native pair programmer; every edit committed automatically; no MCP support.",
+      "providers": [
+        "anthropic",
+        "openai",
+        "deepseek",
+        "google",
+        "openrouter",
+        "azure-openai",
+        "cohere",
+        "ollama"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/Aider-AI/aider"
+    },
+    {
+      "best_for": [
+        "automation",
+        "research"
+      ],
+      "byok": true,
+      "filename": "autogpt.md",
+      "focus": "general-agent",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "web-ui",
+        "api"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT (core); Polyform Shield (platform)",
+      "license_category": "source-available",
+      "maker": "Significant Gravitas",
+      "name": "AutoGPT",
+      "notes": "Pioneered autonomous agent loops; original MIT core largely superseded by Polyform-licensed platform.",
+      "providers": [
+        "openai",
+        "anthropic",
+        "azure-openai"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT"
+    },
+    {
+      "best_for": [
+        "coding"
+      ],
+      "byok": true,
+      "filename": "continue.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "ide-plugin",
+        "cli"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Continue Dev",
+      "name": "Continue",
+      "notes": "Repository archived 2026; final 2.0.0 release shipped; no further fixes will be accepted.",
+      "providers": [
+        "anthropic",
+        "openai",
+        "google",
+        "mistral",
+        "cohere",
+        "aws-bedrock",
+        "azure-openai",
+        "ollama"
+      ],
+      "status": "archived",
+      "supports_mcp": "native",
+      "url": "https://github.com/continuedev/continue"
+    },
+    {
+      "best_for": [
+        "coding"
+      ],
+      "byok": false,
+      "filename": "gemma-chat.md",
+      "focus": "chat-ui",
+      "hardware_tiers": [
+        "mac-only"
+      ],
+      "interfaces": [
+        "desktop"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "ammaarreshi",
+      "name": "Gemma Chat",
+      "notes": "Apple Silicon only; runs Gemma 4 via MLX locally; no API key required; model-specific.",
+      "providers": [
+        "google"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/ammaarreshi/gemma-chat"
+    },
+    {
+      "best_for": [
+        "research"
+      ],
+      "byok": false,
+      "filename": "gemma-gem.md",
+      "focus": "chat-ui",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "browser-extension"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "kessler",
+      "name": "Gemma Gem",
+      "notes": "930 stars 2026-06-14; runs Gemma 4 on-device via WebGPU; Chrome/Edge 113+ only; model-specific.",
+      "providers": [
+        "google"
+      ],
+      "status": "borderline",
+      "supports_mcp": "none",
+      "url": "https://github.com/kessler/gemma-gem"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation",
+        "research"
+      ],
+      "byok": true,
+      "filename": "goose.md",
+      "focus": "general-agent",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "desktop",
+        "api"
+      ],
+      "language": "Rust",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "Block / Linux Foundation AAIF",
+      "name": "Goose",
+      "notes": "Transferred from Block to Linux Foundation AAIF in 2026; 70+ extensions via MCP.",
+      "providers": [
+        "anthropic",
+        "openai",
+        "google",
+        "ollama",
+        "openrouter",
+        "azure-openai",
+        "aws-bedrock"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/block/goose"
+    },
+    {
+      "best_for": [
+        "coding"
+      ],
+      "byok": true,
+      "filename": "gpt-engineer.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Anton Osika",
+      "name": "GPT-Engineer",
+      "notes": "Archived April 22, 2026; historical precursor to lovable.dev; one-shot scaffold generation only.",
+      "providers": [
+        "openai",
+        "azure-openai",
+        "anthropic"
+      ],
+      "status": "archived",
+      "supports_mcp": "none",
+      "url": "https://github.com/gpt-engineer-org/gpt-engineer"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "byok": true,
+      "filename": "gsd-pi.md",
+      "focus": "project-workflow",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "tui",
+        "web-ui",
+        "desktop"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "open-gsd",
+      "name": "GSD-PI",
+      "notes": "626 stars 2026-06-14; milestone/slice/task workflow with worktree-aware git automation.",
+      "providers": [
+        "anthropic"
+      ],
+      "status": "borderline",
+      "supports_mcp": "native",
+      "url": "https://github.com/open-gsd/gsd-pi"
+    },
+    {
+      "best_for": [
+        "coding"
+      ],
+      "byok": true,
+      "filename": "mentat.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "Apache-2.0",
+      "license_category": "apache-2.0",
+      "maker": "AbanteAI",
+      "name": "Mentat",
+      "notes": "Repo removed 2026-06-14; listed for historical reference only.",
+      "status": "archived",
+      "supports_mcp": "none",
+      "url": "https://github.com/AbanteAI/mentat"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation",
+        "data"
+      ],
+      "byok": true,
+      "filename": "open-interpreter.md",
+      "focus": "code-execution",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "api"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "AGPL-3.0",
+      "license_category": "source-available",
+      "maker": "OpenInterpreter",
+      "name": "Open Interpreter",
+      "notes": "Executes Python/JS/Shell locally; AGPL-3.0 limits commercial use; desktop app in early access.",
+      "providers": [
+        "openai",
+        "anthropic",
+        "cohere",
+        "google",
+        "ollama"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/OpenInterpreter/open-interpreter"
+    },
+    {
+      "best_for": [
+        "automation",
+        "coding",
+        "research"
+      ],
+      "byok": true,
+      "filename": "openclaw.md",
+      "focus": "personal-assistant",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "desktop",
+        "mobile",
+        "web-ui"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "OpenClaw Foundation",
+      "name": "OpenClaw",
+      "notes": "Skills Registry (44,000+ skills); 22+ messaging channel interfaces; high-severity CVE history.",
+      "providers": [
+        "openai",
+        "anthropic",
+        "google"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/openclaw/openclaw"
+    },
+    {
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "byok": true,
+      "filename": "opencode.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "tui",
+        "desktop"
+      ],
+      "language": "TypeScript",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Anomaly",
+      "name": "OpenCode",
+      "notes": "Ships as both MCP server and MCP client; 75+ providers via built-in registry.",
+      "providers": [
+        "anthropic",
+        "openai",
+        "google",
+        "aws-bedrock",
+        "azure-openai",
+        "openrouter",
+        "ollama"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/anomalyco/opencode"
+    },
+    {
+      "best_for": [
+        "coding",
+        "research",
+        "automation"
+      ],
+      "byok": true,
+      "filename": "openhands.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "web-ui",
+        "api"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "All Hands AI",
+      "name": "OpenHands",
+      "notes": "Runs in sandboxed Docker; full browser + terminal environment; formerly OpenDevin.",
+      "providers": [
+        "anthropic",
+        "openai",
+        "google",
+        "minimax",
+        "ollama"
+      ],
+      "status": "active",
+      "supports_mcp": "native",
+      "url": "https://github.com/All-Hands-AI/OpenHands"
+    },
+    {
+      "best_for": [
+        "coding",
+        "research"
+      ],
+      "byok": true,
+      "filename": "swe-agent.md",
+      "focus": "agentic-coding",
+      "hardware_tiers": [
+        "any"
+      ],
+      "interfaces": [
+        "cli",
+        "web-ui"
+      ],
+      "language": "Python",
+      "last_verified": "2026-06-14",
+      "layer": "applications",
+      "license": "MIT",
+      "license_category": "mit",
+      "maker": "Princeton NLP",
+      "name": "SWE-agent",
+      "notes": "Research-grade; active development shifted to mini-swe-agent; SWE-bench SOTA holder.",
+      "providers": [
+        "anthropic",
+        "openai",
+        "ollama"
+      ],
+      "status": "active",
+      "supports_mcp": "none",
+      "url": "https://github.com/princeton-nlp/SWE-agent"
+    },
+    {
+      "auth": "none",
+      "best_for": [
+        "research",
+        "automation",
+        "data"
+      ],
+      "filename": "browser-control.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "apache-2.0",
+      "name": "Browser Control",
+      "notes": "Dominant implementation is Microsoft's playwright-mcp; supports HTTP transport via --port flag.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/microsoft/playwright-mcp"
+    },
+    {
+      "auth": "api-key",
+      "best_for": [
+        "automation",
+        "data"
+      ],
+      "filename": "cloud-apis.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "apache-2.0",
+      "name": "Cloud APIs",
+      "notes": "Cloudflare's official server uses OAuth 2.1 with streamable HTTP; AWS/GCP community servers use stdio with ambient SDK credentials.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/cloudflare/mcp-server-cloudflare"
+    },
+    {
+      "auth": "api-key",
+      "best_for": [
+        "coding",
+        "research",
+        "data"
+      ],
+      "filename": "code-execution.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "apache-2.0",
+      "name": "Code Execution",
+      "notes": "E2B is the dominant cloud-sandboxed option and requires an API key; local Docker runners need no auth.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/e2b-dev/mcp-server"
+    },
+    {
+      "auth": "api-key",
+      "best_for": [
+        "research",
+        "data",
+        "automation"
+      ],
+      "filename": "database.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Database",
+      "notes": "Auth is a database connection string/credentials, not a typical API key; read-only mode is the safe default.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres"
+    },
+    {
+      "auth": "none",
+      "best_for": [
+        "coding",
+        "research",
+        "automation",
+        "data"
+      ],
+      "filename": "filesystem.md",
+      "has_anthropic_reference": true,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Filesystem",
+      "notes": "",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+    },
+    {
+      "auth": "api-key",
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "filename": "git-github.md",
+      "has_anthropic_reference": true,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Git / GitHub",
+      "notes": "Local git server requires no auth; GitHub/GitLab servers require a personal access token.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/git"
+    },
+    {
+      "auth": "none",
+      "best_for": [
+        "research",
+        "writing",
+        "automation"
+      ],
+      "filename": "memory.md",
+      "has_anthropic_reference": true,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Memory",
+      "notes": "Reference implementation stores data in a local JSONL file; no multi-tenant isolation.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+    },
+    {
+      "auth": "oauth",
+      "best_for": [
+        "writing",
+        "automation",
+        "research"
+      ],
+      "filename": "productivity.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Productivity",
+      "notes": "OAuth is the dominant auth pattern (Google, Notion, Microsoft 365); some providers use bot/API tokens instead.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/makenotion/notion-mcp-server"
+    },
+    {
+      "auth": "none",
+      "best_for": [
+        "coding",
+        "automation"
+      ],
+      "filename": "shell.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Shell",
+      "notes": "No Anthropic reference implementation; highest-risk MCP category due to arbitrary command execution.",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/g0t4/mcp-server-commands"
+    },
+    {
+      "auth": "none",
+      "best_for": [
+        "research",
+        "automation",
+        "data"
+      ],
+      "filename": "web-fetch.md",
+      "has_anthropic_reference": true,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Web Fetch",
+      "notes": "",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch"
+    },
+    {
+      "auth": "api-key",
+      "best_for": [
+        "research",
+        "data"
+      ],
+      "filename": "web-search.md",
+      "has_anthropic_reference": false,
+      "last_verified": "2026-06-14",
+      "layer": "mcp-servers",
+      "license_category": "mit",
+      "name": "Web Search",
+      "notes": "All implementations require a paid third-party API key (Brave, Exa, Tavily, etc.).",
+      "status": "active",
+      "transport": "stdio",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "coding",
+        "research",
+        "data"
+      ],
+      "filename": "chain-of-thought.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Chain-of-thought",
+      "notes": "",
+      "problem": "LLMs jump directly to answers by pattern-matching, producing confidently wrong results on multi-step reasoning tasks",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2201.11903"
+    },
+    {
+      "applies_at": "runtime",
+      "best_for": [
+        "coding",
+        "automation",
+        "data"
+      ],
+      "filename": "constrained-decoding.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Constrained decoding (JSON mode, grammar)",
+      "notes": "Requires access to token logits at inference time; not available via standard hosted chat-completion APIs without a structured-output wrapper",
+      "problem": "LLMs generate free-form text that may not conform to required schemas, causing downstream parse failures that require expensive retry logic",
+      "status": "active",
+      "url": "https://platform.openai.com/docs/guides/structured-outputs"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "coding",
+        "data",
+        "writing",
+        "automation"
+      ],
+      "filename": "few-shot.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Few-shot / in-context learning",
+      "notes": "",
+      "problem": "Zero-shot prompts rely on the model's internal priors, producing inconsistent or off-format output for tasks with unusual schemas or domain conventions",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2005.14165"
+    },
+    {
+      "applies_at": "runtime",
+      "best_for": [
+        "automation",
+        "data",
+        "research"
+      ],
+      "filename": "kv-cache-reuse.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "KV cache reuse",
+      "notes": "Automatic in production runtimes; agent developers benefit by keeping prompt prefixes stable",
+      "problem": "In multi-turn conversations and agentic loops, the model recomputes key-value attention tensors for unchanged prefix tokens on every request, wasting GPU compute",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2309.06180"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "coding",
+        "research",
+        "automation"
+      ],
+      "filename": "plan-and-execute.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Plan-and-execute",
+      "notes": "",
+      "problem": "Step-by-step agents decide what to do next based only on the most recent observation, so they drift from the original goal on long tasks",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2305.04091"
+    },
+    {
+      "applies_at": "runtime",
+      "best_for": [
+        "automation",
+        "data",
+        "research"
+      ],
+      "filename": "prompt-caching.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Prompt caching",
+      "notes": "Cache TTL is ~5 minutes on Anthropic; any prefix change causes a full cache miss",
+      "problem": "A large static system prompt sent on every request in an agentic loop is billed at full input-token rates, making high-frequency loops expensive",
+      "status": "active",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+    },
+    {
+      "applies_at": "framework",
+      "best_for": [
+        "research",
+        "data",
+        "automation"
+      ],
+      "filename": "rag.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "RAG (retrieval-augmented generation)",
+      "notes": "",
+      "problem": "LLMs have no access to private, domain-specific, or recently updated information beyond their training cutoff",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2005.11401"
+    },
+    {
+      "applies_at": "framework",
+      "best_for": [
+        "coding",
+        "research",
+        "automation",
+        "data"
+      ],
+      "filename": "react.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "ReAct",
+      "notes": "",
+      "problem": "An LLM acting in a loop has no mechanism to verify intermediate steps, so errors compound silently without real-world feedback",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2210.03629"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "coding",
+        "writing",
+        "research"
+      ],
+      "filename": "reflection.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Reflection",
+      "notes": "",
+      "problem": "LLMs produce errors silently with no feedback loop, so the same mistake recurs and cannot be corrected within a session",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2303.11366"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "research",
+        "data",
+        "coding"
+      ],
+      "filename": "self-consistency.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Self-consistency",
+      "notes": "Multiplies inference cost by N samples; only justified when accuracy is the top priority",
+      "problem": "A single chain-of-thought sample can follow a plausible but incorrect reasoning path and return a confident wrong answer",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2203.11171"
+    },
+    {
+      "applies_at": "runtime",
+      "best_for": [
+        "automation",
+        "coding"
+      ],
+      "filename": "speculative-decoding.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Speculative decoding",
+      "notes": "Infrastructure concern; cannot be configured from a prompt or API call",
+      "problem": "Autoregressive decoding generates one token per full model forward pass, making large model generation slow and memory-bandwidth-bound",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2211.17192"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "coding",
+        "research",
+        "automation",
+        "data"
+      ],
+      "filename": "tool-use.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Tool use / function calling",
+      "notes": "",
+      "problem": "LLMs have a frozen knowledge cutoff and no mechanism to take actions or read live state, so they fabricate answers or refuse real-world tasks",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2302.04761"
+    },
+    {
+      "applies_at": "model",
+      "best_for": [
+        "research",
+        "coding"
+      ],
+      "filename": "tree-of-thought.md",
+      "last_verified": "2026-06-14",
+      "layer": "techniques",
+      "license_category": "n/a",
+      "name": "Tree-of-thought",
+      "notes": "Expensive in tokens and LLM calls; most production systems prefer simpler heuristics",
+      "problem": "Chain-of-thought reasoning is strictly linear, so a wrong turn early in a multi-step problem taints the entire chain with no way to backtrack",
+      "status": "active",
+      "url": "https://arxiv.org/abs/2305.10601"
+    }
+  ],
+  "generated_from": "docs/open/{layer}/*.md frontmatter",
+  "layers": [
+    "models",
+    "runtimes",
+    "frameworks",
+    "applications",
+    "mcp-servers",
+    "techniques"
+  ],
+  "version": 1
+}

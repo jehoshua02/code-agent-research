@@ -1,3 +1,15 @@
+---
+name: "Chain-of-thought"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2201.11903"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "LLMs jump directly to answers by pattern-matching, producing confidently wrong results on multi-step reasoning tasks"
+best_for: ["coding", "research", "data"]
+notes: ""
+---
+
 # Chain-of-thought
 
 _Last verified: 2026-06-14_

@@ -113,6 +113,15 @@ If a model or runtime requires a platform the reader doesn't currently have, tha
 
 [Reading Guide](READING_GUIDE.md) — mental model and suggested paths through the survey for new readers.
 
-## 8. Plan
+## 8. Schema & scripts
+
+Each entity has a YAML frontmatter block at the top. INDEX.md tables and `survey.json` are generated from frontmatter — don't edit INDEXes by hand. See:
+
+- [SCHEMA.md](SCHEMA.md) — field definitions per layer, controlled vocab, rules
+- [`../../scripts/README.md`](../../scripts/README.md) — `validate.py` and `regen.py` quick reference
+
+Run `scripts/validate.py` and `scripts/regen.py` locally before committing survey changes.
+
+## 9. Plan
 
 [Plan](PLAN.md) — breadth-first method, inventory, and status.

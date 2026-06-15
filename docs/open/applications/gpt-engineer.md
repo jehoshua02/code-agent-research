@@ -1,3 +1,22 @@
+---
+name: "GPT-Engineer"
+maker: "Anton Osika"
+license: "MIT"
+license_category: "mit"
+status: "archived"
+url: "https://github.com/gpt-engineer-org/gpt-engineer"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli"]
+providers: ["openai", "azure-openai", "anthropic"]
+supports_mcp: "none"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding"]
+notes: "Archived April 22, 2026; historical precursor to lovable.dev; one-shot scaffold generation only."
+---
+
 # GPT-Engineer
 
 _Last verified: 2026-06-14_

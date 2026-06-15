@@ -1,3 +1,20 @@
+---
+name: "ExLlamaV2"
+maker: "turboderp"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/turboderp/exllamav2"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux", "windows"]
+gpu_backends: ["cuda"]
+api_openai_compat: false
+supports_mcp: "none"
+formats: ["exl2", "gptq", "safetensors"]
+notes: "NVIDIA Ampere (sm_80) minimum; no OpenAI server built-in — TabbyAPI recommended for HTTP serving."
+---
+
 # ExLlamaV2 / ExLlamaV3
 
 _Last verified: 2026-06-14_

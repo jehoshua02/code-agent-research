@@ -1,3 +1,18 @@
+---
+name: "DSPy"
+maker: "Stanford NLP"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/stanfordnlp/dspy"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "none"
+programming_model: "declarative"
+best_for: ["research", "data", "automation"]
+notes: "Prompt-as-program paradigm; optimizer (MIPROv2, SIMBA) compiles typed Signatures into tuned prompts."
+---
+
 # DSPy
 
 _Last verified: 2026-06-14_

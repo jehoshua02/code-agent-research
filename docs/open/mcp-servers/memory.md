@@ -1,3 +1,16 @@
+---
+name: "Memory"
+license_category: "mit"
+status: "active"
+url: "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: true
+auth: "none"
+best_for: ["research", "writing", "automation"]
+notes: "Reference implementation stores data in a local JSONL file; no multi-tenant isolation."
+---
+
 # Memory
 
 _Last verified: 2026-06-14_

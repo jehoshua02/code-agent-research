@@ -1,3 +1,22 @@
+---
+name: "Aider"
+maker: "Aider-AI / Paul Gauthier"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/Aider-AI/aider"
+last_verified: "2026-06-14"
+language: "Python"
+interfaces: ["cli"]
+providers: ["anthropic", "openai", "deepseek", "google", "openrouter", "azure-openai", "cohere", "ollama"]
+supports_mcp: "none"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding", "automation"]
+notes: "Git-native pair programmer; every edit committed automatically; no MCP support."
+---
+
 # Aider
 
 _Last verified: 2026-06-14_

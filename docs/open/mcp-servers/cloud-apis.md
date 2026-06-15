@@ -1,3 +1,16 @@
+---
+name: "Cloud APIs"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/cloudflare/mcp-server-cloudflare"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: false
+auth: "api-key"
+best_for: ["automation", "data"]
+notes: "Cloudflare's official server uses OAuth 2.1 with streamable HTTP; AWS/GCP community servers use stdio with ambient SDK credentials."
+---
+
 # Cloud APIs
 
 _Last verified: 2026-06-14_

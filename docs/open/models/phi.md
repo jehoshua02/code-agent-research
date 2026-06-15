@@ -1,3 +1,24 @@
+---
+name: "Phi"
+maker: "Microsoft"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://huggingface.co/microsoft"
+last_verified: "2026-06-14"
+variants: ["Phi-3-mini-3.8B", "Phi-3-small-7B", "Phi-3-medium-14B", "Phi-3.5-mini-3.8B", "Phi-3.5-MoE-42B", "Phi-3.5-Vision-4.2B", "Phi-4-14B", "Phi-4-mini-3.8B", "Phi-4-multimodal-5.6B", "Phi-4-reasoning-14B", "Phi-4-reasoning-vision-15B"]
+params_total: "42B"
+has_moe: true
+params_active: "6.6B"
+context_window: 131072
+modalities: ["text", "vision", "audio"]
+gated: false
+released: "2025-04"
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
+best_for: ["coding", "research", "data"]
+notes: "Phi-4 has only 16K native context; family is English-first despite some multilingual support"
+---
+
 # Phi
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,15 @@
+---
+name: "KV cache reuse"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2309.06180"
+last_verified: "2026-06-14"
+applies_at: "runtime"
+problem: "In multi-turn conversations and agentic loops, the model recomputes key-value attention tensors for unchanged prefix tokens on every request, wasting GPU compute"
+best_for: ["automation", "data", "research"]
+notes: "Automatic in production runtimes; agent developers benefit by keeping prompt prefixes stable"
+---
+
 # KV cache reuse
 
 _Last verified: 2026-06-14_

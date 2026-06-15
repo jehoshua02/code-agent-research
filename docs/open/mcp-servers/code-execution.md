@@ -1,3 +1,16 @@
+---
+name: "Code Execution"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/e2b-dev/mcp-server"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: false
+auth: "api-key"
+best_for: ["coding", "research", "data"]
+notes: "E2B is the dominant cloud-sandboxed option and requires an API key; local Docker runners need no auth."
+---
+
 # Code Execution
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,22 @@
+---
+name: "OpenCode"
+maker: "Anomaly"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/anomalyco/opencode"
+last_verified: "2026-06-14"
+language: "TypeScript"
+interfaces: ["cli", "tui", "desktop"]
+providers: ["anthropic", "openai", "google", "aws-bedrock", "azure-openai", "openrouter", "ollama"]
+supports_mcp: "native"
+byok: true
+focus: "agentic-coding"
+hardware_tiers: ["any"]
+best_for: ["coding", "automation"]
+notes: "Ships as both MCP server and MCP client; 75+ providers via built-in registry."
+---
+
 # OpenCode
 
 _Last verified: 2026-06-14_

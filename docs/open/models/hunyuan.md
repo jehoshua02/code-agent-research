@@ -1,3 +1,24 @@
+---
+name: "Hunyuan"
+maker: "Tencent"
+license: "Tencent Hunyuan License"
+license_category: "custom-permissive"
+status: "active"
+url: "https://huggingface.co/tencent"
+last_verified: "2026-06-14"
+variants: ["Hunyuan-Large-389B", "Hunyuan-A13B-Pretrain", "Hunyuan-A13B-Instruct", "Hunyuan-A13B-Instruct-FP8", "Hunyuan-A13B-Instruct-GPTQ-Int4"]
+params_total: "389B"
+has_moe: true
+params_active: "13B"
+context_window: 262144
+modalities: ["text"]
+gated: false
+released: "2025-06"
+hardware_tiers: ["24gb+"]
+best_for: ["coding", "research", "data"]
+notes: "Proprietary Tencent license — not Apache 2.0; minimum 2× RTX 4090 even at Q4"
+---
+
 # Hunyuan
 
 _Last verified: 2026-06-14_

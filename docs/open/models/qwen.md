@@ -1,3 +1,24 @@
+---
+name: "Qwen"
+maker: "Alibaba"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://huggingface.co/Qwen"
+last_verified: "2026-06-14"
+variants: ["0.6B", "1.7B", "4B", "8B", "14B", "32B", "30B-A3B", "72B", "235B-A22B"]
+params_total: "235B"
+has_moe: true
+params_active: "22B"
+context_window: 131072
+modalities: ["text", "vision"]
+gated: false
+released: "2025-04"
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
+best_for: ["coding", "research", "writing", "automation", "data"]
+notes: "Qwen2.5 uses a proprietary Alibaba license; Qwen3 is Apache 2.0"
+---
+
 # Qwen
 
 _Last verified: 2026-06-14_

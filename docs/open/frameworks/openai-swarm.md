@@ -1,3 +1,18 @@
+---
+name: "OpenAI Swarm"
+maker: "OpenAI"
+license: "MIT"
+license_category: "mit"
+status: "deprecated"
+url: "https://github.com/openai/swarm"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "none"
+programming_model: "imperative"
+best_for: []
+notes: "Superseded by the OpenAI Agents SDK; retained as an educational reference for the handoff pattern."
+---
+
 # OpenAI Swarm
 
 _Last verified: 2026-06-14_

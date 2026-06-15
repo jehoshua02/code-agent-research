@@ -1,3 +1,20 @@
+---
+name: "TGI"
+maker: "HuggingFace"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "deprecated"
+url: "https://github.com/huggingface/text-generation-inference"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux", "wsl2"]
+gpu_backends: ["cuda", "rocm"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["safetensors", "gptq", "awq", "fp8", "bitsandbytes"]
+notes: "Now in maintenance mode; README redirects new projects to vLLM, SGLang, and llama.cpp."
+---
+
 # TGI (text-generation-inference)
 
 _Last verified: 2026-06-14_

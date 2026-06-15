@@ -1,3 +1,15 @@
+---
+name: "Speculative decoding"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2211.17192"
+last_verified: "2026-06-14"
+applies_at: "runtime"
+problem: "Autoregressive decoding generates one token per full model forward pass, making large model generation slow and memory-bandwidth-bound"
+best_for: ["automation", "coding"]
+notes: "Infrastructure concern; cannot be configured from a prompt or API call"
+---
+
 # Speculative decoding
 
 _Last verified: 2026-06-14_

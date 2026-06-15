@@ -1,3 +1,16 @@
+---
+name: "Browser Control"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/microsoft/playwright-mcp"
+last_verified: "2026-06-14"
+transport: "stdio"
+has_anthropic_reference: false
+auth: "none"
+best_for: ["research", "automation", "data"]
+notes: "Dominant implementation is Microsoft's playwright-mcp; supports HTTP transport via --port flag."
+---
+
 # Browser Control
 
 _Last verified: 2026-06-14_

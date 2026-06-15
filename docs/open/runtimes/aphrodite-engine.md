@@ -1,3 +1,20 @@
+---
+name: "Aphrodite Engine"
+maker: "PygmalionAI"
+license: "AGPL-3.0"
+license_category: "source-available"
+status: "active"
+url: "https://github.com/aphrodite-engine/aphrodite-engine"
+last_verified: "2026-06-14"
+language: "Python"
+platforms: ["linux", "wsl2"]
+gpu_backends: ["cuda", "rocm", "cpu", "tpu", "xpu"]
+api_openai_compat: true
+supports_mcp: "none"
+formats: ["safetensors", "gguf", "awq", "gptq", "exl2", "fp8", "bitsandbytes"]
+notes: "vLLM fork with broader quantization support (EXL2, GGUF, AQLM, BitNet); AGPL-3.0 has copyleft implications."
+---
+
 # Aphrodite Engine
 
 _Last verified: 2026-06-14_
