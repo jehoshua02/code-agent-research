@@ -13,7 +13,7 @@ context_window: 131072
 modalities: ["text"]
 gated: false
 released: "2024-08"
-hardware_tiers: ["16gb", "24gb", "24gb+"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["coding", "automation"]
 notes: "Fine-tune of Llama 3.1; inherits Llama 700M MAU cap; trained at 8K context so long-context quality may degrade"
 ---

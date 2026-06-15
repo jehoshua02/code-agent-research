@@ -13,7 +13,7 @@ context_window: 262144
 modalities: ["text"]
 gated: false
 released: "2025-03"
-hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["research", "automation", "data"]
 notes: "CC-BY-NC license blocks production use without a separate Cohere commercial agreement"
 ---

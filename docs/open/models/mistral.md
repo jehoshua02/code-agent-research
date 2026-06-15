@@ -14,7 +14,7 @@ context_window: 262144
 modalities: ["text", "vision"]
 gated: false
 released: "2025-03"
-hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["coding", "research", "writing", "automation"]
 notes: "Codestral v0.1 and Large-2407 are non-commercial; check license per variant"
 ---

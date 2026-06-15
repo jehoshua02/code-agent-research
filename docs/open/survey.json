@@ -10,6 +10,7 @@
       "filename": "command-r.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
         "12gb",
         "16gb",
         "24gb",
@@ -79,6 +80,7 @@
       "filename": "deepseek.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
         "12gb",
         "16gb",
         "24gb",
@@ -260,6 +262,8 @@
       "filename": "hermes.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
+        "12gb",
         "16gb",
         "24gb",
         "24gb+"
@@ -333,6 +337,7 @@
       "filename": "llama.md",
       "gated": true,
       "hardware_tiers": [
+        "8gb",
         "12gb",
         "16gb",
         "24gb",
@@ -376,6 +381,7 @@
       "filename": "mistral.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
         "12gb",
         "16gb",
         "24gb",
