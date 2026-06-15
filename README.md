@@ -80,3 +80,5 @@ docs/
 ## Open Self-Hostable Survey
 
 [docs/open/](docs/open/) — Survey of the open, free, self-hostable AI ecosystem: models, runtimes, agent frameworks, MCP servers, techniques, and applications. Task-agnostic (coding + research + writing + automation + data).
+
+Structured data (frontmatter, INDEXes, `survey.json`) is regenerable from each entity file. See [scripts/README.md](scripts/README.md) for `validate.py` and `regen.py` usage. Schema at [docs/open/SCHEMA.md](docs/open/SCHEMA.md).
