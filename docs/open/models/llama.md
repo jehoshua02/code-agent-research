@@ -14,7 +14,7 @@ context_window: 128000
 modalities: ["text", "vision"]
 gated: true
 released: "2025-04"
-hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["coding", "research", "writing", "automation", "data"]
 notes: "Broadest ecosystem support; community-license restricts apps over 700M MAU"
 ---
