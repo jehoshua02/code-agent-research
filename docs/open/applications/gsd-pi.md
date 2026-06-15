@@ -64,11 +64,17 @@ Extension surfaces include skills (reusable task modules), custom slash commands
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Worktree-aware Git automation**: Executes work in isolated git worktrees, keeping the main checkout clean and reviewable throughout autonomous multi-step tasks. ([README](https://github.com/open-gsd/gsd-pi))
+- **Structured milestone/slice/task workflow**: Breaks long-horizon work into explicit, tracked units stored under `.gsd/` — prevents the context drift and scope creep common in free-form chat agents. ([opengsd.net](https://opengsd.net/products/gsd-pi))
+- **Local project memory with verification evidence**: Persists requirements, decisions, plans, summaries, and validation evidence to disk, producing review-friendly handoff artifacts without re-reading chat history. ([opengsd.net](https://opengsd.net/products/gsd-pi))
+- **Phase-specific model routing**: Allows different models to be assigned to planning, implementation, and verification phases, letting teams optimise cost vs. capability per phase. ([README](https://github.com/open-gsd/gsd-pi))
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **State persistence bugs**: `STATE.json` `completedAt` is never written on workflow completion, causing completed workflows to restart unexpectedly on next run. ([issue #720](https://github.com/open-gsd/gsd-pi/issues/720))
+- **Human-in-the-loop deadlock**: The `ask_user_questions` tool permanently deadlocks the depth-verification gate when no human is available to respond, making fully autonomous runs fragile. ([issue #711](https://github.com/open-gsd/gsd-pi/issues/711))
+- **MCP timeout incompatibility**: The tool's 10-minute user-question timeout is killed by Claude Code's 60-second MCP tool-call timeout, breaking interactive flows when used as an MCP server. ([issue #736](https://github.com/open-gsd/gsd-pi/issues/736))
+- **Early-stage community**: At ~626 stars (2026-06-14) the project lacks the ecosystem, third-party tutorials, and battle-tested feedback loop of more established agents; "safer auto mode" is still on the roadmap. ([opengsd.net](https://opengsd.net/products/gsd-pi))
 
 ## 10. Sources
 

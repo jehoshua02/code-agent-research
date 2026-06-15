@@ -72,11 +72,17 @@ OAuth 2.0 or service API tokens, depending on the provider:
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Official first-party servers from major vendors**: Notion, Slack, and Linear each publish and maintain their own MCP servers, ensuring tool signatures track the provider's API and receive timely updates for breaking API changes ([notionhq/notion-mcp-server](https://github.com/makenotion/notion-mcp-server), [@modelcontextprotocol/server-slack](https://github.com/modelcontextprotocol/servers/tree/main/src/slack)).
+- **High-value automation on existing accounts**: agents can create calendar events, draft and send emails, and post Slack messages without custom API integrations — tasks that represent the majority of personal-assistant workloads.
+- **Structured data access**: services like Notion databases and Linear issue lists expose typed objects (status, priority, due date, assignee) that agents can filter and act on precisely, rather than parsing unstructured text.
+- **OAuth 2.0 token scoping**: providers like Google and Microsoft support fine-grained OAuth scope declarations, allowing operators to grant the agent access only to specific resources (e.g., a single calendar) rather than the whole account.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Tokens grant account-wide write access by default**: most server setup guides request broad OAuth scopes (e.g., `https://mail.google.com/`) rather than minimal ones, giving an agent the ability to delete all email, events, or pages with no additional confirmation.
+- **Refresh tokens in local files are long-lived credentials**: `credentials.json` files storing OAuth refresh tokens grant persistent access to personal accounts; loss or accidental commit of these files yields indefinite account access with no automatic expiry ([Gmail MCP setup](https://github.com/modelcontextprotocol/servers/tree/main/src/gmail)).
+- **Mass-action mistakes are hard to undo**: `send_email` or `post_message` in a loop can spam hundreds of contacts before a human intervenes — most providers have no unsend capability and rate-limit only at high thresholds.
+- **Cross-service orchestration complexity**: building workflows that span Calendar + Gmail + Slack requires chaining multiple MCP servers with separate auth contexts; there is no standard MCP mechanism for cross-server transaction coordination or rollback.
 
 ## 9. Sources
 

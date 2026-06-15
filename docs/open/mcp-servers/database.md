@@ -66,11 +66,17 @@ Database credentials are passed at startup, not through MCP protocol-level auth:
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Direct query execution with real results**: agents receive actual row data rather than API abstractions, enabling precise aggregations, joins, and analytic queries that would be impractical through any higher-level interface ([modelcontextprotocol/servers — postgres](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres)).
+- **Schema introspection built in**: `list_tables` and `describe_table` tools let the agent self-orient in an unfamiliar database — no need to pre-load schema documentation into the prompt, reducing setup overhead for data analysis tasks.
+- **Broad engine coverage**: community servers exist for PostgreSQL, SQLite, MySQL, BigQuery, Snowflake, DuckDB, and others; the MCP tool interface is largely consistent across them, making it easy to switch databases without rewriting agent logic.
+- **Read-only mode as the safe default**: most PostgreSQL and SQLite implementations default to read-only connections, giving operators a safe baseline where destructive queries are prevented at the connection level rather than relying on prompt instructions.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **SQL injection via agent-generated queries**: there is no parameterization layer between the model's output and the database; a prompt-injected `; DROP TABLE users; --` suffix in an agent-constructed query executes directly unless the server enforces read-only mode ([postgres-mcp security notes](https://github.com/crystaldba/postgres-mcp)).
+- **No built-in row-limit enforcement**: a `SELECT *` on a multi-million-row table returns all rows into the MCP response buffer, potentially exhausting memory and filling the model's context window; most servers rely on the caller to add `LIMIT` clauses.
+- **Full schema exposed by default**: `list_tables` enumerates every table the connected role can see, revealing the entire schema structure — including sensitive table names — to the agent and any prompt injector in its context.
+- **Connection string contains plaintext credentials**: database passwords are passed as CLI arguments or environment variables, where they appear in process lists (`ps aux`), MCP host debug logs, and shell history — a persistent credential-leak vector with no rotation mechanism in the server itself.
 
 ## 9. Sources
 

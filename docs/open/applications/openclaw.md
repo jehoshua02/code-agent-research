@@ -55,11 +55,17 @@ Skills are the primary extension unit: packaged TypeScript/JavaScript modules pu
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Massive multi-channel reach**: Supports 22+ messaging platforms (WhatsApp, Telegram, Discord, Slack, iMessage, Teams, Signal, Matrix, etc.) as conversational interfaces, enabling AI access from any device without a dedicated app. ([README](https://github.com/openclaw/openclaw))
+- **Skills Registry breadth**: The community ClawHub registry catalogues 44,000+ skills (as of early 2026), providing ready-made integrations for a wide range of tasks without custom coding. ([VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills))
+- **Multi-provider failover and auth rotation**: Native support for credential rotation and automatic failover between providers when rate limits are hit — documented as a first-class feature. ([docs.openclaw.ai](https://docs.openclaw.ai/concepts/model-failover))
+- **Persistent Gateway daemon**: Runs as a system service (launchd/systemd), surviving reboots and enabling always-on automation and scheduled tasks without a running terminal. ([README](https://github.com/openclaw/openclaw))
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Supply-chain risk in Skills Registry**: The ClawHavoc campaign (February 2026) found 341 malicious skills distributed via ClawHub; broader scanning flagged 7.6% of 31,000+ audited skills as risky. ([DataCamp blog](https://www.datacamp.com/blog/what-is-openclaw))
+- **Security CVEs with high severity**: Over 60 security advisories filed since launch, including CVE-2026-32922 (CVSS 9.9) and CVE-2026-25253 (CVSS 8.8); 220,000+ instances were publicly internet-reachable at peak. ([DataCamp blog](https://www.datacamp.com/blog/what-is-openclaw))
+- **Unexpected token costs**: Each heartbeat, tool call, and sub-task step is a separate API call; users frequently report bills far higher than anticipated for multi-step automations. ([DataCamp blog](https://www.datacamp.com/blog/what-is-openclaw))
+- **Setup complexity not beginner-friendly**: Requires terminal proficiency, file-permission knowledge, API key management, and daemon configuration; 3,500+ open issues and 3,200+ open PRs reflect ongoing rough edges at scale. ([DataCamp blog](https://www.datacamp.com/blog/what-is-openclaw); [issue tracker](https://github.com/openclaw/openclaw/issues))
 
 ## 10. Sources
 

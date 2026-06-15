@@ -74,11 +74,17 @@ stdio for all reference and major community implementations. The process is spaw
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Two official reference implementations**: Anthropic ships both `mcp-server-git` (local operations) and the community-maintained `@modelcontextprotocol/server-github` (GitHub REST API), giving this category the deepest first-party tooling of any MCP server class ([modelcontextprotocol/servers — git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)).
+- **Mature GitHub API surface**: the GitHub server wraps the well-documented, highly stable GitHub REST API v3, covering PRs, issues, reviews, releases, and search — a broad, reliable interface with official versioning guarantees.
+- **Safe read path with no credentials**: the local `mcp-server-git` reads history, diffs, and status entirely from the on-disk repo without any API token, keeping read-only workflows free of credential-leak risk.
+- **Fine-grained token support**: GitHub's fine-grained PATs allow scoping the token to a single repository and a specific permission set (e.g., pull requests: read/write only), limiting blast radius compared to classic PATs.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Token scope management is error-prone**: classic GitHub PATs grant org-wide write access to all repos the owner can see; most documentation examples show classic PATs, nudging operators toward over-provisioned credentials ([GitHub fine-grained tokens docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)).
+- **API rate limits block agentic workflows**: GitHub's REST API enforces 5 000 requests/hour for authenticated users; an agent scanning a large repository (log history, file contents, PR list) can hit this limit mid-task, causing hard failures with no built-in retry/backoff in the MCP server.
+- **No conflict detection on write**: `git_commit` and PR-creation calls do not warn the agent that the target branch has diverged or that a merge conflict exists; the agent may create a PR that immediately shows conflicts with no prior signal.
+- **Force-push is a single unconfirmed call**: `git push --force` via the local server or branch-deletion via the GitHub API require no confirmation step, making history destruction a one-tool-call mistake in an agentic loop.
 
 ## 9. Sources
 

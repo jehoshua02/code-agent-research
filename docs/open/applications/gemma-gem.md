@@ -45,11 +45,17 @@ No plugin or skill system. The extension is intentionally minimal; all logic liv
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Zero-install, zero-egress privacy**: Runs Gemma 4 entirely on-device via WebGPU with no API key, no account, and no data leaving the machine — verified by architecture (no network calls after model cache). ([README](https://github.com/kessler/gemma-gem))
+- **Thinking-mode transparency**: Exposes the model's chain-of-thought reasoning inline so users can inspect and verify the model's logic before acting on its output. ([aiproductivity.ai](https://aiproductivity.ai/news/gemma-gem-chrome-extension-local-ai-no-api-key/))
+- **Page-aware actions**: The content script can read page content, take screenshots, click elements, and fill forms — going beyond passive chat to active page interaction. ([aiproductivity.ai](https://aiproductivity.ai/news/gemma-gem-chrome-extension-local-ai-no-api-key/))
+- **Lightweight footprint**: E2B variant requires only ~500 MB of local storage and runs in the existing browser process with no additional software installation. ([README](https://github.com/kessler/gemma-gem))
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **WebGPU hardware dependency**: Requires Chrome/Edge 113+ with the `shader-f16` GPU feature enabled; integrated and mobile GPUs are characterised as "slow" and the requirements are explicitly noted as "not benchmarked on real devices." ([README](https://github.com/kessler/gemma-gem))
+- **Small model limits reasoning depth**: The 2B–4B parameter models cannot reliably handle multi-step research workflows, nuanced analysis, or tasks requiring broad world knowledge — a documented gap versus cloud models. ([aiproductivity.ai](https://aiproductivity.ai/news/gemma-gem-chrome-extension-local-ai-no-api-key/))
+- **No MCP, shell, or file-system access**: Being a browser extension, there is no path to tool-calling beyond page interaction; MCP would require an unimplemented local server bridge. ([README](https://github.com/kessler/gemma-gem))
+- **128K context incurs 10-20% memory overhead**: Using the full context window adds significant KV-cache memory pressure, which can degrade performance or cause OOM on lower-end GPUs. ([README](https://github.com/kessler/gemma-gem))
 
 ## 10. Sources
 

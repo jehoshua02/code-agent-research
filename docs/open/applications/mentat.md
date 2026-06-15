@@ -36,11 +36,11 @@ Cannot fill; repo removed.
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+Cannot fill; repo removed.
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+Cannot fill; repo removed.
 
 ## 10. Sources
 

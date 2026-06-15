@@ -62,11 +62,17 @@ Keys are obtained from each provider's developer console. Tavily's remote hosted
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Live, post-training information**: search servers are the primary mechanism for giving agents access to current events, newly released documentation, and data beyond the model's training cutoff — none of the other MCP categories provide this ([Brave MCP README](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)).
+- **Provider choice and specialization**: Brave covers general web; Exa adds semantic/neural similarity search with domain and date filters; Tavily returns full-text content extraction optimized for research tasks — operators pick the best fit for their workload.
+- **Structured result objects**: all major servers return typed result objects (title, URL, snippet, published date) rather than raw HTML, reducing parsing overhead and keeping context concise.
+- **Remote hosted variants**: Tavily and Brave offer hosted streamable-HTTP MCP endpoints, enabling search without running a local process — useful for cloud-deployed agents.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Every server requires a paid API key**: there is no free-tier reference implementation; operators must sign up with Brave, Exa, Tavily, or another provider before any search capability is available, adding external dependencies and billing exposure.
+- **Query exfiltration to third parties**: every search string is transmitted to an external provider — sensitive project names, customer identifiers, or proprietary terms embedded in queries leave the operator's infrastructure and appear in provider logs.
+- **Result quality varies significantly by provider**: snippet freshness, deduplication, and factual accuracy differ enough between Brave, Exa, and Tavily that provider choice materially affects agent output quality, with no standardized benchmark.
+- **Cost amplification in agentic loops**: paid-per-query billing means an agent in an unbounded loop can generate hundreds of API calls in a single session, creating unpredictable charges or exhausting monthly quotas without a per-session budget cap.
 
 ## 9. Sources
 

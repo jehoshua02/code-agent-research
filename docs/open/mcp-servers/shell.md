@@ -55,11 +55,17 @@ No credential-based auth. Permissions are entirely dictated by the OS user runni
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Universal reach**: because it executes arbitrary shell commands, a single shell server can substitute for dozens of purpose-built MCP servers — build tools, package managers, test runners, linters — without requiring separate integrations ([mcp-server-commands README](https://github.com/g0t4/mcp-server-commands)).
+- **Zero integration overhead**: any CLI tool the host already has installed is immediately available to the agent without writing adapter code or a new MCP server.
+- **stdin/stdout passthrough**: implementations like `mcp-server-commands` support piped input and capture both stdout and stderr, enabling composable UNIX pipelines within a single tool call.
+- **Flexible sandboxing options**: operators can layer OS-level controls (Docker `--network none`, seccomp, read-only rootfs) around a shell server to enforce a narrower threat surface while retaining broad command coverage.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Highest attack surface of any MCP category**: Anthropic deliberately ships no reference shell server; the MCP security guidance calls arbitrary-execution servers the primary prompt-injection escalation vector ([MCP security docs](https://modelcontextprotocol.io/docs/concepts/security)).
+- **Allowlist bypass is routine**: argument injection (`git config --global …`), shell metacharacter smuggling (`;`, `&&`), and PATH hijacking can all circumvent binary-level allowlists, as documented in community threat-model discussions.
+- **Frequently blocklisted in enterprise deployments**: ops teams routinely disable shell MCP servers entirely rather than attempt to harden them, limiting their practical use to trusted local-dev environments.
+- **No structured output**: raw stdout is returned as a string; agents must parse unstructured CLI output rather than consuming typed data, making responses fragile across tool versions.
 
 ## 9. Sources
 

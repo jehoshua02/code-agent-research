@@ -58,11 +58,17 @@ Logic lives in Python modules under `gpt_engineer/`. Behaviour can be altered by
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **One-shot scaffold generation**: Took a single natural-language `prompt` file and emitted a full multi-file project — demonstrated end-to-end code generation before most comparable tools existed. ([README](https://github.com/gpt-engineer-org/gpt-engineer/blob/main/README.md))
+- **Customizable agent behaviour via preprompts**: Users could override the system prompts that shaped generation style and constraints without modifying source code. ([README](https://github.com/gpt-engineer-org/gpt-engineer/blob/main/README.md))
+- **Vision input support**: Accepted image inputs (architecture diagrams, wireframes) via `--image_directory` when a vision-capable model was configured — ahead of most CLI agents at the time. ([README](https://github.com/gpt-engineer-org/gpt-engineer/blob/main/README.md))
+- **Broad model support**: Worked with OpenAI, Azure OpenAI, Anthropic, and local open-source models (e.g., WizardCoder) via a single env-var swap. ([open_models docs](https://gpt-engineer.readthedocs.io/en/latest/open_models.html))
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Archived / no longer maintained**: The repository was made read-only on April 22, 2026; no new PRs or fixes will be accepted. ([gpt-engineer-org/gpt-engineer](https://github.com/gpt-engineer-org/gpt-engineer))
+- **No iterative editing**: Generated code once from a spec; it could not autonomously run, test, and repair the output — a limitation that drove its own README to recommend Aider for "hackable CLI" use. ([README](https://github.com/gpt-engineer-org/gpt-engineer/blob/main/README.md))
+- **Arbitrary file-write vulnerability**: A security issue in the code-modification logic was filed in the issue tracker, with no upstream fix possible post-archive. ([issue tracker](https://github.com/gpt-engineer-org/gpt-engineer/issues))
+- **No native benchmarks published**: The README referenced APPS and MBPP datasets but shipped no concrete pass-rate numbers, making capability claims hard to verify. ([README](https://github.com/gpt-engineer-org/gpt-engineer/blob/main/README.md))
 
 ## 10. Sources
 

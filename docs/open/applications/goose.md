@@ -57,11 +57,17 @@ Extensions are the primary unit of extensibility: built-in extensions (developer
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Provider-agnostic out of the box**: Ships with 15+ provider integrations (Anthropic, OpenAI, Google, Ollama, AWS Bedrock, Azure, OpenRouter, and more) configured at setup — no code changes needed to swap. ([README](https://github.com/block/goose))
+- **First-class MCP support with 70+ extensions**: MCP servers are a native citizen; extensions can be added through the desktop GUI without editing config files. ([README](https://github.com/block/goose))
+- **Desktop + CLI parity on all major platforms**: Native GUI app and full CLI available on macOS, Linux, and Windows — rare among open-source agents that typically ship CLI only. ([goose-docs.ai installation](https://goose-docs.ai/docs/getting-started/installation))
+- **Linux Foundation AAIF stewardship**: Transferred from Block to AAIF in 2026, giving the project neutral governance and long-term institutional backing. ([block/goose](https://github.com/block/goose))
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **"Doom spiral" in long sessions**: The docs explicitly warn that Goose can enter an unresponsive loop during extended runs, requiring a forced `Ctrl+C` reset and fresh session. ([Known Issues](https://goose-docs.ai/docs/troubleshooting/known-issues))
+- **Long-running commands hang the CLI**: Dev-server commands (e.g., `npm run dev`) can cause the CLI to block indefinitely; mitigation requires manually setting `GOOSE_TERMINAL`. ([Known Issues](https://goose-docs.ai/docs/troubleshooting/known-issues))
+- **Duplicate tool-call bugs**: The issue tracker shows a recurring pattern of the agent sending duplicate tool calls and processing duplicate results, causing unexpected repeated actions. ([issue tracker](https://github.com/block/goose/issues))
+- **Ollama local-model gaps**: DeepSeek models via Ollama lack tool-calling support, requiring all extensions to be disabled — a significant restriction for offline/private workflows. ([Known Issues](https://goose-docs.ai/docs/troubleshooting/known-issues))
 
 ## 10. Sources
 

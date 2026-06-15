@@ -63,11 +63,17 @@ No auth. The server makes outbound requests to arbitrary URLs using a configurab
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Official reference implementation**: Anthropic maintains `mcp-server-fetch` as a first-party server with stable, documented tool signatures, making it a reliable baseline for any agent that needs HTTP retrieval ([modelcontextprotocol/servers — fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)).
+- **No API key required**: unlike search servers that require paid credentials, the fetch server calls any public URL directly — zero signup friction for documentation lookups, public APIs, or open data sources.
+- **Automatic HTML-to-markdown conversion**: returns clean, token-efficient markdown instead of raw HTML, reducing the context footprint of fetched pages and making the output more reliably parseable by the model.
+- **Pagination support**: the `start_index` parameter allows the agent to page through large documents in successive calls without re-fetching the beginning, keeping individual responses within MCP message-size limits.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **JavaScript-heavy sites fail**: the server uses a simple HTTP GET with no browser engine; pages that require JavaScript to render (SPAs, React/Next.js apps) return an empty shell or stub HTML rather than useful content ([modelcontextprotocol/servers #46](https://github.com/modelcontextprotocol/servers/issues/46)).
+- **No SPA / login-wall support**: pages behind OAuth flows, cookie-based sessions, or CAPTCHA challenges cannot be fetched — the server has no mechanism to carry authentication state across requests.
+- **SSRF risk with no built-in IP blocklist**: the reference implementation does not block RFC-1918 or link-local addresses by default, so a prompt-injected instruction to fetch an internal metadata URL (e.g., `169.254.169.254`) succeeds unless the operator adds network-level controls.
+- **robots.txt compliance is opt-out, not enforced**: respecting `robots.txt` is the default but can be disabled by the caller at any time, meaning aggressive scraping is a configuration choice rather than a guardrail.
 
 ## 9. Sources
 

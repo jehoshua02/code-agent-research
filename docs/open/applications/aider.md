@@ -58,11 +58,17 @@ Aider is extended primarily through its `.aider.conf.yml` config file (model sel
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **SWE-bench Lite SOTA (26.3%).** Aider reached state-of-the-art on SWE-bench Lite in May 2024, surpassing the previous leader (Amazon Q, 20.3%); uses a repo-map via static analysis rather than RAG ([aider.chat/2024/05/22/swe-bench-lite](https://aider.chat/2024/05/22/swe-bench-lite.html)).
+- **Git-native workflow.** Every edit is committed automatically with a sensible message; undo is a plain `git revert`. Linting and tests run on every change ([README](https://github.com/Aider-AI/aider)).
+- **Broad model leaderboard.** Maintains a live polyglot coding leaderboard across 225 Exercism exercises in 6 languages; top model (GPT-5 high) scores 88.0% ([aider.chat/docs/leaderboards](https://aider.chat/docs/leaderboards/)).
+- **46 K+ GitHub stars and active releases.** Consistent weekly releases; large contributor base signals sustained community maintenance ([GitHub](https://github.com/Aider-AI/aider)).
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **No MCP support.** MCP integration is not documented; community workarounds are unofficial ([§6 above](#6-mcp-support)).
+- **Security: untrusted repo config execution.** Opening an untrusted repository auto-executes commands from `.aider.conf.yml` without confirmation ([GitHub issues](https://github.com/aider-ai/aider/issues)).
+- **Cannot delete files.** The agent can create files but not delete them, a gap in file-manipulation capability that surprises users ([GitHub issues](https://github.com/aider-ai/aider/issues)).
+- **API rate-limit handling.** Rate-limit errors from Anthropic and other providers lack automatic backoff, causing silent failures in long sessions ([GitHub issues and Dispatch Report](https://thedispatch.ai/reports/1385/)).
 
 ## 10. Sources
 
