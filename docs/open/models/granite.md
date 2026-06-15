@@ -14,7 +14,7 @@ context_window: 131072
 modalities: ["text"]
 gated: false
 released: "2025-04"
-hardware_tiers: ["8gb", "12gb", "16gb", "24gb"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["coding", "automation", "data"]
 notes: "Tops out at 8B; explicit data provenance documentation makes it suitable for regulated industries"
 ---
