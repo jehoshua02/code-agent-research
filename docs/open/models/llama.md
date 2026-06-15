@@ -1,3 +1,24 @@
+---
+name: "Llama"
+maker: "Meta"
+license: "Llama Community License"
+license_category: "custom-permissive"
+status: "active"
+url: "https://huggingface.co/meta-llama"
+last_verified: "2026-06-14"
+variants: ["1B", "3B", "8B", "70B", "405B", "Scout-17B-16E", "Maverick-17B-128E"]
+params_total: "405B"
+has_moe: true
+params_active: "17B"
+context_window: 128000
+modalities: ["text", "vision"]
+gated: true
+released: "2025-04"
+hardware_tiers: ["12gb", "16gb", "24gb", "24gb+"]
+best_for: ["coding", "research", "writing", "automation", "data"]
+notes: "Broadest ecosystem support; community-license restricts apps over 700M MAU"
+---
+
 # Llama
 
 _Last verified: 2026-06-14_
