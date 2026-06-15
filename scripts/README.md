@@ -34,7 +34,7 @@ python3 scripts/regen.py --force
 
 1. **`validate.py`** — checks each entity's frontmatter against the schema. Required fields, controlled vocab, types, dates, URLs. Fails per file with a clear error list.
 2. **`regen.py`** — reads frontmatter, regenerates each layer's `INDEX.md` and `docs/open/survey.json` from truth. INDEXes are derived; don't edit them by hand.
-3. **`.github/workflows/survey-schema.yml`** — runs both on every PR touching `docs/open/**` or `scripts/**`. Catches drift you'd otherwise notice only on next manual run.
+CI is not wired up. Discipline is local — run both before committing.
 
 ## Safety notes
 

@@ -120,7 +120,7 @@ Each entity has a YAML frontmatter block at the top. INDEX.md tables and `survey
 - [SCHEMA.md](SCHEMA.md) — field definitions per layer, controlled vocab, rules
 - [`../../scripts/README.md`](../../scripts/README.md) — `validate.py` and `regen.py` quick reference
 
-CI runs both on every PR touching survey content.
+Run `scripts/validate.py` and `scripts/regen.py` locally before committing survey changes.
 
 ## 9. Plan
 

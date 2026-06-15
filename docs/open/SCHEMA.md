@@ -185,18 +185,18 @@ notes: ""
 
 ## 10. Consistency & completeness enforcement
 
-Three layers catch drift:
+Two scripts catch drift, run locally:
 
-1. **`scripts/validate.py`** — runs locally and in CI. Checks every entity's frontmatter against the schema:
+1. **`scripts/validate.py`** — checks every entity's frontmatter against the schema:
    - Required fields per layer (see §2–§7 above)
    - Controlled vocab values (see §8)
    - Type sanity (lists, ints, bools, dates)
    - URL well-formedness
    Exits non-zero on any violation; prints every issue.
 
-2. **`scripts/regen.py --check`** — runs locally and in CI. Reads frontmatter, regenerates INDEXes and `survey.json` in memory, and compares to disk. Exits non-zero if disk is out of sync. Catches "I edited frontmatter but forgot to rerun regen."
+2. **`scripts/regen.py --check`** — reads frontmatter, regenerates INDEXes and `survey.json` in memory, and compares to disk. Exits non-zero if disk is out of sync. Catches "I edited frontmatter but forgot to rerun regen."
 
-3. **`.github/workflows/survey-schema.yml`** — runs both on every PR touching `docs/open/**` or `scripts/**`. Means the safeguards apply to everyone, not just contributors with local hooks installed.
+Run both before committing changes to survey content. CI is not wired up — discipline is local.
 
 ### Adding a new entity
 
@@ -213,8 +213,6 @@ If you only edit prose, no script needed. If you edit any frontmatter field:
 
 1. Run `python3 scripts/regen.py` to keep INDEX.md and `survey.json` in sync.
 2. Commit the entity edit and the regen output together.
-
-The CI gate will catch you if you forget.
 
 ### Regen safety
 
