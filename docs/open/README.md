@@ -113,7 +113,11 @@ If a model or runtime requires a platform the reader doesn't currently have, tha
 
 [Reading Guide](READING_GUIDE.md) — mental model and suggested paths through the survey for new readers.
 
-## 8. Schema & scripts
+## 8. Audit log
+
+[AUDIT.md](AUDIT.md) — record of structural and accuracy audits run against the survey, the queries used, what's been verified, what's been fixed, and the known limitations the picker accepts.
+
+## 9. Schema & scripts
 
 Each entity has a YAML frontmatter block at the top. INDEX.md tables and `survey.json` are generated from frontmatter — don't edit INDEXes by hand. See:
 
@@ -123,6 +127,6 @@ Each entity has a YAML frontmatter block at the top. INDEX.md tables and `survey
 
 Run `scripts/validate.py` and `scripts/regen.py` locally before committing survey changes.
 
-## 9. Plan
+## 10. Plan
 
 [Plan](PLAN.md) — breadth-first method, inventory, and status.
