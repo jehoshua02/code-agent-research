@@ -31,7 +31,19 @@ python3 scripts/pick.py --help
 
 # Build the SQLite query cache from survey.json (for ad-hoc SQL)
 python3 scripts/build-sqlite.py
+
+# Run raw SQL via the query wrapper (auto-builds sqlite cache if stale)
+python3 scripts/query.py "SELECT name FROM entities WHERE layer='models' AND context_window >= 256000"
+
+# Different output formats
+python3 scripts/query.py "SELECT layer, COUNT(*) FROM entities GROUP BY layer" --format csv
+python3 scripts/query.py "SELECT name FROM entities WHERE layer='frameworks'" --format names
+
+# Or just use sqlite3 CLI directly
 sqlite3 docs/open/survey.sqlite "SELECT name FROM entities WHERE layer='models' AND context_window >= 256000"
+
+# Or open an interactive shell
+python3 scripts/query.py --shell
 ```
 
 ## When to run what
@@ -48,7 +60,9 @@ sqlite3 docs/open/survey.sqlite "SELECT name FROM entities WHERE layer='models' 
 1. **`validate.py`** — checks each entity's frontmatter against the schema. Required fields, controlled vocab, types, dates, URLs. Fails per file with a clear error list.
 2. **`regen.py`** — reads frontmatter, regenerates each layer's `INDEX.md` and `docs/open/survey.json` from truth. INDEXes are derived; don't edit them by hand.
 3. **`pick.py`** — reads `survey.json`, filters by your constraints (hardware, task, license, MCP support, etc.), prints matching entities per layer. Optional `--suggest` picks one per layer. JSON output is `jq`-friendly.
-4. **`build-sqlite.py`** — reads `survey.json`, builds `docs/open/survey.sqlite` (gitignored — a query cache, not source of truth). Use for ad-hoc SQL questions `pick.py` can't express: arbitrary `WHERE`, sorts on any field, aggregates, cross-layer self-joins. See [`docs/open/QUERIES.md`](../docs/open/QUERIES.md) for patterns.
+4. **`build-sqlite.py`** — reads `survey.json`, builds `docs/open/survey.sqlite` (gitignored — a query cache, not source of truth). Use for ad-hoc SQL questions `pick.py` can't express: arbitrary `WHERE`, sorts on any field, aggregates, cross-layer self-joins.
+5. **`query.py`** — thin wrapper over `survey.sqlite`. Takes SQL on the command line, in a file, or on stdin; auto-builds the cache if missing/stale; formats output as tsv (default), csv, json, or names. Optional `--shell` drops into the interactive `sqlite3` CLI. See [`docs/open/QUERIES.md`](../docs/open/QUERIES.md) for patterns.
+
 CI is not wired up. Discipline is local — run both before committing.
 
 ## Safety notes
