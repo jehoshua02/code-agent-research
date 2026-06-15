@@ -1,3 +1,18 @@
+---
+name: "agno"
+maker: "agno-agi"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/agno-agi/agno"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "native"
+programming_model: "imperative"
+best_for: ["automation", "research", "data"]
+notes: "Broadest provider coverage (30+); bidirectional MCP; AgentOS runtime exposes REST API with RBAC."
+---
+
 # agno
 
 _Last verified: 2026-06-14_

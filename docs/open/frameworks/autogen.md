@@ -1,3 +1,18 @@
+---
+name: "AutoGen"
+maker: "Microsoft"
+license: "CC-BY-4.0"
+license_category: "custom-permissive"
+status: "active"
+url: "https://github.com/microsoft/autogen"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "native"
+programming_model: "imperative"
+best_for: ["automation", "research"]
+notes: "Now in maintenance mode; Microsoft recommends new projects use Microsoft Agent Framework."
+---
+
 # AutoGen
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,18 @@
+---
+name: "Atomic Agents"
+maker: "BrainBlend AI"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/BrainBlend-AI/atomic-agents"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "none"
+programming_model: "composable"
+best_for: ["coding", "automation"]
+notes: "Single-responsibility AtomicAgent components chained via Pydantic schema matching; built on Instructor."
+---
+
 # Atomic Agents
 
 _Last verified: 2026-06-14_

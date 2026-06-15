@@ -1,3 +1,18 @@
+---
+name: "BeeAI"
+maker: "IBM Research"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/i-am-bee/beeai-framework"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "native"
+programming_model: "imperative"
+best_for: ["automation", "research", "coding"]
+notes: "Dual Python+TypeScript SDKs; constraint-based RequirementAgent; Linux Foundation governance."
+---
+
 # BeeAI
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,18 @@
+---
+name: "LangGraph"
+maker: "LangChain"
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/langchain-ai/langgraph"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "adapter"
+programming_model: "graph"
+best_for: ["automation", "coding", "research"]
+notes: "MCP via langchain-mcp-adapters; also available as a JS/TS npm package."
+---
+
 # LangGraph
 
 _Last verified: 2026-06-14_

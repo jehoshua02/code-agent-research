@@ -1,3 +1,18 @@
+---
+name: "CrewAI"
+maker: "crewAI Inc."
+license: "MIT"
+license_category: "mit"
+status: "active"
+url: "https://github.com/crewAI-Inc/crewAI"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "native"
+programming_model: "role-based"
+best_for: ["automation", "research", "writing"]
+notes: "YAML/Python hybrid config; LLM routing via LiteLLM (100+ providers)."
+---
+
 # CrewAI
 
 _Last verified: 2026-06-14_

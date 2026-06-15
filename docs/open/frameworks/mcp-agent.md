@@ -1,3 +1,18 @@
+---
+name: "mcp-agent"
+maker: "LastMile AI"
+license: "Apache-2.0"
+license_category: "apache-2.0"
+status: "active"
+url: "https://github.com/lastmile-ai/mcp-agent"
+last_verified: "2026-06-14"
+language: "Python"
+supports_mcp: "native"
+programming_model: "imperative"
+best_for: ["automation"]
+notes: "Low activity since early 2026; last commit January 25, 2026 — long-term maintenance uncertain."
+---
+
 # mcp-agent
 
 _Last verified: 2026-06-14_
