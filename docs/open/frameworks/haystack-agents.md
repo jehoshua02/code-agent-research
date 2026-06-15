@@ -54,11 +54,17 @@ result = pipeline.run({"agent": {"messages": [ChatMessage.from_user("Hello")]}})
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **RAG-pipeline native**: Agents are a first-class `Component` inside the same Pipeline graph used for retrievers, rankers, and readers — enabling seamless agentic RAG without glue code. Docs: [docs.haystack.deepset.ai/docs/agents](https://docs.haystack.deepset.ai/docs/agents).
+- **Serialisable, auditable pipelines**: Pipelines export to YAML for declarative deployment; breakpoint snapshots (`.json`) make long-running runs resumable after failure. Docs: [docs.haystack.deepset.ai/docs/intro](https://docs.haystack.deepset.ai/docs/intro).
+- **Rich observability out of the box**: Auto-tracing to OpenTelemetry, Datadog, Langfuse, MLflow, and Jaeger via a single env-var flag (`HAYSTACK_CONTENT_TRACING_ENABLED`). Docs: [haystack.deepset.ai](https://haystack.deepset.ai/).
+- **deepset commercial backing**: Active enterprise support, dedicated integrations repo ([haystack-core-integrations](https://github.com/deepset-ai/haystack-core-integrations)), and steady release cadence underpin production adoption. Source: [deepset.ai/products-and-services/haystack](https://www.deepset.ai/products-and-services/haystack).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Pipeline abstraction adds overhead for pure-agent use cases**: Teams that only need an agent loop must still learn and maintain the full Pipeline graph model. Noted in [automationswitch.com review](https://automationswitch.com/agentic-ai/frameworks/haystack).
+- **No native tool-result caching in agent loops**: Users must implement their own; open feature request in issue tracker ([github.com/deepset-ai/haystack/issues](https://github.com/deepset-ai/haystack/issues?q=Cache+tool+results+inside+Agent)).
+- **Smaller ecosystem than LangChain**: ~1.3k dependents (lowest in comparative reviews); fewer third-party recipes and community extensions. [automationswitch.com review](https://automationswitch.com/agentic-ai/frameworks/haystack).
+- **Agent loop is less central than in agent-first frameworks**: No formal planning primitives; multi-agent orchestration relies on wrapping agents as tools rather than a dedicated orchestration layer. Docs: [docs.haystack.deepset.ai/docs/agent](https://docs.haystack.deepset.ai/docs/agent).
 
 ## 9. Sources
 

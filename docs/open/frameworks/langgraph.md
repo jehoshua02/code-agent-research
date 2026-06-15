@@ -64,11 +64,17 @@ app = graph.compile()
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Fine-grained control flow.** Explicit `StateGraph` nodes and conditional edges let developers encode pause, branch, retry, and hand-off logic that pure chain-of-prompts frameworks cannot express. Source: [LangGraph overview — "low-level orchestration framework"](https://docs.langchain.com/oss/python/langgraph/overview).
+- **Built-in persistence and time-travel.** Checkpointers (`SqliteSaver`, `PostgresSaver`) persist state across failures; forking and time-travel replay let developers inspect or rerun any past state snapshot. Source: [LangGraph overview — "persist through failures"](https://docs.langchain.com/oss/python/langgraph/overview).
+- **Human-in-the-loop as a first-class primitive.** `interrupt(value)` and compile-time breakpoints allow inspecting and modifying agent state mid-run without external tooling. Source: [LangGraph overview — "inspect and modify agent state at any point"](https://docs.langchain.com/oss/python/langgraph/overview).
+- **Deep observability via LangSmith.** Three env vars enable automatic tracing of execution paths, state transitions, and runtime metrics across all nodes. Source: [LangSmith observability — "deep visibility into complex agent behavior"](https://www.langchain.com/langsmith/observability).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Steep learning curve for newcomers.** The official docs explicitly recommend LangChain's higher-level prebuilt agents for users "just getting started," framing the `StateGraph` API as inherently complex. Source: [LangGraph overview — "just getting started with agents"](https://docs.langchain.com/oss/python/langgraph/overview).
+- **Boilerplate-heavy for simple cases.** The LangGraph team's own v1 roadmap issue asks users to identify what "feels unnecessarily complex or boilerplate-heavy" around `StateGraph`, acknowledging the verbosity problem. Source: [GitHub issue #4973 — LangGraph v1 roadmap feedback](https://github.com/langchain-ai/langgraph/issues/4973).
+- **Breaking changes in prebuilt layer.** `langgraph-prebuilt==1.0.2` introduced a breaking change without proper version constraints, allowing incompatible versions to install silently. Source: [GitHub issue #6363](https://github.com/langchain-ai/langgraph/issues/6363).
+- **Observability requires a separate paid service.** Full tracing depends on LangSmith, which is a hosted product; there is no equivalent built-in open-source observability option for teams that cannot use external SaaS. Source: [LangSmith pricing — langchain.com](https://www.langchain.com/langsmith).
 
 ## 9. Sources
 

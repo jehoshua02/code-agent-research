@@ -69,11 +69,17 @@ print(prog(question="What is LangGraph?").answer)
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Automatic prompt compilation yields measurable gains**: The optimizer pipeline (MIPROv2, SIMBA, GEPA) produces large accuracy lifts — the official site cites 62% → 89% accuracy on one QA task and Shopify reporting ~550× cost reduction for metadata extraction. Source: [dspy.ai](https://dspy.ai/).
+- **Modular, maintainable programs instead of brittle prompt strings**: Typed `Signature` and `Module` abstractions separate task logic from prompt text; swapping chain-of-thought for ReAct requires no rewrite. Docs: [dspy.ai/learn/programming/signatures](https://dspy.ai/).
+- **LiteLLM-backed universal provider support**: Any LiteLLM-compatible model (100+ providers including OpenRouter) works without per-provider adapters. Source: [dspy/clients/lm.py](https://github.com/stanfordnlp/dspy/blob/main/dspy/clients/lm.py).
+- **MLflow zero-code autologging**: Full experiment tracking (prompts, metrics, compiled states) with `mlflow.dspy.autolog()`. Docs: [dspy.ai/tutorials](https://dspy.ai/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Paradigm shift is steep**: Developers must abandon prompt-writing in favour of Signatures, Modules, and compile-then-evaluate loops; no prompt control until after optimization runs. Widely noted in community reviews ([statsig.com](https://www.statsig.com/perspectives/dspy-fundamentals-llm-optimization), [educative.io](https://www.educative.io/blog/what-is-dspy)).
+- **Reserved field name collisions crash ReAct**: Output fields named `history` or `termination_reason` in user Signatures raise `TypeError`. Open bug: [github.com/stanfordnlp/dspy/issues](https://github.com/stanfordnlp/dspy/issues).
+- **dspy.History leaks into system prompts**: Conversational history contaminates system-level instructions, causing LLM formatting hallucinations. Open issue in tracker.
+- **No built-in long-term or persistent memory**: The in-loop `trajectory` dict is working memory only; long-term state must be handled externally via retrieval tools. Docs: [dspy.ai](https://dspy.ai/).
 
 ## 9. Sources
 

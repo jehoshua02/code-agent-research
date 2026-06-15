@@ -50,11 +50,17 @@ Not benchmarked by maintainer. No quantitative throughput, latency, or batch-siz
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Minimal footprint — ~2K LoC core, no Python:** Pure C++ with minimal dependencies; easy to embed in native applications or ship as a standalone binary without a Python runtime. Source: [README](https://github.com/google/gemma.cpp).
+- **Portable CPU SIMD via Google Highway:** Runtime ISA dispatch (AVX/AVX2/AVX-512 on x86, NEON on ARM) means a single binary runs optimally on any CPU the Highway library targets. Source: [README](https://github.com/google/gemma.cpp).
+- **No GPU required — runs on any CPU hardware:** Designed for resource-constrained environments where a GPU is unavailable or undesirable. Source: [README](https://github.com/google/gemma.cpp).
+- **Research-friendly, transparent codebase:** Positioned as bridging the gap between deployment runtimes and research frameworks; straightforward to modify, making it suitable for architecture experimentation on Gemma models. Source: [README](https://github.com/google/gemma.cpp).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Gemma-only — no support for other model families:** Works exclusively with Gemma 2, Gemma 3, and PaliGemma 2; cannot run Llama, Mistral, Qwen, or any other architecture. Source: [README](https://github.com/google/gemma.cpp).
+- **No GPU acceleration:** CPU-only inference via Highway; no CUDA, ROCm, or Metal backend. Throughput is limited by CPU memory bandwidth compared to GPU-accelerated alternatives. Source: [README](https://github.com/google/gemma.cpp).
+- **Quadratic attention degrades at long sequences:** Maintainer documents explicitly: "long sequences will be slow due to the quadratic cost of attention" — practical context length is constrained despite 128K theoretical support. Source: [README](https://github.com/google/gemma.cpp).
+- **Proprietary `.sbs` format with closed-source converter:** Models must be converted to gemma.cpp's format; the safetensors-to-`.sbs` converter is not yet open-sourced, creating a dependency on Google-provided tooling. Source: [README](https://github.com/google/gemma.cpp).
 
 ## 9. Sources
 

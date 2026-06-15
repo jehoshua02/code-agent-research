@@ -55,15 +55,33 @@ SmolLM2-Instruct models target **on-device text tasks**: rewriting, summarizatio
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Scores are for the 1.7B size (the only variant capable of meaningful instruction following). Source: HuggingFace model card ([SmolLM2-1.7B-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct)). MMLU, HumanEval, MATH, and SWE-bench not reported; these benchmarks are designed for much larger models and are not appropriate for the 135M–1.7B range.
+
+| Benchmark | SmolLM2-1.7B-Instruct | Llama-1B-Instruct | Qwen2.5-1.5B-Instruct |
+|---|---|---|---|
+| IFEval | 56.7 | 53.5 | 47.4 |
+| MT-Bench | 6.13 | 5.48 | 6.52 |
+| GSM8K (5-shot) | 48.2 | 26.8 | 42.8 |
+| BBH (3-shot) | 32.2 | 27.6 | 35.3 |
+| HellaSwag | 66.1 | 56.1 | 60.9 |
+| ARC (Average) | 51.7 | 41.6 | 46.2 |
+| MMLU-Pro (base, MCF) | 19.4 | 11.7 | 13.7 |
+
+SmolLM2-1.7B-Instruct leads Llama-1B-Instruct on all reported metrics and leads Qwen2.5-1.5B-Instruct on IFEval and GSM8K, though Qwen2.5-1.5B-Instruct wins on MT-Bench and BBH.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Exceptional hardware efficiency**: The 1.7B model at FP16 requires only ~3.4 GB VRAM, fitting on integrated graphics and Apple Silicon unified memory; the 135M variant runs in 270 MB, enabling true browser and microcontroller inference. ([HuggingFace model card](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct))
+- **Best-in-class IFEval at ≤2B**: SmolLM2-1.7B-Instruct scores 56.7 on IFEval, outperforming both Llama-1B-Instruct (53.5) and Qwen2.5-1.5B-Instruct (47.4) on instruction adherence — the task most relevant to on-device assistant use cases. ([HuggingFace model card](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct))
+- **Apache 2.0 + ONNX exports**: Fully permissive license and official ONNX exports enable deployment in browsers (WebAssembly), Android, and iOS without licensing concerns. ([HuggingFaceTB org](https://huggingface.co/HuggingFaceTB))
+- **11T-token pretraining for the size class**: Trained on significantly more tokens (11T) than the model size would suggest necessary, giving it strong knowledge density relative to its parameter count. ([SmolLM2 blog](https://huggingface.co/blog/smollm2))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **135M and 360M are too small for instruction following**: Only the 1.7B variant produces meaningful instruction-following outputs; the two smaller sizes are suitable only for narrow classification or constrained template-filling tasks. ([SmolLM2 blog](https://huggingface.co/blog/smollm2))
+- **English-only**: No multilingual support across any SmolLM2 variant; unsuitable for non-English tasks. ([HuggingFace model card](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct))
+- **2K context for 135M/360M**: The two smallest variants have only 2,048-token context, limiting them to single short documents or brief conversations.
+- **Well behind larger models on reasoning**: BBH 32.2 and GSM8K 48.2 for the 1.7B-Instruct lag far behind 7B+ models; complex multi-step reasoning is not a reliable capability at this scale.
 
 ## 11. Sources
 

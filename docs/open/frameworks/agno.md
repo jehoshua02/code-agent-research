@@ -51,11 +51,17 @@ agent.print_response("What happened in AI this week?")
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Broadest provider coverage**: 30+ first-class `agno.models.<provider>` modules (OpenAI, Anthropic, Bedrock, Gemini, Ollama, OpenRouter, vLLM, etc.) with a unified `Agent` interface. Docs: [docs.agno.com](https://docs.agno.com).
+- **Extremely fast agent instantiation**: Agno benchmarks ~2 µs / 3.75 KiB per agent (averaged over 1,000 runs), ~10,000× faster and ~50× less memory than LangGraph framework overhead. Source: [docs.agno.com/performance](https://docs.agno.com/performance).
+- **Three-mode Teams for multi-agent coordination**: `Route`, `Coordinate`, and `Broadcast` team modes cover delegation, consensus, and broadcast patterns with no custom orchestration code. Docs: [docs.agno.com](https://docs.agno.com).
+- **13+ storage backends out of the box**: Session persistence to SQLite, PostgreSQL, MongoDB, and more is a `storage=` parameter, not custom middleware. Docs: [docs.agno.com](https://docs.agno.com).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Multiple built-in tools lack HTTP timeouts**: SearxngTools, HackerNewsTools, and OpenWeatherTools have no timeout or HTTP status handling, causing potential agent hangs. Open issues in tracker: [github.com/agno-agi/agno/issues](https://github.com/agno-agi/agno/issues).
+- **`output_schema` conflicts with tool calls**: Setting `output_schema` while using tools produces unexpected behaviour; open bug in issue tracker.
+- **Default model silently assumes OpenAI**: If no model is specified, the framework defaults to `gpt-4o` without requiring explicit declaration — a footgun on multi-provider teams. Community report: [medium.com/@sharmaprabesh027](https://medium.com/@sharmaprabesh027/agno-agi-overcoming-default-model-issues-in-multi-agent-systems-e5d06878a1fb).
+- **Documentation depth varies across providers**: Breadth of integrations means some provider modules have thin docs and limited examples. Noted in comparative reviews ([langwatch.ai/blog](https://langwatch.ai/blog/best-ai-agent-frameworks-in-2025-comparing-langgraph-dspy-crewai-agno-and-more)).
 
 ## 9. Sources
 

@@ -60,11 +60,17 @@ Not officially benchmarked by maintainers. The README includes AVX-512 optimizat
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **True zero-install portability:** A single `.llamafile` file runs on macOS, Linux, Windows, FreeBSD, OpenBSD, and NetBSD with no SDK, no package manager, and no dependencies — via Cosmopolitan Libc's APE format. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
+- **No GPU toolkit required:** GPU acceleration (CUDA/ROCm/Metal) activates via JIT compilation at runtime if compilers are present; end users need only the standard driver, not CUDA Toolkit or ROCm SDK. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
+- **Significant CPU prompt-eval improvement (v0.7):** AVX-512 hand-tuned kernels deliver "up to 10× faster prompt eval on Zen 4" CPUs compared to prior llamafile versions. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
+- **Ideal for air-gapped or constrained deployments:** No network access needed after download; embeds model + runtime in one file for fully offline use. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Windows 4 GB executable limit:** Windows enforces a 4 GB cap on executable size; models larger than that cannot be embedded and must run as a separate GGUF file alongside the binary. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
+- **No CUDA acceleration on Windows (as of v0.10.0):** CUDA JIT is Linux-only; Windows users fall back to CPU on NVIDIA hardware. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
+- **No multi-GPU support:** Backend priority is Metal → AMD → NVIDIA; only one GPU backend activates at a time; no tensor-parallel or layer-split across devices. Source: [README](https://github.com/Mozilla-Ocho/llamafile).
+- **Not designed for concurrent multi-user serving:** Inherited from llama.cpp's slot-based KV cache — once concurrent requests exceed configured slots, VRAM and latency degrade rapidly; no continuous batching scheduler. Source: [community analysis](https://markaicode.com/alternatives/llamacpp-alternatives/).
 
 ## 9. Sources
 

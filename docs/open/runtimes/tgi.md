@@ -63,11 +63,17 @@ Not benchmarked by maintainer. The docs describe enabling features — continuou
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **HuggingFace ecosystem integration**: TGI powers HuggingChat and the HuggingFace Inference API; model-ID-as-argument model loading requires no format conversion for any Hub model. ([TGI README](https://github.com/huggingface/text-generation-inference))
+- **Speculative decoding built-in**: `--speculate <N>` with n-gram or Medusa drafters is documented to yield ~2× latency improvement on long generations, with no external plugin needed. ([TGI docs](https://huggingface.co/docs/text-generation-inference/en/index))
+- **Production observability out of the box**: Prometheus `/metrics`, distributed tracing, and structured logging ship in the default Docker image — no extra instrumentation required. ([TGI architecture docs](https://huggingface.co/docs/text-generation-inference/en/architecture))
+- **Hardware breadth via multi-backend model (2025)**: TRT-LLM and vLLM backends were introduced, extending TGI to cover NVIDIA-optimized and AMD/Intel paths without switching servers. ([HuggingFace blog: multi-backends](https://huggingface.co/blog/tgi-multi-backend))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Now in maintenance mode**: The README explicitly states TGI "is now in maintenance mode" and redirects users to vLLM, SGLang, llama.cpp, and MLX for new projects. ([TGI README](https://github.com/huggingface/text-generation-inference))
+- **No GGUF support**: GGUF is not a supported weight format; only safetensors / GPTQ / AWQ / FP8 / bitsandbytes. ([TGI model formats docs](https://huggingface.co/docs/text-generation-inference/en/index))
+- **AWQ not available on ROCm**: Documented in the hardware support table — AWQ and Mistral sliding-window attention are unsupported on the AMD ROCm backend. ([TGI README](https://github.com/huggingface/text-generation-inference))
+- **macOS and Windows unsupported natively**: Docker is the only practical path on non-Linux hosts; Metal/Apple Silicon backend does not exist. ([TGI install docs](https://huggingface.co/docs/text-generation-inference/en/index))
 
 ## 9. Sources
 

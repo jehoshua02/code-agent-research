@@ -64,15 +64,30 @@ Llama 3.1/3.2/3.3 Instruct models are trained for multilingual chat (8 languages
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers below are for the Instruct variants from Meta's Llama 3.1 launch (July 2024). Source: [mlq.ai Llama 3.1 coverage](https://blog.mlq.ai/meta-releases-llama-3-1/) citing Meta's official model card data.
+
+| Benchmark | 8B | 70B | 405B |
+|---|---|---|---|
+| MMLU (0-shot CoT) | 73.0 | 86.0 | 88.6 |
+| MMLU-Pro (5-shot CoT) | 48.3 | 66.4 | 73.3 |
+| HumanEval (0-shot) | 72.6 | 80.5 | 89.0 |
+| MATH (0-shot CoT) | 51.9 | 68.0 | 73.8 |
+| IFEval | 80.4 | 87.5 | 88.6 |
+| GPQA (0-shot CoT) | 32.8 | 46.7 | 51.1 |
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Tool use and instruction following**: 405B scored 88.6 on IFEval, competitive with GPT-4o (86) and Claude 3.5 Sonnet (88) at launch. ([Meta Llama 3.1 announcement, July 2024](https://ai.meta.com/blog/meta-llama-3-1/))
+- **Code generation at scale**: 405B HumanEval 89.0 matched or exceeded most closed models at the time of release. ([Meta Llama 3.1 announcement, July 2024](https://ai.meta.com/blog/meta-llama-3-1/))
+- **Broadest open-weight ecosystem**: More community quants, tutorials, and runtime integrations (llama.cpp, Ollama, vLLM, SGLang, MLX) than any other open model family as of 2025.
+- **Long context**: Native 128K context window across 3.1/3.2/3.3; Llama 4 Scout extends to 10M tokens. ([Meta Llama 3.1 announcement, July 2024](https://ai.meta.com/blog/meta-llama-3-1/))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **GPQA (PhD-level science) trails closed models**: 405B scores 51.1, well below GPT-4o (~53) and Claude 3.5 Sonnet (~59) at comparable launch windows. ([mlq.ai Llama 3.1 coverage](https://blog.mlq.ai/meta-releases-llama-3-1/))
+- **Compute requirements**: Running 405B or Llama 4 Maverick requires data-center-class hardware (4–8× A100/H100 80 GB); impractical for individual developers. ([Meta Llama 3.1 announcement, July 2024](https://ai.meta.com/blog/meta-llama-3-1/))
+- **MAU license restriction**: Commercial deployments by companies with >700M monthly active users require explicit Meta permission — a real constraint for large platforms. (Llama Community License Agreement)
+- **Long-context practical throughput**: Llama 4 Scout's 10M-token context is headline-only; real-world throughput at very long contexts has not been widely reproduced publicly as of mid-2025.
 
 ## 11. Sources
 

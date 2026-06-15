@@ -61,15 +61,33 @@ DeepSeek-V3 and R1 target **code generation**, math reasoning, and general instr
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers from the DeepSeek-R1 technical report (Jan 2025) and DeepSeek-V3 technical report (Dec 2024). ([arXiv:2501.12948](https://arxiv.org/abs/2501.12948); [arXiv:2412.19437](https://arxiv.org/abs/2412.19437))
+
+| Benchmark | DeepSeek-V3 (671B MoE) | DeepSeek-R1 (671B MoE) |
+|---|---|---|
+| MMLU | 88.5 | 90.8 |
+| MMLU-Pro | 75.9 | 84.0 |
+| GPQA Diamond | 59.1 | 71.5 |
+| MATH-500 | — | 97.3 |
+| AIME 2024 | 39.2 | 79.8 |
+| LiveCodeBench (Pass@1 CoT) | — | 65.9 |
+| SWE-Verified (resolved) | — | 49.2 |
+
+R1-Distill-Llama-70B scores AIME 2024 57.5, demonstrating strong reasoning in distilled smaller models. ([DeepSeek-R1 paper](https://arxiv.org/abs/2501.12948))
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Math reasoning**: R1 achieves MATH-500 97.3 and AIME 2024 79.8 via pure RL training — without human-labeled reasoning traces — matching or exceeding OpenAI o1 at the time of release. ([DeepSeek-R1 paper, Jan 2025](https://arxiv.org/abs/2501.12948))
+- **Code and SWE**: R1 resolves 49.2% of SWE-Verified, one of the highest open-weight results at launch. ([DeepSeek-R1 paper, Jan 2025](https://arxiv.org/abs/2501.12948))
+- **Efficient distillation**: R1 reasoning capability transfers to smaller Qwen2.5 / Llama 3 bases; R1-Distill-Qwen-32B scores AIME 2024 72.6, outperforming much larger models. ([DeepSeek-R1 paper, Jan 2025](https://arxiv.org/abs/2501.12948))
+- **Permissive licensing**: Full 671B weights and distill variants available under MIT/DeepSeek license with no usage caps or gating. ([HuggingFace: deepseek-ai](https://huggingface.co/deepseek-ai))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **Tool/function calling was absent until R1-0528**: The original R1 (Jan 2025) had no official function-call format; this limited agentic use until the May 2025 update. ([DeepSeek R1-0528 release](https://huggingface.co/deepseek-ai/DeepSeek-R1-0528))
+- **Hardware demands for full 671B**: Native FP8 weights require ~336 GB VRAM (4× H100 80 GB); CPU offload is viable but very slow. Community GGUF quants reduce this but degrade quality. ([DeepSeek-V3 technical report, Dec 2024](https://arxiv.org/abs/2412.19437))
+- **Language coverage**: Strong English and Chinese; other languages are secondary. Model card does not claim broad multilingual parity. ([DeepSeek-R1 paper, Jan 2025](https://arxiv.org/abs/2501.12948))
+- **No native vision**: V3 and R1 families are text-only; multimodal capability lives in the separate DeepSeek-VL2 line.
 
 ## 11. Sources
 

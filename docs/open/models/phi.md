@@ -65,15 +65,30 @@ Phi models are optimized for **STEM reasoning, coding, and math** at small param
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers for Phi-4 (14B Instruct) on the simple-evals framework, from the Phi-4 Technical Report (Dec 2024). ([arXiv:2412.08905](https://arxiv.org/abs/2412.08905))
+
+| Benchmark | Phi-4 14B | Qwen2.5-14B | GPT-4o (reference) |
+|---|---|---|---|
+| MMLU | 84.8 | 79.9 | 88.1 |
+| MMLU-Pro | 70.4 | 63.2 | 73.0 |
+| GPQA | 56.1 | 42.9 | 50.6 |
+| MATH | 80.4 | 75.6 | 74.6 |
+| HumanEval | 82.6 | 72.1 | 90.6 |
+| IFEval | 63.0 | 78.7 | 84.8 |
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **STEM and math at 14B**: Phi-4 scores MATH 80.4 and GPQA 56.1, exceeding GPT-4o (74.6 and 50.6 respectively) at 1/70th the parameter count. ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
+- **Consumer hardware deployment**: 14B at Q4 fits ~7–8 GB VRAM or 16 GB RAM CPU-only — unique for a model with frontier-competitive STEM scores. ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
+- **MIT license, no gating**: Download and use commercially with zero restrictions, unlike many comparable-quality models. ([microsoft/phi-4 on HuggingFace](https://huggingface.co/microsoft/phi-4))
+- **Synthetic data efficiency**: Achieves strong benchmarks via curated synthetic training data rather than raw scale — explicitly outperforms its GPT-4o teacher on GPQA and MATH. ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **Instruction following (IFEval 63.0)**: Phi-4 scores notably lower on IFEval (63.0) than same-size peers like Qwen2.5-14B (78.7) — the report explicitly notes struggles with "specific formatting requirements" and "strict tabular formats." ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
+- **Factual hallucinations**: Model size limits factual coverage; the report flags "hallucinations around factual knowledge, particularly with plausible names." ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
+- **Short native context window**: Phi-4 has only 16K native context, well below the 128K common in competing 14B-class models. ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
+- **Verbosity**: The model "tends to give long elaborate answers even for simple problems," noted as a known usability limitation in the technical report. ([Phi-4 Technical Report, Dec 2024](https://arxiv.org/abs/2412.08905))
 
 ## 11. Sources
 

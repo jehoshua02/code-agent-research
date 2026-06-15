@@ -63,11 +63,17 @@ async with app.run():
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **MCP-native from the ground up**: All tools come from MCP servers; connection lifecycle is managed automatically; no adapter layer needed for any MCP-compliant server. Source: [github.com/lastmile-ai/mcp-agent README](https://github.com/lastmile-ai/mcp-agent).
+- **Temporal durable execution with zero code change**: Switching `execution_engine: temporal` in config gives pause/resume, per-activity retry policies, and human-input signals without modifying workflow code. Docs: [github.com/lastmile-ai/mcp-agent/examples/temporal](https://github.com/lastmile-ai/mcp-agent/tree/main/examples/temporal).
+- **Batteries-included agentic patterns**: Factory helpers implement all of Anthropic's "Building Effective Agents" patterns (orchestrator-workers, router, evaluator-optimizer, map-reduce, swarm) as one-liners. Source: [github.com/lastmile-ai/mcp-agent README](https://github.com/lastmile-ai/mcp-agent).
+- **Minimal abstraction surface**: Thin wrapper with explicit Python wiring; no graph DSL or config graph to learn; suitable for teams that want full control. Source: [medium.com/@hanieh_74136 developer guide 2025](https://medium.com/@hanieh_74136/the-developers-guide-to-ai-agent-frameworks-in-2025-mcp-native-vs-traditional-approaches-e6c74027f220).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Low activity since early 2026**: Last commit was January 25, 2026; no releases since; long-term maintenance is uncertain. Source: [github.com/lastmile-ai/mcp-agent/commits](https://github.com/lastmile-ai/mcp-agent/commits/main).
+- **Security issues in deploy tooling**: `deploy` command imports project `main.py` in-process (arbitrary code execution risk); API keys printed in plain text to terminal on deploy. Open issues #669, #670: [github.com/lastmile-ai/mcp-agent/issues](https://github.com/lastmile-ai/mcp-agent/issues).
+- **Async-only, no sync API**: No `run_sync` or blocking wrappers; callers must use asyncio throughout. Docs: [github.com/lastmile-ai/mcp-agent README](https://github.com/lastmile-ai/mcp-agent).
+- **Silent partial failures in server discovery**: `get_capabilities_task` returns exception objects inside the `ServerCapabilities` dict on partial server failure rather than raising. Open bug #671: [github.com/lastmile-ai/mcp-agent/issues/671](https://github.com/lastmile-ai/mcp-agent/issues/671).
 
 ## 9. Sources
 

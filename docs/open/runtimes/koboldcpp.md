@@ -57,11 +57,17 @@ Not benchmarked by maintainer. KoboldCpp includes a `--benchmark` flag that runs
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Zero-install single binary:** "Single file executable, with no installation required and no external dependencies" — ships ready-to-run on Windows, Linux, and macOS. Source: [README](https://github.com/LostRuins/koboldcpp).
+- **Integrated story/roleplay UI:** Bundles KoboldAI Lite with Tavern character-card support, world-building tools, and adventure/instruct/chat modes — purpose-built for creative writing. Source: [README](https://github.com/LostRuins/koboldcpp).
+- **Broad hardware backends in one binary:** CUDA, Vulkan, Metal, and CPU all covered; GPU-layer partial offload lets undersized VRAM spill to RAM. Source: [README](https://github.com/LostRuins/koboldcpp).
+- **Wide platform reach:** Native binaries for Windows, Linux, macOS (ARM + Intel), Android via Termux, and cloud (Colab, RunPod). Source: [README](https://github.com/LostRuins/koboldcpp).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **GGUF/GGML only:** GPTQ, AWQ, EXL2, and safetensors formats are not natively loaded; they must be converted to GGUF first. Source: [README](https://github.com/LostRuins/koboldcpp).
+- **Conservative defaults reduce throughput vs. bare llama.cpp:** KoboldCpp ships with smaller batch sizes, `mmap=false`, and Flash Attention disabled by default, producing dramatically lower tok/s than equivalent llama.cpp configs on the same hardware (34 vs. 1490 prompt tok/s reported). Source: [issue #1780](https://github.com/LostRuins/koboldcpp/issues/1780).
+- **Not designed for concurrent multi-user serving:** No batching/scheduling layer above llama.cpp; documentation and design target single-user interactive use rather than production API throughput. Source: [README](https://github.com/LostRuins/koboldcpp).
+- **AGPL-3.0 copyleft:** Same licensing constraint as aphrodite-engine — any modifications served over a network must be open-sourced. Source: [GitHub repo](https://github.com/LostRuins/koboldcpp).
 
 ## 9. Sources
 

@@ -50,11 +50,17 @@ main.py              ← entry point
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Intuitive role-based mental model.** Defining an agent's role, goal, and backstory maps directly to how teams actually work; community benchmarks report getting to a working prototype "roughly 40 percent faster than graph-based alternatives." Source: [designrevision.com — AI Agent Frameworks Compared 2026](https://designrevision.com/blog/ai-agent-frameworks).
+- **Minimal boilerplate for multi-agent pipelines.** YAML config + `@CrewBase` decorators wire agents to tasks without manual graph construction; `hierarchical` process adds a manager agent with one flag. Source: [CrewAI docs — Crews](https://docs.crewai.com/concepts/crews).
+- **Broad LLM coverage via LiteLLM.** 100+ providers accessible through a uniform interface without additional adapter packages. Source: [CrewAI docs — LLM Connections](https://docs.crewai.com/how-to/LLM-Connections/).
+- **Built-in memory with semantic retrieval.** Unified LanceDB-backed memory with recency/semantic/importance weights and per-crew scoping requires no external vector DB setup. Source: [CrewAI docs — Memory](https://docs.crewai.com/concepts/memory).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Limited fine-grained loop control.** CrewAI's "structured, role-based approach may not suit organizations needing highly specialized or unconventional agent behaviors," and fine-grained customization is harder than in frameworks like LangGraph. Source: [latenode.com — CrewAI 2025 review](https://latenode.com/blog/ai-frameworks-technical-infrastructure/crewai-framework/crewai-framework-2025-complete-review-of-the-open-source-multi-agent-ai-platform).
+- **No built-in production monitoring or error recovery.** The review notes "absence of built-in monitoring, error recovery, and scaling mechanisms," requiring teams to add these independently. Source: [latenode.com — CrewAI 2025 review](https://latenode.com/blog/ai-frameworks-technical-infrastructure/crewai-framework/crewai-framework-2025-complete-review-of-the-open-source-multi-agent-ai-platform).
+- **Scaling coordination complexity.** As crews grow, "maintaining clear role definitions and ensuring smooth communication between agents becomes increasingly challenging," demanding significant architectural upfront work. Source: [latenode.com — CrewAI 2025 review](https://latenode.com/blog/ai-frameworks-technical-infrastructure/crewai-framework/crewai-framework-2025-complete-review-of-the-open-source-multi-agent-ai-platform).
+- **Struggles with smaller open-source models.** Function-calling features have documented difficulties with 7B-parameter models due to precise instruction-adherence limitations. Source: [latenode.com — CrewAI 2025 review](https://latenode.com/blog/ai-frameworks-technical-infrastructure/crewai-framework/crewai-framework-2025-complete-review-of-the-open-source-multi-agent-ai-platform).
 
 ## 9. Sources
 

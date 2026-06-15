@@ -59,11 +59,17 @@ Not benchmarked by maintainer. Jan's docs, README, and changelog contain no cano
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Privacy-first, fully local:** "Everything runs locally when you want it to" — no data leaves the machine; no cloud account required. Source: [README](https://github.com/menloresearch/jan).
+- **Polished cross-platform desktop GUI:** Native installers for Windows 10+, macOS 13.6+, and Linux (AppImage/deb/Flathub); UI includes "Fits / May be slow / Won't fit" VRAM guidance and pause/resume downloads. Source: [jan.ai/download](https://jan.ai/download).
+- **Multiple hardware backends in one app:** llama.cpp (CPU/CUDA/ROCm/Metal/Vulkan), MLX (Apple Silicon), and Cortex.TensorRT-LLM (NVIDIA) all accessible through the same interface. Source: [Hardware docs](https://jan.ai/docs/desktop/).
+- **OpenAI- and Anthropic-compatible local API:** `localhost:1337` exposes `/v1/chat/completions` and `/v1/messages` (auto-translated Anthropic format), enabling drop-in local use by any OpenAI-compatible client. Source: [api-server docs](https://jan.ai/docs/desktop/api-server).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **GGUF-only local inference (primary path):** The llama.cpp backend accepts GGUF exclusively; safetensors, GPTQ, AWQ, and EXL2 are not directly loadable. Source: [README](https://github.com/menloresearch/jan).
+- **Desktop app, not a production server:** No concurrent request batching or multi-user serving layer; designed for single-user interactive chat, not API throughput. Source: [README](https://github.com/menloresearch/jan).
+- **Published security CVEs in 2025:** Four CVEs issued (CVE-2025-2446 path traversal, CVE-2025-2439 GGUF parser OOB read, CVE-2025-2445 Python engine command injection, CVE-2025-2447 missing CSRF). Source: [SecurityWeek, March 2025](https://www.securityweek.com/vulnerabilities-expose-jan-ai-systems-to-remote-manipulation/).
+- **No GGUF validation on load:** Jan allows chatting with a partially downloaded model without error, causing hard-to-diagnose malfunctions. Source: [issue #5266](https://github.com/janhq/jan/issues/5266).
 
 ## 9. Sources
 

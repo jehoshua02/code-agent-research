@@ -63,11 +63,17 @@ Prefill and decode reported separately in GB200 figures. TTFT/latency charts sho
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Highest throughput among open-weight servers on prefix-heavy workloads**: RadixAttention prefix caching delivers up to 6.4× throughput vs. vLLM on multi-turn / RAG workloads; 29% edge (16,200 vs 12,500 tok/s) on H100 for mixed traffic. ([LMSYS Jan 2024 blog](https://lmsys.org/blog/2024-01-17-sglang/); [runpod.io comparison](https://www.runpod.io/blog/sglang-vs-vllm-kv-cache))
+- **3× faster constrained/structured decoding vs. vLLM**: XGrammar + compressed FSM makes JSON-schema generation measurably faster at batch size 8+. ([SGLang structured outputs docs](https://docs.sglang.io/docs/advanced_features/structured_outputs.md); [chatforest.com review](https://chatforest.com/reviews/sglang-structured-generation-llm-serving/))
+- **5,000 tok/s output on A100 matching TRT-LLM**: LMSYS July 2024 benchmark on Llama-3-8B (1× A100 bf16) shows SGLang and TRT-LLM both at ~5,000 tok/s output, with vLLM significantly lower. ([LMSYS July 2024 blog](https://lmsys.org/blog/2024-07-25-sglang-llama3/))
+- **GB200 scale-out**: v0.4 release documents 3.8× prefill and 4.8× decode throughput gains on DeepSeek on GB200 NVL72 via large-scale expert parallelism. ([SGLang v0.4 release notes](https://github.com/sgl-project/sglang))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Windows not supported**: Officially unsupported with an open tracking issue; only Linux is a first-class path. ([SGLang install docs](https://docs.sglang.io/))
+- **macOS support is experimental**: Apple Silicon MLX backend targets Python 3.11 only and was on a "2026 Q1 roadmap" status at time of writing. ([SGLang install docs](https://docs.sglang.io/))
+- **`awq_marlin` and `gptq_marlin` unavailable on AMD ROCm**: Marlin-kernel-dependent quant paths (awq_marlin, gptq_marlin, modelopt_fp8, modelopt_fp4, GGUF) are NVIDIA-only; fused_marlin_moe is also missing on HIP. ([SGLang AMD GPU docs](https://docs.sglang.io/platforms/amd_gpu.html))
+- **RadixAttention advantage disappears on unique-prompt workloads**: For benchmarks with all-unique prompts, the throughput edge over vLLM is minimal — the caching benefit requires repeated prefixes. ([runpod.io](https://www.runpod.io/blog/sglang-vs-vllm-kv-cache); [github issue #21061](https://github.com/sgl-project/sglang/issues/21061))
 
 ## 9. Sources
 

@@ -139,7 +139,7 @@ Scope: Anthropic reference servers + notable community servers per category. Pul
 | Wave 2 — Pass A (Identity) | Done | every entity has §1 + ≥1 source; layer INDEXes have license + key columns filled where confident |
 | Wave 2 — Pass B (Catalog) | Done | per-layer §2-§4/5 (Variants, Install, Hardware, Formats, Model Compatibility, etc.); INDEX columns filled where applicable |
 | Wave 2 — Pass C (Function) | Done | per-layer §4-§7 (Runtime Support, Capabilities, Agent Capabilities, MCP Support, Extensibility, API Surface, Performance, Security Considerations); atomic-agents §4 marked deferred (research blocked) |
-| Wave 2 — Pass D (Evidence) | Not started | |
+| Wave 2 — Pass D (Evidence) | In progress | models / runtimes / frameworks done; applications + mcp-servers pending |
 | Wave 2 — Pass E (Views) | Not started | |
 
 Update this table after each commit that advances a phase.

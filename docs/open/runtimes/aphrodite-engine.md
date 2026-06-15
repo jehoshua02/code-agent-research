@@ -56,11 +56,17 @@ Not officially benchmarked by maintainers. No canonical tok/s, TTFT, or throughp
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Broadest quantization format coverage among vLLM forks:** Supports EXL2/ExLlamaV3, GGUF, QuIP#, AQLM, BitNet, SqueezeLLM, and MXFP4 (Blackwell) beyond upstream vLLM. Source: [README](https://github.com/aphrodite-engine/aphrodite-engine).
+- **Extended sampler suite:** Adds DRY, XTC, Mirostat, and other community samplers not available in upstream vLLM, directly targeting creative/roleplay use cases. Source: [README](https://github.com/aphrodite-engine/aphrodite-engine).
+- **High-throughput serving foundation:** Inherits vLLM's PagedAttention KV-cache management and continuous batching, enabling efficient multi-request GPU utilization. Source: [aphrodite docs](https://aphrodite.pygmalion.chat/).
+- **LoRA at scale:** Native multi-LoRA serving via Punica kernels and PEFT-style prompt adapters. Source: [aphrodite docs](https://aphrodite.pygmalion.chat/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **AGPL-3.0 copyleft license:** Commercial deployments that modify and serve the engine must open-source their changes — a hard constraint for proprietary products. Source: [GitHub repo license](https://github.com/aphrodite-engine/aphrodite-engine).
+- **Linux-only native support; no macOS:** Windows requires WSL2; native Windows support is a work-in-progress. Source: [FAQ & Issues wiki](https://github.com/aphrodite-engine/aphrodite-engine/wiki/6.-FAQ-&-Issues).
+- **Consumes 92% VRAM by default:** Designed for dedicated single-tenant serving; unsuitable for machines running other GPU workloads concurrently. Source: [FAQ & Issues wiki](https://github.com/aphrodite-engine/aphrodite-engine/wiki/6.-FAQ-&-Issues).
+- **Slow multi-GPU startup:** KV-cache initialization runs full dummy forward passes; initialization time grows super-linearly with GPU count due to communication overhead. Source: [FAQ & Issues wiki](https://github.com/aphrodite-engine/aphrodite-engine/wiki/6.-FAQ-&-Issues).
 
 ## 9. Sources
 

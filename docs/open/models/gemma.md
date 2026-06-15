@@ -62,15 +62,30 @@ Gemma 3 (4B–27B) supports **vision** (image understanding via SigLIP encoder),
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers for Gemma 3 Instruct variants from the Gemma 3 Technical Report (Mar 2025). ([arXiv:2503.19786](https://arxiv.org/abs/2503.19786))
+
+| Benchmark | Gemma 3 1B-IT | Gemma 3 4B-IT | Gemma 3 12B-IT | Gemma 3 27B-IT |
+|---|---|---|---|---|
+| MMLU | 38.8 | 58.1 | 71.9 | 76.9 |
+| MMLU-Pro | 14.7 | 43.6 | 60.6 | 67.5 |
+| HumanEval | 41.5 | 71.3 | 85.4 | 87.8 |
+| MATH | 48.0 | 75.6 | 83.8 | 89.0 |
+| IFEval | 80.2 | 90.2 | 88.9 | 90.4 |
+| GPQA Diamond | 19.2 | 30.8 | 40.9 | 42.4 |
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Strong instruction following (IFEval)**: The 4B and 27B models both score ~90 on IFEval — among the best for their respective size classes, surpassing much larger models. ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
+- **Math at all sizes**: 27B-IT scores MATH 89.0 and even the 4B-IT reaches 75.6 — notable given the size. ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
+- **Multilingual breadth**: Gemma 3 (4B–27B) supports 140+ languages, broadening Google's open-weight reach well beyond European languages. ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
+- **Vision integration**: Native 128K context with SigLIP vision encoder enables image + text understanding at all non-1B sizes, with Pan & Scan for non-square images. ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **GPQA lags reasoning-specialized models**: 27B-IT scores 42.4 on GPQA Diamond, far below DeepSeek-R1 (71.5) and Phi-4 (56.1, at the same parameter count). ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
+- **Long-context degradation**: The technical report states models "rapidly degrade" beyond 128K tokens; the 5:1 local-to-global attention ratio reduces KV cache cost but limits far-context reasoning. ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
+- **Fixed vision encoder resolution**: The frozen 896×896 SigLIP encoder introduces artifacts on non-square images; Pan & Scan mitigates this but adds inference overhead. ([Gemma 3 Technical Report, Mar 2025](https://arxiv.org/abs/2503.19786))
+- **Gating for Gemma 1–3**: Accepting the Gemma Terms of Use is required before downloading weights — not strictly open-source per OSI, which can block certain organizational deployments.
 
 ## 11. Sources
 

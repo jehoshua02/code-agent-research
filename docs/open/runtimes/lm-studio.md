@@ -57,11 +57,17 @@ Not benchmarked by maintainer. LM Studio does not publish canonical throughput o
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Most polished GUI for local LLMs**: Model download, GPU-layer offload slider with real-time VRAM estimation, side-by-side chat comparison, and parameter tuning — all without touching config files. Widely cited as the most approachable entry point for non-technical users. ([sailingbyte.com comparison 2025](https://sailingbyte.com/blog/the-ultimate-comparison-of-free-desktop-tools-for-running-local-llms/))
+- **Apple Silicon MLX path**: The v0.3.4 MLX backend (released 2024) delivers noticeably higher tok/s on M3/M4 vs. the prior Metal-only path; structured outputs on MLX via the Outlines library. ([LM Studio blog v0.3.4](https://lmstudio.ai/blog/lmstudio-v0.3.4))
+- **Dual GPU strategy** (v0.4.15+): Priority-order mode or tensor parallelism for multi-GPU setups, with no manual llama.cpp flags required. ([LM Studio docs](https://lmstudio.ai/docs/))
+- **Native per-request telemetry**: The `chat.end` SSE event exposes `tokens_per_second` and `time_to_first_token_seconds` for every request without extra tooling. ([streaming-events docs](https://lmstudio.ai/docs/developer/rest/streaming-events))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **macOS Intel (x86) not supported**: Apple Silicon only; dozens of open user requests; the `llmster` daemon also gives 404 on Darwin x86_64 (issue #1568). ([GitHub issue #1568](https://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/1568); [issue #1690](https://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/1690))
+- **Closed-source / proprietary**: Source code is not available; bugs must be tracked against a public bug tracker with no visibility into internals. ([lmstudio-ai/lmstudio-bug-tracker](https://github.com/lmstudio-ai/lmstudio-bug-tracker))
+- **Logprobs not exposed**: The OpenAI-compat `/v1/chat/completions` surface does not document `logprobs` support, blocking log-probability-based evaluation workflows. ([LM Studio openai-api docs](https://lmstudio.ai/docs/api/openai-api))
+- **macOS 26 Tahoe slowdown**: Open issue #1119 reports LM Studio (using Electron 37.2.0) slowing down the entire OS under macOS 26. ([GitHub issue #1119](https://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/1119))
 
 ## 9. Sources
 

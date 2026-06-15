@@ -59,11 +59,17 @@ print(result.output)
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Full type safety at write-time**: Agent generics (`Agent[Deps, OutputType]`) and Pydantic-validated tool schemas catch mismatches in the IDE before runtime. Docs: [ai.pydantic.dev/overview](https://pydantic.dev/docs/ai/overview/).
+- **First-class testability via dependency injection**: `RunContext` lets you swap real services for mocks; the same DI system powers evals. Docs: [ai.pydantic.dev/testing-evals](https://pydantic.dev/docs/ai/testing-evals/).
+- **Tight Logfire/OTel observability**: `logfire.instrument_pydantic_ai()` provides trace-level token cost, latency, and failure data with zero extra code; routes to Langfuse, Weave, Arize, etc. Docs: [logfire.pydantic.dev/docs/ai-observability](https://logfire.pydantic.dev/docs/ai-observability/).
+- **FastAPI-style ergonomics**: Decorator-driven tool registration and familiar Python idioms minimise learning curve for teams already using Pydantic/FastAPI. Docs: [ai.pydantic.dev/overview](https://pydantic.dev/docs/ai/overview/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Upfront schema design cost**: Structured output and typed deps require more schema work than looser frameworks; barrier rises with complex nested models. Noted in community comparisons ([jangwook.net, 2026](https://jangwook.net/en/blog/en/python-ai-agent-library-comparison-2026/)).
+- **Provider parity gaps**: Some backends (e.g. Bedrock) silently ignore settings like `top_k`; cross-provider behaviour is inconsistent. Open bug tracker: [github.com/pydantic/pydantic-ai/issues](https://github.com/pydantic/pydantic-ai/issues?q=is%3Aissue+is%3Aopen+label%3Abug).
+- **Durable-execution non-determinism**: Temporal/DBOS replay can hit determinism violations due to tool-definition caching ordering; noted as a systemic design challenge in open issues.
+- **Younger ecosystem**: Released late 2024; fewer third-party integrations and community recipes than LangChain. API surface still evolving. ([kunalganglani.com comparison, 2026](https://www.kunalganglani.com/blog/pydantic-ai-vs-langchain)).
 
 ## 9. Sources
 

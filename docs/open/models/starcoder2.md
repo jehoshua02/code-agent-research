@@ -53,15 +53,32 @@ StarCoder2 is a **code-only** model with no chat / instruction tuning — it is 
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+All scores are pass@1 from the official HuggingFace model cards and the StarCoder2 paper ([arXiv 2402.19173](https://arxiv.org/abs/2402.19173)).
+
+| Benchmark | StarCoder2-3B | StarCoder2-15B | Notes |
+|---|---|---|---|
+| HumanEval (pass@1) | 31.7 | 46.3 | Python code gen |
+| HumanEval+ (pass@1) | 27.4 | 37.8 | Harder variant |
+| CRUXEval-I (pass@1) | 32.7 | 48.1 | Code reasoning |
+| DS-1000 (pass@1) | 25.0 | 33.8 | Data-science tasks |
+| GSM8K via PAL | 27.7 | 65.1 | Math reasoning, code execution |
+| RepoBench-v1.1 edit-sim | 71.2 | 74.1 | Repository-level completion |
+
+StarCoder2-15B matches or exceeds CodeLlama-34B on MBPP and MultiPL-E low-resource languages (D, Julia, Lua, Perl), and outperforms DeepSeekCoder-33B on math/code-reasoning benchmarks, per the paper. MMLU, GPQA, and SWE-bench were not reported.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Best-in-class at its size for code completion**: StarCoder2-15B outperforms CodeLlama-34B (a model 2× larger) on HumanEval, MBPP, and MultiPL-E, and leads 16/18 languages among large models on MultiPL-E. ([StarCoder2 paper](https://arxiv.org/abs/2402.19173))
+- **Fill-in-the-middle (FIM) support**: Native FIM tokens (`<fim_prefix>`, `<fim_suffix>`, `<fim_middle>`) enable IDE-style autocomplete and infilling tasks without fine-tuning. ([HuggingFace model card](https://huggingface.co/bigcode/starcoder2-15b))
+- **600+ programming languages**: Trained on The Stack v2 covering an exceptionally broad set of languages, including low-resource ones (D, Julia, Lua, Perl) where it outperforms DeepSeekCoder-33B. ([StarCoder2 paper](https://arxiv.org/abs/2402.19173))
+- **Fully open training pipeline**: The Stack v2 dataset, training code, and model weights are all publicly released; developers can inspect data provenance and reproduce training. ([BigCode project](https://huggingface.co/bigcode))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **No instruction tuning**: StarCoder2 is a pure base model and does not follow natural-language instructions; it requires a system prompt wrapper or fine-tuning (e.g., Starchat) before use as a chatbot or coding assistant. ([HuggingFace model card](https://huggingface.co/bigcode/starcoder2-15b))
+- **StarCoder2-7B underperforms relative to its size**: The paper explicitly notes the 7B model does not perform as expected between the 3B and 15B; the reason is unclear. ([StarCoder2 paper](https://arxiv.org/abs/2402.19173))
+- **Superseded by newer code models**: DeepSeekCoder-V2, Qwen2.5-Coder-7B/32B, and CodeGemma have since posted higher HumanEval scores at equivalent or smaller sizes.
+- **16K context only**: No long-context extension; repository-level tasks requiring more than 16K tokens must rely on chunking strategies, degrading performance.
 
 ## 11. Sources
 
