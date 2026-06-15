@@ -1,3 +1,15 @@
+---
+name: "Few-shot / in-context learning"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2005.14165"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "Zero-shot prompts rely on the model's internal priors, producing inconsistent or off-format output for tasks with unusual schemas or domain conventions"
+best_for: ["coding", "data", "writing", "automation"]
+notes: ""
+---
+
 # Few-shot / in-context learning
 
 _Last verified: 2026-06-14_

@@ -1,3 +1,15 @@
+---
+name: "Prompt caching"
+license_category: "n/a"
+status: "active"
+url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+last_verified: "2026-06-14"
+applies_at: "runtime"
+problem: "A large static system prompt sent on every request in an agentic loop is billed at full input-token rates, making high-frequency loops expensive"
+best_for: ["automation", "data", "research"]
+notes: "Cache TTL is ~5 minutes on Anthropic; any prefix change causes a full cache miss"
+---
+
 # Prompt caching
 
 _Last verified: 2026-06-14_

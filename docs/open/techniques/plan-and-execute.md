@@ -1,3 +1,15 @@
+---
+name: "Plan-and-execute"
+license_category: "n/a"
+status: "active"
+url: "https://arxiv.org/abs/2305.04091"
+last_verified: "2026-06-14"
+applies_at: "model"
+problem: "Step-by-step agents decide what to do next based only on the most recent observation, so they drift from the original goal on long tasks"
+best_for: ["coding", "research", "automation"]
+notes: ""
+---
+
 # Plan-and-execute
 
 _Last verified: 2026-06-14_
