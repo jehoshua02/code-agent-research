@@ -69,11 +69,17 @@ Custom agents are written as Python classes implementing the `Agent` interface a
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **SWE-bench Verified #1 (open-source).** OpenHands reached 66.4% on SWE-bench Verified (5-attempt rollout with critic model) and is the only open-source agent in the top 10; also #1 on Multi-SWE-Bench across 8 languages ([blog, Apr 2025](https://www.openhands.dev/blog/sota-on-swe-bench-verified-with-inference-time-scaling-and-critic-model)).
+- **Full-environment sandbox.** Gives the LLM a browser (Playwright), terminal, and filesystem inside Docker — enabling end-to-end tasks beyond code editing alone ([README](https://github.com/All-Hands-AI/OpenHands)).
+- **Composable agent SDK.** Python `Agent` interface supports thousands of parallel agents and microagent sub-tasks, making it suitable for production pipelines ([arXiv:2511.03690](https://arxiv.org/pdf/2511.03690)).
+- **70 K+ GitHub stars.** Strong community growth reflects broad adoption for research and production workflows ([GitHub](https://github.com/All-Hands-AI/OpenHands)).
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Docker startup latency.** New users experience 1+ minute delays to pull the runtime image; even subsequent starts take ~15 s on modern hardware ([GitHub #2555](https://github.com/OpenHands/OpenHands/issues/2555), [#3644](https://github.com/OpenHands/OpenHands/issues/3644)).
+- **Strong-model dependency.** Performance drops significantly without Claude 4.5 or GPT-4o; weaker models produce unreliable results, raising API cost concerns ([OpenHands Review 2026](https://vibecoding.app/blog/openhands-review)).
+- **Agent loop repetition.** The agent sometimes repeats the same failing approach; Planning Mode (still beta) is occasionally ignored by the agent ([OpenHands Review 2026](https://vibecoding.app/blog/openhands-review)).
+- **Docker networking edge cases.** In LAN/Docker deployments, agent-server containers fail to resolve `host.docker.internal`, blocking sandbox startup ([GitHub #12229](https://github.com/OpenHands/OpenHands/issues/12229)).
 
 ## 10. Sources
 

@@ -65,11 +65,17 @@ Extensibility lives in `~/.continue/config.json` (or a workspace-level override)
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **IDE-native, privacy-first.** Routes LLM calls directly between the IDE and the API endpoint — no third-party intermediary — enabling fully local or air-gapped deployments ([dev.to review](https://dev.to/maximsaplin/continuedev-the-swiss-army-knife-that-sometimes-fails-to-cut-4gg3)).
+- **Broad model and provider support.** Works with any LiteLLM-compatible provider including local Ollama models, making it provider-agnostic in a way proprietary Copilot is not ([README](https://github.com/continuedev/continue)).
+- **MCP client support (v1.0).** Native MCP client added in v1.0 (late 2024), exposing external tools as IDE slash commands — a differentiator vs. most IDE extensions ([§6 above](#6-mcp-support)).
+- **33.7 K GitHub stars.** Strong adoption before archival; 2.0.0 final release removed telemetry and authentication, making the codebase cleanly self-hostable ([GitHub](https://github.com/continuedev/continue)).
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Repository archived as of 2026.** Active development has stopped; the repo is read-only, so bugs and compatibility issues will not receive official fixes ([GitHub](https://github.com/continuedev/continue)).
+- **Mediocre core code generation.** One detailed review rated it 3/5, noting it lacks tree-sitter integration, SEARCH/REPLACE diff protocols, and test-driven autocorrection that Aider and Cursor use ([dev.to review](https://dev.to/maximsaplin/continuedev-the-swiss-army-knife-that-sometimes-fails-to-cut-4gg3)).
+- **Inline editor UX and stability.** Ctrl+I / Cmd+I has 5–10 s first-use delays; indexing breaks on macOS; context providers sometimes fail to load ([dev.to review](https://dev.to/maximsaplin/continuedev-the-swiss-army-knife-that-sometimes-fails-to-cut-4gg3)).
+- **JetBrains plugin less mature.** Feature parity with the VS Code extension is lower; maintainers recommended the CLI over the JetBrains plugin before archiving ([README](https://github.com/continuedev/continue)).
 
 ## 10. Sources
 

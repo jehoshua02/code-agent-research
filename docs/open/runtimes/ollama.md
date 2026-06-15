@@ -69,11 +69,17 @@ A separate Apple Silicon post claims "up to 20% faster" output speed with the ML
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Zero-configuration install**: Single command (`brew install ollama` / `curl … | sh` / `OllamaSetup.exe`) brings up an OpenAI-compatible server on all three major platforms; no CUDA Toolkit separate install required (bundled). ([ollama/ollama README](https://github.com/ollama/ollama))
+- **Bundled model library**: 100+ curated models with automated download, version control, and format conversion (safetensors → GGUF internally) via `ollama pull <name>`. ([skywork.ai Ollama models 2025](https://skywork.ai/blog/llm/ollama-models-list-2025-100-models-compared/))
+- **Apple Silicon performance**: MLX engine path delivers up to 20% faster decode speeds on M-series vs. the prior llama.cpp-only path; DGX Spark benchmark shows 7,614 tok/s prefill and 38 tok/s decode on Llama 3.1 8B Q4_K_M. ([Ollama MLX post](https://ollama.com/blog/mlx-performance); [DGX Spark post](https://ollama.com/blog/nvidia-spark-performance))
+- **Broad GPU coverage without driver complexity**: Auto-detects and falls back across CUDA → ROCm → Vulkan → CPU; Windows AMD support via Vulkan when ROCm is unavailable. ([ollama/ollama docs](https://github.com/ollama/ollama/blob/main/docs/gpu.md))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Throughput gap under concurrent load**: Red Hat benchmark (Aug 2025) found Ollama peaks at 41 TPS vs. vLLM's 793 TPS (~19× gap); P99 ITL becomes "extremely erratic at higher concurrency" while vLLM stays stable at 80 ms. ([Red Hat Developer, Aug 2025](https://developers.redhat.com/articles/2025/08/08/ollama-vs-vllm-deep-dive-performance-benchmarking))
+- **Sequential-by-default request handling**: Requests queue; at 10 concurrent users, the 10th request waits ≥18 s for a 2-second generation; `OLLAMA_NUM_PARALLEL=32` helps but throughput still plateaus. ([aicompetence.org](https://aicompetence.org/ollama-production-limitations/))
+- **`logprobs` not supported**: The OpenAI-compat `/v1/chat/completions` endpoint explicitly omits `logprobs`, `logit_bias`, and `tool_choice`, limiting use in log-probability-based evaluation pipelines. ([openai.md](https://github.com/ollama/ollama/blob/main/docs/openai.md))
+- **Images generation is "experimental"**: `/v1/images/generations` is marked experimental in the docs, with no stability guarantee. ([Ollama API docs](https://github.com/ollama/ollama/blob/main/docs/openai.md))
 
 ## 9. Sources
 

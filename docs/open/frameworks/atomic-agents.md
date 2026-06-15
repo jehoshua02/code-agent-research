@@ -63,11 +63,17 @@ response = agent.run(BasicChatInputSchema(chat_message="Hello!"))
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Predictable, reproducible outputs**: Schema-driven input/output contracts (Pydantic + Instructor) enforce exact structured outputs at every step, reducing hallucination drift in production pipelines. Source: [brainblendai.com/blogs/atomic-agents-2-0](https://www.brainblendai.com/blogs/introducing-atomic-agents-2-0-the-enterprise-friendly-way-to-build-ai-agents).
+- **Single-responsibility composability**: Each `AtomicAgent[InputSchema, OutputSchema]` does exactly one thing; agents chain via schema matching like typed LEGO blocks, making components independently testable and swappable. Docs: [github.com/BrainBlend-AI/atomic-agents/README.md](https://github.com/BrainBlend-AI/atomic-agents/blob/main/README.md).
+- **Instructor-backed auto-retry on validation failure**: Structured output validation errors automatically re-prompt the model with the error message (default 3 retries), catching format failures without custom retry logic. Docs: [python.useinstructor.com](https://python.useinstructor.com/).
+- **No hidden abstractions**: All wiring is explicit Python; no graph DSL or YAML config to debug. Noted in [brainblendai.com blog](https://www.brainblendai.com/blogs/introducing-atomic-agents-2-0-the-enterprise-friendly-way-to-build-ai-agents).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Verbose by design**: Decomposing tasks into atomic steps requires significantly more boilerplate than monolithic agent classes; explicitly acknowledged as a trade-off by maintainers. [brainblendai.com/blogs/atomic-agents-2-0](https://www.brainblendai.com/blogs/introducing-atomic-agents-2-0-the-enterprise-friendly-way-to-build-ai-agents).
+- **No built-in long-term memory or graph memory**: `ChatHistory` is in-process only; persistent/vector memory is an open feature request (#151) with no native implementation. [github.com/BrainBlend-AI/atomic-agents/issues/151](https://github.com/BrainBlend-AI/atomic-agents/issues/151).
+- **No MCP or native orchestration primitive**: No built-in MCP support and no handoff/orchestrator layer; multi-agent workflows are application-level code. Confirmed by review of [BrainBlend-AI/atomic-agents](https://github.com/BrainBlend-AI/atomic-agents).
+- **Smaller ecosystem**: Fewer community examples and third-party tool recipes than LangChain or CrewAI; requires Python 3.12+ narrowing compatibility. [aitoolsatlas.ai/tools/atomic-agents](https://aitoolsatlas.ai/tools/atomic-agents).
 
 ## 9. Sources
 

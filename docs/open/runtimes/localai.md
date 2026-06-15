@@ -71,11 +71,17 @@ Not benchmarked by maintainer. None of the official docs publish throughput, lat
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **True OpenAI drop-in replacement:** Existing code calling `api.openai.com` can be redirected to `localhost` with no client-side changes; also covers Anthropic Messages, Ollama, and ElevenLabs compatible APIs. Source: [localai.io/features](https://localai.io/features/).
+- **Broadest multi-modal scope among self-hosted servers:** Single endpoint covers text, embeddings, image generation, speech-to-text, TTS, video generation, object detection, and reranking — 36+ backends. Source: [localai.io/features](https://localai.io/features/).
+- **Runs on CPU without GPU:** CPU path works on any x86-64/ARM64 machine; GPU is optional, not required. Source: [README](https://github.com/mudler/LocalAI).
+- **Distributed inference across nodes:** Built-in peer-to-peer federation and production multi-node scaling to spread inference load beyond a single machine. Source: [localai.io/features](https://localai.io/features/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Complex setup and backend management:** LocalAI is a routing layer over 36+ backends; users must manage backend installs individually (`local-ai backends list/install`) and write per-model YAML configs — significantly more operational surface area than single-backend servers. Source: [Ollama vs LocalAI comparison](https://hyscaler.com/insights/ollama-vs-localai-open-source-local-llm-apis/).
+- **Backend install failures are a recurring issue:** Community reports document errors such as "not a valid backend: run file not found" when backends cannot install correctly. Source: [issue #7662](https://github.com/mudler/LocalAI/issues/7662).
+- **Models stay resident in VRAM by default:** Once a model loads, it is not evicted when switching; VRAM exhaustion occurs when loading multiple models without explicit unloading. Source: [troubleshooting docs](https://localai.io/basics/troubleshooting/).
+- **Intel GPU known hang:** Intel SYCL backend requires `mmap: false` in model YAML to avoid hangs — documented workaround rather than a fixed bug. Source: [Hardware docs](https://localai.io/).
 
 ## 9. Sources
 

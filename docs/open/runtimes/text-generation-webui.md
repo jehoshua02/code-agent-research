@@ -68,11 +68,17 @@ Not benchmarked by maintainer. The README and wiki contain no canonical throughp
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Hot-swap between backends without restart:** llama.cpp, ExLlamaV2/V3, Transformers, ik_llama.cpp, and TensorRT-LLM can be switched at runtime from the UI — no server restart needed. Source: [README](https://github.com/oobabooga/text-generation-webui).
+- **Rich extension ecosystem:** Built-in and community extensions (TTS, voice input, translation, Stable Diffusion) each require only a single `.py` file, making the platform easily extensible. Source: [README](https://github.com/oobabooga/text-generation-webui).
+- **Widest format coverage through backend composition:** GGUF, EXL2, GPTQ, AWQ, safetensors FP16/BF16, bitsandbytes NF4/INT8, TensorRT-LLM, and HQQ — each via the appropriate backend. Source: [README](https://github.com/oobabooga/text-generation-webui).
+- **OpenAI- and Anthropic-compatible API:** Drop-in local replacement for OpenAI/Anthropic endpoints; supports tool calling, vision, and streaming. Source: [README](https://github.com/oobabooga/text-generation-webui).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Heavy install (~10 GB):** The one-click installer downloads PyTorch and all dependencies, totaling approximately 10 GB; setup is significantly larger than single-binary alternatives. Source: [README](https://github.com/oobabooga/text-generation-webui).
+- **Not designed for production concurrent serving:** The llama.cpp backend's `--parallel` slots divide the context window equally, limiting real-world throughput; there is no continuous-batching scheduler. Source: [Wiki §12](https://github.com/oobabooga/text-generation-webui/wiki/12-%E2%80%90-OpenAI-API).
+- **AMD on Windows is Vulkan/llama.cpp only:** ROCm, ExLlamaV2/V3, and TensorRT-LLM are unavailable on Windows AMD hardware. Source: [README](https://github.com/oobabooga/text-generation-webui).
+- **Ongoing stability issues:** Community issue tracker records recurring regressions (e.g., blank responses in v2.3 across multiple backends). Source: [issue #6708](https://github.com/oobabooga/text-generation-webui/issues/6708).
 
 ## 9. Sources
 

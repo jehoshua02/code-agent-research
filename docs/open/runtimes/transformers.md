@@ -79,11 +79,17 @@ Not benchmarked by maintainer (in quantitative terms). The [GPU inference guide]
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Widest architecture coverage of any single library:** Supports thousands of model families (LLaMA, Mistral, Falcon, Gemma, Phi, Qwen, CLIP, Whisper, T5, …) with a unified `from_pretrained()` API. Source: [huggingface/transformers README](https://github.com/huggingface/transformers).
+- **Broadest quantization backend selection:** bitsandbytes NF4/INT8, GPTQ, AWQ, AQLM, HQQ, compressed-tensors, torchao, FBGEMM FP8, EETQ — all via `quantization_config`; no other single library offers this range. Source: [quantization docs](https://huggingface.co/docs/transformers/quantization).
+- **Full training-to-inference workflow:** The only runtime in this list that supports fine-tuning, gradient checkpointing, PEFT/LoRA adapter training, and dataset pipelines alongside inference — making it the standard research tool. Source: [huggingface/transformers README](https://github.com/huggingface/transformers).
+- **Direct model internals access:** Logits, hidden states, attention weights, custom logits processors, and generation hooks are all first-class Python objects — essential for research, evaluation, and custom pipelines. Source: [text_generation docs](https://huggingface.co/docs/transformers/en/main_classes/text_generation).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Significantly lower serving throughput than dedicated engines:** Independent benchmark on Llama-3.2-3B-Instruct (NVIDIA L4): HF pipelines took 12.9 s at batch 32 vs. vLLM's 3.38 s — roughly 4× slower; gap widens at larger batches. Source: [vLLM vs HuggingFace benchmark, Medium 2024](https://medium.com/@alishafique3/vllm-vs-hugging-face-for-high-performance-offline-llm-inference-2d953b4fb3b4).
+- **No built-in HTTP server or OpenAI-compatible API:** `transformers` is a library; serving requires wrapping with FastAPI, TGI, vLLM, or another layer. Source: [README](https://github.com/huggingface/transformers).
+- **GGUF loads as dequantized FP32 (no native quantized inference):** When loaded via `gguf_file=`, weights are converted to FP32 at load time — the purpose is fine-tuning portability, not quantized inference speed. Source: [GGUF docs](https://huggingface.co/docs/transformers/gguf).
+- **MPS (Apple Silicon) is partially supported for quantization backends:** bitsandbytes and autoawq have only partial MPS support; some quant configurations silently fall back to CPU. Source: [perf_infer_gpu docs](https://huggingface.co/docs/transformers/perf_infer_gpu_one).
 
 ## 9. Sources
 

@@ -70,11 +70,17 @@ No canonical benchmark suite. The README ships a single illustrative `llama-benc
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Broadest hardware reach of any GGUF runtime**: Single codebase supports Metal, CUDA, ROCm/HIP, Vulkan, SYCL, OpenCL, WebGPU, and CPU (x86/ARM/RISC-V/Z) — documented in the [ggml-org/llama.cpp README](https://github.com/ggml-org/llama.cpp).
+- **Q4_K_M throughput vs FP16 CPU baseline**: Independent benchmarks on Llama-3.1-8B show 47.9 tok/s with Q4_K_M (4.8 bits/weight), an ~18× improvement over the FP16 CPU baseline, with >90% RAM reduction. ([arxiv 2601.14277](https://arxiv.org/html/2601.14277v1))
+- **Zero-dependency CPU inference**: Runs on bare CPU with no GPU drivers; suitable for air-gapped, embedded, and mobile (Android/iOS) targets where other runtimes cannot be installed. ([README](https://github.com/ggml-org/llama.cpp))
+- **Upstream of the ecosystem**: Ollama, KoboldCpp, and llamafile are all wrappers around llama.cpp, making it the de facto reference implementation for GGUF inference. ([ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Multimodal is explicitly "experimental"**: Server docs mark `image_url`, `input_audio`, and `input_video` support as experimental; flash attention is disabled for multimodal projectors on several backends. ([tools/server/README.md](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md))
+- **Vulkan backend shows negative scaling on MoE models at small batch sizes**: throughput drops at batch sizes 2–3, reported in weekly GitHub issue trackers (Nov 2025). ([Buttondown weekly report Nov 2025](https://buttondown.com/weekly-project-news/archive/weekly-github-report-for-llamacpp-november-03/))
+- **Low multi-request throughput compared to production servers**: llama-server's continuous batching supports a modest 4 parallel slots by default and lacks the scheduler-level optimizations of vLLM/TGI; llama_server is also reported 5–10% slower than llama_cli per token. ([community reports](https://github.com/ggml-org/llama.cpp/discussions/4167))
+- **No native Python package** — all GPU builds require environment-specific compile flags or pre-built wheel variants (`CMAKE_ARGS="-DGGML_CUDA=on"`), adding friction for Python-first workflows. ([llama-cpp-python docs](https://github.com/abetlen/llama-cpp-python))
 
 ## 9. Sources
 

@@ -55,11 +55,17 @@ agent.run("Find the current price of gold.")
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Code-as-actions is uniquely expressive.** `CodeAgent` emits Python code rather than JSON tool calls, enabling function nesting, loops, and conditionals in a single action step. The HuggingFace team reports CodeAgents use "30% fewer LLM steps and costs than classic ReAct-style JSON agents." Source: [HuggingFace smolagents docs](https://huggingface.co/docs/smolagents/en/index); [KDnuggets — Big Gains with smolagents](https://www.kdnuggets.com/big-gains-with-hugging-faces-smolagents).
+- **Extremely minimal codebase.** Core agent logic fits in ~1,000 lines of code with minimal abstractions, making it easy to read, fork, and understand fully. Source: [GitHub — huggingface/smolagents README](https://github.com/huggingface/smolagents).
+- **GAIA benchmark top performance.** A CodeAgent built on smolagents topped the GAIA leaderboard, demonstrating that open-source models with code-first agents can compete with top closed models. Source: [HuggingFace blog — "Our Transformers Code Agent beats the GAIA benchmark"](https://huggingface.co/blog/beating-gaia).
+- **Native HuggingFace ecosystem integration.** `InferenceClientModel` provides direct access to 50+ Hub providers; tools, agents, and models are publishable and loadable from the Hub. Source: [smolagents README](https://github.com/huggingface/smolagents).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **No built-in long-term or cross-session memory.** `AgentMemory` is in-context only; there is no built-in summarization or persistent store. Multiple open GitHub issues request this feature: [#694](https://github.com/huggingface/smolagents/issues/694), [#901](https://github.com/huggingface/smolagents/issues/901), [#1121](https://github.com/huggingface/smolagents/issues/1121).
+- **Observability requires external tooling.** There is no first-party tracing dashboard; teams must wire up OpenTelemetry to Langfuse, Phoenix, or MLflow themselves. Source: [Langfuse — Observability for smolagents](https://langfuse.com/integrations/frameworks/smolagents).
+- **Sandbox setup required for production code execution.** Running `CodeAgent` safely in production requires E2B, Docker, or Modal sandbox configuration, adding operational overhead. Source: [smolagents README — sandboxed executors](https://github.com/huggingface/smolagents).
+- **Context grows unboundedly without intervention.** The framework has basic truncation but no automatic summarization; long-running agents accumulate history until context limits are hit, requiring custom management. Source: [ZenML blog — smolagents vs LangGraph](https://www.zenml.io/blog/smolagents-vs-langgraph).
 
 ## 9. Sources
 

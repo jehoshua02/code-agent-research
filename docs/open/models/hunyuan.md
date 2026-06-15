@@ -60,15 +60,32 @@ Hunyuan-A13B-Instruct targets **reasoning** (multi-step math, science, code), **
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers from the official Hunyuan-A13B GitHub repository (Tencent, Jun 2025). Base model unless noted. ([github.com/Tencent-Hunyuan/Hunyuan-A13B](https://github.com/Tencent-Hunyuan/Hunyuan-A13B))
+
+| Benchmark | Hunyuan-A13B Base | Hunyuan-A13B-Instruct |
+|---|---|---|
+| MMLU | 88.17 | — |
+| MMLU-Pro | 67.23 | — |
+| GPQA | 49.12 | — |
+| MATH | 72.35 | — |
+| GSM8K | 91.83 | — |
+| EvalPlus | 78.64 | — |
+| AIME 2024 | — | 87.3 |
+| AIME 2025 | — | 76.8 |
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Math reasoning at MoE efficiency**: Instruct scores AIME 2024 87.3 with only 13B active parameters — competitive with much larger dense models. ([Hunyuan-A13B GitHub, Jun 2025](https://github.com/Tencent-Hunyuan/Hunyuan-A13B))
+- **Chinese-English bilingual**: Primary design goal; CMATH 91.17 reflects strong Chinese mathematical reasoning alongside English MMLU 88.17. ([Hunyuan-A13B GitHub, Jun 2025](https://github.com/Tencent-Hunyuan/Hunyuan-A13B))
+- **Long context**: Native 256K context window (262,144 tokens), one of the longest among open-weight models in its class. ([Hunyuan-A13B model card](https://huggingface.co/tencent/Hunyuan-A13B-Instruct))
+- **Official quantizations**: Tencent ships FP8 and GPTQ-Int4 variants alongside GGUF Q4/Q8, reducing the barrier to deployment on consumer clusters.
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **NLU and text-creation gaps**: Community evaluation finds performance gaps in ComplexNLU (61.2) and creative/text-generation tasks compared to competing models at similar active-parameter counts. ([Hunyuan-A13B GitHub, Jun 2025](https://github.com/Tencent-Hunyuan/Hunyuan-A13B))
+- **High minimum hardware bar**: Q4_K_M still requires ~49 GB VRAM (2× RTX 4090); the 80B total expert weight must all reside in memory despite only 13B active per token.
+- **Proprietary license**: Tencent's custom license is not Apache 2.0 and has commercial-use restrictions in some jurisdictions — requires legal review before production deployment. ([Hunyuan-A13B LICENSE](https://github.com/Tencent-Hunyuan/Hunyuan-A13B))
+- **Limited third-party validation**: Relatively new model (Jun 2025) with fewer independent community benchmarks than Llama or Qwen families.
 
 ## 11. Sources
 

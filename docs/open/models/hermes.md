@@ -54,15 +54,33 @@ Hermes 3 is purpose-built for **tool use and function calling** using both a JSO
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Sources: HuggingFace model card ([Hermes-3-Llama-3.1-8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)) and Hermes 3 Technical Report ([arXiv 2408.11857](https://arxiv.org/abs/2408.11857)). Scores are from the HuggingFace Open LLM Leaderboard v2 (8B) and the paper's downstream task evaluation table.
+
+| Benchmark | Hermes-3-8B | Hermes-3-70B | Llama-3.1-8B-Instruct | Llama-3.1-70B-Instruct |
+|---|---|---|---|---|
+| MMLU (5-shot) | 64.8 | 79.1 | 68.1 | 82.3 |
+| ARC-Challenge (0-shot) | 58.1 | 65.5 | 55.1 | 63.4 |
+| IFEval (0-shot) | 61.7 | — | — | — |
+| BBH (3-shot) | 30.7 | — | — | — |
+| GPQA (0-shot) | 6.4 | — | — | — |
+| MMLU-Pro (5-shot) | 23.8 | — | — | — |
+| MATH Lvl 5 (4-shot) | 4.8 | — | — | — |
+
+Hermes-3-405B "achieves state of the art performance among open-weight models on several public benchmarks" including ARC, BoolQ, HellaSwag, IFEval, and WinoGrande. ([arXiv 2408.11857](https://arxiv.org/abs/2408.11857)). HumanEval and SWE-bench not reported.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Tool calling and structured output as the core training target**: Hermes 3 implements both a JSON schema tool format and an XML-based `<tool_call>` / `<tool_response>` format explicitly trained for reliable function invocation — the primary reason to choose it over the base Llama 3.1 instruct models. ([Hermes 3 tech report](https://arxiv.org/abs/2408.11857))
+- **Agentic scratchpad thinking**: Hermes introduced the `<scratchpad>` internal-monologue pattern widely adopted in the community, enabling models to reason step-by-step before producing a tool call or response — improving accuracy on multi-step agentic tasks. ([NousResearch Hermes 3](https://nousresearch.com/hermes3/))
+- **Competitive with or exceeds Llama 3.1 Instruct on several benchmarks**: Hermes-3-8B outperforms Llama-3.1-8B-Instruct on ARC-Challenge (58.1 vs 55.1); Hermes-3-70B similarly outperforms on ARC-Challenge (65.5 vs 63.4). ([Hermes 3 tech report](https://arxiv.org/abs/2408.11857))
+- **Apache 2.0 path via Qwen-based variants**: Qwen-base Hermes variants inherit Apache 2.0 (unlike Llama-base variants with Meta's 700M MAU cap), offering a fully permissive option for commercial deployment. ([NousResearch](https://huggingface.co/NousResearch))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **MMLU trails the base Llama 3.1 instruct**: Hermes-3-8B MMLU 64.8 vs Llama-3.1-8B-Instruct 68.1; Hermes-3-70B 79.1 vs Llama-3.1-70B-Instruct 82.3 — instruction tuning for tool calling came at a cost to general knowledge accuracy. ([Hermes 3 tech report](https://arxiv.org/abs/2408.11857))
+- **Training sequence length only 8K**: Despite the inherited 128K context window, Hermes 3 was trained on 8,192-token sequences; output quality on very long inputs (>32K) is untested and likely degraded relative to models explicitly long-context trained. ([HuggingFace model card](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B))
+- **Llama 3.1 license cap for commercial use**: Llama-based Hermes variants inherit Meta's Llama Community License, which requires a separate agreement for deployments serving more than 700 million monthly active users. ([Meta Llama 3.1 license](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B))
+- **No vision support**: No multimodal capability across any current Hermes 3 variant; tool calling is text/JSON only.
 
 ## 11. Sources
 

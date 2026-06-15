@@ -57,11 +57,17 @@ result = await agent.run(task="Summarize the news.")
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Flexible multi-agent team topologies.** `RoundRobinGroupChat`, `SelectorGroupChat`, and `MagenticOneGroupChat` provide distinct collaboration patterns out of the box, with `GraphFlow` for directed-graph workflows. Source: [AutoGen AgentChat docs](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/).
+- **MagenticOne competitive on agentic benchmarks.** The Orchestrator + specialist agent system achieves "statistically competitive performance to the state-of-the-art" on GAIA, AssistantBench, and WebArena. Source: [Microsoft Research — Magentic-One paper (arXiv:2411.04468)](https://arxiv.org/abs/2411.04468).
+- **Human-in-the-loop as a first-class citizen.** `UserProxyAgent` can block the team for human approval at any turn; `max_turns=1` pattern supports between-run review. Source: [AutoGen AgentChat tutorial](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/tutorial/).
+- **Native MCP support.** `McpWorkbench` in `autogen-ext` connects directly to any stdio or SSE MCP server without third-party adapters. Source: [AutoGen README MCP example](https://github.com/microsoft/autogen#mcp-server).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Officially in maintenance mode.** Microsoft confirmed AutoGen will receive only bug fixes and security patches; no new features or performance improvements are planned. New projects are directed to Microsoft Agent Framework. Source: [AI DEV DAY — "Is AutoGen Deprecated?"](https://aidevdayindia.org/blogs/ai-agent-framework-decision-matrix/is-autogen-deprecated-maintenance-mode-microsoft.html).
+- **Unpredictable loops in production.** The "agents having a conversation" pattern is noted to "work great in demos but create unpredictable, hard-to-debug loops in production." Source: [buildmvpfast.com — LangGraph vs CrewAI vs AutoGen comparison 2026](https://www.buildmvpfast.com/blog/langgraph-vs-crewai-vs-autogen-vs-swarms-agent-framework-2026).
+- **No native observability standard.** Observability depends on OpenTelemetry instrumentation rather than a first-party tracing product; the framework will not receive updates to support emerging tool standards. Source: [AI DEV DAY — maintenance mode analysis](https://aidevdayindia.org/blogs/ai-agent-framework-decision-matrix/is-autogen-deprecated-maintenance-mode-microsoft.html).
+- **Community fragmentation.** The AG2 community fork was created to continue feature development after Microsoft halted it, meaning the ecosystem is now split between two incompatible paths. Source: [AI DEV DAY — maintenance mode analysis](https://aidevdayindia.org/blogs/ai-agent-framework-decision-matrix/is-autogen-deprecated-maintenance-mode-microsoft.html).
 
 ## 9. Sources
 

@@ -69,11 +69,17 @@ Credentials are passed via environment variables or ambient SDK credential chain
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Official provider investment**: Cloudflare ships and maintains a first-party MCP server covering Workers, KV, R2, D1, and AI Gateway with OAuth 2.1 support — the most production-polished cloud-provider MCP integration available ([cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare)).
+- **Ambient credential reuse**: AWS, GCP, and Azure servers use their SDK's existing credential chains (`~/.aws/credentials`, ADC, `az login`), so no new secret management is required — agents inherit the developer's current cloud identity immediately.
+- **Structured resource enumeration**: `list_resources` and `describe_resource` return typed API objects rather than CLI text, making it straightforward for agents to extract resource IDs, ARNs, or connection strings for subsequent operations.
+- **Read-only mode feasibility**: most AWS and GCP servers can be run with read-only IAM policies (no destructive permissions granted), enabling safe exploratory agents for cost analysis, log querying, and infrastructure auditing without write risk.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Ambient credentials are typically over-scoped**: developer workstation profiles (`AdministratorAccess`, `Owner` roles) carry far broader permissions than any agent task needs; most documentation omits least-privilege setup, nudging operators toward high-blast-radius configurations.
+- **Irreversible mutations with no confirmation step**: tools like `delete_bucket` or `terminate_instances` execute immediately; the MCP protocol has no built-in human-approval gate, so a single hallucinated resource name can cause an outage.
+- **Cost runaway in agentic loops**: provisioning tools called repeatedly in a planning loop (e.g., creating scratch VMs for exploration) generate real charges; there is no built-in spend cap in any MCP server implementation.
+- **Community server quality is uneven**: unlike Cloudflare's official server, AWS and GCP community servers are maintained by third parties with varying update cadence, API coverage, and error handling — capability gaps and stale SDK versions are common.
 
 ## 9. Sources
 

@@ -56,11 +56,17 @@ No auth. The server reads and writes a local JSONL file. Access is controlled en
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Official reference implementation with a knowledge-graph model**: Anthropic ships `@modelcontextprotocol/server-memory` with a JSONL-backed entity/relation graph — a more structured store than simple key-value, enabling relational queries like `search_nodes` across facts ([modelcontextprotocol/servers — memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)).
+- **Session-spanning persistence**: unlike the context window, stored observations survive across restarts and new conversations, enabling long-running user-preference or project-context accumulation that would otherwise require reloading from an external source each session.
+- **Zero infrastructure**: data lives in a single JSONL file on the host filesystem — no database or cloud service required, making the reference implementation trivially self-hostable and auditable.
+- **Selective retrieval tools**: `search_nodes` and `open_nodes` allow the agent to fetch only relevant entities rather than loading the entire graph, keeping context footprint proportional to the task.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Memory poisoning risk**: stored observations are written by the model itself; a hallucinated or prompt-injected fact persists permanently and is re-injected verbatim into future contexts, silently corrupting all downstream behavior ([modelcontextprotocol/servers#memory security](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)).
+- **No eviction policy or size limit**: the `memory.jsonl` file grows unboundedly; there is no TTL, LRU eviction, or storage cap, meaning the graph accumulates stale or contradictory observations indefinitely without operator intervention.
+- **No multi-tenant isolation**: a single server instance shares one file across all sessions — private data from one conversation (credentials, personal details) is visible to any other session that calls `read_graph`, with no per-user namespacing.
+- **Prompt injection via retrieved memory**: observations are inserted into the context without sanitization; a stored string beginning with `"Ignore previous instructions…"` becomes a live injection attack on every future session that reads that entity.
 
 ## 9. Sources
 

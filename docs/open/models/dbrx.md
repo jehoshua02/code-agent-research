@@ -49,15 +49,33 @@ DBRX Instruct targets **general English chat and instruction following**, with e
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+All scores are for DBRX Instruct. Source: Databricks launch blog ([databricks.com/blog/introducing-dbrx-new-state-art-open-llm](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm)). The HuggingFace model repo is gated (requires license acceptance); scores from the blog are the primary public source.
+
+| Benchmark | DBRX Instruct | Notable Comparison |
+|---|---|---|
+| MMLU | 73.7% | GPT-3.5: 70.0% |
+| HumanEval (pass@1) | 70.1% | CodeLlama-70B: 67.8%; Grok-1: 63.2% |
+| GSM8K | 66.9% | Grok-1: 62.9% |
+| MT-Bench (corrected) | 8.39 | Gemini 1.0 Pro: 8.23 |
+| HellaSwag | 89.0% | GPT-3.5: 85.5% |
+| HF Open LLM Leaderboard | 74.5% | Mixtral-8x7B-Instruct: 72.7% |
+| Databricks Model Gauntlet | 66.8% | Mixtral-8x7B-Instruct: 60.7% |
+
+GPQA, MATH, IFEval, and SWE-bench scores were not reported. These benchmarks reflect March 2024 results; the model has not been updated since.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Strong code generation at launch**: HumanEval 70.1% outperformed CodeLlama-70B (67.8%) and Grok-1 (63.2%) at the time of release in March 2024 — notable given DBRX activates only 36B parameters per token. ([Databricks blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm))
+- **Fine-grained MoE efficiency**: The 16-expert, 4-active architecture (16-choose-4 = 1,820 routing combinations) enables diverse expert specialization with better per-token efficiency than coarser MoE designs; matched or exceeded Mixtral-8x7B at higher active-parameter count. ([Databricks blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm))
+- **Databricks / MLflow integration**: Native deployment path via Mosaic AI Model Serving and MLflow, making it a low-friction choice for teams already in the Databricks platform.
+- **32K context with competitive RAG**: HotPotQA RAG accuracy 55.0% outperforms GPT-3.5 Turbo 53.0%; a practical advantage for Databricks-based data pipelines. ([Databricks blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **No model updates since March 2024**: DBRX has received no architectural updates, fine-tune releases, or extended-context variants; it has been substantially surpassed by Llama 3.1 70B/405B, Qwen 2.5, and other models released later in 2024.
+- **Very high hardware floor**: Even at INT4, DBRX requires ~66 GB VRAM (two A100 80 GB GPUs) because all 132B parameters must reside in memory — the active-36B figure does not reduce the memory footprint. ([DBRX model card / Databricks blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm))
+- **No tool calling or multilingual support**: No officially documented function-calling format; primarily English; neither was added post-launch.
+- **Long-context underperformance**: The blog notes DBRX "underperforms" GPT-4 Turbo on 16K and 32K context benchmarks despite having the window size, suggesting degraded quality at long ranges. ([Databricks blog](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm))
 
 ## 11. Sources
 

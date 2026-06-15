@@ -58,15 +58,31 @@ Yi and Yi-1.5 are bilingual **English and Chinese** general-purpose models train
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers for Yi base models (5-shot MMLU, 8-shot GSM8K, 4-shot MATH, 0-shot HumanEval) from the Yi technical report (Mar 2024). ([arXiv:2403.04652](https://arxiv.org/abs/2403.04652)) Yi-1.5 scores are not officially published in a separate table; the 01-AI README notes Yi-1.5 improves on Yi across "reasoning, coding, math."
+
+| Benchmark | Yi-6B | Yi-34B |
+|---|---|---|
+| MMLU (5-shot) | 63.2 | 76.3 |
+| CMMLU (5-shot) | 75.5 | 83.7 |
+| GSM8K (8-shot) | 32.5 | 67.2 |
+| MATH (4-shot) | 4.6 | 14.4 |
+| HumanEval (pass@1) | 15.9 | 23.2 |
+
+Yi-34B-Chat AlpacaEval win rate: 94.08 (vs. GPT-4 baseline). ([arXiv:2403.04652](https://arxiv.org/abs/2403.04652))
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Chinese-English bilingual**: Yi-34B CMMLU 83.7 is one of the strongest results among open models at launch (Nov 2023) for Chinese language understanding. ([Yi technical report, Mar 2024](https://arxiv.org/abs/2403.04652))
+- **Apache 2.0, no gating**: Fully open download with no access form or usage cap — simpler to deploy in organizational contexts than Llama or Gemma 1–3.
+- **200K long-context variant**: Yi-34B-200K extends to 200,000-token context via position interpolation, useful for very long document analysis. ([Yi technical report, Mar 2024](https://arxiv.org/abs/2403.04652))
+- **Human preference (Chat)**: Yi-34B-Chat achieves a 94.08 AlpacaEval win rate, indicating strong instruction-following quality for a base-34B model at launch. ([Yi technical report, Mar 2024](https://arxiv.org/abs/2403.04652))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **Math and code lag**: The technical report explicitly acknowledges "discernible disparities...particularly in tasks related to mathematics and coding" — Yi-34B MATH 14.4 is far below contemporaries like Qwen2.5-72B or DeepSeek-R1. ([Yi technical report, Mar 2024](https://arxiv.org/abs/2403.04652))
+- **No native tool-calling format**: Yi-Chat models lack a structured function-call schema; tool use requires prompt engineering rather than a native runtime format.
+- **Superseded by newer models**: As of mid-2025, Qwen3 and Llama 3.x outperform Yi-1.5 at all size classes on general benchmarks; 01.AI's newer work (Yi-Lightning, etc.) is closed-source.
+- **Long-context coherence degradation**: Community reports note that the 200K context models degrade in quality beyond ~32K tokens in practice. ([Yi technical report, Mar 2024](https://arxiv.org/abs/2403.04652))
 
 ## 11. Sources
 

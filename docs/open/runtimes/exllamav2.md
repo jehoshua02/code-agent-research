@@ -66,11 +66,17 @@ Prefill throughput not reported separately. No TTFT, multi-GPU scaling, or batch
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Best single-sequence decode throughput at EXL2 quantization**: Maintainer-published figures show 205 tok/s (Llama-7B GPTQ 4-bit) and 257 tok/s (Llama-2-7B EXL2 3.0 bpw) on a single RTX 4090; community results report ~140 tok/s for 7B and ~40 tok/s for 33B on 24 GB cards. ([ExLlamaV2 README performance table](https://github.com/turboderp-org/exllamav2); [sitepoint.com speed limit guide](https://www.sitepoint.com/breaking-the-speed-limit-strategies-for-17k-tokens-sec-local-inference/))
+- **EXL2 mixed-precision quantization fits 70B in 24 GB**: Variable-bits-per-weight per layer (2–8 bpw) lets important layers retain higher precision; 2.5 bpw Llama-2-70B runs in a single 24 GB GPU with a reported 1.2 perplexity hit. ([ExLlamaV2 README](https://github.com/turboderp-org/exllamav2))
+- **Q4/Q8 KV cache + paged attention**: Paged FlashAttention with 256-token pages enables continuous batching with mid-batch sequence add/remove and cross-request prefix deduplication — documented in `doc/dynamic.md`. ([turboderp/exllamav2 dynamic.md](https://github.com/turboderp-org/exllamav2))
+- **Windows first-class citizen**: Prebuilt per-Python/CUDA wheels and VS Build Tools support; one of the few GPU inference libraries with genuinely supported Windows wheel builds. ([ExLlamaV2 README](https://github.com/turboderp-org/exllamav2))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **NVIDIA only, minimum Ampere (sm_80)**: Turing (RTX 20-series, GTX 16-series) is explicitly unsupported — kernels require sm_80 features; AMD ROCm is listed as "future work" for ExLlamaV3. ([ExLlamaV2 README](https://github.com/turboderp-org/exllamav2))
+- **macOS/Metal support not planned**: Issue #765 on the tracker; maintainer stated Metal support is not planned, citing architectural constraints. ([GitHub issue #765](https://github.com/turboderp-org/exllamav2/issues/765))
+- **No CPU fallback**: `EXLLAMA_NOCOMPILE=1` only skips JIT; there is no native CPU inference path — open issue #578. ([GitHub issue #578](https://github.com/turboderp-org/exllamav2/issues/578))
+- **No built-in OpenAI-compatible server**: TabbyAPI (separate project) is required for HTTP serving; the upstream ships only a WebSocket server with a bespoke protocol. ([ExLlamaV2 README](https://github.com/turboderp-org/exllamav2))
 
 ## 9. Sources
 

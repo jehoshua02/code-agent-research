@@ -47,11 +47,18 @@ response = client.run(agent=agent_a, messages=[{"role": "user", "content": "Hi"}
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+_Note: Swarm is deprecated; strengths are framed in past tense as educational reference value._
+
+- **Minimal, readable implementation of agent handoffs.** The entire orchestration loop was ~300 lines; the handoff pattern (a function returning an `Agent`) was the clearest published demonstration of how to transfer control between agents. Source: [openai/swarm README](https://github.com/openai/swarm).
+- **Lightweight and easily testable.** The README noted that Swarm explored "patterns that are lightweight, scalable, and highly customizable by design," with all logic running client-side and no hidden state, making unit testing straightforward. Source: [openai/swarm README](https://github.com/openai/swarm).
+- **Two-primitive model was easy to teach.** Just `Agent` (instructions + tool functions) and `handoff` (a function returning another `Agent`) made the mental model trivially graspable for people learning multi-agent patterns. Source: [openai/swarm README](https://github.com/openai/swarm).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Officially deprecated.** OpenAI's own README states: "Swarm is now replaced by the OpenAI Agents SDK, which is a production-ready evolution of Swarm." No further development is expected. Source: [openai/swarm README](https://github.com/openai/swarm).
+- **Completely stateless.** The framework stored no state between `client.run()` calls; the developer was entirely responsible for persisting messages, agent reference, and context variables — unsuitable for any production use case with continuity requirements. Source: [openai/swarm README](https://github.com/openai/swarm).
+- **Hardcoded to OpenAI Chat Completions API.** No support for non-OpenAI providers without overriding the underlying client; no native MCP support. Source: [openai/swarm README](https://github.com/openai/swarm).
+- **No approval workflows or observability primitives.** Human-in-the-loop was limited to the `run_demo_loop` REPL; `debug=True` was the only observability option. Source: [openai/swarm README](https://github.com/openai/swarm).
 
 ## 9. Sources
 

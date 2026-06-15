@@ -65,15 +65,33 @@ Falcon 1 models (7B/40B/180B) target general English instruction following; 2K c
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers for Falcon-H1-34B-Instruct from the official HuggingFace model card (TII, May 2025). ([tiiuae/Falcon-H1-34B-Instruct](https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct)) Falcon3 and Falcon 1 scores not officially benchmarked on the same suite; Falcon 1 is obsolete for these tests.
+
+| Benchmark | Falcon-H1-34B-Instruct |
+|---|---|
+| MMLU | 84.05 |
+| HumanEval (pass@1) | 87.2 |
+| MATH-500 | 83.8 |
+| IFEval | 89.37 |
+| GPQA | 41.53 |
+| GSM8K | 83.62 |
+| AIME 2025 | 16.67 |
+
+Falcon-H1R-7B (reasoning variant, Jan 2026) scores GPQA Diamond 61.3, MMLU-Pro 72.1. ([MarkTechPost, Jan 2026](https://www.marktechpost.com/2026/01/07/tii-abu-dhabi-released-falcon-h1r-7b-a-new-reasoning-model-outperforming-others-in-math-and-coding-with-only-7b-params-with-256k-context-window/))
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Efficiency via hybrid SSM+Attention**: H1 achieves up to 4× input throughput and 8× output throughput gains at long contexts compared to pure-attention models. ([Falcon-H1 blog](https://falcon-lm.github.io/blog/falcon-h1/))
+- **Instruction following (IFEval 89.37)**: Falcon-H1-34B-Instruct scores 89.37 on IFEval — competitive with much larger models like Qwen3-32B and Llama 3.3 70B. ([tiiuae/Falcon-H1-34B-Instruct model card](https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct))
+- **256K native context**: H1's hybrid architecture supports 256K tokens natively; the small SSM component makes long-context KV-cache memory far cheaper than pure attention. ([Falcon-H1 blog](https://falcon-lm.github.io/blog/falcon-h1/))
+- **Apache 2.0 across all H1/H1R variants**: No usage caps or gating for Falcon 3, H1, or H1R. ([tiiuae on HuggingFace](https://huggingface.co/tiiuae))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **GPQA lags reasoning specialists**: H1-34B scores 41.53 on GPQA, well below DeepSeek-R1 (71.5) and comparable-size reasoning models. The H1R-7B reasoning variant climbs to 61.3 but at a much smaller size. ([tiiuae/Falcon-H1-34B-Instruct model card](https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct))
+- **AIME hard-math ceiling**: H1-34B scores only 16.67 on AIME 2025, indicating that complex competition math is a weakness. ([tiiuae/Falcon-H1-34B-Instruct model card](https://huggingface.co/tiiuae/Falcon-H1-34B-Instruct))
+- **SSM optimization immaturity**: The Falcon-H1 announcement acknowledges that "Transformers are slightly faster at shorter context lengths" due to more mature attention kernel optimizations; SSM kernels are still catching up. ([Falcon-H1 blog](https://falcon-lm.github.io/blog/falcon-h1/))
+- **No vision or tool-calling**: No Falcon variant includes image understanding or a native function-call schema; both capabilities require external tooling or prompt engineering.
 
 ## 11. Sources
 

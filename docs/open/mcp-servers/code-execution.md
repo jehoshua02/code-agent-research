@@ -53,11 +53,17 @@ stdio for local implementations (Docker-based, Pyodide). Cloud-based servers suc
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Verifiable computation**: agents can run Python or JavaScript to confirm calculations, process data, and generate charts rather than reasoning about numbers from memory — eliminating a major source of LLM arithmetic errors ([E2B MCP server docs](https://e2b.dev/docs/mcp)).
+- **E2B cloud sandboxes remove host risk**: E2B runs code in ephemeral remote micro-VMs with full isolation, meaning no local Docker setup, no host resource risk, and automatic teardown after each session — the leading option for production use cases.
+- **Pyodide (WASM) as a zero-install option**: browser-side Pyodide runners execute Python in WebAssembly with no server process, OS permissions, or network access — a convenient, genuinely isolated choice for lightweight data tasks.
+- **Stateful sessions**: E2B's session model persists installed packages and in-memory state across multiple `run_code` calls, enabling multi-step data analysis workflows without re-importing libraries each turn.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Cloud sandbox cost**: E2B bills per sandbox-second; an agentic loop running many code cells against a long-lived sandbox accumulates charges quickly, and there is no built-in per-session budget cap in the MCP server itself ([E2B pricing](https://e2b.dev/pricing)).
+- **Subprocess-based local runners offer no real isolation**: without Docker or gVisor, `run_code` executes as the agent's OS user with full filesystem and network access — functionally equivalent to a shell server, despite the "code execution" framing.
+- **Network egress enables data exfiltration**: even cloud sandboxes allow outbound network connections by default; agent-generated code can POST data to external endpoints unless the operator explicitly restricts egress at the network layer.
+- **Package installation as a runtime escape hatch**: `install_package` tools pull arbitrary third-party libraries at runtime; a typosquatted or malicious package can introduce second-stage payloads that evade static review of the agent's code string.
 
 ## 9. Sources
 

@@ -61,11 +61,16 @@ Behaviour is customised via the Python API: set `interpreter.system_message`, `i
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **60 K+ GitHub stars; broad local execution scope.** Executes code in Python, JavaScript, and Shell with real file and network access — the closest open-source equivalent to ChatGPT's Code Interpreter running on your own machine ([tooljunction.io review 2026](https://www.tooljunction.io/ai-tools/open-interpreter)).
+- **Full privacy via local models.** `--local` flag + Ollama keeps all data on-device; no cloud calls required ([README](https://github.com/OpenInterpreter/open-interpreter)).
+- **Provider-agnostic via LiteLLM.** Supports OpenAI, Anthropic, Groq, OpenRouter, and any Ollama-compatible model without code changes ([README](https://github.com/OpenInterpreter/open-interpreter)).
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Arbitrary code-execution risk.** The agent runs code with full local permissions; misdirected commands can damage the system. Requires per-execution human approval ([tooljunction.io review 2026](https://www.tooljunction.io/ai-tools/open-interpreter)).
+- **Multiple CVEs patched in PR #1643.** Code injection (CWE-94 in magic commands), OS command injection in `terminal.py`, path traversal in `wtf.py`, and authorization bypass in `display.py` were all found and fixed in a single review pass ([GitHub PR #1643](https://github.com/openinterpreter/open-interpreter/pull/1643)).
+- **AGPL-3.0 license.** Copyleft extends to network interactions; Google and many enterprises prohibit AGPL on corporate devices, limiting commercial adoption ([Open Core Ventures](https://www.opencoreventures.com/blog/agpl-license-is-a-non-starter-for-most-companies)).
+- **Browser control experimental.** Playwright-based browsing is labelled experimental and works inconsistently across sites; not suited for daily coding workflows ([tooljunction.io review 2026](https://www.tooljunction.io/ai-tools/open-interpreter)).
 
 ## 10. Sources
 

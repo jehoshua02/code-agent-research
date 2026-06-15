@@ -45,11 +45,17 @@ No plugin or skill system. The app is intentionally minimal: behaviour is define
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Fully offline after first download**: All inference runs locally via MLX-LM on Apple Silicon with no network dependency after the initial ~3 GB model pull — zero data leaves the machine. ([README](https://github.com/ammaarreshi/gemma-chat))
+- **Live preview canvas for web projects**: Build mode streams generated files to a sandboxed preview pane that updates as the model types, giving instant visual feedback on scaffolded web projects. ([README](https://github.com/ammaarreshi/gemma-chat))
+- **Hot-swappable model variants**: Four Gemma 4 sizes (E2B ~1.5 GB through 31B ~18 GB) are selectable at runtime without reinstalling, letting users trade speed for capability. ([README](https://github.com/ammaarreshi/gemma-chat))
+- **Per-conversation sandbox isolation**: Each conversation runs in its own workspace, preventing file collisions between concurrent projects. ([README](https://github.com/ammaarreshi/gemma-chat))
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Apple Silicon exclusive**: Requires macOS on Apple Silicon — no Intel Mac, Linux, or Windows support — eliminating it for most developer environments. ([README](https://github.com/ammaarreshi/gemma-chat))
+- **Model loading failures on fresh install**: Multiple users report Gemma 4 models broken on fresh install and downloads stalling on the final file (issue #29, #27), with no automated recovery. ([issue tracker](https://github.com/ammaarreshi/gemma-chat/issues))
+- **Port conflict with Ollama**: The MLX server binds port 11434 — the same default as Ollama — causing a collision that prevents launch when Ollama is already running. ([issue #7](https://github.com/ammaarreshi/gemma-chat/issues/7))
+- **Agent loop capped at 40 rounds**: Autonomous Build-mode tasks are hard-limited to 40 back-and-forth rounds per user message, which may be insufficient for large or complex codebases. ([README](https://github.com/ammaarreshi/gemma-chat))
 
 ## 10. Sources
 

@@ -61,11 +61,17 @@ No credential-based auth for the MCP protocol layer itself. The browser session 
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Handles JavaScript-rendered apps**: unlike plain HTTP fetch, a real browser engine executes JavaScript fully, making SPAs, React/Next.js apps, and dynamically loaded content accessible to agents ([microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)).
+- **Accessibility-tree element selection**: Microsoft's `playwright-mcp` exposes the browser's accessibility tree as a structured snapshot, letting agents target elements by ARIA role and label rather than brittle CSS selectors — significantly improving click reliability across page redesigns.
+- **Full interactive flow support**: agents can fill forms, click through multi-step OAuth flows, handle file uploads, and respond to modal dialogs — operations that no fetch-only server can perform.
+- **Screenshot feedback loop**: screenshot tools let a multimodal model visually verify page state before acting, enabling error recovery (e.g., detecting a CAPTCHA or unexpected redirect) mid-task.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **Brittle CSS selector dependency**: despite accessibility-tree alternatives, many community servers default to CSS or XPath selectors that break when page markup changes, requiring frequent selector maintenance ([playwright-mcp issues](https://github.com/microsoft/playwright-mcp/issues)).
+- **Heavy resource use**: a full Chromium instance consumes 200–500 MB of RAM per session; running multiple parallel browser-control agents on a single host exhausts memory quickly and is impractical without container orchestration.
+- **Slow tool-call latency**: page navigation, DOM stabilization, and screenshot capture add 0.5–5 s per tool call — fine for single-step tasks but expensive in multi-step agentic loops where tens of interactions are needed.
+- **Session state management complexity**: persistent browser profiles carry authentication across sessions, which aids re-use but creates credential-leak risk; ephemeral profiles lose login state between runs, forcing the agent to re-authenticate on every task.
 
 ## 9. Sources
 

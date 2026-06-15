@@ -61,11 +61,17 @@ No credential-based auth. Access control is path-based: the server enforces that
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs or community reports. Cite source.
+- **Official reference implementation**: Anthropic ships and maintains `@modelcontextprotocol/server-filesystem` as the canonical example, giving it stable, well-documented tool signatures that community clients target first ([modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)).
+- **Simple, auditable permission model**: allowed directories are declared at startup as CLI arguments, making the attack surface easy to review and lock down without runtime configuration complexity.
+- **Batch read support**: `read_multiple_files` lets an agent fetch many files in a single round-trip, reducing latency for codebase-scan tasks.
+- **MCP Roots integration**: supports the `roots/list` protocol so hosts can dynamically advertise which directories the agent may access, enabling per-session scoping.
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker or community reports. Cite source.
+- **No native diff / patch operation**: agents must read an entire file, compute a replacement, and write the whole thing back — there is no line-level patch primitive, which wastes tokens and risks clobbering concurrent edits ([modelcontextprotocol/servers #59](https://github.com/modelcontextprotocol/servers/issues/59)).
+- **Blocking I/O on large files**: the reference Node.js implementation reads files synchronously into memory; multi-megabyte files stall the server process and can exhaust the MCP message size budget.
+- **Silent overwrite**: `write_file` has no dry-run or backup mode — a hallucinated path causes irreversible data loss with no recycle-bin fallback.
+- **No directory-level watch / streaming**: agents must poll `list_directory` to detect changes; there is no event-push mechanism for file-system notifications.
 
 ## 9. Sources
 

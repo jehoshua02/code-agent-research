@@ -56,15 +56,33 @@ Command R / R+ / A are explicitly designed for **retrieval-augmented generation 
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Results below are for Command R+ v0.1 (104B) unless noted. Cohere's model card explicitly notes these scores "do not capture RAG, multilingual, or tooling performance." ([HuggingFace model card](https://huggingface.co/CohereLabs/c4ai-command-r-plus))
+
+| Benchmark | Score | Notes |
+|---|---|---|
+| MMLU | 75.7 | Command R+ v0.1; 5-shot |
+| HellaSwag | 88.6 | Command R+ v0.1 |
+| ARC-Challenge | 71.0 | Command R+ v0.1 |
+| WinoGrande | 85.4 | Command R+ v0.1 |
+| GSM8K | 70.7 | Command R+ v0.1 |
+| RAG human-preference win rate | 71.8–81.6% vs. GPT-4 Turbo | Command R (35B); internal eval ([Cohere blog](https://langbase.com/models/cohere/command-r/benchmarks)) |
+| BFCL / ToolTalk tool-use | Outperforms GPT-4 Turbo (no exact figure published) | Command R+; ([Sebastian Ruder's write-up](https://www.ruder.io/command-r/)) |
+
+HumanEval, MATH, GPQA, IFEval, and SWE-bench scores were not officially published.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **RAG and grounded generation**: Command R's primary design target; achieves 71.8–81.6% human-preference win rate over GPT-4 Turbo on enterprise RAG tasks, with structured citation output built into the model's prompt format. ([Cohere blog / langbase summary](https://langbase.com/models/cohere/command-r/benchmarks))
+- **Multi-step tool use**: Command R+ outperforms GPT-4 Turbo on the Berkeley Function Calling Leaderboard (BFCL) and Microsoft ToolTalk (Hard) benchmarks for zero-shot, parallel, and sequential tool calling. ([Sebastian Ruder](https://www.ruder.io/command-r/))
+- **Multilingual coverage**: Natively trained in 23 languages; leads peer models on Japanese, Korean, and Chinese translation tasks (FLORES BLEU L2→EN 35.7%). ([Cohere / langbase](https://langbase.com/models/cohere/command-r/benchmarks))
+- **128K–256K context**: Command A extends to 256K tokens with near-perfect Needle-in-a-Haystack recall at all depths, enabling very long document RAG without chunking loss.
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **General reasoning trails larger models**: MMLU 75.7 for the 104B R+ is below comparably sized open models like Llama 3 70B (79.5) or Mixtral 8×22B; GSM8K 70.7 lags significantly behind frontier models. ([HuggingFace model card](https://huggingface.co/CohereLabs/c4ai-command-r-plus))
+- **Non-commercial license**: CC-BY-NC 4.0 blocks production deployment without a separate Cohere commercial agreement, limiting self-hosted enterprise use. ([Cohere model card / license](https://huggingface.co/CohereLabs/c4ai-command-r-plus))
+- **Code generation not a focus**: No HumanEval scores published; model card and documentation consistently de-prioritize coding tasks in favor of RAG and tool use.
+- **TruthfulQA only 56.3**: Relatively low factual accuracy on TruthfulQA, suggesting potential for hallucination outside of grounded (cited-source) generation workflows. ([HuggingFace model card](https://huggingface.co/CohereLabs/c4ai-command-r-plus))
 
 ## 11. Sources
 

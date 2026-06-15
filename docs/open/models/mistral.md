@@ -67,15 +67,32 @@ Mistral Instruct models are trained for general instruction following and **func
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers from official Mistral announcements. Mixtral 8x22B numbers from the [Mistral announcement (Apr 2024)](https://mistral.ai/news/mixtral-8x22b/); Mistral Small 3/3.1 numbers from the [Mistral Small 3 announcement (Jan 2025)](https://mistral.ai/news/mistral-small-3/) and llm-stats.com aggregating official card data.
+
+| Benchmark | Mixtral 8x22B Instruct | Mistral Small 3.1 24B Instruct |
+|---|---|---|
+| MMLU | ~80% (visual chart) | 80.6 |
+| MMLU-Pro | — | 56.0 |
+| HumanEval | — | 88.4 |
+| MATH | — | 69.3 |
+| GSM8K (maj@8) | 90.8 | — |
+| GPQA | — | 37.5 |
+
+Mistral Small 3 (predecessor) scored IFEval 82.9. ([Mistral Small 3 announcement, Jan 2025](https://mistral.ai/news/mistral-small-3/))
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Efficiency at size**: Mistral Small 3.1 (24B) is claimed to run >3× faster than Llama 3.3 70B on identical hardware at 150 tokens/s, while scoring comparably on MMLU (80.6 vs ~86). ([Mistral Small 3 announcement, Jan 2025](https://mistral.ai/news/mistral-small-3/))
+- **Multilingual European coverage**: Mixtral 8x22B is natively fluent in English, French, German, Italian, and Spanish — broader European-language quality than most open models. ([Mixtral 8x22B announcement, Apr 2024](https://mistral.ai/news/mixtral-8x22b/))
+- **Mature function-calling format**: Mistral introduced a structured `[TOOL_CALLS]` format across its family early; the format is well-supported in tooling ecosystems. ([Mistral function calling docs](https://docs.mistral.ai/capabilities/function_calling/))
+- **Apache 2.0 for most models**: 7B, Mixtral 8x7B/8x22B, NeMo, Small 3.1, and Large 3 all under Apache 2.0 — commercially deployable without restriction.
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **No RL/reasoning optimization in Small line**: Mistral Small 3 is "neither trained with RL nor synthetic data," explicitly lacking the reasoning-chain capabilities of models like DeepSeek-R1 or QwQ. ([Mistral Small 3 announcement, Jan 2025](https://mistral.ai/news/mistral-small-3/))
+- **GPQA score is modest**: Mistral Small 3.1 scores 37.5 on GPQA, well below DeepSeek-R1 (71.5) and even mid-range reasoning models. ([llm-stats.com, citing official card](https://llm-stats.com/models/compare/mistral-small-3.1-24b-base-2503-vs-mistral-small-3.1-24b-instruct-2503))
+- **Codestral and Large 2 licensing**: Codestral-22B v0.1 (MNLP-0.1) and Mistral-Large-2407 (Mistral Research License) are non-commercial — a footgun for teams who pick those variants without checking licenses.
+- **Mistral Large 3 hardware demands**: 675B MoE requires 8–16× H100 80 GB at Q4 precision; not accessible for self-hosted deployments outside hyperscalers.
 
 ## 11. Sources
 

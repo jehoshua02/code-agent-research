@@ -58,11 +58,17 @@ response = await agent.run("Who built the Eiffel Tower?")
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Dual-SDK (Python + TypeScript) from one framework**: Both SDKs share the same abstractions and `ChatModel.from_name()` pattern, cutting dual-stack maintenance burden. Docs: [framework.beeai.dev](https://framework.beeai.dev/).
+- **OpenInference/OTel observability built in**: `openinference-instrumentation-beeai` emits traces to Phoenix, Langfuse, or Langsmith; `GlobalTrajectoryMiddleware` captures every agent event. Docs: [framework.beeai.dev/observability](https://framework.beeai.dev/); [IBM think](https://www.ibm.com/think/topics/beeai).
+- **Linux Foundation open governance**: Transferred from IBM Research to the Linux Foundation; enterprise-grade stability guarantees and community governance model. Source: [ibm.com/think/news/beeai-open-source-multiagent](https://www.ibm.com/think/news/beeai-open-source-multiagent).
+- **Four built-in memory strategies**: `UnconstrainedMemory`, `SlidingMemory`, `TokenMemory`, and `SummarizeMemory` cover common production trade-offs without custom code. Docs: [framework.beeai.dev](https://framework.beeai.dev/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Thin community and ecosystem**: Fewer third-party tutorials, integrations, and Stack Overflow answers than LangGraph or CrewAI; noted in comparative overviews. Source: [ibm.com/think/topics/beeai](https://www.ibm.com/think/topics/beeai).
+- **Open CVEs in dependency tree**: Multiple unresolved CVEs (including PyTorch RCE CVE-2025-32434) and outdated LangChain dependencies flagged in open issue tracker. [github.com/i-am-bee/beeai-framework/issues](https://github.com/i-am-bee/beeai-framework/issues).
+- **Async-only Python API**: No documented sync wrappers; forces async-all-the-way for callers that don't already use asyncio. Docs: [framework.beeai.dev](https://framework.beeai.dev/).
+- **Multimodal tool outputs not yet supported**: Image/file output from tools is an open feature request, limiting vision-heavy workflows. [github.com/i-am-bee/beeai-framework/issues](https://github.com/i-am-bee/beeai-framework/issues).
 
 ## 9. Sources
 

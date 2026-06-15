@@ -57,11 +57,17 @@ response = client.agents.messages.create(agent_id=agent.id, input="Hello!")
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **OS-inspired tiered memory is the core differentiator.** Core (RAM-like), Recall (cache-like), and Archival (cold storage) tiers let agents self-edit what they remember, supporting "effectively unlimited memory" for multi-week or multi-thousand-turn tasks. Source: [vectorize.io — Mem0 vs Letta 2026](https://vectorize.io/articles/mem0-vs-letta); [atlan.com — Best AI Agent Memory Frameworks 2026](https://atlan.com/know/best-ai-agent-memory-frameworks-2026/).
+- **Transparent memory inspection.** The Agent Development Environment (ADE) lets developers inspect memory state across all three tiers and monitor tool calls in real time, which the review calls "genuinely useful for understanding why an agent made a particular memory decision." Source: [vectorize.io — Mem0 vs Letta 2026](https://vectorize.io/articles/mem0-vs-letta).
+- **Integrated stateful runtime.** The Letta server manages the agent loop, tool execution, state persistence, and memory together, eliminating friction between memory management and the rest of agent logic. Source: [Letta docs — quickstart](https://docs.letta.com/quickstart).
+- **Background async mode survives disconnects.** `create_async` with `run_id`+`seq_id` cursor pagination lets long-running tasks continue even if the client disconnects. Source: [Letta docs — async runs](https://docs.letta.com).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Architectural lock-in.** Adopting Letta means "rewriting not just your memory layer but your entire agent infrastructure," making it a significant commitment that is difficult to reverse. Source: [vectorize.io — Mem0 vs Letta 2026](https://vectorize.io/articles/mem0-vs-letta).
+- **Every memory operation costs inference tokens.** The agent must reason about what to store on each turn; this active-paging approach adds latency and token cost compared to passive extraction approaches. Source: [vectorize.io — Mem0 vs Letta 2026](https://vectorize.io/articles/mem0-vs-letta).
+- **Requires running a server.** The Letta architecture mandates a Letta Cloud or self-hosted Letta server with a database backend; there is no simple "import and call" library mode. Source: [Letta docs quickstart](https://docs.letta.com/quickstart).
+- **No published independent benchmark results.** Letta has not published LongMemEval scores, making objective performance comparison with alternatives impossible. Source: [vectorize.io — Mem0 vs Letta 2026](https://vectorize.io/articles/mem0-vs-letta).
 
 ## 9. Sources
 

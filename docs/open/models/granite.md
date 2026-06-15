@@ -60,15 +60,36 @@ Granite 3.x models are trained for **enterprise instruction following** in 12+ l
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Sources: HuggingFace model cards ([Granite-3.3-8B-Instruct](https://huggingface.co/ibm-granite/granite-3.3-8b-instruct), [Granite-3.1-8B-Instruct](https://huggingface.co/ibm-granite/granite-3.1-8b-instruct)).
+
+| Benchmark | Granite-3.1-8B-Instruct | Granite-3.3-8B-Instruct |
+|---|---|---|
+| MMLU | 65.3 | 65.5 |
+| MMLU-Pro | 41.0 | — |
+| GPQA | 8.3 | — |
+| IFEval | 72.1 | 74.8 |
+| MATH-500 | — | 69.0 |
+| HumanEval (pass@1) | — | 89.7 |
+| HumanEval+ | — | 86.1 |
+| GSM8K | 73.8 | 80.9 |
+| BBH | 34.1 | 69.1 |
+| Arena-Hard | — | 57.6 |
+
+Granite-3.3-8B HumanEval of 89.7 is competitive with Llama-3.1-8B-Instruct (85.3) and approaches Qwen-2.5-7B-Instruct (93.4). GPQA and SWE-bench were not reported for Granite-3.3.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Documented data provenance**: IBM explicitly lists training data sources, their licenses, and data filtering methodology — a significant differentiator for enterprise risk management. Training used ~12 trillion tokens from publicly licensed and IBM-internal synthetic data only, with no undisclosed scrapes. ([Granite-3.1-8B model card](https://huggingface.co/ibm-granite/granite-3.1-8b-instruct))
+- **Strong code generation**: Granite-3.3-8B-Instruct achieves HumanEval 89.7 and HumanEval+ 86.1, outperforming Llama-3.1-8B-Instruct on both metrics despite similar parameter count. ([Granite-3.3 model card](https://huggingface.co/ibm-granite/granite-3.3-8b-instruct))
+- **Apache 2.0 with commercial deployment on watsonx.ai**: Fully permissive license and enterprise-grade deployment path via IBM watsonx.ai; suitable for regulated industries that need vendor accountability. ([ibm-granite org](https://huggingface.co/ibm-granite))
+- **Structured reasoning in 3.3**: Native `<think>` / `<response>` tag support for chain-of-thought reasoning, improving performance on complex tasks like MATH-500 (69.0) and BBH (69.1) relative to 3.1. ([Granite-3.3 model card](https://huggingface.co/ibm-granite/granite-3.3-8b-instruct))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **Small maximum model size (8B)**: The Granite 3.x instruct line tops out at 8B parameters; for tasks requiring frontier-scale reasoning, it cannot match 70B+ open models or API-based services.
+- **Low GPQA score**: Granite-3.1-8B-Instruct scores 8.3 on GPQA (graduate-level scientific reasoning), indicating weak performance on complex scientific questions. ([Granite-3.1 model card](https://huggingface.co/ibm-granite/granite-3.1-8b-instruct))
+- **BBH regression in 3.1**: Granite-3.1-8B scores only 34.1 on BBH (though 3.3 improves to 69.1), suggesting the earlier generation has meaningful gaps on multi-step reasoning. ([Granite-3.1 model card](https://huggingface.co/ibm-granite/granite-3.1-8b-instruct))
+- **No vision in the 3.x text line**: The Granite 3.x instruct family has no multimodal capability; IBM maintains a separate Granite Vision series, complicating deployment for mixed text/image workloads.
 
 ## 11. Sources
 

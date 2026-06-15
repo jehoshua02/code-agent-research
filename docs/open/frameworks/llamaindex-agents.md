@@ -55,11 +55,17 @@ agent.chat("What is 2+2?")
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **RAG as a first-class agent primitive.** `QueryEngineTool` wraps any index or retrieval pipeline as a tool; agents can cite sources, run semantic search, and chain retrieval steps without external glue. Source: [sider.ai — LlamaIndex Review 2025](https://sider.ai/blog/ai-tools/llamaindex-review-2025-is-it-the-best-rag-framework-for-production-ai).
+- **300+ integrations via LlamaHub.** Data loaders, LLM providers, embedding models, and vector stores are available as drop-in packages, making it straightforward to connect any data source to an agent. Source: [LlamaHub](https://llamahub.ai/).
+- **Built-in RAG-aware evaluation.** Answer correctness, context faithfulness, hallucination detection, and grounding scores are available out of the box — rare in agent frameworks. Source: [sider.ai — LlamaIndex Review 2025](https://sider.ai/blog/ai-tools/llamaindex-review-2025-is-it-the-best-rag-framework-for-production-ai).
+- **Event-driven Workflows for complex orchestration.** `Workflow` with `@step` decorators and `wait_for_event` provides async multi-agent pipelines with human-in-the-loop pause/resume without requiring a graph abstraction library. Source: [LlamaIndex docs — Workflows](https://docs.llamaindex.ai/en/stable/module_guides/workflow/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Memory is session-scoped by default.** The `Memory` class holds conversation history only while the agent runs; context is lost on restart, making multi-session continuity a gap for repeat-user applications. Source: [vectorize.io Hindsight — Teaching the Llama to Remember](https://hindsight.vectorize.io/blog/2026/03/30/llamaindex-agent-memory).
+- **Fewer pre-built agent tools than LangChain.** LlamaIndex "does not come with as many pre-baked agent personas or chains," requiring developers to construct tool logic from lower-level components. Source: [ZenML — LlamaIndex vs LangChain](https://www.zenml.io/blog/llamaindex-vs-langchain).
+- **No first-party evaluation/observability dashboard.** LlamaIndex "doesn't (yet) have a full evaluation suite like LangSmith," requiring integration with third-party tools (Arize Phoenix, Langfuse, MLflow) for production monitoring. Source: [ZenML — LlamaIndex vs LangChain](https://www.zenml.io/blog/llamaindex-vs-langchain).
+- **Overkill for non-retrieval agent tasks.** The RAG-centric design adds unnecessary complexity when agents don't need document indexing; reviewers note it is best reserved for "data-aware LLM applications" rather than general orchestration. Source: [ZenML — LlamaIndex vs LangChain](https://www.zenml.io/blog/llamaindex-vs-langchain).
 
 ## 9. Sources
 

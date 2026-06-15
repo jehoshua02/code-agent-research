@@ -64,11 +64,17 @@ Configuration lives in a project-level or user-level `opencode.json` / `opencode
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Provider-agnostic, no lock-in.** Supports 75+ LLM providers including local models via Ollama; users bring their own API keys ([README](https://github.com/anomalyco/opencode)).
+- **High adoption momentum.** Reached 161 K GitHub stars as of June 2026, surpassing Claude Code, with 864+ contributors and 7.5 M monthly active developers ([morphllm.com comparison, June 2026](https://www.morphllm.com/comparisons/opencode-vs-claude-code)).
+- **Client/server architecture.** Persistent sessions survive reconnects and support remote execution in Docker containers ([Medium review, May 2026](https://medium.com/@codexpedite/is-opencode-really-good-honest-deep-dive-review-2026-c2fa55b5de0a)).
+- **LSP integration.** Real-time language diagnostics across 40+ languages feed directly into LLM context, enabling self-correction without human intervention ([Medium review, May 2026](https://medium.com/@codexpedite/is-opencode-really-good-honest-deep-dive-review-2026-c2fa55b5de0a)).
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **~45% slower task completion than Claude Code.** Benchmark comparison showed 16 m 20 s vs 9 m 9 s for equivalent tasks ([morphllm.com comparison, June 2026](https://www.morphllm.com/comparisons/opencode-vs-claude-code)).
+- **Claude OAuth access removed.** Anthropic blocked consumer OAuth tokens in January 2026; Claude Pro/Max support was removed from the codebase, requiring raw API keys ([morphllm.com comparison, June 2026](https://www.morphllm.com/comparisons/opencode-vs-claude-code)).
+- **No sandboxing.** The permission system does not provide security isolation; the agent runs with full local file/shell access ([README security note](https://github.com/anomalyco/opencode/security)).
+- **TUI stability issues.** Open issues include UI hanging indefinitely after stream errors, startup freeze on Ubuntu/Wayland, and "EditBuffer Destroyed" crashes post-upgrade ([GitHub issues #32366, #32361, #32348](https://github.com/anomalyco/opencode/issues)).
 
 ## 10. Sources
 

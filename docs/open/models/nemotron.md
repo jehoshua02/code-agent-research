@@ -63,15 +63,51 @@ Llama-3.1-Nemotron-70B-Instruct is RLHF-tuned for **general helpfulness** and ra
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Sources: Nemotron-4-340B Technical Report ([arXiv 2406.11704](https://arxiv.org/abs/2406.11704)) and Llama-3.1-Nemotron-70B model card ([HuggingFace](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF)).
+
+**Nemotron-4-340B-Base:**
+
+| Benchmark | Score | vs. Llama-3-70B |
+|---|---|---|
+| MMLU (5-shot) | 81.1 | 79.5 |
+| HumanEval (0-shot) | 57.3 | 48.2 |
+| BBH (3-shot) | 85.4 | 81.3 |
+| ARC-Challenge | 94.3 | 93.0 |
+
+**Nemotron-4-340B-Instruct:**
+
+| Benchmark | Score |
+|---|---|
+| MT-Bench | 8.22 |
+| MMLU (0-shot) | 78.7 |
+| GSM8K (0-shot) | 92.3 |
+| IFEval (Prompt-Strict) | 79.9 |
+| Arena Hard | 54.2 |
+
+**Llama-3.1-Nemotron-70B-Instruct (RLHF fine-tune of Llama 3.1-70B):**
+
+| Benchmark | Score |
+|---|---|
+| Arena Hard | 85.0 (#1 open-source at Oct 2024) |
+| AlpacaEval 2 LC | 57.6 (tied GPT-4o) |
+| MT-Bench | 8.98 |
+| MMLU-Pro | 62.8 |
+
+**Nemotron-4-340B-Reward:** RewardBench Overall 92.0 (ranked #1 at publication time). GPQA, MATH, and SWE-bench not reported.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Top-ranked open-source helpfulness (Nemotron-70B)**: Llama-3.1-Nemotron-70B-Instruct ranked #1 on Arena Hard (85.0) as of October 2024, outperforming GPT-4o (79.3) and Claude 3.5 Sonnet (79.2) on that benchmark at the time. ([HuggingFace model card](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF))
+- **Leading reward model**: Nemotron-4-340B-Reward achieved RewardBench Overall 92.0, ranking #1 among reward models at publication, making it valuable as a quality signal in synthetic data pipelines and RLHF. ([Nemotron-4 tech report](https://arxiv.org/abs/2406.11704))
+- **Optimized for NVIDIA hardware**: TensorRT-LLM and NVIDIA NIM support with 45+ pre-built quantized variants (FP8, INT8, AWQ) means near-zero deployment friction on NVIDIA infrastructure. ([NVIDIA NGC / model card](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF))
+- **Synthetic data generation pipeline**: Nemotron-4-340B was used to generate the entire training dataset for its own Instruct variant via RLHF; the pipeline is documented and reproducible as a template for others. ([Nemotron-4 tech report](https://arxiv.org/abs/2406.11704))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **Nemotron-4-340B requires massive hardware**: BF16 inference needs 8× H200 or 16× A100 80 GB GPUs; this puts the 340B out of reach for anyone without a full multi-node NVIDIA server cluster. ([Nemotron-4 tech report](https://arxiv.org/abs/2406.11704))
+- **4K context window on Nemotron-4**: The 340B series has only a 4,096-token context — effectively unusable for long-document or multi-turn agentic tasks without chunking. ([Nemotron-4 tech report](https://arxiv.org/abs/2406.11704))
+- **HumanEval regression in Nemotron-4 Instruct**: The Instruct 340B scores 73.2 on HumanEval versus 81.7 for Llama-3-70B-Instruct — instruction tuning degraded code performance relative to a much smaller model. ([Nemotron-4 tech report](https://arxiv.org/abs/2406.11704))
+- **NVIDIA Open Model License, not Apache 2.0**: While permissive for commercial use, the NVIDIA license requires attribution and restricts uses that compete with NVIDIA products; it is not as unrestricted as Apache 2.0.
 
 ## 11. Sources
 

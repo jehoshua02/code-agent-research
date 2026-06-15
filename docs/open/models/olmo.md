@@ -56,15 +56,34 @@ OLMo 2 targets general English **instruction following** (via the Instruct varia
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Scores for the fully post-trained Instruct variants. Source: HuggingFace model cards ([7B-Instruct](https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct), [13B-Instruct](https://huggingface.co/allenai/OLMo-2-1124-13B-Instruct)).
+
+| Benchmark | OLMo-2-7B-Instruct | OLMo-2-13B-Instruct |
+|---|---|---|
+| MMLU | 61.3 | 68.5 |
+| GSM8K | 85.1 | 87.4 |
+| MATH | 32.5 | 39.2 |
+| IFEval | 72.3 | 82.6 |
+| BBH | 46.6 | 58.8 |
+| DROP | 60.5 | 71.5 |
+| AlpacaEval | 29.1 | 39.5 |
+| TruthfulQA | 56.5 | 64.3 |
+
+The 7B-Instruct outperforms Gemma-2-9B-it and Mistral-Nemo-Instruct on the Ai2 aggregate metric; the 13B-Instruct is competitive with Qwen-2.5-14B-Instruct. HumanEval, GPQA, and SWE-bench were not reported.
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Fully open pipeline — weights, data, and training code**: OLMo 2 is one of the only models where the complete pretraining dataset (Dolma), model architecture, and training scripts are all publicly released under Apache 2.0, enabling genuine scientific reproducibility — a major differentiator for academic research. ([OLMo 2 paper](https://arxiv.org/abs/2501.00656), [Ai2](https://huggingface.co/allenai))
+- **Competitive instruction-following for its size**: OLMo-2-7B-Instruct scores 72.3 on IFEval and 85.1 on GSM8K, outperforming similarly-sized open models like Gemma-2-9B-it and Mistral-Nemo-Instruct on Ai2's aggregate evaluation suite. ([HuggingFace model card](https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct))
+- **Apache 2.0 license**: No use-based restrictions — suitable for commercial deployment, fine-tuning, and redistribution without negotiating a separate license. ([allenai/OLMo-2-1124-7B-Instruct](https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct))
+- **Multi-stage training released**: All intermediate checkpoints (SFT, DPO, RLVR) are publicly available, making OLMo 2 valuable for alignment research and studying the effect of each post-training stage. ([HuggingFace allenai org](https://huggingface.co/allenai))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **4K context window**: All OLMo 2 variants have a 4,096-token native context, significantly shorter than contemporaries (Llama 3 at 128K, Qwen 2.5 at 128K), limiting usefulness on long documents and multi-turn conversations. ([OLMo 2 paper](https://arxiv.org/abs/2501.00656))
+- **English-only**: OLMo 2 was trained exclusively on English data; multilingual tasks are unsupported and performance on non-English text is undefined. ([HuggingFace model card](https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct))
+- **Trails frontier open models on reasoning**: OLMo-2-7B-Instruct MATH score (32.5) and BBH (46.6) lag behind Llama-3.1-8B-Instruct and Qwen-2.5-7B-Instruct; it is a research-transparency model, not a capability leader. ([HuggingFace model card](https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct))
+- **No tool calling or vision**: No structured function-calling schema and no multimodal support; unsuitable as a drop-in for agentic or image-understanding tasks.
 
 ## 11. Sources
 

@@ -57,11 +57,17 @@ Not officially benchmarked by maintainers. No canonical tok/s, TTFT, or batch-si
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **Best Apple Silicon throughput for small models**: Community benchmarks (June 2026) show Gemma 4 E2B at ~158 tok/s and Phi-4 Mini at ~135 tok/s on M5 Max via MLX — figures not reachable by llama.cpp or GGUF paths on the same hardware. ([llmcheck.net benchmarks](https://llmcheck.net/benchmarks))
+- **Runs 70B models at practical speeds on a laptop**: Llama 3.1 70B Q4_K_M achieves ~20 tok/s on M4 Max — a 40 GB model running at usable speed on consumer hardware due to unified memory. ([seankim blog, M4 Max benchmarks](https://blog.imseankim.com/apple-m4-max-macbook-pro-ai-inference-benchmarks/))
+- **Memory-efficient native format**: MLX safetensors format is consistently 7–13% smaller than equivalent GGUF (e.g., Qwen3-235B-A22B: 124 GB MLX vs 133 GB GGUF), enabling larger models in unified RAM. ([yage.ai MLX vs llama.cpp](https://yage.ai/share/mlx-apple-silicon-en-20260331.html))
+- **Zero-copy unified memory**: Tensor operations share the same physical pool across CPU and GPU with no data movement overhead — the fundamental architectural advantage Apple Silicon provides and MLX exploits. ([arxiv 2601.19139](https://arxiv.org/html/2601.19139))
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Apple Silicon + macOS only**: No CUDA, ROCm, or Linux path for mlx-lm; the project itself warns the server is "not recommended for production." ([mlx-lm SERVER.md](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/SERVER.md))
+- **No tool calling or embeddings endpoint**: The built-in server exposes only `/v1/chat/completions` and `/v1/models`; tool use and `/v1/embeddings` are absent. ([mlx-lm README](https://github.com/ml-explore/mlx-lm/blob/main/README.md))
+- **Prefill lags llama.cpp for short contexts**: Independent comparisons find MLX prefill throughput below llama.cpp on short prompts; advantage is mainly in decode speed on large models. ([medium: On-Device LLM Runtime decision framework](https://medium.com/@michael.hannecke/choosing-an-on-device-llm-runtime-on-apple-silicon-a-decision-framework-beyond-benchmarks-2449067b8b67))
+- **Rapidly changing API**: Framework API is still evolving quickly, making production pinning difficult; Metal 4 compatibility issues reported on newest Apple hardware. ([yage.ai](https://yage.ai/share/mlx-apple-silicon-en-20260331.html))
 
 ## 9. Sources
 

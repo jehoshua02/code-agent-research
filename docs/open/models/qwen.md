@@ -66,15 +66,32 @@ Qwen3 models are trained for multilingual chat (100+ languages), **tool/function
 
 ## 8. Benchmarks
 
-Public benchmark numbers (MMLU, HumanEval, SWE-bench, GAIA, ...). Cite source.
+Numbers below are for base models from the Qwen3 Technical Report (May 2025). ([arXiv:2505.09388](https://arxiv.org/abs/2505.09388))
+
+| Benchmark | Qwen3-32B | Qwen3-30B-A3B (MoE) | Qwen3-235B-A22B (MoE) |
+|---|---|---|---|
+| MMLU | 83.6 | 81.4 | 87.8 |
+| MMLU-Pro | 65.5 | 61.5 | 68.2 |
+| GPQA | 49.5 | 43.9 | 47.5 |
+| MATH | 61.6 | 59.0 | 71.8 |
+| EvalPlus (HumanEval+) | 72.1 | 71.5 | 77.6 |
+| LiveCodeBench v5 | — | — | 70.7 |
+
+Instruct/thinking-mode scores are higher; the search result summary cites 235B-A22B at MMLU-Pro 84.4, GPQA Diamond 81.1, IFEval 87.8 in thinking mode. ([Qwen3 Technical Report](https://arxiv.org/abs/2505.09388))
 
 ## 9. Documented Strengths
 
-Documented strengths from benchmarks, model card, or independent testing. Cite source.
+- **Math and reasoning at scale**: 235B-A22B achieves AIME'24 85.7 and AIME'25 81.5, competitive with frontier closed models. ([Qwen3 Technical Report, May 2025](https://arxiv.org/abs/2505.09388))
+- **Hybrid thinking mode**: All Qwen3 models can toggle extended chain-of-thought on/off at inference time — a flexibility not available in most other open families. ([Qwen3 blog, April 2025](https://qwenlm.github.io/blog/qwen3/))
+- **Apache 2.0 license**: No usage caps or gating; among the most commercially permissive of any frontier-quality open model family. ([Qwen3 blog, April 2025](https://qwenlm.github.io/blog/qwen3/))
+- **Efficiency via MoE**: 30B-A3B (3B active params) achieves MMLU 81.4, rivalling much larger dense models. ([Qwen3 Technical Report, May 2025](https://arxiv.org/abs/2505.09388))
 
 ## 10. Documented Weaknesses
 
-Documented limitations and failure modes from benchmarks, model card, or community reports. Cite source.
+- **GPQA (PhD-level science) base scores are moderate**: 235B-A22B base scores 47.5 on GPQA; thinking-mode instruct scores (81.1 Diamond) are much higher but require extra compute. ([Qwen3 Technical Report, May 2025](https://arxiv.org/abs/2505.09388))
+- **MoE VRAM footprint**: 235B-A22B requires ~470 GB FP16 (all expert weights resident), limiting deployment to high-end server clusters even though only 22B params are active per token.
+- **YaRN-extended context quality**: MoE models extend to 128K via YaRN; quality at the far end of that range has not been independently validated as of mid-2025. ([Qwen3 blog, April 2025](https://qwenlm.github.io/blog/qwen3/))
+- **Multilingual breadth vs. depth**: The technical report notes multilingual performance on INCLUDE is "comparable" across model sizes rather than clearly superior, suggesting diminishing returns on low-resource languages. ([Qwen3 Technical Report, May 2025](https://arxiv.org/abs/2505.09388))
 
 ## 11. Sources
 

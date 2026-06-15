@@ -56,11 +56,16 @@ The platform is extended through custom blocks (Python classes registered in the
 
 ## 8. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent reviews. Cite source.
+- **Pioneered the autonomous agent paradigm.** Released two weeks after GPT-4 (March 2023), AutoGPT was the first project to demonstrate LLM goal-pursuit loops, catalysing the entire autonomous-agent ecosystem ([vibeagentmaking.com](https://vibeagentmaking.com/blog/autogpt-got-100k-stars-and-then-what/)).
+- **183 K GitHub stars.** Remains one of the most-starred AI repositories on GitHub, reflecting its historical influence and ongoing community interest ([Tencent Cloud comparison, 2026](https://www.tencentcloud.com/techpedia/144032)).
+- **Visual low-code Agent Builder.** The 2024 platform redesign introduced a block-graph workflow UI, making multi-step automation accessible without coding ([agpt.co docs](https://agpt.co/docs/platform/getting-started/getting-started)).
 
 ## 9. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **Original loop deprecated for platform.** The self-prompting loop has been superseded by the Polyform-licensed platform; the MIT core agent is largely unmaintained as a standalone tool ([vibeagentmaking.com](https://vibeagentmaking.com/blog/autogpt-got-100k-stars-and-then-what/)).
+- **Compound reliability failure.** An ~85% per-step success rate yields only ~20% end-to-end success over 10 steps; agents frequently hallucinate and enter infinite loops ([vibeagentmaking.com](https://vibeagentmaking.com/blog/autogpt-got-100k-stars-and-then-what/)).
+- **Heavy API costs.** Recursive GPT-4 calls ($0.03–0.06/1 K tokens) stack quickly; model-switching to GPT-3.5 collapsed performance ([vibeagentmaking.com](https://vibeagentmaking.com/blog/autogpt-got-100k-stars-and-then-what/)).
+- **Eclipsed by focused alternatives.** Community reviews note AutoGPT has been "largely eclipsed" by tools like CrewAI and OpenHands that offer more predictable multi-agent workflows ([vibeagentmaking.com](https://vibeagentmaking.com/blog/autogpt-got-100k-stars-and-then-what/)).
 
 ## 10. Sources
 

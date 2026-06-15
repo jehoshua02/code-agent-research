@@ -58,11 +58,17 @@ The only fixed maintainer-authored numbers come from the [launch blog post (June
 
 ## 7. Documented Strengths
 
-Documented strengths from maintainer docs, benchmarks, or independent comparisons. Cite source.
+- **PagedAttention throughput**: The June 2023 launch blog reported 14×–24× higher throughput vs. HF Transformers and 2.2×–3.5× vs. TGI on A10G/A100 with LLaMA-family models. ([vllm.ai launch post](https://vllm.ai/blog/2023-06-20-vllm))
+- **v0.6.0 generation-speed gains**: Release notes claimed 2.7× throughput and 5× faster time-per-output-token on Llama-3 8B; 1.8× throughput / 2× lower latency on Llama 70B. ([vllm-project/vllm releases](https://github.com/vllm-project/vllm/releases))
+- **Near-zero KV-cache waste**: PagedAttention paging reduces wasted KV cache memory from the 60–80% typical of static allocation to near zero, enabling larger effective batch sizes. ([arxiv 2309.06180](https://arxiv.org/pdf/2309.06180))
+- **Broadest hardware / quantization matrix**: Single stack supports NVIDIA, AMD ROCm, Intel Gaudi/XPU, Google TPU, CPU (x86/ARM/Z); AWQ, GPTQ, FP8, bitsandbytes, compressed-tensors, TorchAO, and more — documented in the [vLLM quantization docs](https://docs.vllm.ai/en/stable/features/quantization/).
 
 ## 8. Documented Weaknesses
 
-Documented limitations from issue tracker, docs, or community reports. Cite source.
+- **GGUF support is "highly experimental and under-optimized … might be incompatible with other features"** — single-file only, tokenizer conversion described as "time-consuming and unstable." ([vLLM GGUF docs](https://docs.vllm.ai/en/stable/features/quantization/gguf/))
+- **Windows not natively supported**: macOS path requires an unsupported community plugin (`vllm-metal`); no prebuilt wheels. ([vllm README](https://github.com/vllm-project/vllm))
+- **CPU offload gaps in V1 engine**: KV-cache CPU offload is noted as a known gap in the V1 engine path. ([vLLM docs §Memory](https://docs.vllm.ai/en/latest/))
+- **Ray multi-node CPU spin**: Open issue #21231 reports Ray distributed workers pegging 3 cores at 100% CPU; `--enable-sleep-mode` has no effect on Ray workers. ([github issue #21231](https://github.com/vllm-project/vllm/issues/21231))
 
 ## 9. Sources
 
