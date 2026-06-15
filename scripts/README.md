@@ -14,11 +14,24 @@ python3 scripts/validate.py
 # Regenerate INDEX.md tables and survey.json from frontmatter
 python3 scripts/regen.py
 
-# Dry-run (used by CI) — exits non-zero if anything would change
+# Dry-run — exits non-zero if anything would change
 python3 scripts/regen.py --check
 
 # Force regen even if some entities lack frontmatter (drops their rows)
 python3 scripts/regen.py --force
+
+# Pick a stack by filtering survey.json
+python3 scripts/pick.py --hardware 8gb --task coding --mcp native --suggest
+
+# JSON output (pipe to jq)
+python3 scripts/pick.py --hardware 16gb --format json | jq '.applications[].name'
+
+# See all flags
+python3 scripts/pick.py --help
+
+# Build the SQLite query cache from survey.json (for ad-hoc SQL)
+python3 scripts/build-sqlite.py
+sqlite3 docs/open/survey.sqlite "SELECT name FROM entities WHERE layer='models' AND context_window >= 256000"
 ```
 
 ## When to run what
@@ -34,6 +47,8 @@ python3 scripts/regen.py --force
 
 1. **`validate.py`** — checks each entity's frontmatter against the schema. Required fields, controlled vocab, types, dates, URLs. Fails per file with a clear error list.
 2. **`regen.py`** — reads frontmatter, regenerates each layer's `INDEX.md` and `docs/open/survey.json` from truth. INDEXes are derived; don't edit them by hand.
+3. **`pick.py`** — reads `survey.json`, filters by your constraints (hardware, task, license, MCP support, etc.), prints matching entities per layer. Optional `--suggest` picks one per layer. JSON output is `jq`-friendly.
+4. **`build-sqlite.py`** — reads `survey.json`, builds `docs/open/survey.sqlite` (gitignored — a query cache, not source of truth). Use for ad-hoc SQL questions `pick.py` can't express: arbitrary `WHERE`, sorts on any field, aggregates, cross-layer self-joins. See [`docs/open/QUERIES.md`](../docs/open/QUERIES.md) for patterns.
 CI is not wired up. Discipline is local — run both before committing.
 
 ## Safety notes
