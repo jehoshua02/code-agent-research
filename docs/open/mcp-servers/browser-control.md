@@ -43,7 +43,17 @@ No credential-based auth for the MCP protocol layer itself. The browser session 
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Cookie and credential exposure** is the highest-impact risk. If the browser session is configured with a persistent profile directory (or the user has previously logged in during the same session), the agent has access to stored cookies, session tokens, and any autofill credentials for every site visited. A prompt-injected instruction can silently exfiltrate these by navigating to an attacker-controlled URL with cookies appended as query parameters.
+
+**Persisted login state leakage** is a variant: even without explicit credential storage, OAuth tokens or SSO session cookies obtained during an agent-driven login flow persist in the browser profile and may be reused across sessions or by subsequent agents sharing the same profile directory.
+
+**Arbitrary JavaScript execution** via `evaluate` / `execute_js` gives the agent (or a prompt-injecting page) direct DOM and network access within the browser context — equivalent to a persistent XSS with exfiltration capability.
+
+**Headed-mode sandbox escape** is a risk specific to non-headless configurations: a headed browser running on a display server can interact with other windows (screen capture, keylogging via `xdotool`) and is not isolated from the desktop environment.
+
+**Prompt injection via page content** is structurally unavoidable: the agent reads page text and can be manipulated by content on any page it visits.
+
+**Mitigation:** use an ephemeral, isolated browser profile for each session (no persistent profile dir); prefer headless mode in a container; block network egress to internal IP ranges; never configure stored passwords or OAuth apps in an agent-controlled browser profile.
 
 ## 7. Documented Strengths
 

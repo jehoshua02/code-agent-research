@@ -20,15 +20,15 @@ Cannot fill; repo removed.
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Cannot fill; repo removed.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Cannot fill; repo removed.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Cannot fill; repo removed.
 
 ## 8. Documented Strengths
 

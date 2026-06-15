@@ -45,15 +45,15 @@ BYOK: yes. No bundled model; no provider lock-in.
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Open Interpreter executes code in Python, JavaScript, Shell, and other languages locally to accomplish tasks: file manipulation, data analysis, chart generation, web scraping, and system automation. It can browse the web by generating and running browser-control code. Vision is supported when using a multimodal model (image paths or screenshots can be passed as messages).
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not natively supported. MCP integration is not documented; the project predates MCP's wide adoption and uses its own tool-call loop rather than the MCP protocol.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Behaviour is customised via the Python API: set `interpreter.system_message`, `interpreter.llm.model`, `interpreter.computer.languages` to add/remove language kernels, and `interpreter.tools` to register custom tools. Custom language kernels can be added as Python classes. No plugin registry or hook system; scripting is done by wrapping the Python API directly.
 
 ## 8. Documented Strengths
 

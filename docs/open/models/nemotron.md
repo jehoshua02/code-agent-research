@@ -51,11 +51,11 @@ NVIDIA also provides 45+ quantized variants of the 70B (FP8, INT8, etc.) via NGC
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+NVIDIA's preferred runtime is **TensorRT-LLM** (their optimized inference engine for NVIDIA GPUs) and **NVIDIA NIM** (containerized serving). Both Nemotron-4-340B and Llama-3.1-Nemotron-70B are also supported by **vLLM** (BF16, FP8, INT8 via NGC) and **Hugging Face Transformers**. The Nemotron-70B (Llama 3.1 base) loads on **llama.cpp** (GGUF) and **Ollama** like any Llama 3.1 model. NVIDIA ships 45+ quantized variants of the 70B via NGC including **FP8, INT8, and AWQ**. Nemotron-4-340B community GGUF quants exist but are not officially published.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Llama-3.1-Nemotron-70B-Instruct is RLHF-tuned for **general helpfulness** and ranked highly on Arena Hard and MT-Bench. It supports **tool/function calling** (inherited from Llama 3.1's format). Nemotron-4-340B is English-focused, trained for general chat and as a **synthetic data generator** for AI alignment pipelines. No vision in either family (Nemotron 3 Nano/Super/Ultra added vision, per late-2025 announcements). No multilingual design goal for Nemotron-4; Llama-3.1-Nemotron-70B inherits Llama's 8-language multilingual training. ([Llama-3.1-Nemotron-70B model card](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF))
 
 ## 8. Benchmarks
 

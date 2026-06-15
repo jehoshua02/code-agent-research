@@ -46,11 +46,11 @@ CPU offload viable; 32 GB system RAM recommended for 34B partial offload.
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (all sizes), **vLLM** (BF16, AWQ, GPTQ), **llama.cpp** (GGUF, community quants via TheBloke and bartowski), and **Ollama** (GGUF). **SGLang** and **MLX** support the standard sizes. Yi-VL requires a runtime with vision preprocessing (transformers with vision extras). Official GPTQ-Int4 and GPTQ-Int8 quants shipped for Yi-34B-Chat; community GGUF covers Q2–Q8 for all sizes. AWQ is available from community sources.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Yi and Yi-1.5 are bilingual **English and Chinese** general-purpose models trained for instruction following, coding (Yi-Coder), math, and reasoning. Yi-VL (6B / 34B) adds **vision-language** capability (image understanding). Yi-Chat models support basic instruction following but do not have an official structured **tool/function calling** format — users typically prompt-engineer tool use rather than using a native schema. Yi-1.5 improved reasoning and math over the original Yi through continued pretraining. ([Yi technical report](https://arxiv.org/abs/2403.04652))
 
 ## 8. Benchmarks
 

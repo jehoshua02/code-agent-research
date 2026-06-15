@@ -41,15 +41,15 @@ BYOK: yes. No bundled model; no provider lock-in. Provider credentials configure
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+General-purpose agent targeting coding (any language), shell command execution, file creation and editing, and web browsing/search. Vision is supported when paired with a multimodal provider such as Claude or GPT-4o. Data analysis tasks are handled via shell and scripting tools rather than a dedicated notebook environment.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Native. Goose ships with first-class MCP support; 70+ extensions are available as MCP servers and can be added via the desktop app or CLI config. No adapter layer required.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Extensions are the primary unit of extensibility: built-in extensions (developer, browser, memory) live in the Rust source, while community extensions ship as MCP servers or standalone processes configured in `~/.config/goose/config.yaml`. Custom extensions can be written in any language that speaks the MCP protocol. No formal plugin registry beyond the extensions marketplace in the desktop app.
 
 ## 8. Documented Strengths
 

@@ -31,7 +31,7 @@ Source: [smolagents README](https://github.com/huggingface/smolagents).
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+Minimal code-first agent library from HuggingFace. Two agent classes: `CodeAgent` (LLM writes Python tool calls, executes in sandbox) and `ToolCallingAgent` (JSON tool calls; `max_tool_threads` for parallel). Tools via `smolagents.Tool` subclass or `@tool`; collections from HF Hub or MCP (`ToolCollection.from_mcp`); imports from LangChain or Gradio. Planning: opt-in `planning_interval=N`; default ReAct loop with Thought/Code/Observation. Memory in-context only (`AgentMemory` of `TaskStep`/`ActionStep`/`PlanningStep`); `reset=False` preserves across `agent.run()` calls; no long-term store. Multi-agent via `managed_agents` — sub-agents appear as callable tools to a `CodeAgent` orchestrator. HITL minimal: `agent.interrupt()`, `final_answer_checks`, `GradioUI`. State persistence at definition level only: `agent.save()` / `from_folder()` / `push_to_hub()`. Observability via OpenTelemetry (`openinference-instrumentation-smolagents`) → Phoenix/MLflow/Langfuse. Retry: self-correction via error observations in `AgentMemory`; `max_steps` (20); sandboxed executors (`local`/`e2b`/`modal`/`docker`/`blaxel`). Primarily sync; `stream=True` returns a generator. Source: huggingface.co/docs/smolagents.
 
 ## 5. MCP Support
 

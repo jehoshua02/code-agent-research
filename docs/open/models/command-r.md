@@ -44,11 +44,11 @@ CPU offload viable via llama.cpp; 64 GB RAM recommended for R+ partial offload.
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (primary; Cohere provides model cards with Transformers-first examples), **vLLM** (BF16, AWQ, GPTQ), **llama.cpp** (GGUF for all sizes), and **Ollama** (GGUF). Command A's 256K context at full length requires vLLM or SGLang with chunked prefill. **MLX** supports R7B and Command R (32B) on Apple Silicon. Community GGUF quants (Q2–Q8) available for all sizes; AWQ and GPTQ available from community sources. No FP8 official release.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Command R / R+ / A are explicitly designed for **retrieval-augmented generation (RAG)** with grounded generation and citation output, **multi-step tool use** (structured tool-call format with parallel and sequential calling), and multilingual tasks (23 languages including EN, FR, DE, ES, IT, PT, JA, KO, ZH, AR). Command A adds **agentic** workflows with stronger multi-hop reasoning. No vision capability. Code generation is supported but not the primary focus. ([Command R model card](https://huggingface.co/CohereForAI/c4ai-command-r-plus-08-2024))
 
 ## 8. Benchmarks
 

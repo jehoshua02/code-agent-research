@@ -36,11 +36,20 @@ LM Studio is a closed-source, proprietary desktop app from Element Labs. Free-to
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+LM Studio's local server exposes OpenAI-compatible endpoints at `http://localhost:1234/v1`: `GET /v1/models`, `POST /v1/chat/completions`, `POST /v1/completions`, `POST /v1/embeddings`, `POST /v1/responses`.
+
+- **Tool / function calling:** Supported on `/v1/chat/completions` via OpenAI's `tools` parameter. Models with native chat templates (Qwen 2.5, Llama 3.1/3.2, Mistral Ministral) work best; others receive a fallback system-prompt injection. Tool call arguments stream via `delta.tool_calls.function`.
+- **Vision (multimodal):** Supported — listed as "Chat Completions (text and images)" under OpenAI-compat.
+- **Streaming:** SSE. The native REST API emits 20+ distinct event types (lifecycle, model loading, prompt processing, reasoning, tool calls, message deltas).
+- **Structured outputs:** `response_format: { type: "json_schema", ... }` on `/v1/chat/completions` (OpenAI Structured Output format). GGUF models use llama.cpp grammar-based sampling; MLX models use the Outlines library.
+- **Logprobs:** Not documented as a supported parameter.
+- **Native non-OpenAI API:** Beta REST API at `/api/v1/` with stateful chat (`POST /api/v1/chat`), model lifecycle (list/load/unload/download), and MCP integration. Reports per-request `tokens_per_second` and `time_to_first_token_seconds` in the `chat.end` SSE event.
+
+Sources: [openai-api docs](https://lmstudio.ai/docs/api/openai-api), [REST docs](https://lmstudio.ai/docs/developer/rest).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. LM Studio does not publish canonical throughput or latency figures. The native REST `chat.end` SSE event does expose per-request live `tokens_per_second` and `time_to_first_token_seconds` instrumentation, but these are runtime values, not maintainer benchmarks. Prefill vs decode are not reported separately. Source: [streaming-events docs](https://lmstudio.ai/docs/developer/rest/streaming-events).
 
 ## 7. Documented Strengths
 

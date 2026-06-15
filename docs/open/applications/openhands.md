@@ -53,15 +53,15 @@ BYOK: yes — API keys are supplied at setup time via the CLI wizard or environm
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+OpenHands targets general software engineering: coding in any language, shell command execution, file reading and editing, and web browsing via a built-in browser tool (Playwright-backed). Vision input is supported when using a multimodal model. Data analysis and research tasks are within scope via the code-execution sandbox.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Native MCP support was added in late 2024 / early 2025. OpenHands can act as an MCP client, connecting to external MCP servers to consume additional tools. The integration is declared in the agent configuration; maturity is documented as experimental/beta.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Custom agents are written as Python classes implementing the `Agent` interface and placed in the `openhands/agenthub/` directory. Runtime tools (shell, browser, file ops) are registered at startup. The microagent system allows lightweight task-specific sub-agents to be defined in Markdown files under `.openhands/microagents/`. Hooks and event-bus listeners are available for platform integrations.
 
 ## 8. Documented Strengths
 

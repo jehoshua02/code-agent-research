@@ -52,7 +52,13 @@ Database credentials are passed at startup, not through MCP protocol-level auth:
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**SQL injection via prompt-as-query.** Agent-generated SQL is passed directly to the database; a malicious or ambiguous prompt can produce `DROP TABLE` or `DELETE FROM` statements even when only a read was intended. Use a read-only database role or connection string to eliminate write risk.
+
+**Data exfiltration.** A broad `SELECT *` across tables can return sensitive PII or secrets in the model context window, which may be logged. Restrict the database user to only the schemas and tables the agent legitimately needs.
+
+**Row-level security bypass.** Some MCP servers connect as a superuser to avoid permission errors; this bypasses any RLS policies enforced at the application layer. Always connect with the least-privileged database role.
+
+**Schema enumeration.** `list_tables` and `describe_table` expose full schema structure, giving an attacker (or a misbehaving agent) a roadmap to sensitive tables without executing a single data query. Consider restricting these tools or the schemas they can enumerate.
 
 ## 7. Documented Strengths
 

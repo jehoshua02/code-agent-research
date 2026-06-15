@@ -39,11 +39,23 @@ Primary distribution is Docker: `ghcr.io/huggingface/text-generation-inference` 
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+TGI exposes two parallel surfaces.
+
+**Native TGI API** (since v1.0): `POST /generate`, `POST /generate_stream`, `POST /tokenize`, `POST /embed`, `GET /info`, `GET /health`, `GET /metrics` (Prometheus).
+
+**OpenAI-compatible Messages API** (since v1.4.0): `POST /v1/chat/completions` is fully compatible with OpenAI Chat Completion (point `base_url` at TGI with no other client changes). `/v1/completions` and `/v1/embeddings` are **not** explicitly documented as supported.
+
+- **Tool / function calling:** Supported on `/v1/chat/completions` via OpenAI `tools` / `tool_choice` schema (since v1.4.3; `auto`, `none`, `required`, or named function). Implemented as grammar-constrained generation via [outlines](https://github.com/outlines-dev/outlines).
+- **Vision (multimodal):** Idefics 1/2/3, LLaVA-Next 1.6, PaliGemma, Mllama (Llama 3.2 Vision), Qwen2-VL, Qwen2.5-VL, Gemma3, Llama4.
+- **Streaming:** SSE on both `/generate_stream` and `/v1/chat/completions` (`stream: true`).
+- **Structured outputs:** Grammar-constrained generation via outlines — JSON schema (incl. Pydantic) and regex on `/generate`. Disable with `--disable-grammar-support`.
+- **Logprobs:** Supported. Prefill logprobs off by default (VRAM); enable with `--enable-prefill-logprobs`. `top_n_tokens` (up to `--max-top-n-tokens`, default 5) returns top-N per step.
+
+Sources: [api_reference](https://huggingface.co/docs/text-generation-inference/en/reference/api_reference), [using_guidance](https://huggingface.co/docs/text-generation-inference/en/basic_tutorials/using_guidance), [streaming](https://huggingface.co/docs/text-generation-inference/en/conceptual/streaming).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. The docs describe enabling features — continuous batching, Flash/Paged Attention, tensor parallelism, speculative decoding (n-gram or Medusa via `--speculate`), CUDA graph capture for fixed batch sizes (1, 2, 4, 8, 16, 32), quantization (AWQ/GPTQ/FP8/bitsandbytes) — but publish no specific tokens/sec, TTFT, or inter-token latency numbers. The launcher distinguishes prefill from decode conceptually (`--max-batch-prefill-tokens`, `--max-batch-total-tokens`, `--waiting-served-ratio`, `--max-waiting-tokens`) without numerical results. The README notes TGI is in maintenance mode, pointing users toward vLLM and SGLang. Sources: [index](https://huggingface.co/docs/text-generation-inference/en/index), [launcher](https://huggingface.co/docs/text-generation-inference/en/reference/launcher).
 
 ## 7. Documented Strengths
 

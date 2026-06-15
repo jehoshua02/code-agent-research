@@ -28,7 +28,7 @@ Model- and vendor-agnostic via a component integration system. Core integrations
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+deepset-ai's RAG-and-pipelines framework with agentic features. Tools via `@tool` decorator (auto-schema from `Annotated` params), `create_tool_from_function`, or manual `Tool(...)`. `Agent` combines `ChatGenerator` + `ToolInvoker` in a loop bounded by `exit_conditions`. No formal planning; loop-based. Memory: in-context chat history; `state_schema` for structured state shared across tools (`inputs_from_state`/`outputs_to_state`). Multi-agent via wrapping agents as `Tool`/`ComponentTool`/`PipelineTool`; no dedicated orchestration class. HITL via `confirmation_strategies` — `BlockingConfirmationStrategy` with Strategy/Policy/UI layers; human can confirm/reject/modify with templated feedback. State persistence via pipeline **breakpoints** with snapshots (`{component}_{visit}_{ts}.json`), enabled by `HAYSTACK_PIPELINE_SNAPSHOT_SAVE_ENABLED=true`; resumable via `pipeline.run(data={}, pipeline_snapshot=snapshot)`; failed runs auto-snapshot. Observability with auto-tracing for OpenTelemetry, Datadog, Langfuse, MLflow, Weave, Jaeger; `HAYSTACK_CONTENT_TRACING_ENABLED` exposes I/O. Retry: `raise_on_tool_invocation_failure=False` lets LLM recover; snapshots enable resume. `AsyncPipeline` runs independents in parallel; `run`, `run_async`, `run_async_generator`; `concurrency_limit`. Source: docs.haystack.deepset.ai.
 
 ## 5. MCP Support
 

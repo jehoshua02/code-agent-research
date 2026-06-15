@@ -28,8 +28,7 @@ CrewAI routes all LLM calls through [LiteLLM](https://litellm.ai/), giving acces
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
-
+Role-based multi-agent crew framework. Tools via `BaseTool` subclass or `@tool` decorator; 30+ built-in tools via `pip install 'crewai[tools]'`; tools attached per-agent. Planning: crew-level via `planning=True` (`AgentPlanner` injects step plan), agent-level via `reasoning=True` (per-step reflection); processes `sequential` or `hierarchical`. Memory unified via LanceDB at `./.crewai/memory`; recency/semantic/importance weights; hierarchical scopes; non-blocking writes. Multi-agent via Sequential/Hierarchical processes, `allow_delegation=True`, task `context=[other_task,...]`. HITL via task-level `human_input=True` (pauses before output), `before_kickoff_callbacks`/`after_kickoff_callbacks`, `task_callback`. State persistence: `checkpoint=True` on Crew, configurable `CheckpointConfig`; resume via `crewai replay -t <task_id>`. Observability: `verbose`, per-agent/crew `step_callback`, OpenTelemetry via `tracing` param. Retry: `max_retry_limit` (default 2), `max_iter` (20), task guardrails with `guardrail_max_retries` (3). Both sync (`kickoff`) and async (`akickoff`, `akickoff_for_each`). Source: docs.crewai.com.
 ## 5. MCP Support
 
 Native — `crewai-tools` provides an `MCPServerTool` that connects to MCP servers (stdio or SSE) and exposes their tools to CrewAI agents. Source: [CrewAI docs — MCP Server Tool](https://docs.crewai.com/tools/mcp-server-tool).

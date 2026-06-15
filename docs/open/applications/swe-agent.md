@@ -45,15 +45,15 @@ BYOK: yes. No bundled model; no provider lock-in. Model selection via `--agent.m
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Targets software engineering tasks: navigating repositories, editing source files, and running shell commands inside a sandboxed Docker environment. Language-agnostic in practice — any language the underlying model understands. No browser/web tool, no vision support, and no interactive data-analysis environment; the agent-computer interface (ACI) exposes file search, view, edit, and bash execution.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Not supported in the main SWE-agent codebase. No MCP adapter is documented; the project predates MCP adoption and uses its own ACI tool schema.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Behaviour is configured via YAML files (`config/`) that define the agent pipeline, tool set, and prompt templates. New tools can be added by implementing a `Tool` subclass in Python under `sweagent/tools/`. The `mini-swe-agent` successor simplifies this further. No plugin registry; extension requires modifying source or supplying a custom config YAML.
 
 ## 8. Documented Strengths
 

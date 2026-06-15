@@ -58,7 +58,15 @@ stdio for all reference and major community implementations. The process is spaw
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Token leakage** is the primary risk for hosted-platform servers: `GITHUB_PERSONAL_ACCESS_TOKEN` and `GITLAB_PERSONAL_ACCESS_TOKEN` are long-lived credentials with broad scope (classic PATs grant org-wide write access). If the token appears in debug logs, error messages, or is embedded in a repository accidentally committed by the agent, it provides full API access until manually revoked.
+
+**Force-push to protected branches** can occur if the agent misidentifies the target branch. The GitHub API and local `git push --force` do not ask for confirmation; a single misdirected call can overwrite or delete history on `main` or a release branch, with no undo if the remote is the only copy.
+
+**Committing secrets** is a structural risk: an agent writing files and then calling `git_add` + `git_commit` may include `.env` files, private keys, or API credentials that happened to be in the working tree. The git server has no secret-scanning step; the commit lands and is immediately in history even if pushed and then deleted (it remains in reflog and forks).
+
+**Scope over-provisioning** compounds all of these: a classic PAT with `repo` scope grants read/write access to every repository the token owner can access — far beyond the single repo the agent is working in. A compromised agent session or prompt injection can exploit this to exfiltrate code from unrelated private repositories.
+
+**Mitigation:** use fine-grained PATs scoped to the minimum required repository and permissions; enable branch protection rules (require PRs, disallow force-push) on important branches; run secret-scanning (e.g., `git-secrets`, `trufflehog`) in a pre-commit hook or CI step; rotate tokens regularly.
 
 ## 7. Documented Strengths
 

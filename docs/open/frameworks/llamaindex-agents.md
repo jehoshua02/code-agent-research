@@ -29,7 +29,7 @@ Broad via a plugin integration system. First-party packages cover: OpenAI, Anthr
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+Agent component of LlamaIndex, data-aware. Three agent types: `FunctionAgent` (native function-calling), `ReActAgent` (ReAct prompting), `CodeActAgent` (code execution). Tools as `FunctionTool` (Python), `QueryEngineTool` (query engine), Tool Specs (pre-built collections); passed as `tools=[...]`. Planning per-agent-type; multi-step via Workflows (event-driven, `@step` decorator). Memory: `Memory` class (replaces deprecated `ChatMemoryBuffer`) with `token_limit` (30k default) and `chat_history_token_ratio` (0.7); `MemoryBlock` types — `StaticMemoryBlock`, `FactExtractionMemoryBlock`, `VectorMemoryBlock`; persistence via SQLite by default, PostgreSQL supported. Multi-agent via `AgentWorkflow` (with `can_handoff_to`), orchestrator + sub-agents as tools, or custom `Workflow` planner. HITL: `ctx.wait_for_event(HumanResponseEvent, ...)` pauses; resume via `ctx.send_event(HumanResponseEvent(...))`. State via `WorkflowCheckpointer` and DBOS Durable Execution integration. Observability: `set_global_handler("arize_phoenix")` or instrumentation module (v0.10.20+); integrations include MLflow, Langfuse, SigNoz, OpenTelemetry, Weave, etc. Retry: `error_on_no_tool_call=False`, workflow `retry_steps`. Async-first throughout; sync requires `asyncio.run()`. Source: developers.llamaindex.ai.
 
 ## 5. MCP Support
 

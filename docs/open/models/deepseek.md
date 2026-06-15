@@ -49,11 +49,11 @@ All 671B weights must reside in VRAM (or be offloaded) despite only 37B active p
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Full-size V3/R1 (671B MoE) are best served by **vLLM** (≥0.6, with FP8 and expert-parallel support) or **SGLang** (recommended in model cards); **LMDeploy** also supported. **llama.cpp** supports GGUF quants of all sizes including the 671B (CPU/GPU offload). **Ollama** wraps llama.cpp and ships community GGUF quants. R1-Distill variants run on **Hugging Face Transformers** without special handling. **MLX** supports distill sizes on Apple Silicon. Formats: FP8 (official V3/R1), GGUF (Q2–Q8), AWQ and GPTQ available for distill variants.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+DeepSeek-V3 and R1 target **code generation**, math reasoning, and general instruction following; R1 specifically emphasizes chain-of-thought reasoning trained via reinforcement learning without supervised reasoning labels. **Tool/function calling** was added in R1-0528 (May 2025); earlier V3/R1 had limited or no official function-call support. No vision capability in the main V3/R1 family; DeepSeek-VL2 is a separate multimodal line. Strong English and Chinese; limited other language coverage. ([DeepSeek-R1 paper, Jan 2025](https://arxiv.org/abs/2501.12948))
 
 ## 8. Benchmarks
 

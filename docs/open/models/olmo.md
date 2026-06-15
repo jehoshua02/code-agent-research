@@ -44,11 +44,11 @@ Model cards mention 8-bit `bitsandbytes` loading. Min viable for 7B-Instruct at 
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (primary, with `bitsandbytes` 8-bit loading), **vLLM** (BF16, GPTQ), and **llama.cpp** (community GGUF quants for OLMo 2 are available). **Ollama** supports OLMo 2 via GGUF. Because the architecture is a standard decoder-only transformer close to Llama, most runtimes can load it with minor config. **AWQ** is available from community sources. OLMo's focus on full openness means Ai2 publishes training code (OLMo repo on GitHub) and data (Dolma dataset), not just weights. Common formats: GGUF (Q2–Q8), GPTQ (INT4/INT8), 8-bit via bitsandbytes.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+OLMo 2 targets general English **instruction following** (via the Instruct variant trained with SFT + DPO + RLVR), reasoning, and academic benchmarks. It is primarily a **research model** — its key differentiator is full pipeline transparency (weights + data + training code), not frontier capability. No tool/function calling schema, no vision, English-only. The 4K context window limits utility on long documents. ([OLMo 2 paper](https://arxiv.org/abs/2501.00656))
 
 ## 8. Benchmarks
 

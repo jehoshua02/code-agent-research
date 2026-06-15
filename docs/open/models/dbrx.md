@@ -37,11 +37,11 @@ All 132B params must be in memory (not just active 36B). CPU offload impractical
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (primary; model card examples use transformers), **vLLM** (BF16, GPTQ; expert routing supported), and **llama.cpp** (GGUF; the fine-grained MoE architecture was added to llama.cpp in 2024). **Ollama** supports community GGUF quants. Databricks' own **MLflow** and **Mosaic AI Model Serving** are the intended production paths. Due to the 132B total weight requirement, consumer-grade runtimes require heavy quantization. Common quant formats: GGUF (Q2–Q8 community), GPTQ (INT4); no official FP8 or AWQ release. The 4-expert-per-token routing is compatible with vLLM's MoE backend.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+DBRX Instruct targets **general English chat and instruction following**, with emphasis on **code generation** (trained on 12T tokens including substantial code data). Benchmarks at launch showed competitiveness with Mixtral-8x7B and GPT-3.5 on coding (HumanEval) and reasoning. No tool/function calling schema is officially documented — function use requires prompt engineering. No vision capability. No multilingual design goal; primarily English. No official smaller or updated variants have been released post-launch. ([DBRX blog post](https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm))
 
 ## 8. Benchmarks
 

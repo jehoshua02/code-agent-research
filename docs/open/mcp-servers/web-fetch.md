@@ -47,7 +47,15 @@ No auth. The server makes outbound requests to arbitrary URLs using a configurab
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**SSRF (Server-Side Request Forgery)** is the primary risk. Because the server process makes HTTP requests from inside the network, an LLM instructed to fetch `http://169.254.169.254/latest/meta-data/` (AWS EC2 instance metadata), `http://10.0.0.1/` (internal services), or `file:///etc/passwd` can exfiltrate internal resources that are not reachable from the public internet. The reference server does not block private IP ranges or `file://` URIs by default.
+
+**Unbounded response size** can cause memory exhaustion or DoS: a URL returning a multi-gigabyte response will be buffered in process unless `max_length` is enforced by the caller. The reference server supports `max_length` but does not impose a hard cap server-side.
+
+**Redirect chains** can be exploited to bypass naive allowlists: an allowed public URL redirects (301/302) to an internal address, and the server follows it transparently.
+
+**Prompt injection** via fetched content is a higher-order risk: a page the agent is instructed to fetch may contain adversarial text that hijacks subsequent model behavior.
+
+**Mitigation:** run the server process with a network policy that blocks RFC-1918 ranges and link-local addresses; set `max_length` conservatively; log all fetched URLs for audit; consider an egress allowlist for production deployments.
 
 ## 7. Documented Strengths
 

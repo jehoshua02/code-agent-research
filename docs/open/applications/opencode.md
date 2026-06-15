@@ -48,15 +48,15 @@ Provider-agnostic via a built-in provider registry covering 75+ LLM providers. C
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+OpenCode targets agentic coding across any language supported by the chosen LLM. It can read and write files, run shell commands, and apply multi-file edits within a repo. Vision input is model-dependent (supported when the provider model accepts image tokens); no built-in browser or web-fetch tool is documented.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Native MCP support is built in. OpenCode ships as an MCP server itself (exposing its agent as an MCP tool) and can consume external MCP servers via its config file, enabling tool composition with any MCP-compatible tool provider.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Configuration lives in a project-level or user-level `opencode.json` / `opencode.toml`. Custom providers and models are added via the provider registry config. MCP servers are declared as tool providers in config; no plugin API or scripting hook system beyond that is documented.
 
 ## 8. Documented Strengths
 

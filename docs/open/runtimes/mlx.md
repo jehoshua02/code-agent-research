@@ -35,11 +35,21 @@ The `mlx` core array framework is installed automatically as a dependency. No Li
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+`mlx_lm` is primarily a **Python library** (`mlx_lm.generate`, `mlx_lm.stream_generate`), not an OpenAI-compatible server. A lightweight HTTP server is included via `mlx_lm.server` (documented in `SERVER.md`) but carries the warning "not recommended for production as it only implements basic security checks."
+
+- **Endpoints:** `POST /v1/chat/completions` (chat-style generation), `GET /v1/models`. No `/v1/completions` or `/v1/embeddings`.
+- **Streaming:** SSE via `"stream": true` on `/v1/chat/completions`; Python-side via `stream_generate()`.
+- **Logprobs:** `logprobs` parameter (1–10); response includes `token_logprobs` and `top_logprobs`.
+- **Tool / function calling:** Not supported in the built-in server or library.
+- **Vision (multimodal):** Not part of `mlx_lm`; handled by the separate `mlx_vlm` package (`pip install mlx-vlm`).
+- **Structured outputs:** Not documented.
+- **Embeddings:** No `/v1/embeddings` endpoint; embedding extraction requires custom Python code.
+
+Sources: [mlx-lm SERVER.md](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/SERVER.md), [README](https://github.com/ml-explore/mlx-lm/blob/main/README.md).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not officially benchmarked by maintainers. No canonical tok/s, TTFT, or batch-size figures are published in the mlx-lm README, SERVER.md, or official docs. The Ollama team published a relative claim of "up to 20% faster" output speed vs prior Ollama builds when switching to the MLX engine on Apple Silicon ([Ollama MLX post](https://ollama.com/blog/mlx-performance)), but no absolute numbers. Community benchmarks vary widely by model size and chip (M3 Max, M4 Ultra, etc.) and are not maintainer-sourced.
 
 ## 7. Documented Strengths
 

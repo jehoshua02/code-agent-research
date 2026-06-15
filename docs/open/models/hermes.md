@@ -42,11 +42,11 @@ Min viable: 8B FP16 on RTX 3080/4070 Ti 16 GB; 70B Q4 on 2× RTX 4090 (~48 GB) o
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+As Llama 3.1 fine-tunes, Hermes 3 runs on every runtime that supports Llama 3.1: **llama.cpp** (GGUF; Nous publishes official GGUF repos for 8B and 70B), **Ollama** (GGUF), **vLLM** (BF16, FP8 via NeuralMagic/llm-compressor), **SGLang**, **Hugging Face Transformers**, and **MLX** (Apple Silicon). FP8 quantized variants are available from NeuralMagic (`neuralmagic/Hermes-3-Llama-3.1-*-FP8`). Community AWQ and GPTQ quants exist for 8B and 70B. The 405B is only practical via community GGUF Q2–Q4 with aggressive offloading.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Hermes 3 is purpose-built for **tool use and function calling** using both a JSON schema tool format and an XML-based structured output format (`<tool_call>` / `<tool_response>`). It supports **agentic workflows** with internal monologue / scratchpad thinking (Hermes introduced the `<scratchpad>` pattern widely adopted in the community). Code generation, multi-turn reasoning, and roleplay are also training targets. Inherits Llama 3.1's 8-language multilingual training but is not specifically optimized for it. No vision. ([Hermes 3 technical report](https://nousresearch.com/hermes3/))
 
 ## 8. Benchmarks
 

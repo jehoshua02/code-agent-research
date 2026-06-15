@@ -41,11 +41,11 @@ Min viable GPU: RTX 3090/4090 24 GB runs 15B at Q8. 7B at FP16 fits a 16 GB GPU 
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers** (primary; model card examples use transformers + `generate`), **vLLM** (BF16 and GPTQ), **llama.cpp** (GGUF; StarCoder2 architecture supported since llama.cpp mid-2024), and **Ollama** (GGUF). **Text Generation Inference (TGI)** — Hugging Face's serving backend — is a natural fit given the BigCode/HF collaboration. Community GGUF quants (Q2–Q8) available for all three sizes; official GPTQ-Int4 quants published by BigCode. AWQ available from community. No FP8 or MLX official releases.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+StarCoder2 is a **code-only** model with no chat / instruction tuning — it is a base model intended for code completion and **fill-in-the-middle (FIM)** (special `<fim_prefix>`, `<fim_suffix>`, `<fim_middle>` tokens). Supports **600+ programming languages** (15B) trained on The Stack v2; 7B and 3B cover at least 17 major languages. No tool/function calling, no vision, no multilingual natural language. Typically fine-tuned before deployment as a chat assistant (e.g., Starchat). ([StarCoder2 paper](https://arxiv.org/abs/2402.19173))
 
 ## 8. Benchmarks
 

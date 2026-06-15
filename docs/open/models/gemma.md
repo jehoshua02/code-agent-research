@@ -50,11 +50,11 @@ Native weights are BF16. Community GGUF via bartowski; also via Ollama.
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers**, **vLLM** (BF16, AWQ, GPTQ), **llama.cpp** (GGUF), **Ollama** (GGUF), **SGLang**, and **MLX** (Apple Silicon via MLX-LM). Google also maintains **gemma.cpp** — a lightweight C++ inference runtime specifically for the Gemma family, analogous to llama.cpp. JAX/Keras on TPU is supported for training and inference via Google AI Platform. Common quant formats: GGUF (Q2–Q8), AWQ (INT4), GPTQ (INT4/INT8); FP8 available for larger Gemma 4 sizes on H100.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Gemma 3 (4B–27B) supports **vision** (image understanding via SigLIP encoder), 140+ languages, and **function/tool calling** in the Instruct variants via a structured `<start_of_turn>` format. Gemma 2 is text-only and primarily English/multilingual-European; Gemma 3 extended multilingual significantly. Gemma 4 adds audio understanding alongside vision and text. Code generation and reasoning are core training targets across all sizes; the 27B and Gemma 4 31B are competitive with much larger dense models. ([Gemma 3 technical report](https://arxiv.org/abs/2503.19786))
 
 ## 8. Benchmarks
 

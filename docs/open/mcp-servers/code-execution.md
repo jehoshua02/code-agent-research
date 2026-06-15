@@ -39,7 +39,13 @@ stdio for local implementations (Docker-based, Pyodide). Cloud-based servers suc
 
 ## 6. Security Considerations
 
-Sandboxing, allowlists, common footguns.
+**Sandbox strength is the critical variable.** Subprocess-based runners (no container) offer essentially no isolation — arbitrary code runs as the agent's OS user with full filesystem and network access. Always use a container (Docker, gVisor) or a cloud sandbox (E2B) for any untrusted code path.
+
+**Network egress.** Even containerized runners allow outbound network by default. A piece of agent-generated code can exfiltrate data to an external host or download and execute a second-stage payload. Explicitly drop outbound network in the container network policy unless the use case requires it.
+
+**Resource exhaustion.** Unbounded CPU loops, memory allocation, or fork bombs can bring down the host or adjacent workloads. Enforce per-execution CPU time limits, memory caps (`--memory` in Docker), and PID limits.
+
+**Package installation as an escape hatch.** `install_package` tools let the agent pull arbitrary third-party libraries into the sandbox at runtime. A malicious or typosquatted package can bypass sandbox controls or phone home. Pin allowed packages or disable the tool when not needed.
 
 ## 7. Documented Strengths
 

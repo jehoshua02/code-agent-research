@@ -52,11 +52,11 @@ For MoE variants, all expert weights must reside in VRAM (or be offloaded), not 
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by all major runtimes: **llama.cpp** (native GGUF; first-class support, name derived from Llama), **Ollama** (GGUF, wraps llama.cpp), **vLLM** (BF16/FP8/AWQ/GPTQ), **SGLang** (BF16/FP8), **Hugging Face Transformers** (BF16), **MLX** (Apple Silicon, MLX-LM). Llama 4 MoE requires vLLM ≥0.8 or SGLang for efficient expert routing. Common quant formats: GGUF (Q2–Q8, IQ variants), AWQ (INT4), GPTQ (INT4/INT8), FP8 (Llama 4 Maverick official).
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Llama 3.1/3.2/3.3 Instruct models are trained for multilingual chat (8 languages: EN, DE, FR, IT, PT, HI, ES, TH), code generation, and **tool/function calling** via a structured `<|python_tag|>` / tool-call format. Llama 3.2 11B/90B add **vision** (image understanding). Llama 4 Scout and Maverick extend to native multimodal (image + text) and extremely long context. ([Meta Llama 3 model card](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct))
 
 ## 8. Benchmarks
 

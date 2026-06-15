@@ -43,11 +43,27 @@ LocalAI is a multi-backend server; the appropriate backend (36+ total: llama.cpp
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+Drop-in OpenAI-compatible REST API. Confirmed endpoints:
+
+- `/v1/chat/completions`, `/v1/completions`, `/v1/edits`, `/v1/embeddings`, `/v1/models`
+- `/v1/images/generations` (Stable Diffusion via stablediffusion-ggml and Diffusers)
+- `/v1/messages` (Anthropic Messages API: tool calling, multimodal, system prompts)
+- `/v1/responses` (Open Responses API: background, reasoning config, parallel tools)
+- Audio: STT (transcription), TTS, Realtime API (speech-to-speech over WebSocket)
+- Reranker, object detection, voice activity detection
+
+- **Tool / function calling:** Fully supported via OpenAI-compatible tools API; LocalAI parses structured tool calls out of model output. Parallel function calls (experimental). Works across llama.cpp (automatic), vLLM/vLLM Omni (needs `tool_parser`), MLX.
+- **Vision (multimodal):** Vision API; llama.cpp video input listed.
+- **Streaming:** SSE. Anthropic Messages path emits `message_start`, `content_block_delta`, `message_stop`. Tool streaming supported.
+- **Structured outputs / grammar:** BNF grammar constraints on the llama.cpp backend via the `grammar` parameter (JSON, YAML, binary choices, arbitrary BNF). `grammar_json_functions` for grammar-based function calling; `no_grammar: true` per-request opt-out.
+- **Logprobs:** Not documented.
+- **Beyond OpenAI:** Anthropic API compatibility, ElevenLabs API compatibility, drop-in Ollama API (v4.2.0+), video generation, object detection, reranker, Realtime speech-to-speech.
+
+Sources: [features](https://localai.io/features/), [openai-functions](https://localai.io/features/openai-functions/), [constrained_grammars](https://localai.io/features/constrained_grammars/).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. None of the official docs publish throughput, latency, or batch-size figures. Performance depends entirely on the chosen backend (llama.cpp, vLLM, MLX, etc.) and hardware. Source: [LocalAI README](https://github.com/mudler/LocalAI).
 
 ## 7. Documented Strengths
 

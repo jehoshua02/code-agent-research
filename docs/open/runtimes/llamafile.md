@@ -37,11 +37,22 @@ No install: download a `.llamafile`, mark it executable, run it. The APE (Actual
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+llamafile embeds llama.cpp's server, exposing the same endpoint surface as `llama-server`:
+
+- **OpenAI-compatible:** `POST /v1/chat/completions`, `POST /v1/completions`, `POST /v1/embeddings`.
+- **Native llama.cpp endpoints:** `POST /completion`, `POST /embedding`, `POST /infill` (code fill-in-the-middle), `GET /slots`, `GET /metrics` (Prometheus), `GET /health`.
+- **Tool / function calling:** Supported via `--jinja` flag, using chat-template-based tool parsing.
+- **Vision (multimodal):** Experimental — `image_url` and `input_audio` content parts on `/v1/chat/completions`; requires a vision model with `--mmproj`.
+- **Streaming:** SSE via `"stream": true`.
+- **Structured outputs:** GBNF grammar (`grammar` parameter) and JSON Schema (`json_schema` parameter).
+- **Logprobs:** Via `n_probs` on native `/completion` endpoint (top-N token probabilities).
+- **Built-in web UI:** Opens automatically in-browser on launch (suppress with `--nobrowser`); separate from the API.
+
+Third-party reference confirms: completion ✅, streaming ✅, embeddings ✅, list models ✅; vision ❌ (not surfaced through documented official paths). Source: [Mozilla-Ocho/llamafile README](https://github.com/Mozilla-Ocho/llamafile), [docs.mozilla.ai/llamafile](https://docs.mozilla.ai/llamafile/).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not officially benchmarked by maintainers. The README includes AVX-512 optimization notes (v0.7: "up to 10× faster prompt eval on Zen 4 vs prior llamafile" for AVX-512 CPUs) but provides no absolute tok/s figures. No canonical throughput, TTFT, or batch-size numbers are published. GPU performance inherits llama.cpp JIT-compiled CUDA/ROCm/Metal kernels but no benchmarks are cited for these paths. Source: [Mozilla-Ocho/llamafile README](https://github.com/Mozilla-Ocho/llamafile).
 
 ## 7. Documented Strengths
 

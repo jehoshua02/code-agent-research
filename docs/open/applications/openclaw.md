@@ -39,15 +39,15 @@ OpenClaw supports multiple providers with a `<provider>/<model-id>` syntax in co
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+General-purpose assistant targeting coding (language-agnostic via provider model), shell execution, file editing, web browsing/search, and vision (when a multimodal model is configured). Multi-channel messaging surfaces (WhatsApp, Telegram, Discord, etc.) extend reach beyond the terminal. Data-analysis tasks are handled through shell and scripting skills in the community registry.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Native. OpenClaw ships with MCP support as a first-class integration; MCP servers can be registered via the Gateway config and are surfaced alongside built-in tools. No adapter layer required.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Skills are the primary extension unit: packaged TypeScript/JavaScript modules published to the community Skills Registry (5,400+ skills). Custom skills live in `~/.openclaw/skills/` or can be loaded from a local path in `openclaw.json`. Hooks and custom agents are configured in the same JSON file. The Gateway daemon and agent runtime are defined in the TypeScript source under `packages/`.
 
 ## 8. Documented Strengths
 

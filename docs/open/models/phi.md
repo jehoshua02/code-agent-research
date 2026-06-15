@@ -53,11 +53,11 @@ Phi-4 (14B) at Q4 runs on ~16 GB system RAM CPU-only.
 
 ## 6. Runtime Support
 
-Which runtimes load it (ollama, vllm, llama.cpp, transformers, ...). Quantization formats available (GGUF, AWQ, GPTQ, FP8, ...).
+Supported by **Hugging Face Transformers**, **vLLM** (BF16, AWQ, GPTQ), **llama.cpp** (GGUF), **Ollama** (GGUF), and **MLX** (Apple Silicon). Microsoft also ships Phi models via **ONNX Runtime** and **DirectML** for on-device/edge deployment (Windows AI platform). Phi-3.5-MoE requires vLLM or SGLang for expert routing. Phi-4-multimodal requires a runtime with speech+vision preprocessing (transformers or Azure AI). Common quant formats: GGUF (Q2–Q8), AWQ (INT4), GPTQ (INT4/INT8), INT4 via ONNX.
 
 ## 7. Capabilities
 
-Tool use, function calling, vision, code, languages, etc. What it's trained for.
+Phi models are optimized for **STEM reasoning, coding, and math** at small parameter counts, leveraging curated synthetic training data rather than raw scale. Phi-3.5-Vision and Phi-4-multimodal add **vision** (image understanding, OCR, chart reading) and speech respectively. **Tool/function calling** is supported in Phi-3/3.5/4 Instruct variants via a structured prompt format. Phi-3.5-mini and Phi-4-mini support 128K context for long-document tasks. Primarily English-first; Phi-3.5-mini adds multilingual coverage across ~20 languages. ([Phi-4 technical report](https://arxiv.org/abs/2412.08905))
 
 ## 8. Benchmarks
 

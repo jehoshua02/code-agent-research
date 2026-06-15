@@ -32,11 +32,17 @@ Proprietary `.sbs` format (custom forward/backward-compatible binary with embedd
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+Primarily a **C++ library** (`libgemma`, ~2K LoC core) and **CLI tool**, not an OpenAI-compatible server. A basic HTTP API server is included (see `API_SERVER_README.md`) exposing a **Google-protocol REST API** (not OpenAI-compatible):
+
+- `POST /v1beta/models/gemma3-4b:generateContent` (non-streaming)
+- `POST /v1beta/models/gemma3-4b:streamGenerateContent` (SSE streaming)
+- `GET /v1beta/models`
+
+**Streaming:** Supported in the C++ API ("C++ APIs with streaming for single query and batched inference") and via the HTTP server's SSE endpoint. **Vision:** Via PaliGemma 2 (image file via `--image_file`). **Tool calling, structured outputs, embeddings:** Not documented. Python bindings via pybind11; community Lua and Godot bindings exist. Sources: [README.md](https://github.com/google/gemma.cpp/blob/main/README.md), [API_SERVER_README.md](https://raw.githubusercontent.com/google/gemma.cpp/main/API_SERVER_README.md).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not benchmarked by maintainer. No quantitative throughput, latency, or batch-size figures in README or docs. Optimization notes are qualitative: mixed-precision GEMM with runtime autotuning, 8-bit switched floating-point models described as enabling "faster inference," and a caveat that "long sequences will be slow due to the quadratic cost of attention." No prefill vs decode breakdown. Source: [README.md](https://github.com/google/gemma.cpp/blob/main/README.md).
 
 ## 7. Documented Strengths
 

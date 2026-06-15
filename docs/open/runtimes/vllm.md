@@ -38,11 +38,19 @@ vLLM (vllm-project/vllm) is an Apache 2.0 Python inference engine. Active. High-
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+Full OpenAI-compatible HTTP server (`vllm serve`): `/v1/chat/completions`, `/v1/completions`, `/v1/embeddings` (Pooling/Embed entrypoint), `/v1/models`. Also exposes Anthropic Messages API, native gRPC (`vllm.entrypoints.serve.dev.rpc`), and MCP entrypoint (`vllm.entrypoints.mcp`).
+
+- **Tool / function calling:** `auto`, `required`, `none`, named-function `tool_choice`; parallel tool calls; streaming tool-call extraction. Per-model tool parser plugins (Llama 3.1/4, Mistral, Hermes, DeepSeek-V3, Qwen2.5, Granite, etc.). [tool_calling docs](https://docs.vllm.ai/en/latest/features/tool_calling.html).
+- **Vision / multimodal:** Images (PIL/URL/base64), video (frames/URL), audio (array+rate) via `image_url`, `video_url`, `input_audio` / `audio_url` content fields on Chat Completions. [multimodal_inputs docs](https://docs.vllm.ai/en/latest/features/multimodal_inputs.html).
+- **Streaming:** SSE on chat completions and completions, including mid-generation tool-call extraction.
+- **Structured outputs:** xgrammar and guidance backends; JSON Schema, regex (Rust), EBNF, choices, structural tags. Via `response_format`/`extra_body` or `--structured-outputs-config.backend`. [structured_outputs docs](https://docs.vllm.ai/en/latest/features/structured_outputs.html).
+- **Logprobs:** Per-token `logP` and prompt `prmpt logP`, broad hardware coverage.
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Maintainers do not publish a static table of canonical figures. The [benchmarking docs](https://docs.vllm.ai/en/latest/benchmarking/) describe tooling (CLI, Parameter Sweeps, Performance Dashboard) with per-commit results pushed to a PyTorch CI dashboard.
+
+The only fixed maintainer-authored numbers come from the [launch blog post (June 2023)](https://vllm.ai/blog/2023-06-20-vllm) on A10G/A100 with LLaMA-family models: **14×–24×** higher throughput than HF Transformers (single output), **8.5×–15×** (3 parallel); **2.2×–2.5×** over TGI (single), **3.3×–3.5×** (3 parallel); LMSYS reported up to **30×** higher throughput vs. initial HF backend (50% fewer GPUs handling ~30K req/day, peak 60K). Dashboard sample shows ~24.98–28.61 tok/s for Llama-3.1-8B-Instruct at 2048 in/out across concurrency, presented as illustrative. Prefill vs decode is measured separately by the benchmark tooling but not split out in published figures.
 
 ## 7. Documented Strengths
 

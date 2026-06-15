@@ -35,11 +35,20 @@ Loads HuggingFace safetensors and PyTorch state_dict for almost all architecture
 
 ## 5. API Surface
 
-OpenAI-compatible? Native API? Streaming? Tool calling? Embeddings?
+OpenAI-compatible HTTP server on port 2242 (`aphrodite run <model>`), inheriting vLLM's endpoint set: `/v1/chat/completions`, `/v1/completions`, `/v1/embeddings`, `/v1/models`. The docs describe it as supporting "Text/Chat Completions, Vision, and Batch API."
+
+- **Tool / function calling:** Supported via the OpenAI `tools` parameter (inherited from vLLM); exact per-model parser availability matches upstream.
+- **Vision (multimodal):** Supported — listed explicitly in the docs alongside Chat Completions and Batch API.
+- **Streaming:** SSE on chat and completion endpoints (inherited from vLLM).
+- **Structured outputs:** Inherited from vLLM (xgrammar/guidance); JSON Schema, regex, EBNF via `response_format`.
+- **Logprobs:** Supported (inherited from vLLM); per-token and prompt logprobs.
+- **Additional samplers:** DRY, XTC, Mirostat, and other community samplers exposed as extra parameters — beyond the OpenAI-compatible surface.
+
+Sources: [aphrodite-engine README](https://github.com/aphrodite-engine/aphrodite-engine), [docs landing page](https://aphrodite.pygmalion.chat/).
 
 ## 6. Performance
 
-Throughput (tok/s), latency, batch support. Cite source or note "not benchmarked".
+Not officially benchmarked by maintainers. No canonical tok/s, TTFT, or throughput figures are published in the README or documentation. The engine inherits vLLM's PagedAttention and continuous batching; the README emphasizes architectural features (speculative decoding with EAGLE/DFlash/MTP, MXFP4 on Blackwell, custom CUDA kernels) without numerical claims. Source: [aphrodite-engine README](https://github.com/aphrodite-engine/aphrodite-engine).
 
 ## 7. Documented Strengths
 

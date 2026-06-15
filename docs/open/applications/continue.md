@@ -49,15 +49,15 @@ BYOK: yes — provider credentials are set in a `config.json` file per workspace
 
 ## 5. Capabilities
 
-What tasks it targets (coding, general, research, etc.). Tool use, file editing, shell, browser, vision, etc.
+Continue targets IDE-integrated coding assistance: inline autocomplete, chat over selected code, multi-file edits via Agent mode, and codebase-wide context retrieval through embeddings. It can read and write files within the IDE workspace and run terminal commands via Agent mode. No built-in browser tool or vision input; data analysis is limited to in-editor context.
 
 ## 6. MCP Support
 
-Native? Via adapter? Not supported?
+Native MCP client support was added in v1.0 (late 2024). Continue can connect to any MCP server declared in `config.json` under the `mcpServers` key, exposing MCP tools as slash commands or context providers inside the IDE. Maturity is documented as stable for client consumption.
 
 ## 7. Extensibility
 
-Plugins, custom agents/commands, hooks, scripting. Where logic lives.
+Extensibility lives in `~/.continue/config.json` (or a workspace-level override): custom slash commands (arbitrary prompts or TypeScript functions), context providers (pull in docs, repos, web pages, databases), and model providers are all config-driven. The SDK (`@continuedev/config-types`) allows TypeScript-based custom context providers and commands to be written as local packages and loaded via the config.
 
 ## 8. Documented Strengths
 

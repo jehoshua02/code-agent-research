@@ -22,7 +22,7 @@ Extremely broad — Agno has first-class provider modules (`agno.models.<provide
 
 ## 4. Agent Capabilities
 
-Tool use, planning, memory, multi-agent, human-in-the-loop, state persistence.
+Model-agnostic, multi-modal agent framework with the broadest provider coverage. Tools are plain Python functions auto-converted to JSON Schema (docstring + `Args:` required); 120+ built-in Toolkits; per-run `RunContext` injectable; `function_calling_llm` allows a separate model. Concurrent tool exec under `arun`. Planning framed as "reasoning": Reasoning Models (e.g. extended-thinking), Reasoning Tools (scratchpad), Reasoning Agents (`reasoning=True`, ReAct loop with self-correction). Memory has two concepts — Session History (`add_history_to_context`) and User Memory (persistent facts: `update_memory_on_run=True` for auto, `enable_agentic_memory=True` for agent-driven); backends include PostgreSQL, SQLite, MongoDB. Multi-agent via `Teams` with three `TeamMode` — Route, Coordinate (default), Broadcast; nesting supported. HITL: "team runs can pause for human-in-the-loop and continue after approval"; agent-level supported. State persistence via 13+ storage backends (SQLite/PostgreSQL recommended; async variants); resumed by `session_id`. Observability: OpenTelemetry → Arize Phoenix, Langfuse, Langsmith, Logfire, Maxim, MLflow, OpenLIT, Weave, etc.; auto-instruments runs/tools/perf/errors/tokens. Retry/error handling: no dedicated retry mechanism documented; self-correction via reasoning loop. Sync (`Agent.run()`) and async (`Agent.arun()`); both with streaming via `stream=True` / `stream_events=True`. Source: docs.agno.com.
 
 ## 5. MCP Support
 
