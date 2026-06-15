@@ -300,6 +300,10 @@
       "filename": "hunyuan.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
         "24gb+"
       ],
       "has_moe": true,
@@ -319,11 +323,16 @@
       "status": "active",
       "url": "https://huggingface.co/tencent",
       "variants": [
-        "Hunyuan-Large-389B",
+        "Hunyuan-0.5B",
+        "Hunyuan-1.8B",
+        "Hunyuan-4B",
+        "Hunyuan-7B-Instruct",
+        "Hunyuan-MT-7B",
         "Hunyuan-A13B-Pretrain",
         "Hunyuan-A13B-Instruct",
         "Hunyuan-A13B-Instruct-FP8",
-        "Hunyuan-A13B-Instruct-GPTQ-Int4"
+        "Hunyuan-A13B-Instruct-GPTQ-Int4",
+        "Hunyuan-Large-389B"
       ]
     },
     {
@@ -425,6 +434,10 @@
       "filename": "nemotron.md",
       "gated": false,
       "hardware_tiers": [
+        "8gb",
+        "12gb",
+        "16gb",
+        "24gb",
         "24gb+"
       ],
       "has_moe": false,
@@ -443,11 +456,13 @@
       "status": "active",
       "url": "https://huggingface.co/nvidia",
       "variants": [
+        "Nemotron-Mini-4B-Instruct",
+        "Nemotron-3-Nano-4B",
+        "Llama-3.1-Nemotron-70B-Instruct",
+        "Llama-3.1-Nemotron-70B-Reward",
         "Nemotron-4-340B-Base",
         "Nemotron-4-340B-Instruct",
-        "Nemotron-4-340B-Reward",
-        "Llama-3.1-Nemotron-70B-Instruct",
-        "Llama-3.1-Nemotron-70B-Reward"
+        "Nemotron-4-340B-Reward"
       ]
     },
     {

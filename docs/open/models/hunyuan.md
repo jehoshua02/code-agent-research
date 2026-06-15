@@ -6,7 +6,7 @@ license_category: "custom-permissive"
 status: "active"
 url: "https://huggingface.co/tencent"
 last_verified: "2026-06-14"
-variants: ["Hunyuan-Large-389B", "Hunyuan-A13B-Pretrain", "Hunyuan-A13B-Instruct", "Hunyuan-A13B-Instruct-FP8", "Hunyuan-A13B-Instruct-GPTQ-Int4"]
+variants: ["Hunyuan-0.5B", "Hunyuan-1.8B", "Hunyuan-4B", "Hunyuan-7B-Instruct", "Hunyuan-MT-7B", "Hunyuan-A13B-Pretrain", "Hunyuan-A13B-Instruct", "Hunyuan-A13B-Instruct-FP8", "Hunyuan-A13B-Instruct-GPTQ-Int4", "Hunyuan-Large-389B"]
 params_total: "389B"
 has_moe: true
 params_active: "13B"
@@ -14,7 +14,7 @@ context_window: 262144
 modalities: ["text"]
 gated: false
 released: "2025-06"
-hardware_tiers: ["24gb+"]
+hardware_tiers: ["8gb", "12gb", "16gb", "24gb", "24gb+"]
 best_for: ["coding", "research", "data"]
 notes: "Proprietary Tencent license — not Apache 2.0; minimum 2× RTX 4090 even at Q4"
 ---
