@@ -8,7 +8,8 @@ Output snapshots are dated and will drift as the survey changes — the value he
 
 | File | Scenario |
 |---|---|
-| [query-small-vram-coding.md](query-small-vram-coding.md) | 8 GB GPU, agentic coding, MCP-required, Apache 2.0 / MIT only |
+| [query-small-vram-coding.md](query-small-vram-coding.md) | 8 GB GPU (NVIDIA / RTX 3070), agentic coding, MCP-required, Apache 2.0 / MIT only |
+| [query-m1-max-coding.md](query-m1-max-coding.md) | M1 Max 32 GB unified memory (Apple Silicon / Metal), agentic coding, MCP-required, Apache 2.0 / MIT only |
 
 ## When to add a new example
 
